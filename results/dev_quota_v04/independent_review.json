@@ -1,0 +1,124 @@
+{
+  "schema": "versematrix.dev-quota-independent-review.v0.4",
+  "status": "PASS_EXPLORATORY_DEV_ONLY_DIAGNOSTIC",
+  "reviewed_at_utc": "2026-10-29T03:29:57.969242+00:00",
+  "io_scope_review": "Inspected complete frozen script and its imported scoring/data modules: reads are fixed train/dev source resources and formal dev predictions. No confirmation task, prediction or report path is read. This review also opened no confirmation files.",
+  "confirmation_files_read_in_this_review": false,
+  "old_test_rows_skipped_before_json_decode": 530,
+  "freeze_sha256": "c7e5f4879528ea80991fb04ee70a9735768242cf9fdd1e4c65f9d0161f49ff82",
+  "manifest_sha256": "beff8cb9927e519b14d3d65ab5342f05d6025cc3ab2d4b37a2de87f43ca029f5",
+  "script_sha256": "789b29dd3745716eb223a90bc1cc4b1fca17d32e7b127b8b1bedf3e7b0474418",
+  "frozen_sources_inputs_outputs_and_rebuild_receipt": "passed",
+  "dev_tasks": 2188,
+  "dev_poems": 547,
+  "dev_families": 508,
+  "schemes": 10,
+  "pool_checks": {
+    "pool_records_checked": 21880,
+    "exact_distinct_source_spans_per_pool": 16,
+    "old_and_new_buckets_disjoint": true,
+    "fixed_bucket_rank_prefixes": "passed",
+    "q16_formal_dev_pool_hit_score_and_hash_replay_tasks_per_q16_scheme": 2188
+  },
+  "independently_recomputed_metric_slices": 30,
+  "all_metrics_exactly_equal_report": true,
+  "metrics": [
+    {
+      "method": "q00_ngram",
+      "family_recall": 0.01894685039370079,
+      "exact": {
+        "numerator": 77,
+        "denominator": 4064
+      },
+      "hits": 40
+    },
+    {
+      "method": "q00_a025_b025",
+      "family_recall": 0.019438976377952756,
+      "exact": {
+        "numerator": 79,
+        "denominator": 4064
+      },
+      "hits": 41
+    },
+    {
+      "method": "q04_ngram",
+      "family_recall": 0.0375246062992126,
+      "exact": {
+        "numerator": 305,
+        "denominator": 8128
+      },
+      "hits": 83
+    },
+    {
+      "method": "q04_a025_b025",
+      "family_recall": 0.0375246062992126,
+      "exact": {
+        "numerator": 305,
+        "denominator": 8128
+      },
+      "hits": 83
+    },
+    {
+      "method": "q08_ngram",
+      "family_recall": 0.04146161417322835,
+      "exact": {
+        "numerator": 337,
+        "denominator": 8128
+      },
+      "hits": 93
+    },
+    {
+      "method": "q08_a025_b025",
+      "family_recall": 0.042445866141732284,
+      "exact": {
+        "numerator": 345,
+        "denominator": 8128
+      },
+      "hits": 95
+    },
+    {
+      "method": "q12_ngram",
+      "family_recall": 0.043184055118110236,
+      "exact": {
+        "numerator": 351,
+        "denominator": 8128
+      },
+      "hits": 96
+    },
+    {
+      "method": "q12_a025_b025",
+      "family_recall": 0.04343011811023622,
+      "exact": {
+        "numerator": 353,
+        "denominator": 8128
+      },
+      "hits": 97
+    },
+    {
+      "method": "q16_ngram",
+      "family_recall": 0.04072342519685039,
+      "exact": {
+        "numerator": 331,
+        "denominator": 8128
+      },
+      "hits": 91
+    },
+    {
+      "method": "q16_a025_b025",
+      "family_recall": 0.04072342519685039,
+      "exact": {
+        "numerator": 331,
+        "denominator": 8128
+      },
+      "hits": 91
+    }
+  ],
+  "best_scheme": "q12_a025_b025",
+  "best_quota_family_recall": 0.04343011811023622,
+  "formal_selected_wide_dev_family_recall": 0.0442503280839895,
+  "best_quota_minus_formal_selected_dev": -0.0008202099737532808,
+  "interpretation": "The descriptive best old12/new4 quota is below the already-selected wide dev retriever. These exploratory dev results do not justify prioritizing an independent quota confirmation. No inferiority significance or fresh-test improvement is claimed.",
+  "formal_result_changed": false,
+  "new_training_or_model_selection_experiment_in_review": false
+}

@@ -1,0 +1,2636 @@
+[
+  {
+    "status": "optimal",
+    "length": 5,
+    "supplied_templates": [
+      "L5-P-R0",
+      "L5-P-R1"
+    ],
+    "supplied_rhyme_groups": [
+      "R1",
+      "R2"
+    ],
+    "full_combinations": 384,
+    "feasible_combinations": 16,
+    "input_domain_sizes": [
+      [
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    ],
+    "configurations": [
+      {
+        "template_id": "L5-P-R0",
+        "rhyme_group": "R1",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": 0.236934361738458,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.11460560382314462,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.07922093726345975,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.04081338081955083,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.002294439832302809,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      },
+      {
+        "template_id": "L5-P-R0",
+        "rhyme_group": "R2",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": 0.4539549035723876,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.16395970612387578,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.13328915170563668,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.097555929648827,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.05915011609404815,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      },
+      {
+        "template_id": "L5-P-R1",
+        "rhyme_group": "R1",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": 0.12244918840104353,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ],
+            "score": 0.00012043048573014137,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.07922093726345975,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.04081338081955083,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": 0.002294439832302809,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      },
+      {
+        "template_id": "L5-P-R1",
+        "rhyme_group": "R2",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": 0.3865891066556411,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ],
+            "score": 0.09659390920712926,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.13328915170563668,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.097555929648827,
+            "factor_calls": 5,
+            "transitions": 5,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": 0.05915011609404815,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      }
+    ],
+    "selected_template": "L5-P-R0",
+    "selected_rhyme": "R2",
+    "selected": [
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:0:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:0:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:0:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:0:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:0:4:A",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:1:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:1:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:1:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:1:3:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:5:1:4:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:2:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:2:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:2:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:2:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:2:4:A",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:3:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:3:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:3:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:3:3:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:5:3:4:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:4:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:4:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:4:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:4:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:4:4:A",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:5:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:5:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:5:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:5:3:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:5:5:4:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:6:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:6:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:6:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:6:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:6:4:A",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:7:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:5:7:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:7:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:5:7:3:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:5:7:4:B",
+          "verified": true
+        }
+      ]
+    ],
+    "lines": [
+      "AAAAA",
+      "AAAAB",
+      "AAAAA",
+      "AAAAB",
+      "AAAAA",
+      "AAAAB",
+      "AAAAA",
+      "AAAAB"
+    ],
+    "score": 0.4539549035723876,
+    "issues": [],
+    "frozen_feature_count": 49,
+    "exact_scope": "Complete finite caller-supplied candidate domains, canonical strict basic templates and caller-supplied rhyme groups only; objective is the sum of four width-three LocalConvScorer couplet scores on frozen per-cell token features and weights, evaluated in floating-point arithmetic. No global semantic, repetition, word-span, common-prefix or aojiu constraints. Reading verification is asserted by the caller, not inferred from meter; optimality concerns this objective, not literary quality.",
+    "literary_quality": "not_evaluated"
+  },
+  {
+    "status": "optimal",
+    "length": 7,
+    "supplied_templates": [
+      "L7-Z-R0",
+      "L7-Z-R1"
+    ],
+    "supplied_rhyme_groups": [
+      "R1",
+      "R2"
+    ],
+    "full_combinations": 384,
+    "feasible_combinations": 16,
+    "input_domain_sizes": [
+      [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    ],
+    "configurations": [
+      {
+        "template_id": "L7-Z-R0",
+        "rhyme_group": "R1",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": -2.1071208987246144,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": -0.5822588142544276,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": -0.5391265618729199,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": -0.5250953770776949,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ],
+            "score": -0.4606401455195719,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      },
+      {
+        "template_id": "L7-Z-R0",
+        "rhyme_group": "R2",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": -1.8834877460247668,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": -0.5233007777633463,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": -0.4821458412815935,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": -0.471006764646853,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "B"
+              ]
+            ],
+            "score": -0.40703436233297396,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      },
+      {
+        "template_id": "L7-Z-R1",
+        "rhyme_group": "R1",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": -2.0233718596025128,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ],
+            "score": -0.49850977513232636,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": -0.5391265618729199,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ]
+            ],
+            "score": -0.5250953770776949,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ],
+            "score": -0.4606401455195719,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      },
+      {
+        "template_id": "L7-Z-R1",
+        "rhyme_group": "R2",
+        "status": "optimal",
+        "filtered_domain_sizes": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_combinations": 4,
+        "missing_positions": [],
+        "score": -1.8530851974189895,
+        "couplets": [
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "C",
+                "B"
+              ]
+            ],
+            "score": -0.4928982291575689,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "B",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": -0.4821458412815935,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "score": -0.471006764646853,
+            "factor_calls": 7,
+            "transitions": 7,
+            "peak_states": 1,
+            "full_combinations": 1,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          },
+          {
+            "status": "optimal",
+            "path": [
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "A",
+                "A"
+              ],
+              [
+                "B",
+                "B"
+              ]
+            ],
+            "score": -0.40703436233297396,
+            "factor_calls": 9,
+            "transitions": 9,
+            "peak_states": 2,
+            "full_combinations": 2,
+            "scope": "exact_for_declared_radius_one_additive_objective_and_domains"
+          }
+        ]
+      }
+    ],
+    "selected_template": "L7-Z-R1",
+    "selected_rhyme": "R2",
+    "selected": [
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:0:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:0:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:0:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:0:3:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:0:4:B",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:0:5:A",
+          "verified": true
+        },
+        {
+          "token": "C",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:7:0:6:C",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:1:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:1:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:1:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:1:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:1:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:1:5:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:7:1:6:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:2:0:B",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:2:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:2:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:2:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:2:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:2:5:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:2:6:A",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:3:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:3:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:3:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:3:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:3:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:3:5:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:7:3:6:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:4:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:4:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:4:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:4:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:4:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:4:5:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:4:6:A",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:5:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:5:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:5:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:5:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:5:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:5:5:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:7:5:6:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:6:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:6:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:6:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:6:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:6:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:6:5:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:6:6:B",
+          "verified": true
+        }
+      ],
+      [
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:7:0:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:7:1:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:7:2:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "P",
+          "rhyme": "R1",
+          "reading_id": "synthetic:7:7:3:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:7:4:A",
+          "verified": true
+        },
+        {
+          "token": "A",
+          "tone": "Z",
+          "rhyme": "Z0",
+          "reading_id": "synthetic:7:7:5:A",
+          "verified": true
+        },
+        {
+          "token": "B",
+          "tone": "P",
+          "rhyme": "R2",
+          "reading_id": "synthetic:7:7:6:B",
+          "verified": true
+        }
+      ]
+    ],
+    "lines": [
+      "AAAABAC",
+      "AAAAAAB",
+      "BAAAAAA",
+      "AAAAAAB",
+      "AAAAAAA",
+      "AAAAAAB",
+      "AAAAAAB",
+      "AAAAAAB"
+    ],
+    "score": -1.8530851974189895,
+    "issues": [],
+    "frozen_feature_count": 65,
+    "exact_scope": "Complete finite caller-supplied candidate domains, canonical strict basic templates and caller-supplied rhyme groups only; objective is the sum of four width-three LocalConvScorer couplet scores on frozen per-cell token features and weights, evaluated in floating-point arithmetic. No global semantic, repetition, word-span, common-prefix or aojiu constraints. Reading verification is asserted by the caller, not inferred from meter; optimality concerns this objective, not literary quality.",
+    "literary_quality": "not_evaluated"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "files": {
+    "case_receipts.jsonl": {
+      "bytes": 142855,
+      "sha256": "e69f2e174e3ec0c81487b24190cea372bf5543b32f251d210b52d41a7f3614ae"
+    },
+    "model_receipts.json": {
+      "bytes": 5931,
+      "sha256": "58d12bc5c6ec75308ca6bd0443ccfc7315298cb75328d2568efe30947614527d"
+    },
+    "plan_frozen.json": {
+      "bytes": 2224,
+      "sha256": "7c4866b7d73b4591429fd71f12e8af73491d526d249adabee79383368d9adb12"
+    },
+    "prepared.json": {
+      "bytes": 321,
+      "sha256": "5da8ee8bce279841ab5bd75dfe1578ff8ad246e6a0610420f30239f89618a34a"
+    },
+    "report.json": {
+      "bytes": 1239,
+      "sha256": "b0ff88ba6aee0f15240aa1f6f71f96a79c05dbf2b7290a0b98f217b1a975fc0a"
+    },
+    "sample_queries.json": {
+      "bytes": 8307,
+      "sha256": "ac6996eafcc2b8b2fd8de0276aa920a123e819f5532a33c32509a8b8c572f3ac"
+    }
+  },
+  "formal_artifacts_unchanged": true,
+  "status": "passed"
+}

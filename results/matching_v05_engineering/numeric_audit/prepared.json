@@ -1,0 +1,8 @@
+{
+  "formal_experiment_changed": false,
+  "plan_sha256": "7c4866b7d73b4591429fd71f12e8af73491d526d249adabee79383368d9adb12",
+  "queries": 16,
+  "sample_sha256": "ac6996eafcc2b8b2fd8de0276aa920a123e819f5532a33c32509a8b8c572f3ac",
+  "selected_models_opened": false,
+  "status": "prepared_visible_queries_without_targets"
+}

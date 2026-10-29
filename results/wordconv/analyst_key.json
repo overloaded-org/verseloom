@@ -1,0 +1,12 @@
+{
+  "schema_version": "versematrix.blind-review.v2",
+  "status": "unfilled_review_template",
+  "seed": 1729,
+  "allowed_preferences": [
+    "left",
+    "right",
+    "tie",
+    "skip"
+  ],
+  "items": []
+}

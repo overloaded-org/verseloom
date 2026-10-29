@@ -1,0 +1,33 @@
+{
+  "dev_model_evaluation_performed": false,
+  "formal_optimizer_updates_performed": 0,
+  "freeze_sha256": "7902197f93d8376c97dfe72d90d61285494dbdb3c91f2ff621847c2bb29aec2a",
+  "outputs": {
+    "candidate_resources.json": {
+      "bytes": 4009354,
+      "sha256": "d1ab814edc12f8e244be10eb62a2989209c6aaf4df8a87f6e3afc261108dc967"
+    },
+    "context_permutation.json": {
+      "bytes": 986998,
+      "sha256": "edfa6c5548aea49635a912b5e00b71d32fe412b4c4ae49e5e0e12b953c0a5bd4"
+    },
+    "coverage.json": {
+      "bytes": 1733,
+      "sha256": "93d7c7aa9a56d2fc22e34c7e98e1e24daf8448a4c0742ae518c9b6ddc12ddadd"
+    },
+    "schedules/seed0.jsonl": {
+      "bytes": 1684893,
+      "sha256": "daa3c35ec9e6d2a9d9b1ec08c871660813fba9ff8e5dce4c25679d4dcc3685c8"
+    },
+    "schedules/seed1.jsonl": {
+      "bytes": 1684893,
+      "sha256": "4fa23a77c9ef5f7f2a1586dbb3065e5c4c304d915445dc4454315b59ef6c5501"
+    },
+    "schedules/seed2.jsonl": {
+      "bytes": 1684893,
+      "sha256": "683ac84f3610251b67be4419eca61794f464f420ae42b2b9e746c529fda76b6f"
+    }
+  },
+  "prepared_at_utc": "2026-10-29T08:34:32.664388+00:00",
+  "status": "prepared_no_formal_updates"
+}

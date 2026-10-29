@@ -1,0 +1,71 @@
+{
+  "candidate_counts": {
+    "5": 10375,
+    "7": 1504
+  },
+  "candidate_set_sha256": {
+    "5": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+    "7": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e"
+  },
+  "old_test_or_confirmation_content_decoded": false,
+  "old_test_rows_skipped_before_json_decode": 530,
+  "splits": {
+    "dev": {
+      "by_length": {
+        "5": {
+          "covered": 824,
+          "tasks": 1820
+        },
+        "7": {
+          "covered": 73,
+          "tasks": 368
+        }
+      },
+      "covered_tasks": 897,
+      "families": 508,
+      "poems": 547,
+      "prefix_positive_buckets": {
+        "in_W_never_prefix_positive": 250,
+        "outside_W": 1291,
+        "seen_prefix_positive": 647
+      },
+      "tasks": 2188,
+      "unknown_visible_character_tasks": 245,
+      "vocabulary_coverage": {
+        "families": 508,
+        "family_macro": 0.40194389763779526,
+        "task_micro": 0.409963436928702,
+        "tasks": 2188
+      }
+    },
+    "train": {
+      "by_length": {
+        "5": {
+          "covered": 5494,
+          "tasks": 8812
+        },
+        "7": {
+          "covered": 457,
+          "tasks": 1196
+        }
+      },
+      "covered_tasks": 5951,
+      "families": 2373,
+      "poems": 2502,
+      "prefix_positive_buckets": {
+        "in_W_never_prefix_positive": 0,
+        "outside_W": 4057,
+        "seen_prefix_positive": 5951
+      },
+      "tasks": 10008,
+      "unknown_visible_character_tasks": 632,
+      "vocabulary_coverage": {
+        "families": 2373,
+        "family_macro": 0.577960387694901,
+        "task_micro": 0.5946243005595524,
+        "tasks": 10008
+      }
+    }
+  },
+  "vocabulary_size_with_UNK": 3068
+}

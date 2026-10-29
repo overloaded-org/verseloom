@@ -1,0 +1,56 @@
+{
+  "context_disambiguation_performed": false,
+  "licensing": [
+    "data/reference_v02/LICENSE_NOTICE.md",
+    "data/corpus_v03/LICENSE_NOTICE.md"
+  ],
+  "outputs": {
+    "audit.json": {
+      "bytes": 3242,
+      "sha256": "69d6bf6a00e2f5b23c5831f33e31a293bfdd32da9febcde63d64e32b5b8da291"
+    },
+    "candidate_readings.jsonl": {
+      "bytes": 1465459,
+      "sha256": "32c258e7d3e108bc1ffb11e29d4a14e067c8a00d311602e5711afd6215e8ebf1"
+    }
+  },
+  "schema": "versematrix.candidate-reading-build.v0.3",
+  "script": {
+    "path": "scripts/audit_candidate_readings_v03.py",
+    "sha256": "b81dd219ff465f27d35daf46361d6b20ad8f4274b15e3a8bb1507ac99ff23fe9"
+  },
+  "sources": [
+    {
+      "bytes": 310133,
+      "path": "data/corpus_v03/candidate_spans.json",
+      "sha256": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6"
+    },
+    {
+      "bytes": 2128359,
+      "path": "data/reference_v02/pingshui_106_memberships.json",
+      "sha256": "6481c560885544fed72bc426c7461f2cea01dde8c299eab1e041d23a18364537"
+    },
+    {
+      "bytes": 4184,
+      "path": "data/reference_v02/editorial_issues.json",
+      "sha256": "9599a3d03986cbf1602f6521a7c3fd990f2a8faa56f0d9c5fba18c7dac1b6155"
+    },
+    {
+      "bytes": 1397,
+      "path": "data/corpus_v03/build_manifest.json",
+      "sha256": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301"
+    },
+    {
+      "bytes": 4868,
+      "path": "data/reference_v02/source_manifest.json",
+      "sha256": "963acf542262b827aeca6a51626b66cae8029cf7582f2e97e26342cfb90662fb"
+    },
+    {
+      "bytes": 2038259,
+      "path": "data/corpus_v03/poems.jsonl",
+      "sha256": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c"
+    }
+  ],
+  "status": "completed",
+  "test_predictions_accessed": false
+}

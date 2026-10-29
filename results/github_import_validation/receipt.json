@@ -1,0 +1,27 @@
+{
+  "status": "PASS_LOCAL_GITHUB_IMPORT_VALIDATION",
+  "created_utc": "2026-10-29T15:54:28.010480+00:00",
+  "source_directory": "versematrix-github",
+  "unit_tests": {
+    "command": "PYTHONPATH=src python3 -m unittest discover -s tests -v",
+    "count": 175,
+    "passed": 175,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unittest_seconds": 0.455,
+    "exit_code": 0,
+    "log": "unit_tests.log",
+    "log_sha256": "fc38bc1e432b9e5752672a3bd8f402f2a0a6b155a40c9ac22611caa4a5f3add3"
+  },
+  "first_poem_audit": {
+    "command": "python3 scripts/audit_free_poem_v06.py --run results/free_generation_v06_run001 --output <new-receipt-path>",
+    "receipt": "first_poem_audit.json",
+    "status": "PASS_INDEPENDENT_SOURCE_AND_SELECTED_PATH_AUDIT",
+    "original_result_sha256": "0a7469be1bcbfab8afc792d6cb26a7daa2c926b598ab6f226c27703674165aad"
+  },
+  "new_real_poems_generated": 0,
+  "remote_actions_executed": false,
+  "python": "3.12.14",
+  "numpy": "2.3.5"
+}

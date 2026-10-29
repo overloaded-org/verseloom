@@ -1,0 +1,197 @@
+{
+  "by_length": {
+    "5": {
+      "families": 363,
+      "narrow_ngram": {
+        "covered_but_below_top16": 235,
+        "hits_at_16": 49,
+        "recall_at_16_conditional_on_vocabulary": 0.17253521126760563,
+        "task_micro_recall_at_16": 0.03284182305630027,
+        "task_micro_vocabulary_coverage": 0.1903485254691689,
+        "vocabulary_absent": 1208,
+        "vocabulary_covered": 284
+      },
+      "paired_task_transitions": {
+        "selected_minus_narrow_ngram": {
+          "both_miss": 1431,
+          "gain": 12,
+          "gain_new_vocabulary": 10,
+          "gain_old_vocabulary_reranked": 2,
+          "loss": 12,
+          "new_vocabulary_covered": 351,
+          "retained_hit": 37
+        },
+        "selected_minus_wide_ngram": {
+          "both_miss": 1440,
+          "gain": 3,
+          "gain_new_vocabulary": 0,
+          "gain_old_vocabulary_reranked": 3,
+          "loss": 3,
+          "new_vocabulary_covered": 0,
+          "retained_hit": 46
+        },
+        "wide_ngram_minus_narrow_ngram": {
+          "both_miss": 1434,
+          "gain": 9,
+          "gain_new_vocabulary": 9,
+          "gain_old_vocabulary_reranked": 0,
+          "loss": 9,
+          "new_vocabulary_covered": 351,
+          "retained_hit": 40
+        }
+      },
+      "poems": 373,
+      "selected": {
+        "covered_but_below_top16": 586,
+        "hits_at_16": 49,
+        "recall_at_16_conditional_on_vocabulary": 0.07716535433070866,
+        "task_micro_recall_at_16": 0.03284182305630027,
+        "task_micro_vocabulary_coverage": 0.42560321715817695,
+        "vocabulary_absent": 857,
+        "vocabulary_covered": 635
+      },
+      "tasks": 1492,
+      "wide_ngram": {
+        "covered_but_below_top16": 586,
+        "hits_at_16": 49,
+        "recall_at_16_conditional_on_vocabulary": 0.07716535433070866,
+        "task_micro_recall_at_16": 0.03284182305630027,
+        "task_micro_vocabulary_coverage": 0.42560321715817695,
+        "vocabulary_absent": 857,
+        "vocabulary_covered": 635
+      }
+    },
+    "7": {
+      "families": 149,
+      "narrow_ngram": {
+        "covered_but_below_top16": 6,
+        "hits_at_16": 14,
+        "recall_at_16_conditional_on_vocabulary": 0.7,
+        "task_micro_recall_at_16": 0.023178807947019868,
+        "task_micro_vocabulary_coverage": 0.033112582781456956,
+        "vocabulary_absent": 584,
+        "vocabulary_covered": 20
+      },
+      "paired_task_transitions": {
+        "selected_minus_narrow_ngram": {
+          "both_miss": 579,
+          "gain": 11,
+          "gain_new_vocabulary": 11,
+          "gain_old_vocabulary_reranked": 0,
+          "loss": 5,
+          "new_vocabulary_covered": 72,
+          "retained_hit": 9
+        },
+        "selected_minus_wide_ngram": {
+          "both_miss": 584,
+          "gain": 0,
+          "gain_new_vocabulary": 0,
+          "gain_old_vocabulary_reranked": 0,
+          "loss": 0,
+          "new_vocabulary_covered": 0,
+          "retained_hit": 20
+        },
+        "wide_ngram_minus_narrow_ngram": {
+          "both_miss": 579,
+          "gain": 11,
+          "gain_new_vocabulary": 11,
+          "gain_old_vocabulary_reranked": 0,
+          "loss": 5,
+          "new_vocabulary_covered": 72,
+          "retained_hit": 9
+        }
+      },
+      "poems": 151,
+      "selected": {
+        "covered_but_below_top16": 72,
+        "hits_at_16": 20,
+        "recall_at_16_conditional_on_vocabulary": 0.21739130434782608,
+        "task_micro_recall_at_16": 0.033112582781456956,
+        "task_micro_vocabulary_coverage": 0.152317880794702,
+        "vocabulary_absent": 512,
+        "vocabulary_covered": 92
+      },
+      "tasks": 604,
+      "wide_ngram": {
+        "covered_but_below_top16": 72,
+        "hits_at_16": 20,
+        "recall_at_16_conditional_on_vocabulary": 0.21739130434782608,
+        "task_micro_recall_at_16": 0.033112582781456956,
+        "task_micro_vocabulary_coverage": 0.152317880794702,
+        "vocabulary_absent": 512,
+        "vocabulary_covered": 92
+      }
+    }
+  },
+  "limits": [
+    "Post-confirmation explanation; not a new confirmatory test or a changed promotion gate.",
+    "Transitions are raw task counts; they are not equal-family weighted gains.",
+    "Only observed source-prefix retrieval is described; literary quality remains unevaluated."
+  ],
+  "overall": {
+    "families": 512,
+    "narrow_ngram": {
+      "covered_but_below_top16": 241,
+      "hits_at_16": 63,
+      "recall_at_16_conditional_on_vocabulary": 0.20723684210526316,
+      "task_micro_recall_at_16": 0.030057251908396948,
+      "task_micro_vocabulary_coverage": 0.1450381679389313,
+      "vocabulary_absent": 1792,
+      "vocabulary_covered": 304
+    },
+    "paired_task_transitions": {
+      "selected_minus_narrow_ngram": {
+        "both_miss": 2010,
+        "gain": 23,
+        "gain_new_vocabulary": 21,
+        "gain_old_vocabulary_reranked": 2,
+        "loss": 17,
+        "new_vocabulary_covered": 423,
+        "retained_hit": 46
+      },
+      "selected_minus_wide_ngram": {
+        "both_miss": 2024,
+        "gain": 3,
+        "gain_new_vocabulary": 0,
+        "gain_old_vocabulary_reranked": 3,
+        "loss": 3,
+        "new_vocabulary_covered": 0,
+        "retained_hit": 66
+      },
+      "wide_ngram_minus_narrow_ngram": {
+        "both_miss": 2013,
+        "gain": 20,
+        "gain_new_vocabulary": 20,
+        "gain_old_vocabulary_reranked": 0,
+        "loss": 14,
+        "new_vocabulary_covered": 423,
+        "retained_hit": 49
+      }
+    },
+    "poems": 524,
+    "selected": {
+      "covered_but_below_top16": 658,
+      "hits_at_16": 69,
+      "recall_at_16_conditional_on_vocabulary": 0.09491059147180192,
+      "task_micro_recall_at_16": 0.032919847328244274,
+      "task_micro_vocabulary_coverage": 0.34685114503816794,
+      "vocabulary_absent": 1369,
+      "vocabulary_covered": 727
+    },
+    "tasks": 2096,
+    "wide_ngram": {
+      "covered_but_below_top16": 658,
+      "hits_at_16": 69,
+      "recall_at_16_conditional_on_vocabulary": 0.09491059147180192,
+      "task_micro_recall_at_16": 0.032919847328244274,
+      "task_micro_vocabulary_coverage": 0.34685114503816794,
+      "vocabulary_absent": 1369,
+      "vocabulary_covered": 727
+    }
+  },
+  "same_score_superset_rank_monotonicity": {
+    "status": "passed",
+    "tasks_checked": 304
+  },
+  "status": "completed_descriptive_diagnostic"
+}

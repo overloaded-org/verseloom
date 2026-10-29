@@ -1,0 +1,69 @@
+{
+  "code_sha256": {
+    "scripts/build_corpus_v03.py": "e77cdc8e92698b636537daa017c14dd8f6fbe886d59e9ef7339d4dc5501f111d",
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a"
+  },
+  "config": {
+    "candidate_min_count": 2,
+    "characters": "CJK unified/compatibility ideographs only, exact Unicode code points",
+    "families": [
+      "exact text deduplication",
+      "shared complete line",
+      "within-line bigram-set Jaccard >= 4/5"
+    ],
+    "shape": [
+      [
+        8,
+        5
+      ],
+      [
+        8,
+        7
+      ]
+    ],
+    "shard_offsets": [
+      0,
+      1000,
+      2000,
+      3000,
+      4000,
+      5000,
+      6000,
+      7000,
+      8000,
+      9000
+    ],
+    "source_commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "split_hash_buckets": {
+      "dev": [
+        7000,
+        8499
+      ],
+      "test": [
+        8500,
+        9999
+      ],
+      "train": [
+        0,
+        6999
+      ]
+    },
+    "split_salt": "versematrix-source-restoration-v03-20261029",
+    "status": "source_restoration_not_verified_lushi_or_quality_gold",
+    "task": "four even-line two-character-prefix masks per unique poem"
+  },
+  "frozen_at_utc": "2026-10-29T01:54:31.631894+00:00",
+  "source_sha256": {
+    "data/audit_sources/tang_0.json": "4f88f429938082523cdc72a1612bd7a7c3e3f7a33f8192c61ae51340efc3c92d",
+    "data/corpus_v03/raw/poet.tang.1000.json": "6e703b8d8dcedbd6110f6d48d043665ca2131db2035a5bfcef5e59a19aeb6d75",
+    "data/corpus_v03/raw/poet.tang.2000.json": "ec28efa7e2ae9cdbbba09f0ed186e32ccae47a325ad1e5816b7ad56071c1665a",
+    "data/corpus_v03/raw/poet.tang.3000.json": "9e4ba2323752b6b9fbdba875cdbc6a26636fe0cabc85fd066370d4915952001f",
+    "data/corpus_v03/raw/poet.tang.4000.json": "b8a7946c879b9658a6c667a4c55f776fae7e5e00a17789ab06b274c1429afc66",
+    "data/corpus_v03/raw/poet.tang.5000.json": "a0306e6962cff01639ad9a00b042a201b8dec1f30fa5d768a7b112589887861e",
+    "data/corpus_v03/raw/poet.tang.6000.json": "982a21d2b15922b406911f1c825785054314c686da86b2155d7aebb362d22771",
+    "data/corpus_v03/raw/poet.tang.7000.json": "a6fb69d7b4343c904dc56ae5aae34facc2478d196b51c37ceba9d1e2f171b342",
+    "data/corpus_v03/raw/poet.tang.8000.json": "ac3848e95b02736168003863795de4474838c2d6a71a24ca2a4a280ea5177773",
+    "data/corpus_v03/raw/poet.tang.9000.json": "b99d6596e3a1fe1a661652383083f92d196b8baf4e461d087081d5e1e1b7a51f"
+  },
+  "status": "frozen_before_processing"
+}

@@ -1,0 +1,262 @@
+{
+  "version": "0.2.0",
+  "status": "exact_algorithm_verified_in_declared_scope",
+  "grammar_templates": 8,
+  "scorer_trained": false,
+  "human_evaluated": false,
+  "worked_examples": [
+    {
+      "title": "和晉陵陸丞早春遊望",
+      "status": "source_annotation_worked_example_not_blind_test",
+      "audit": {
+        "status": "outside_supported_profile",
+        "profile": "common_prefix",
+        "matches": [],
+        "nearest": {
+          "template_id": "L5-Z-R1",
+          "tone_edit_distance": 1,
+          "closest_supported_lines": [
+            "ZZZPP",
+            "PPZZP",
+            "PPPZZ",
+            "PZZPP",
+            "ZZPPZ",
+            "PPZZP",
+            "ZPPZZ",
+            "PZZPP"
+          ],
+          "differing_positions": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        "warning": "Outside this incomplete profile does NOT mean the poem is invalid; rhyme/meaning/antithesis are not certified.",
+        "literary_quality": "not_evaluated",
+        "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf"
+      }
+    },
+    {
+      "title": "曲江（一片花飛減卻春）",
+      "status": "source_annotation_worked_example_not_blind_test",
+      "audit": {
+        "status": "matches_supported_profile",
+        "profile": "common_prefix",
+        "matches": [
+          "L7-Z-R1"
+        ],
+        "nearest": {
+          "template_id": "L7-Z-R1",
+          "tone_edit_distance": 0,
+          "closest_supported_lines": [
+            "ZZPPZZP",
+            "PPZZZPP",
+            "ZPZZPPZ",
+            "ZZPPZZP",
+            "PZZPPZZ",
+            "ZPPZZPP",
+            "ZPZZPPZ",
+            "PZPPZZP"
+          ],
+          "differing_positions": []
+        },
+        "warning": "Outside this incomplete profile does NOT mean the poem is invalid; rhyme/meaning/antithesis are not certified.",
+        "literary_quality": "not_evaluated",
+        "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf"
+      }
+    }
+  ],
+  "dp_checks": [
+    {
+      "status": "optimal",
+      "path": [
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ]
+      ],
+      "score": -0.19415065882860721,
+      "factor_calls": 224,
+      "transitions": 224,
+      "peak_states": 16,
+      "full_combinations": 1024,
+      "scope": "exact_for_declared_radius_one_additive_objective_and_domains",
+      "length": 5,
+      "seed": 0,
+      "trained": false,
+      "direct_original_score": -0.19415065882860727,
+      "oracle_score": -0.19415065882860727,
+      "factorization_abs_error": 5.551115123125783e-17,
+      "optimality_abs_error": 0.0,
+      "dp_seconds": 0.005050490999565227,
+      "oracle_seconds": 0.14044311099996776,
+      "oracle_original_model_calls": 1024,
+      "call_units_warning": "local factor calls and whole-model calls are different units; do not divide as throughput"
+    },
+    {
+      "status": "optimal",
+      "path": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "score": -0.03551061042603888,
+      "factor_calls": 224,
+      "transitions": 224,
+      "peak_states": 16,
+      "full_combinations": 1024,
+      "scope": "exact_for_declared_radius_one_additive_objective_and_domains",
+      "length": 5,
+      "seed": 1,
+      "trained": false,
+      "direct_original_score": -0.03551061042603884,
+      "oracle_score": -0.03551061042603884,
+      "factorization_abs_error": 4.163336342344337e-17,
+      "optimality_abs_error": 0.0,
+      "dp_seconds": 0.006760392000160209,
+      "oracle_seconds": 0.11312207499986471,
+      "oracle_original_model_calls": 1024,
+      "call_units_warning": "local factor calls and whole-model calls are different units; do not divide as throughput"
+    },
+    {
+      "status": "optimal",
+      "path": [
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ]
+      ],
+      "score": -0.21314370753748088,
+      "factor_calls": 352,
+      "transitions": 352,
+      "peak_states": 16,
+      "full_combinations": 16384,
+      "scope": "exact_for_declared_radius_one_additive_objective_and_domains",
+      "length": 7,
+      "seed": 0,
+      "trained": false,
+      "direct_original_score": -0.21314370753748102,
+      "oracle_score": -0.21314370753748102,
+      "factorization_abs_error": 1.3877787807814457e-16,
+      "optimality_abs_error": 0.0,
+      "dp_seconds": 0.011808298000232753,
+      "oracle_seconds": 1.755777461999969,
+      "oracle_original_model_calls": 16384,
+      "call_units_warning": "local factor calls and whole-model calls are different units; do not divide as throughput"
+    },
+    {
+      "status": "optimal",
+      "path": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "score": -0.03987601201199466,
+      "factor_calls": 352,
+      "transitions": 352,
+      "peak_states": 16,
+      "full_combinations": 16384,
+      "scope": "exact_for_declared_radius_one_additive_objective_and_domains",
+      "length": 7,
+      "seed": 1,
+      "trained": false,
+      "direct_original_score": -0.03987601201199471,
+      "oracle_score": -0.03987601201199471,
+      "factorization_abs_error": 5.551115123125783e-17,
+      "optimality_abs_error": 0.0,
+      "dp_seconds": 0.008135009000397986,
+      "oracle_seconds": 1.5833071140000357,
+      "oracle_original_model_calls": 16384,
+      "call_units_warning": "local factor calls and whole-model calls are different units; do not divide as throughput"
+    }
+  ],
+  "limits": [
+    "Finite declared domains, additive radius-one factors and fixed positional token features only.",
+    "Arbitrary global semantic scores or unresolved global constraints invalidate this small DP state.",
+    "Global optimum is of the internal mathematical objective, not literary quality.",
+    "Common-prefix grammar is deliberately incomplete; unsupported verse is not declared invalid."
+  ]
+}

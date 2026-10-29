@@ -1,0 +1,62 @@
+{
+  "config": {
+    "architecture": {
+      "channels": 24,
+      "context_mode": "both",
+      "embedding_dim": 12,
+      "kernel_width": 3,
+      "norm_epsilon": 1e-06,
+      "representation_dim": 16,
+      "seed": 172905,
+      "temperature": 0.1
+    },
+    "batch_size": 32,
+    "candidate_vocabulary": "fixed train all-adjacent min-count-2, full softmax",
+    "dev_test_confirm_decoded": false,
+    "gradient_accumulation": 1,
+    "model_selection_performed": false,
+    "optimizer": {
+      "learning_rate": 0.003,
+      "max_grad_norm": 5.0,
+      "weight_decay": 0.0001
+    },
+    "optimizer_updates": 20,
+    "purpose": "engineering throughput only; not a formal training run or model selection",
+    "schedule_lengths": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "seed": 172905,
+    "split": "train"
+  },
+  "driver_sha256": "17b4c0aa65268f3b7b249b84f64af765916ae9508e82eee93d50861167bbced2",
+  "frozen_at_utc": "2026-10-29T08:33:08.723977+00:00",
+  "input_sha256": {
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc"
+  },
+  "source_sha256": {
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+    "src/wordconv_lab/matching.py": "9c0bd4ba7c6dc18a8ce12e41a371e4037df858eb6da1b950d46348cbcd853d23",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+    "src/wordconv_lab/retrieval.py": "e791fb648996ef431aeafa6cbe86933c905df509c5a4e2ae8d04c5751d7fb856"
+  }
+}

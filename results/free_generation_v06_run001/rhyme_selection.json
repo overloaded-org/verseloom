@@ -1,0 +1,454 @@
+{
+  "ranking": [
+    {
+      "PPZZP_endings": [
+        "仙",
+        "圓",
+        "天",
+        "年",
+        "弦",
+        "眠",
+        "筵",
+        "邊"
+      ],
+      "ZZZPP_endings": [
+        "仙",
+        "前",
+        "天",
+        "川",
+        "年",
+        "煙",
+        "田",
+        "邊"
+      ],
+      "feasible": true,
+      "frequency": 55,
+      "group": "pingshui:lower_level:01",
+      "minimum_type_ending_coverage": 8,
+      "union_ending_coverage": 12
+    },
+    {
+      "PPZZP_endings": [
+        "垂",
+        "墀",
+        "斯",
+        "枝",
+        "規",
+        "辭"
+      ],
+      "ZZZPP_endings": [
+        "儀",
+        "奇",
+        "時",
+        "枝",
+        "移",
+        "絲"
+      ],
+      "feasible": true,
+      "frequency": 43,
+      "group": "pingshui:upper_level:04",
+      "minimum_type_ending_coverage": 6,
+      "union_ending_coverage": 11
+    },
+    {
+      "PPZZP_endings": [
+        "人",
+        "新",
+        "春",
+        "津",
+        "賓",
+        "辰"
+      ],
+      "ZZZPP_endings": [
+        "人",
+        "嚬",
+        "塵",
+        "巾",
+        "新",
+        "春",
+        "津",
+        "神"
+      ],
+      "feasible": true,
+      "frequency": 74,
+      "group": "pingshui:upper_level:11",
+      "minimum_type_ending_coverage": 6,
+      "union_ending_coverage": 10
+    },
+    {
+      "PPZZP_endings": [
+        "微",
+        "扉",
+        "暉",
+        "歸",
+        "稀",
+        "飛"
+      ],
+      "ZZZPP_endings": [
+        "圍",
+        "微",
+        "歸",
+        "稀",
+        "輝",
+        "違",
+        "飛"
+      ],
+      "feasible": true,
+      "frequency": 69,
+      "group": "pingshui:upper_level:05",
+      "minimum_type_ending_coverage": 6,
+      "union_ending_coverage": 9
+    },
+    {
+      "PPZZP_endings": [
+        "成",
+        "明",
+        "清",
+        "營",
+        "驚"
+      ],
+      "ZZZPP_endings": [
+        "城",
+        "征",
+        "情",
+        "成",
+        "明",
+        "生",
+        "纓",
+        "聲",
+        "英",
+        "鳴"
+      ],
+      "feasible": true,
+      "frequency": 60,
+      "group": "pingshui:lower_level:08",
+      "minimum_type_ending_coverage": 5,
+      "union_ending_coverage": 13
+    },
+    {
+      "PPZZP_endings": [
+        "傷",
+        "光",
+        "央",
+        "妝",
+        "梁",
+        "郎",
+        "鄉",
+        "香",
+        "黃"
+      ],
+      "ZZZPP_endings": [
+        "倉",
+        "光",
+        "房",
+        "荒",
+        "香"
+      ],
+      "feasible": true,
+      "frequency": 39,
+      "group": "pingshui:lower_level:07",
+      "minimum_type_ending_coverage": 5,
+      "union_ending_coverage": 12
+    },
+    {
+      "PPZZP_endings": [
+        "宮",
+        "窮",
+        "終",
+        "翁",
+        "驄"
+      ],
+      "ZZZPP_endings": [
+        "叢",
+        "同",
+        "弓",
+        "東",
+        "風"
+      ],
+      "feasible": true,
+      "frequency": 31,
+      "group": "pingshui:upper_level:01",
+      "minimum_type_ending_coverage": 5,
+      "union_ending_coverage": 10
+    },
+    {
+      "PPZZP_endings": [
+        "幽",
+        "愁",
+        "樓",
+        "流",
+        "秋",
+        "舟",
+        "鷗"
+      ],
+      "ZZZPP_endings": [
+        "幽",
+        "浮",
+        "秋",
+        "舟"
+      ],
+      "feasible": true,
+      "frequency": 39,
+      "group": "pingshui:lower_level:11",
+      "minimum_type_ending_coverage": 4,
+      "union_ending_coverage": 8
+    },
+    {
+      "PPZZP_endings": [
+        "來",
+        "杯",
+        "臺",
+        "開"
+      ],
+      "ZZZPP_endings": [
+        "來",
+        "催",
+        "才",
+        "杯",
+        "枚",
+        "臺",
+        "開"
+      ],
+      "feasible": true,
+      "frequency": 66,
+      "group": "pingshui:upper_level:10",
+      "minimum_type_ending_coverage": 4,
+      "union_ending_coverage": 7
+    },
+    {
+      "PPZZP_endings": [
+        "多",
+        "河",
+        "羅"
+      ],
+      "ZZZPP_endings": [
+        "多",
+        "梭",
+        "河",
+        "蛾",
+        "跎",
+        "鵝"
+      ],
+      "feasible": true,
+      "frequency": 26,
+      "group": "pingshui:lower_level:05",
+      "minimum_type_ending_coverage": 3,
+      "union_ending_coverage": 7
+    },
+    {
+      "PPZZP_endings": [
+        "安",
+        "寒",
+        "歡",
+        "殘",
+        "闌"
+      ],
+      "ZZZPP_endings": [
+        "官",
+        "殘",
+        "端"
+      ],
+      "feasible": true,
+      "frequency": 23,
+      "group": "pingshui:upper_level:14",
+      "minimum_type_ending_coverage": 3,
+      "union_ending_coverage": 7
+    },
+    {
+      "PPZZP_endings": [
+        "斜",
+        "沙",
+        "華"
+      ],
+      "ZZZPP_endings": [
+        "家",
+        "沙",
+        "花",
+        "霞"
+      ],
+      "feasible": true,
+      "frequency": 24,
+      "group": "pingshui:lower_level:06",
+      "minimum_type_ending_coverage": 3,
+      "union_ending_coverage": 6
+    },
+    {
+      "PPZZP_endings": [
+        "恩",
+        "翻"
+      ],
+      "ZZZPP_endings": [
+        "昏",
+        "村",
+        "源",
+        "門"
+      ],
+      "feasible": false,
+      "frequency": 21,
+      "group": "pingshui:upper_level:13",
+      "minimum_type_ending_coverage": 2,
+      "union_ending_coverage": 6
+    },
+    {
+      "PPZZP_endings": [
+        "衾",
+        "襟",
+        "陰"
+      ],
+      "ZZZPP_endings": [
+        "心",
+        "金"
+      ],
+      "feasible": false,
+      "frequency": 24,
+      "group": "pingshui:lower_level:12",
+      "minimum_type_ending_coverage": 2,
+      "union_ending_coverage": 5
+    },
+    {
+      "PPZZP_endings": [
+        "閑",
+        "顏",
+        "鬟"
+      ],
+      "ZZZPP_endings": [
+        "斑",
+        "關"
+      ],
+      "feasible": false,
+      "frequency": 11,
+      "group": "pingshui:upper_level:15",
+      "minimum_type_ending_coverage": 2,
+      "union_ending_coverage": 5
+    },
+    {
+      "PPZZP_endings": [
+        "橋",
+        "遙",
+        "飄",
+        "驕"
+      ],
+      "ZZZPP_endings": [
+        "潮"
+      ],
+      "feasible": false,
+      "frequency": 12,
+      "group": "pingshui:lower_level:02",
+      "minimum_type_ending_coverage": 1,
+      "union_ending_coverage": 5
+    },
+    {
+      "PPZZP_endings": [
+        "陘"
+      ],
+      "ZZZPP_endings": [
+        "寧",
+        "螢",
+        "馨"
+      ],
+      "feasible": false,
+      "frequency": 10,
+      "group": "pingshui:lower_level:09",
+      "minimum_type_ending_coverage": 1,
+      "union_ending_coverage": 4
+    },
+    {
+      "PPZZP_endings": [
+        "君"
+      ],
+      "ZZZPP_endings": [
+        "雲"
+      ],
+      "feasible": false,
+      "frequency": 11,
+      "group": "pingshui:upper_level:12",
+      "minimum_type_ending_coverage": 1,
+      "union_ending_coverage": 2
+    },
+    {
+      "PPZZP_endings": [
+        "初"
+      ],
+      "ZZZPP_endings": [
+        "書"
+      ],
+      "feasible": false,
+      "frequency": 8,
+      "group": "pingshui:upper_level:06",
+      "minimum_type_ending_coverage": 1,
+      "union_ending_coverage": 2
+    },
+    {
+      "PPZZP_endings": [
+        "階"
+      ],
+      "ZZZPP_endings": [
+        "懷"
+      ],
+      "feasible": false,
+      "frequency": 6,
+      "group": "pingshui:upper_level:09",
+      "minimum_type_ending_coverage": 1,
+      "union_ending_coverage": 2
+    },
+    {
+      "PPZZP_endings": [
+        "濃"
+      ],
+      "ZZZPP_endings": [
+        "松"
+      ],
+      "feasible": false,
+      "frequency": 5,
+      "group": "pingshui:upper_level:02",
+      "minimum_type_ending_coverage": 1,
+      "union_ending_coverage": 2
+    },
+    {
+      "PPZZP_endings": [],
+      "ZZZPP_endings": [
+        "貪",
+        "酣"
+      ],
+      "feasible": false,
+      "frequency": 4,
+      "group": "pingshui:lower_level:13",
+      "minimum_type_ending_coverage": 0,
+      "union_ending_coverage": 2
+    },
+    {
+      "PPZZP_endings": [
+        "低"
+      ],
+      "ZZZPP_endings": [],
+      "feasible": false,
+      "frequency": 8,
+      "group": "pingshui:upper_level:08",
+      "minimum_type_ending_coverage": 0,
+      "union_ending_coverage": 1
+    },
+    {
+      "PPZZP_endings": [
+        "刀"
+      ],
+      "ZZZPP_endings": [],
+      "feasible": false,
+      "frequency": 2,
+      "group": "pingshui:lower_level:04",
+      "minimum_type_ending_coverage": 0,
+      "union_ending_coverage": 1
+    },
+    {
+      "PPZZP_endings": [],
+      "ZZZPP_endings": [
+        "衢"
+      ],
+      "feasible": false,
+      "frequency": 2,
+      "group": "pingshui:upper_level:07",
+      "minimum_type_ending_coverage": 0,
+      "union_ending_coverage": 1
+    }
+  ],
+  "selected": "pingshui:lower_level:01"
+}

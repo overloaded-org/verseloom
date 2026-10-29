@@ -1,0 +1,161 @@
+{
+  "config": {
+    "arms": [
+      {
+        "channels": 24,
+        "context_mode": "both",
+        "id": "full_w3",
+        "kernel_width": 3
+      },
+      {
+        "channels": 27,
+        "context_mode": "both",
+        "id": "full_w1",
+        "kernel_width": 1
+      },
+      {
+        "channels": 24,
+        "context_mode": "upper",
+        "id": "upper_w3",
+        "kernel_width": 3
+      },
+      {
+        "channels": 24,
+        "context_mode": "suffix",
+        "id": "suffix_w3",
+        "kernel_width": 3
+      }
+    ],
+    "data": {
+      "candidate_definition": "all_training_line_internal_adjacent_two_character_spans_count_at_least_two_separate_by_poem_length",
+      "candidate_normalization": "none_exact_source_code_points",
+      "evaluation_split": "dev",
+      "expected_candidates_by_length": {
+        "5": 10375,
+        "7": 1504
+      },
+      "expected_dev_poems": 547,
+      "expected_dev_tasks": 2188,
+      "expected_eligible_train_tasks": 5951,
+      "expected_train_poems": 2502,
+      "expected_train_tasks": 10008,
+      "old_test_or_confirmation_evaluation": false,
+      "skip_old_test_before_json_decode": true,
+      "training_split": "train"
+    },
+    "deployment_seed": 0,
+    "diagnostics": {
+      "applied_arm": "full_w3",
+      "applied_checkpoint": "primary_arm_shared_selected_checkpoint",
+      "gold_equality_between_donor_and_original_is_not_a_filter": true,
+      "mismatched_context": "within_each_length_sort_task_ids_by_fixed_salted_SHA256; first_positive_circular_offset_with_all_donor_families_and_VisibleQuery_hashes_different; replace_whole_visible_query_keep_original_target_and_W",
+      "permutation_salt": "versematrix-matching-v05-context-permutation-20261029",
+      "permutation_uses_targets": false,
+      "zero_context": "frozen_checkpoint_inference_mask_both; no_additional_training"
+    },
+    "evaluation": {
+      "all_dev_tasks_in_denominator": true,
+      "baselines": [
+        {
+          "alignment_weight": 0.25,
+          "boundary_weight": 0.25,
+          "id": "strong_statistical",
+          "pool": "wide"
+        },
+        {
+          "count": "training_all_line_internal_adjacent_pair_count",
+          "id": "all_position_frequency"
+        },
+        {
+          "count": "training_even_line_prefix_positive_count_including_zero_for_W_items",
+          "id": "prefix_positive_frequency"
+        }
+      ],
+      "batch_size": 64,
+      "checkpoint_selection": "one_shared_checkpoint_per_arm_maximizes_exact_primary_metric_across_all_three_seeds; earliest_update_wins_exact_ties",
+      "full_ranking_saved_as": "SHA256_of_little_endian_int32_complete_candidate_index_order; raw_top16_scores_and_target_rank_saved; full_order_recomputable_from_immutable_checkpoint_and_allowlisted_query",
+      "k": 16,
+      "oov_target_rank": null,
+      "primary_metric": "seed_mean_then_equal_family_mean_recall_at_16",
+      "score_mixing": false,
+      "target_buckets": [
+        "seen_prefix_positive",
+        "in_W_never_prefix_positive",
+        "outside_W"
+      ],
+      "tie_rule": "descending_exact_floating_score_then_source_text_lexicographic_order"
+    },
+    "model": {
+      "embedding_dim": 12,
+      "norm_epsilon": 1e-06,
+      "representation_dim": 16,
+      "temperature": 0.1
+    },
+    "primary_arm": "full_w3",
+    "resource_gate": {
+      "each_of_three_seed_gains_strictly_positive": true,
+      "formal_literary_quality_gate": "NOT_EVALUATED",
+      "primary_mean_gain_over_strong_baseline_at_least": 0.02,
+      "primary_mean_minus_mismatched_context_at_least": 0.01,
+      "scope": "development_resource_allocation_gate_not_confirmatory_evidence"
+    },
+    "schema": "versematrix.context-span-matching-config.v0.5",
+    "scope": "development_only_not_independent_confirmation_or_literary_quality",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "status": "frozen",
+    "task": "observed_even_line_initial_two_character_restoration",
+    "training": {
+      "batch_size": 32,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "checkpoint_updates": [
+        400,
+        800,
+        1200
+      ],
+      "epsilon": 1e-08,
+      "gradient_accumulation": 1,
+      "learning_rate": 0.003,
+      "max_grad_norm": 5.0,
+      "normalizer": "full_softmax_over_fixed_length_specific_W",
+      "optimizer": "Adam_decoupled_weight_decay",
+      "optimizer_updates": 1200,
+      "positive_task": "initial_two_characters_of_even_numbered_lines_only",
+      "schedule": "largest_remainder_allocation_of_update_lengths_proportional_to_eligible_tasks; seed_shuffled_length_schedule; independent_seeded_per_length_shuffled_cycles_fill_every_batch_to_32; identical_schedule_for_all_four_arms_of_a_seed",
+      "schedule_seed_salt": 2026102905,
+      "training_oov_policy": "only_targets_in_W_are_eligible_for_gradient_updates",
+      "weight_decay": 0.0001
+    },
+    "version": "0.5.0"
+  },
+  "config_sha256": "16c4ba6a3cdc50ab62f98f93916c8ff6295076139e6853c18bc5a53af5062fb2",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "external_preregistration": false,
+  "frozen_at_utc": "2026-10-29T08:34:30.940733+00:00",
+  "input_sha256": {
+    "data/corpus_v03/build_manifest.json": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301",
+    "data/corpus_v03/candidate_spans.json": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6",
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc",
+    "results/dev_candidate_diagnostic_v03/candidate_counts.json": "f0715baa8faae31bb2303886d151dc95c1133bd398bac7876e07a96051bb9d89"
+  },
+  "schema": "versematrix.matching-freeze.v0.5",
+  "source_sha256": {
+    "configs/matching_v0.5.json": "eca15450f52c8abafbc0716fdd50097e2e370e22f85717d4f82937078b57edf5",
+    "scripts/run_matching_v05.py": "1308cf6899fefc075841e7876d87397153abba3c00591ff5c032ff927bb518ac",
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+    "src/wordconv_lab/matching.py": "9c0bd4ba7c6dc18a8ce12e41a371e4037df858eb6da1b950d46348cbcd853d23",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+    "src/wordconv_lab/retrieval.py": "e791fb648996ef431aeafa6cbe86933c905df509c5a4e2ae8d04c5751d7fb856"
+  },
+  "status": "frozen_before_formal_training_or_dev_model_evaluation"
+}

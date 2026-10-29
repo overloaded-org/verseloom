@@ -1,0 +1,19 @@
+{
+  "frozen_at_utc": "2026-10-29T03:18:04.047501+00:00",
+  "selected_method": {
+    "id": "wide_a1_b1",
+    "pool": "wide",
+    "alignment_weight": 0.25,
+    "boundary_weight": 0.25
+  },
+  "selection_metric": "exact_rational_equal_family_all_dev_recall_at_16",
+  "selection_tie_rule": "first_grid_entry",
+  "freeze_sha256": "208535a904822f7dd7fd8dd6cc5e6ec6374d3919ca06fefab8c4d5a81ed20ca4",
+  "candidate_resources_sha256": "9dddec7077e807536a97712aed31560a062f13fac29976ae78e79a36ddbcbb4c",
+  "association_resources_sha256": "e597f15443343213d8840fbafa4d3a97d9f24906e64b867f4592bbabdaba1994",
+  "training_statistics_summary_sha256": "ed67d605edef983e87cf04b71a21aa57191ecf86fb870c285381d6f3c124e7a3",
+  "dev_report_sha256": "5247e005873603c92a9b11e8596912b62431df3c9abf6efca21bd7894f6bbe5e",
+  "dev_predictions_sha256": "d080a25cf1c6ce1a83378c29b2b0df81679bcef13e8ab298990515d0da140bc4",
+  "confirmation_tasks_sha256": "c84b5addf7b1e033fc126e4e7517cacf874a64bfc1d0672c729cd85aa4dcaa69",
+  "confirmation_evaluated": false
+}

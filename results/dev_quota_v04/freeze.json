@@ -1,0 +1,156 @@
+{
+  "config": {
+    "checks": [
+      "disjoint N and W-minus-N",
+      "exactly 16 distinct complete source spans per task/scheme",
+      "requested bucket quotas exactly satisfied",
+      "q16 pool and hit exactly replay v0.4 dev narrow baseline",
+      "all candidate origins in train",
+      "all ten predeclared schemes reported"
+    ],
+    "confirmation_evaluation": false,
+    "confirmation_files_opened": false,
+    "descriptive_selection": "largest exact rational equal-family all-task recall@16; first scheme in grid order on ties",
+    "evaluate_split": "dev",
+    "expected_dev_poems": 547,
+    "expected_dev_tasks": 2188,
+    "expected_train_poems": 2502,
+    "fit_split": "train",
+    "formal_promotion_changed": false,
+    "grid_in_tie_order": [
+      {
+        "id": "q00_ngram",
+        "new_quota": 16,
+        "new_ranker": {
+          "alignment_weight": 0.0,
+          "boundary_weight": 0.0,
+          "id": "ngram"
+        },
+        "old_quota": 0
+      },
+      {
+        "id": "q00_a025_b025",
+        "new_quota": 16,
+        "new_ranker": {
+          "alignment_weight": 0.25,
+          "boundary_weight": 0.25,
+          "id": "a025_b025"
+        },
+        "old_quota": 0
+      },
+      {
+        "id": "q04_ngram",
+        "new_quota": 12,
+        "new_ranker": {
+          "alignment_weight": 0.0,
+          "boundary_weight": 0.0,
+          "id": "ngram"
+        },
+        "old_quota": 4
+      },
+      {
+        "id": "q04_a025_b025",
+        "new_quota": 12,
+        "new_ranker": {
+          "alignment_weight": 0.25,
+          "boundary_weight": 0.25,
+          "id": "a025_b025"
+        },
+        "old_quota": 4
+      },
+      {
+        "id": "q08_ngram",
+        "new_quota": 8,
+        "new_ranker": {
+          "alignment_weight": 0.0,
+          "boundary_weight": 0.0,
+          "id": "ngram"
+        },
+        "old_quota": 8
+      },
+      {
+        "id": "q08_a025_b025",
+        "new_quota": 8,
+        "new_ranker": {
+          "alignment_weight": 0.25,
+          "boundary_weight": 0.25,
+          "id": "a025_b025"
+        },
+        "old_quota": 8
+      },
+      {
+        "id": "q12_ngram",
+        "new_quota": 4,
+        "new_ranker": {
+          "alignment_weight": 0.0,
+          "boundary_weight": 0.0,
+          "id": "ngram"
+        },
+        "old_quota": 12
+      },
+      {
+        "id": "q12_a025_b025",
+        "new_quota": 4,
+        "new_ranker": {
+          "alignment_weight": 0.25,
+          "boundary_weight": 0.25,
+          "id": "a025_b025"
+        },
+        "old_quota": 12
+      },
+      {
+        "id": "q16_ngram",
+        "new_quota": 0,
+        "new_ranker": {
+          "alignment_weight": 0.0,
+          "boundary_weight": 0.0,
+          "id": "ngram"
+        },
+        "old_quota": 16
+      },
+      {
+        "id": "q16_a025_b025",
+        "new_quota": 0,
+        "new_ranker": {
+          "alignment_weight": 0.25,
+          "boundary_weight": 0.25,
+          "id": "a025_b025"
+        },
+        "old_quota": 16
+      }
+    ],
+    "insufficient_bucket_policy": "fail; no adaptive quota backfill",
+    "limits": "Development exploration only; no independent improvement claim, literary-quality claim, or equal-computation claim.",
+    "new_ranking": "unchanged PhraseRetriever, fixed two choices; no new weight tuning",
+    "new_set": "W minus N, disjoint exact source strings within each poem length",
+    "normalization": "none; exact source code points",
+    "old_ranking": "unchanged original BidirNGram, score descending and source-text lexical tie",
+    "old_set_N": "original even-line initial two-character spans, count >=2 in train",
+    "old_test_records_decoded": false,
+    "oov_policy": "retain every dev task; absent target is a zero",
+    "output_k": 16,
+    "pool": "take q from N and 16-q from W minus N, concatenate; this is a set-recall pool, not a joint top1 ranking",
+    "previous_dev_use": "This dev set was already used in v0.3 and v0.4 development and selection.",
+    "production_default_changed": false,
+    "schema": "versematrix.dev-quota-diagnostic.v0.4",
+    "stage": "post_formal_experiment_exploratory_dev_only",
+    "target_injection": false,
+    "wide_set_W": "all eight rows, within-line adjacent two-character spans, count >=2 in train"
+  },
+  "frozen_at_utc": "2026-10-29T03:24:35.611781+00:00",
+  "input_sha256": {
+    "data/corpus_v03/build_manifest.json": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301",
+    "data/corpus_v03/candidate_spans.json": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6",
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc",
+    "results/dev_candidate_diagnostic_v03/candidate_counts.json": "f0715baa8faae31bb2303886d151dc95c1133bd398bac7876e07a96051bb9d89",
+    "results/retrieval_v04/dev_predictions.jsonl": "d080a25cf1c6ce1a83378c29b2b0df81679bcef13e8ab298990515d0da140bc4"
+  },
+  "source_sha256": {
+    "scripts/run_dev_quota_v04.py": "789b29dd3745716eb223a90bc1cc4b1fca17d32e7b127b8b1bedf3e7b0474418",
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+    "src/wordconv_lab/retrieval.py": "e791fb648996ef431aeafa6cbe86933c905df509c5a4e2ae8d04c5751d7fb856"
+  },
+  "status": "frozen_before_any_quota_ranking_or_dev_hit_calculation"
+}

@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "batch_single_full_rankings": "exact ordered index equality with lexical ties",
+    "batch_single_scores": "max_abs <= 1e-10 and np.allclose(rtol=1e-12,atol=1e-10)",
+    "immutable_selected_file_hash_before_after": "exact equality",
+    "public_matrix_factor_reconstruction": "exact array equality",
+    "rank_api_top16": "exact ordered candidate equality",
+    "roundtrip_batch_scores_and_full_rankings": "exact equality",
+    "roundtrip_parameters_optimizer_config": "exact equality"
+  },
+  "created_at_utc": "2026-10-29T08:40:45.269265+00:00",
+  "formal_experiment_directory": "results/matching_v05",
+  "independent_math_oracle": "separate reviewer; this script audits artifact/API algebra and deployment consistency only",
+  "input_sha256": {
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc",
+    "results/matching_v05/candidate_resources.json": "d1ab814edc12f8e244be10eb62a2989209c6aaf4df8a87f6e3afc261108dc967",
+    "results/matching_v05/freeze.json": "7902197f93d8376c97dfe72d90d61285494dbdb3c91f2ff621847c2bb29aec2a"
+  },
+  "models": "all four formal arms times all three seeds, references from selection_frozen.json",
+  "sampling": {
+    "lengths": [
+      5,
+      7
+    ],
+    "ordering": "SHA256(salt + colon + task_id), then task_id; first eight per length",
+    "per_length": 8,
+    "salt": "versematrix-matching-v05-engineering-audit-20261029",
+    "split": "old_dev",
+    "targets_retained_or_used": false
+  },
+  "schema": "versematrix.matching-artifact-audit-plan.v0.5",
+  "selected_metric_reports_opened": false,
+  "source_sha256": {
+    "scripts/audit_matching_numeric_v05.py": "c2a23ae9249980c05a8ad15f57a0396da42cc14f9a43c1e4935a66692edbcedb",
+    "src/wordconv_lab/matching.py": "9c0bd4ba7c6dc18a8ce12e41a371e4037df858eb6da1b950d46348cbcd853d23",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14"
+  },
+  "stage": "separate_engineering_audit_not_formal_experiment_or_model_selection",
+  "test_or_confirmation_files_opened": false,
+  "training_updates_performed": 0
+}

@@ -1,0 +1,7499 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "title": "平水韻",
+    "source_url": "https://zh.wikisource.org/w/index.php?title=平水韻&oldid=8264804",
+    "revision_id": 8264804,
+    "revision_timestamp_utc": "2026-08-12T08:23:22Z",
+    "mediawiki_content_sha1": "9bd6b11f51375912f8751120936c9184ad87cb7d",
+    "wikitext_sha256": "c0003fa238f6cb2c767f7747fae33eecde8c06da3eb661ab9d48bbff655857d9",
+    "wikitext_file": "pingshui_8264804.wikitext",
+    "printed_edition": null,
+    "printed_edition_note": "The source Header.from field is empty; no print exemplar is identified."
+  },
+  "policy": {
+    "membership_status": "source_candidate_needs_context",
+    "contextual_gold": false,
+    "unicode_policy": "exact source code points; no normalization, traditional/simplified conversion, or alias union",
+    "main_index": "main character lines only; same-group repeats deduplicated in the index",
+    "supplement_policy": "【詞】 and 【辭】 stored separately and disabled by default; origins unidentified",
+    "editorial_policy": "source defects retained and flagged; no correction overlay applied",
+    "lookup_absence": "unknown in this reference, not proof that the character or reading is impossible",
+    "poem_annotation": "select contextual readings separately and preserve unresolved alternatives"
+  },
+  "counts": {
+    "groups": 106,
+    "groups_by_section": {
+      "上平聲": 15,
+      "下平聲": 15,
+      "上聲": 29,
+      "去聲": 30,
+      "入聲": 17
+    },
+    "main_character_occurrences": 8985,
+    "main_unique_character_group_pairs": 8976,
+    "main_unique_characters": 7663,
+    "within_group_duplicate_excess_occurrences": 9,
+    "groups_with_within_group_duplicates": 8,
+    "characters_in_multiple_groups": 1183,
+    "characters_in_both_level_and_oblique_groups": 573,
+    "supplemental_lines": 111,
+    "supplemental_lines_by_marker": {
+      "詞": 105,
+      "辭": 6
+    },
+    "supplemental_unique_character_group_pairs": 1694,
+    "supplemental_pairs_not_in_main": 1672,
+    "supplemental_characters_not_in_main": 887,
+    "main_plus_supplement_unique_characters_diagnostic_only": 8550,
+    "editorial_issues_flagged": 5,
+    "editorial_corrections_applied": 0
+  },
+  "group_validation": {
+    "expected_total": 106,
+    "expected_section_counts": {
+      "上平聲": 15,
+      "下平聲": 15,
+      "上聲": 29,
+      "去聲": 30,
+      "入聲": 17
+    },
+    "actual_section_counts": {
+      "上平聲": 15,
+      "下平聲": 15,
+      "上聲": 29,
+      "去聲": 30,
+      "入聲": 17
+    },
+    "missing_groups": [],
+    "duplicate_group_ids": [],
+    "out_of_order_group_ids": [],
+    "head_character_absent_from_own_main": [
+      "pingshui:lower_level:01"
+    ],
+    "interpretation": "All 106 structural groups and frozen-source names parse correctly. This does not establish completeness or accuracy of their contents."
+  },
+  "within_group_duplicates": [
+    {
+      "group_id": "pingshui:upper_level:07",
+      "label": "上平聲七虞",
+      "duplicates": [
+        {
+          "character": "瑜",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:lower_level:11",
+      "label": "下平聲十一尤",
+      "duplicates": [
+        {
+          "character": "鵂",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:rising:04",
+      "label": "上聲四紙",
+      "duplicates": [
+        {
+          "character": "痔",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:departing:04",
+      "label": "去聲四寘",
+      "duplicates": [
+        {
+          "character": "施",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:departing:28",
+      "label": "去聲二十八勘",
+      "duplicates": [
+        {
+          "character": "瞰",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:entering:06",
+      "label": "入聲六月",
+      "duplicates": [
+        {
+          "character": "兀",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:entering:09",
+      "label": "入聲九屑",
+      "duplicates": [
+        {
+          "character": "洌",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "group_id": "pingshui:entering:10",
+      "label": "入聲十藥",
+      "duplicates": [
+        {
+          "character": "鑿",
+          "occurrences": 2
+        },
+        {
+          "character": "澤",
+          "occurrences": 2
+        }
+      ]
+    }
+  ],
+  "cross_group_memberships": {
+    "三": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "上": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "下": [
+      "pingshui:rising:21",
+      "pingshui:departing:22"
+    ],
+    "不": [
+      "pingshui:lower_level:11",
+      "pingshui:entering:05"
+    ],
+    "且": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:21"
+    ],
+    "中": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "乘": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "乾": [
+      "pingshui:upper_level:14",
+      "pingshui:lower_level:01"
+    ],
+    "了": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:17"
+    ],
+    "予": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "些": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:21"
+    ],
+    "亢": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "亹": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:05"
+    ],
+    "仆": [
+      "pingshui:departing:07",
+      "pingshui:departing:26"
+    ],
+    "仔": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:11"
+    ],
+    "仗": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "令": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "仰": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "任": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "企": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "伏": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "佃": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "作": [
+      "pingshui:departing:07",
+      "pingshui:departing:21",
+      "pingshui:entering:10"
+    ],
+    "佳": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:09"
+    ],
+    "併": [
+      "pingshui:rising:23",
+      "pingshui:departing:24"
+    ],
+    "佻": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "佼": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "使": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "侃": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "侐": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "侗": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "供": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "侲": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "便": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "倒": [
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "借": [
+      "pingshui:departing:22",
+      "pingshui:entering:11"
+    ],
+    "倩": [
+      "pingshui:departing:17",
+      "pingshui:departing:24"
+    ],
+    "倭": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:05"
+    ],
+    "假": [
+      "pingshui:rising:21",
+      "pingshui:departing:22"
+    ],
+    "偈": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "偵": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "傀": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:04"
+    ],
+    "傍": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "傳": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "僂": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:07",
+      "pingshui:departing:26"
+    ],
+    "僄": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "僕": [
+      "pingshui:entering:01",
+      "pingshui:entering:02"
+    ],
+    "僚": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "儐": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "儗": [
+      "pingshui:rising:04",
+      "pingshui:departing:04",
+      "pingshui:departing:11"
+    ],
+    "償": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "儳": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "儺": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "儻": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "允": [
+      "pingshui:rising:11",
+      "pingshui:departing:12"
+    ],
+    "兒": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08",
+      "pingshui:entering:03"
+    ],
+    "兩": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "共": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "其": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "兼": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "冒": [
+      "pingshui:departing:20",
+      "pingshui:entering:13"
+    ],
+    "冠": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "冢": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:02"
+    ],
+    "凝": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "凸": [
+      "pingshui:entering:06",
+      "pingshui:entering:09"
+    ],
+    "出": [
+      "pingshui:departing:04",
+      "pingshui:entering:04"
+    ],
+    "函": [
+      "pingshui:lower_level:13",
+      "pingshui:lower_level:15"
+    ],
+    "分": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:13"
+    ],
+    "切": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "刖": [
+      "pingshui:entering:06",
+      "pingshui:entering:08"
+    ],
+    "剌": [
+      "pingshui:entering:07",
+      "pingshui:entering:11"
+    ],
+    "剖": [
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "剞": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "剟": [
+      "pingshui:entering:07",
+      "pingshui:entering:09"
+    ],
+    "副": [
+      "pingshui:departing:26",
+      "pingshui:entering:01",
+      "pingshui:entering:13"
+    ],
+    "創": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "剸": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "剽": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "劍": [
+      "pingshui:departing:29",
+      "pingshui:departing:30"
+    ],
+    "劑": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:08"
+    ],
+    "劘": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:05"
+    ],
+    "劭": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "劾": [
+      "pingshui:departing:06",
+      "pingshui:departing:11",
+      "pingshui:entering:13"
+    ],
+    "勝": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "勞": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "匐": [
+      "pingshui:entering:01",
+      "pingshui:entering:13"
+    ],
+    "北": [
+      "pingshui:departing:11",
+      "pingshui:entering:08",
+      "pingshui:entering:13"
+    ],
+    "匜": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "區": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "卉": [
+      "pingshui:rising:05",
+      "pingshui:departing:05"
+    ],
+    "卒": [
+      "pingshui:entering:04",
+      "pingshui:entering:06"
+    ],
+    "占": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "卣": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "卵": [
+      "pingshui:rising:14",
+      "pingshui:rising:20"
+    ],
+    "卷": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "厚": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "厝": [
+      "pingshui:departing:07",
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "厥": [
+      "pingshui:entering:05",
+      "pingshui:entering:06"
+    ],
+    "厭": [
+      "pingshui:departing:29",
+      "pingshui:entering:16"
+    ],
+    "去": [
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "參": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "反": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "取": [
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "叟": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "句": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11",
+      "pingshui:departing:07",
+      "pingshui:departing:26"
+    ],
+    "台": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:10"
+    ],
+    "右": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "司": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "后": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "吐": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "吟": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "否": [
+      "pingshui:rising:04",
+      "pingshui:rising:25"
+    ],
+    "吭": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "吮": [
+      "pingshui:rising:11",
+      "pingshui:rising:16"
+    ],
+    "吹": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "吼": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "吾": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:06"
+    ],
+    "告": [
+      "pingshui:departing:20",
+      "pingshui:entering:02"
+    ],
+    "呿": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "咀": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "咄": [
+      "pingshui:entering:06",
+      "pingshui:entering:07"
+    ],
+    "和": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "咎": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:25"
+    ],
+    "咥": [
+      "pingshui:departing:04",
+      "pingshui:entering:04",
+      "pingshui:entering:09"
+    ],
+    "咮": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07",
+      "pingshui:departing:26"
+    ],
+    "咺": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "咻": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:07"
+    ],
+    "咽": [
+      "pingshui:lower_level:01",
+      "pingshui:entering:09"
+    ],
+    "哆": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:04",
+      "pingshui:rising:20",
+      "pingshui:rising:21",
+      "pingshui:departing:04"
+    ],
+    "哇": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "員": [
+      "pingshui:upper_level:12",
+      "pingshui:lower_level:01",
+      "pingshui:departing:13"
+    ],
+    "哨": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "唈": [
+      "pingshui:entering:14",
+      "pingshui:entering:15"
+    ],
+    "唧": [
+      "pingshui:entering:04",
+      "pingshui:entering:13"
+    ],
+    "售": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "啁": [
+      "pingshui:lower_level:03",
+      "pingshui:lower_level:11"
+    ],
+    "啞": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:21",
+      "pingshui:entering:11"
+    ],
+    "喁": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:07"
+    ],
+    "善": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "喊": [
+      "pingshui:rising:27",
+      "pingshui:rising:29"
+    ],
+    "喋": [
+      "pingshui:entering:16",
+      "pingshui:entering:17"
+    ],
+    "喑": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "喝": [
+      "pingshui:departing:10",
+      "pingshui:entering:07"
+    ],
+    "喤": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08"
+    ],
+    "喪": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "單": [
+      "pingshui:upper_level:14",
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "嗃": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19",
+      "pingshui:entering:10"
+    ],
+    "嗺": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "嗾": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "嘔": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "嘹": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "噓": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "噞": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "噤": [
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "噫": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:10"
+    ],
+    "噴": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "嚴": [
+      "pingshui:lower_level:14",
+      "pingshui:lower_level:15"
+    ],
+    "囂": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:04"
+    ],
+    "回": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "囷": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "囿": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "圃": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "圈": [
+      "pingshui:rising:13",
+      "pingshui:departing:14"
+    ],
+    "在": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "圮": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "坋": [
+      "pingshui:rising:12",
+      "pingshui:departing:13"
+    ],
+    "坐": [
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "坷": [
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "坻": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "垝": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "垠": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:13"
+    ],
+    "埴": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "培": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:25"
+    ],
+    "埽": [
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "堁": [
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "堋": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "堨": [
+      "pingshui:entering:06",
+      "pingshui:entering:07"
+    ],
+    "堰": [
+      "pingshui:rising:13",
+      "pingshui:departing:14",
+      "pingshui:departing:17"
+    ],
+    "堲": [
+      "pingshui:entering:04",
+      "pingshui:entering:13"
+    ],
+    "塈": [
+      "pingshui:departing:04",
+      "pingshui:departing:05"
+    ],
+    "塗": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:06"
+    ],
+    "塞": [
+      "pingshui:departing:11",
+      "pingshui:entering:13"
+    ],
+    "填": [
+      "pingshui:upper_level:11",
+      "pingshui:lower_level:01",
+      "pingshui:departing:12",
+      "pingshui:departing:17"
+    ],
+    "墐": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "墮": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:20"
+    ],
+    "墳": [
+      "pingshui:upper_level:12",
+      "pingshui:rising:12"
+    ],
+    "壅": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02",
+      "pingshui:departing:02"
+    ],
+    "壘": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:04"
+    ],
+    "壚": [
+      "pingshui:upper_level:06",
+      "pingshui:upper_level:07"
+    ],
+    "壝": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "壽": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "夏": [
+      "pingshui:rising:21",
+      "pingshui:departing:22"
+    ],
+    "夢": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "夥": [
+      "pingshui:rising:09",
+      "pingshui:rising:20"
+    ],
+    "大": [
+      "pingshui:departing:09",
+      "pingshui:departing:21"
+    ],
+    "夭": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:rising:19"
+    ],
+    "奈": [
+      "pingshui:departing:09",
+      "pingshui:departing:21"
+    ],
+    "契": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "女": [
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "奼": [
+      "pingshui:rising:21",
+      "pingshui:departing:22"
+    ],
+    "好": [
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "如": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "妊": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "妨": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "妻": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "姁": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "始": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "委": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "姣": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "姪": [
+      "pingshui:entering:04",
+      "pingshui:entering:09"
+    ],
+    "姺": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:16"
+    ],
+    "姼": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "娃": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "娉": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:24"
+    ],
+    "娑": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "娗": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "娙": [
+      "pingshui:lower_level:08",
+      "pingshui:lower_level:09"
+    ],
+    "娠": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "娣": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "婁": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "媌": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "媞": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "媧": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "嫇": [
+      "pingshui:lower_level:08",
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "嫋": [
+      "pingshui:rising:17",
+      "pingshui:entering:10"
+    ],
+    "嬈": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "嬌": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "孌": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "孛": [
+      "pingshui:departing:11",
+      "pingshui:entering:06"
+    ],
+    "孱": [
+      "pingshui:upper_level:15",
+      "pingshui:lower_level:01"
+    ],
+    "宄": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:04"
+    ],
+    "守": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "宛": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "宦": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:16"
+    ],
+    "宴": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "宿": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "寅": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:11"
+    ],
+    "封": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "射": [
+      "pingshui:departing:22",
+      "pingshui:entering:11"
+    ],
+    "將": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "尉": [
+      "pingshui:departing:05",
+      "pingshui:entering:05"
+    ],
+    "少": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "就": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "尼": [
+      "pingshui:upper_level:04",
+      "pingshui:entering:04"
+    ],
+    "居": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:06"
+    ],
+    "屏": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:23"
+    ],
+    "屠": [
+      "pingshui:upper_level:06",
+      "pingshui:upper_level:07"
+    ],
+    "屣": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "屬": [
+      "pingshui:departing:07",
+      "pingshui:entering:02"
+    ],
+    "屯": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:13"
+    ],
+    "峨": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "崒": [
+      "pingshui:entering:04",
+      "pingshui:entering:06"
+    ],
+    "嵌": [
+      "pingshui:lower_level:15",
+      "pingshui:rising:27"
+    ],
+    "嵕": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:03"
+    ],
+    "嵬": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "嵯": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:05"
+    ],
+    "嵷": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "嶁": [
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "嶙": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "嶠": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "嶭": [
+      "pingshui:entering:07",
+      "pingshui:entering:09"
+    ],
+    "嶲": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:04"
+    ],
+    "嶷": [
+      "pingshui:upper_level:04",
+      "pingshui:entering:13"
+    ],
+    "巉": [
+      "pingshui:lower_level:15",
+      "pingshui:rising:29"
+    ],
+    "巋": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "巘": [
+      "pingshui:rising:13",
+      "pingshui:rising:16"
+    ],
+    "左": [
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "差": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "帆": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "帑": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:22"
+    ],
+    "師": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "幅": [
+      "pingshui:entering:01",
+      "pingshui:entering:13"
+    ],
+    "幢": [
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "幨": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "幪": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01",
+      "pingshui:departing:01"
+    ],
+    "平": [
+      "pingshui:lower_level:01",
+      "pingshui:lower_level:08"
+    ],
+    "并": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "幾": [
+      "pingshui:upper_level:05",
+      "pingshui:rising:05",
+      "pingshui:departing:04"
+    ],
+    "底": [
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "度": [
+      "pingshui:departing:07",
+      "pingshui:entering:10"
+    ],
+    "庭": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "庮": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "庱": [
+      "pingshui:lower_level:10",
+      "pingshui:rising:24"
+    ],
+    "庳": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "廌": [
+      "pingshui:rising:04",
+      "pingshui:rising:09"
+    ],
+    "廣": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "弁": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:17"
+    ],
+    "弔": [
+      "pingshui:departing:18",
+      "pingshui:entering:12"
+    ],
+    "引": [
+      "pingshui:rising:11",
+      "pingshui:departing:12"
+    ],
+    "弟": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "弮": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "張": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "彈": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "彗": [
+      "pingshui:departing:04",
+      "pingshui:departing:08"
+    ],
+    "彭": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08"
+    ],
+    "後": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "從": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "徠": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "復": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "徯": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "徵": [
+      "pingshui:lower_level:10",
+      "pingshui:rising:04"
+    ],
+    "德": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "徼": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "忘": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "忝": [
+      "pingshui:rising:28",
+      "pingshui:departing:29"
+    ],
+    "忿": [
+      "pingshui:rising:12",
+      "pingshui:departing:13"
+    ],
+    "怏": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "怒": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "思": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "怨": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "怮": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11"
+    ],
+    "怲": [
+      "pingshui:rising:23",
+      "pingshui:departing:24"
+    ],
+    "恟": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "恥": [
+      "pingshui:rising:04",
+      "pingshui:entering:08"
+    ],
+    "恧": [
+      "pingshui:entering:01",
+      "pingshui:entering:13"
+    ],
+    "恫": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "悍": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "悔": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "悖": [
+      "pingshui:departing:11",
+      "pingshui:entering:06"
+    ],
+    "悝": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:04"
+    ],
+    "患": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "悹": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "悾": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:03"
+    ],
+    "惡": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07",
+      "pingshui:entering:10"
+    ],
+    "惰": [
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "惷": [
+      "pingshui:rising:11",
+      "pingshui:departing:02",
+      "pingshui:departing:03"
+    ],
+    "意": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "愒": [
+      "pingshui:departing:08",
+      "pingshui:departing:09"
+    ],
+    "愾": [
+      "pingshui:departing:05",
+      "pingshui:departing:11"
+    ],
+    "慓": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "慶": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:24"
+    ],
+    "慺": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "憃": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03"
+    ],
+    "憧": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:03"
+    ],
+    "憨": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "憮": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "憺": [
+      "pingshui:rising:27",
+      "pingshui:departing:28"
+    ],
+    "應": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "懠": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "懵": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:02",
+      "pingshui:rising:01"
+    ],
+    "戍": [
+      "pingshui:departing:07",
+      "pingshui:entering:04"
+    ],
+    "戲": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "扁": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "扇": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "扣": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "批": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:09"
+    ],
+    "折": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:09"
+    ],
+    "抵": [
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "拔": [
+      "pingshui:departing:11",
+      "pingshui:entering:07",
+      "pingshui:entering:08"
+    ],
+    "拗": [
+      "pingshui:rising:18",
+      "pingshui:departing:19"
+    ],
+    "拚": [
+      "pingshui:departing:13",
+      "pingshui:departing:17"
+    ],
+    "拮": [
+      "pingshui:entering:04",
+      "pingshui:entering:09"
+    ],
+    "挑": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:04",
+      "pingshui:rising:17"
+    ],
+    "振": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "捄": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "捩": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "捼": [
+      "pingshui:upper_level:10",
+      "pingshui:lower_level:05"
+    ],
+    "掄": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:13"
+    ],
+    "掇": [
+      "pingshui:entering:07",
+      "pingshui:entering:09"
+    ],
+    "授": [
+      "pingshui:departing:17",
+      "pingshui:departing:26"
+    ],
+    "掉": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "掊": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:25"
+    ],
+    "掎": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "掘": [
+      "pingshui:entering:05",
+      "pingshui:entering:06"
+    ],
+    "掠": [
+      "pingshui:departing:23",
+      "pingshui:entering:10"
+    ],
+    "掣": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "推": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:10"
+    ],
+    "掫": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "揀": [
+      "pingshui:rising:15",
+      "pingshui:departing:17"
+    ],
+    "提": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "揣": [
+      "pingshui:rising:04",
+      "pingshui:rising:20"
+    ],
+    "揭": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "搒": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:23"
+    ],
+    "搖": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "搶": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "摎": [
+      "pingshui:lower_level:03",
+      "pingshui:lower_level:11"
+    ],
+    "摘": [
+      "pingshui:entering:11",
+      "pingshui:entering:12"
+    ],
+    "摻": [
+      "pingshui:lower_level:04",
+      "pingshui:lower_level:15",
+      "pingshui:rising:29"
+    ],
+    "摽": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "撓": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:18"
+    ],
+    "撞": [
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "撰": [
+      "pingshui:rising:15",
+      "pingshui:rising:16"
+    ],
+    "操": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "擐": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "擔": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "擖": [
+      "pingshui:entering:08",
+      "pingshui:entering:17"
+    ],
+    "擠": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "攘": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "攤": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "收": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "放": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "教": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "散": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "敦": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14",
+      "pingshui:departing:11",
+      "pingshui:departing:14"
+    ],
+    "敲": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "數": [
+      "pingshui:rising:07",
+      "pingshui:departing:07",
+      "pingshui:entering:03"
+    ],
+    "斁": [
+      "pingshui:departing:07",
+      "pingshui:entering:11"
+    ],
+    "料": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "斤": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:13"
+    ],
+    "斮": [
+      "pingshui:entering:03",
+      "pingshui:entering:10"
+    ],
+    "斷": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "於": [
+      "pingshui:upper_level:06",
+      "pingshui:upper_level:07"
+    ],
+    "施": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "旄": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "旋": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "易": [
+      "pingshui:departing:04",
+      "pingshui:entering:11"
+    ],
+    "昔": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "昧": [
+      "pingshui:departing:09",
+      "pingshui:departing:11"
+    ],
+    "昭": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "昴": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:18"
+    ],
+    "晏": [
+      "pingshui:departing:15",
+      "pingshui:departing:16"
+    ],
+    "暍": [
+      "pingshui:entering:06",
+      "pingshui:entering:07"
+    ],
+    "暝": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "暨": [
+      "pingshui:departing:04",
+      "pingshui:departing:05"
+    ],
+    "暴": [
+      "pingshui:departing:20",
+      "pingshui:entering:01"
+    ],
+    "暵": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "曬": [
+      "pingshui:departing:04",
+      "pingshui:departing:10"
+    ],
+    "更": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "曼": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:14"
+    ],
+    "朏": [
+      "pingshui:rising:05",
+      "pingshui:departing:11",
+      "pingshui:entering:06"
+    ],
+    "朒": [
+      "pingshui:entering:01",
+      "pingshui:entering:08"
+    ],
+    "朓": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "朕": [
+      "pingshui:rising:11",
+      "pingshui:rising:26"
+    ],
+    "望": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "杓": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:10"
+    ],
+    "杴": [
+      "pingshui:lower_level:14",
+      "pingshui:lower_level:15"
+    ],
+    "杷": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:22"
+    ],
+    "枅": [
+      "pingshui:upper_level:08",
+      "pingshui:lower_level:01"
+    ],
+    "枕": [
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "枷": [
+      "pingshui:lower_level:05",
+      "pingshui:lower_level:06"
+    ],
+    "枸": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "枹": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:03",
+      "pingshui:lower_level:11"
+    ],
+    "柚": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "柞": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "柟": [
+      "pingshui:lower_level:13",
+      "pingshui:lower_level:14"
+    ],
+    "柢": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "柬": [
+      "pingshui:rising:15",
+      "pingshui:departing:17"
+    ],
+    "柴": [
+      "pingshui:upper_level:09",
+      "pingshui:departing:04"
+    ],
+    "柵": [
+      "pingshui:departing:16",
+      "pingshui:entering:11"
+    ],
+    "栩": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:07"
+    ],
+    "核": [
+      "pingshui:entering:06",
+      "pingshui:entering:11"
+    ],
+    "格": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "栽": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "桁": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08",
+      "pingshui:departing:23"
+    ],
+    "桋": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "桴": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "梲": [
+      "pingshui:entering:06",
+      "pingshui:entering:09"
+    ],
+    "棧": [
+      "pingshui:rising:15",
+      "pingshui:rising:16",
+      "pingshui:departing:16"
+    ],
+    "植": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "椐": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "椑": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "楚": [
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "楬": [
+      "pingshui:entering:06",
+      "pingshui:entering:08",
+      "pingshui:entering:09"
+    ],
+    "楰": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "楷": [
+      "pingshui:upper_level:09",
+      "pingshui:rising:09"
+    ],
+    "榜": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:22",
+      "pingshui:departing:24"
+    ],
+    "榦": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "槍": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08"
+    ],
+    "槐": [
+      "pingshui:upper_level:09",
+      "pingshui:upper_level:10"
+    ],
+    "槧": [
+      "pingshui:rising:27",
+      "pingshui:departing:29"
+    ],
+    "槮": [
+      "pingshui:lower_level:12",
+      "pingshui:rising:27"
+    ],
+    "槱": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "樂": [
+      "pingshui:departing:19",
+      "pingshui:entering:03",
+      "pingshui:entering:10"
+    ],
+    "樅": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03"
+    ],
+    "標": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "樠": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14"
+    ],
+    "樸": [
+      "pingshui:entering:01",
+      "pingshui:entering:03"
+    ],
+    "樹": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "樺": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:22"
+    ],
+    "橇": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:09"
+    ],
+    "橈": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:19"
+    ],
+    "橑": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:19"
+    ],
+    "橙": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:25"
+    ],
+    "橦": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03"
+    ],
+    "橫": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "檠": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "櫂": [
+      "pingshui:departing:19",
+      "pingshui:entering:03"
+    ],
+    "欐": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "欙": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "欠": [
+      "pingshui:departing:29",
+      "pingshui:departing:30"
+    ],
+    "欬": [
+      "pingshui:departing:04",
+      "pingshui:departing:10",
+      "pingshui:departing:11"
+    ],
+    "欱": [
+      "pingshui:entering:15",
+      "pingshui:entering:17"
+    ],
+    "欷": [
+      "pingshui:upper_level:05",
+      "pingshui:departing:05"
+    ],
+    "欸": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "歅": [
+      "pingshui:upper_level:11",
+      "pingshui:lower_level:01"
+    ],
+    "歉": [
+      "pingshui:rising:28",
+      "pingshui:rising:29"
+    ],
+    "歎": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "歐": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "歙": [
+      "pingshui:entering:14",
+      "pingshui:entering:16"
+    ],
+    "歜": [
+      "pingshui:rising:27",
+      "pingshui:entering:02"
+    ],
+    "正": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "殷": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:15",
+      "pingshui:rising:12"
+    ],
+    "殺": [
+      "pingshui:departing:10",
+      "pingshui:entering:08"
+    ],
+    "母": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:25"
+    ],
+    "每": [
+      "pingshui:rising:07",
+      "pingshui:rising:10"
+    ],
+    "比": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "氂": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:04"
+    ],
+    "氏": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "汎": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:12",
+      "pingshui:departing:30"
+    ],
+    "汗": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "汙": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:07"
+    ],
+    "汧": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "汨": [
+      "pingshui:entering:04",
+      "pingshui:entering:06",
+      "pingshui:entering:12"
+    ],
+    "汩": [
+      "pingshui:entering:04",
+      "pingshui:entering:06",
+      "pingshui:entering:12"
+    ],
+    "沄": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:13"
+    ],
+    "沈": [
+      "pingshui:lower_level:12",
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "沕": [
+      "pingshui:entering:04",
+      "pingshui:entering:05"
+    ],
+    "沮": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "沱": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "油": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "治": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "沾": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "泄": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "泌": [
+      "pingshui:departing:04",
+      "pingshui:entering:04"
+    ],
+    "泚": [
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "泥": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "泯": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "泱": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "洗": [
+      "pingshui:rising:08",
+      "pingshui:rising:16"
+    ],
+    "洚": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "洞": [
+      "pingshui:rising:01",
+      "pingshui:departing:01"
+    ],
+    "洳": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "洶": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "洹": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14"
+    ],
+    "浪": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "涑": [
+      "pingshui:lower_level:11",
+      "pingshui:entering:01"
+    ],
+    "涕": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "涯": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "涷": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "涸": [
+      "pingshui:departing:07",
+      "pingshui:entering:10"
+    ],
+    "淙": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "淞": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:01"
+    ],
+    "淤": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "淦": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:07",
+      "pingshui:departing:28"
+    ],
+    "淰": [
+      "pingshui:rising:26",
+      "pingshui:rising:29"
+    ],
+    "深": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "淹": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:30"
+    ],
+    "渫": [
+      "pingshui:entering:09",
+      "pingshui:entering:17"
+    ],
+    "湑": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "湛": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:13",
+      "pingshui:rising:29"
+    ],
+    "湩": [
+      "pingshui:rising:02",
+      "pingshui:departing:01"
+    ],
+    "湫": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:17"
+    ],
+    "湯": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "湲": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:15",
+      "pingshui:lower_level:01"
+    ],
+    "溉": [
+      "pingshui:departing:05",
+      "pingshui:departing:11"
+    ],
+    "準": [
+      "pingshui:rising:11",
+      "pingshui:entering:09"
+    ],
+    "溟": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "溶": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "溷": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "滑": [
+      "pingshui:entering:06",
+      "pingshui:entering:08"
+    ],
+    "漂": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "漊": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:25"
+    ],
+    "漕": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "漚": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "漫": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "漸": [
+      "pingshui:lower_level:14",
+      "pingshui:rising:28"
+    ],
+    "漼": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "潎": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "潛": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "潢": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "潸": [
+      "pingshui:upper_level:15",
+      "pingshui:rising:15"
+    ],
+    "潺": [
+      "pingshui:upper_level:15",
+      "pingshui:lower_level:01"
+    ],
+    "澇": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "澌": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08",
+      "pingshui:departing:04"
+    ],
+    "澤": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "澳": [
+      "pingshui:departing:20",
+      "pingshui:entering:01"
+    ],
+    "澹": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27",
+      "pingshui:departing:28"
+    ],
+    "濊": [
+      "pingshui:departing:09",
+      "pingshui:entering:07"
+    ],
+    "濟": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "濫": [
+      "pingshui:rising:29",
+      "pingshui:departing:28"
+    ],
+    "濺": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "瀁": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "瀉": [
+      "pingshui:rising:21",
+      "pingshui:departing:22"
+    ],
+    "瀌": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11"
+    ],
+    "瀏": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "瀑": [
+      "pingshui:departing:20",
+      "pingshui:entering:01"
+    ],
+    "瀣": [
+      "pingshui:departing:10",
+      "pingshui:departing:11"
+    ],
+    "瀰": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "瀲": [
+      "pingshui:rising:28",
+      "pingshui:departing:29"
+    ],
+    "瀾": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "灊": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:14"
+    ],
+    "灑": [
+      "pingshui:rising:09",
+      "pingshui:rising:21"
+    ],
+    "灘": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "炙": [
+      "pingshui:departing:22",
+      "pingshui:departing:26",
+      "pingshui:entering:11"
+    ],
+    "炷": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "為": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "烝": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "焞": [
+      "pingshui:upper_level:10",
+      "pingshui:upper_level:13"
+    ],
+    "煎": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "煦": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "煬": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "熇": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:01",
+      "pingshui:entering:02",
+      "pingshui:entering:10"
+    ],
+    "燀": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "燋": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:10"
+    ],
+    "燎": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "燒": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "燕": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "燠": [
+      "pingshui:rising:19",
+      "pingshui:departing:20",
+      "pingshui:entering:01"
+    ],
+    "爁": [
+      "pingshui:departing:28",
+      "pingshui:departing:29"
+    ],
+    "爆": [
+      "pingshui:departing:19",
+      "pingshui:entering:03"
+    ],
+    "爝": [
+      "pingshui:departing:18",
+      "pingshui:entering:10"
+    ],
+    "爹": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:20"
+    ],
+    "牽": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "犍": [
+      "pingshui:upper_level:13",
+      "pingshui:lower_level:01"
+    ],
+    "犛": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:03"
+    ],
+    "狃": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "狙": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "狷": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "狺": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:12"
+    ],
+    "狿": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "猭": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "猲": [
+      "pingshui:entering:06",
+      "pingshui:entering:07"
+    ],
+    "猶": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "獥": [
+      "pingshui:departing:18",
+      "pingshui:entering:12"
+    ],
+    "獪": [
+      "pingshui:departing:09",
+      "pingshui:departing:10"
+    ],
+    "獫": [
+      "pingshui:rising:28",
+      "pingshui:departing:29"
+    ],
+    "獲": [
+      "pingshui:departing:07",
+      "pingshui:entering:11"
+    ],
+    "獷": [
+      "pingshui:rising:22",
+      "pingshui:rising:23"
+    ],
+    "獺": [
+      "pingshui:entering:07",
+      "pingshui:entering:08"
+    ],
+    "獻": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:14"
+    ],
+    "王": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "玤": [
+      "pingshui:rising:01",
+      "pingshui:rising:03"
+    ],
+    "玼": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "珥": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "琇": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "瑁": [
+      "pingshui:departing:11",
+      "pingshui:departing:20"
+    ],
+    "瑟": [
+      "pingshui:departing:04",
+      "pingshui:entering:04"
+    ],
+    "瑩": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:25"
+    ],
+    "瑱": [
+      "pingshui:departing:12",
+      "pingshui:departing:17"
+    ],
+    "瑳": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "璡": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "瓠": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "瓿": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:25"
+    ],
+    "甄": [
+      "pingshui:upper_level:11",
+      "pingshui:lower_level:01"
+    ],
+    "甔": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "甗": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "甚": [
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "町": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "留": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "畛": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "畜": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "番": [
+      "pingshui:upper_level:13",
+      "pingshui:lower_level:05"
+    ],
+    "畫": [
+      "pingshui:departing:10",
+      "pingshui:entering:11"
+    ],
+    "畬": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06"
+    ],
+    "當": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "畷": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "畹": [
+      "pingshui:rising:13",
+      "pingshui:departing:14"
+    ],
+    "疋": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:21"
+    ],
+    "疏": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "痁": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "痱": [
+      "pingshui:upper_level:05",
+      "pingshui:departing:05"
+    ],
+    "瘉": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "瘕": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:21"
+    ],
+    "瘤": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "瘥": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:10"
+    ],
+    "癉": [
+      "pingshui:upper_level:14",
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "癬": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "盎": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "盛": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "盟": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "監": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "盥": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "盪": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "相": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "盾": [
+      "pingshui:rising:11",
+      "pingshui:rising:13"
+    ],
+    "眄": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "眅": [
+      "pingshui:upper_level:15",
+      "pingshui:rising:15"
+    ],
+    "眈": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "眊": [
+      "pingshui:departing:04",
+      "pingshui:departing:20",
+      "pingshui:entering:03"
+    ],
+    "看": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "眢": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14"
+    ],
+    "眥": [
+      "pingshui:departing:04",
+      "pingshui:departing:08"
+    ],
+    "眴": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:17"
+    ],
+    "睍": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "睛": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:23"
+    ],
+    "睢": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "瞀": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26",
+      "pingshui:entering:03"
+    ],
+    "瞑": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:17"
+    ],
+    "瞢": [
+      "pingshui:upper_level:01",
+      "pingshui:lower_level:10",
+      "pingshui:departing:01"
+    ],
+    "瞵": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "瞿": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "矇": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "砅": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:08"
+    ],
+    "砉": [
+      "pingshui:entering:11",
+      "pingshui:entering:12"
+    ],
+    "研": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "砭": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "砮": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "硪": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "碣": [
+      "pingshui:entering:06",
+      "pingshui:entering:09"
+    ],
+    "碬": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:15"
+    ],
+    "碭": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "磋": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "磕": [
+      "pingshui:departing:09",
+      "pingshui:entering:15"
+    ],
+    "磨": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "礧": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "礱": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "祖": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:07"
+    ],
+    "祭": [
+      "pingshui:departing:08",
+      "pingshui:departing:10"
+    ],
+    "祲": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "禁": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "禕": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:05"
+    ],
+    "禜": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "禪": [
+      "pingshui:upper_level:14",
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "禺": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:07"
+    ],
+    "秅": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:07"
+    ],
+    "秠": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "稌": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "稍": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "種": [
+      "pingshui:rising:02",
+      "pingshui:departing:02"
+    ],
+    "稱": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "積": [
+      "pingshui:departing:04",
+      "pingshui:entering:11"
+    ],
+    "穫": [
+      "pingshui:departing:07",
+      "pingshui:entering:10"
+    ],
+    "穰": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "空": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01",
+      "pingshui:departing:01"
+    ],
+    "穿": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "窌": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19",
+      "pingshui:departing:26"
+    ],
+    "窱": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "竁": [
+      "pingshui:departing:08",
+      "pingshui:departing:17"
+    ],
+    "竣": [
+      "pingshui:upper_level:11",
+      "pingshui:lower_level:01"
+    ],
+    "竭": [
+      "pingshui:entering:06",
+      "pingshui:entering:09"
+    ],
+    "笈": [
+      "pingshui:entering:14",
+      "pingshui:entering:16"
+    ],
+    "笯": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:06"
+    ],
+    "笴": [
+      "pingshui:rising:14",
+      "pingshui:rising:20"
+    ],
+    "筊": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "箑": [
+      "pingshui:entering:16",
+      "pingshui:entering:17"
+    ],
+    "算": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "箘": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "箠": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "篻": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "簍": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "簣": [
+      "pingshui:departing:04",
+      "pingshui:departing:10"
+    ],
+    "簸": [
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "籔": [
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "籠": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "糈": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "糲": [
+      "pingshui:departing:08",
+      "pingshui:departing:09",
+      "pingshui:entering:07"
+    ],
+    "約": [
+      "pingshui:departing:18",
+      "pingshui:entering:10"
+    ],
+    "紓": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "純": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:13",
+      "pingshui:lower_level:01",
+      "pingshui:rising:11"
+    ],
+    "紟": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "索": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "絧": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "綅": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:14"
+    ],
+    "經": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "綢": [
+      "pingshui:lower_level:04",
+      "pingshui:lower_level:11"
+    ],
+    "綣": [
+      "pingshui:rising:13",
+      "pingshui:departing:14"
+    ],
+    "綬": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "維": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:27"
+    ],
+    "綰": [
+      "pingshui:rising:15",
+      "pingshui:departing:16"
+    ],
+    "綴": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "綸": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:15"
+    ],
+    "緉": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "締": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "緣": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "緹": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "緺": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:05",
+      "pingshui:lower_level:06"
+    ],
+    "縕": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:13",
+      "pingshui:departing:13"
+    ],
+    "縜": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:12"
+    ],
+    "縞": [
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "縫": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "縱": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "縵": [
+      "pingshui:departing:15",
+      "pingshui:departing:16"
+    ],
+    "繁": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14"
+    ],
+    "繅": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:19"
+    ],
+    "繆": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "繇": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "織": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "繞": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "繪": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:09"
+    ],
+    "繾": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "纍": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "纏": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "纚": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "纛": [
+      "pingshui:departing:20",
+      "pingshui:entering:02"
+    ],
+    "罞": [
+      "pingshui:upper_level:01",
+      "pingshui:lower_level:03"
+    ],
+    "罦": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "罷": [
+      "pingshui:rising:09",
+      "pingshui:departing:22"
+    ],
+    "羱": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14"
+    ],
+    "翟": [
+      "pingshui:entering:11",
+      "pingshui:entering:12"
+    ],
+    "翰": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "翿": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "聞": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:13"
+    ],
+    "聽": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "胖": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "胠": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "胯": [
+      "pingshui:departing:07",
+      "pingshui:departing:22"
+    ],
+    "能": [
+      "pingshui:upper_level:10",
+      "pingshui:lower_level:10"
+    ],
+    "脁": [
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "脅": [
+      "pingshui:departing:29",
+      "pingshui:entering:17"
+    ],
+    "脛": [
+      "pingshui:rising:24",
+      "pingshui:departing:25"
+    ],
+    "脢": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "腄": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "膏": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "膜": [
+      "pingshui:upper_level:07",
+      "pingshui:entering:10"
+    ],
+    "膠": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "膢": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "膴": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "臑": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:04"
+    ],
+    "臨": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "臭": [
+      "pingshui:departing:26",
+      "pingshui:entering:12"
+    ],
+    "與": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "興": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "般": [
+      "pingshui:upper_level:14",
+      "pingshui:upper_level:15"
+    ],
+    "艟": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:03"
+    ],
+    "艴": [
+      "pingshui:entering:05",
+      "pingshui:entering:06"
+    ],
+    "芊": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:04"
+    ],
+    "芋": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "芼": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "若": [
+      "pingshui:rising:21",
+      "pingshui:entering:10"
+    ],
+    "苦": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "苫": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "苴": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06",
+      "pingshui:rising:06"
+    ],
+    "苶": [
+      "pingshui:entering:09",
+      "pingshui:entering:16"
+    ],
+    "茁": [
+      "pingshui:entering:04",
+      "pingshui:entering:08",
+      "pingshui:entering:09"
+    ],
+    "茄": [
+      "pingshui:lower_level:05",
+      "pingshui:lower_level:06"
+    ],
+    "茆": [
+      "pingshui:rising:18",
+      "pingshui:rising:25"
+    ],
+    "茷": [
+      "pingshui:departing:09",
+      "pingshui:departing:11"
+    ],
+    "茸": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "茹": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "荂": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:06"
+    ],
+    "荄": [
+      "pingshui:upper_level:09",
+      "pingshui:upper_level:10"
+    ],
+    "荷": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "莚": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "莛": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "莞": [
+      "pingshui:upper_level:14",
+      "pingshui:rising:15"
+    ],
+    "莫": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "莽": [
+      "pingshui:rising:07",
+      "pingshui:rising:22"
+    ],
+    "菀": [
+      "pingshui:rising:13",
+      "pingshui:entering:05"
+    ],
+    "菔": [
+      "pingshui:entering:01",
+      "pingshui:entering:13"
+    ],
+    "菟": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "菫": [
+      "pingshui:upper_level:12",
+      "pingshui:rising:12"
+    ],
+    "菲": [
+      "pingshui:upper_level:05",
+      "pingshui:rising:05"
+    ],
+    "萎": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "萐": [
+      "pingshui:entering:16",
+      "pingshui:entering:17"
+    ],
+    "葑": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "著": [
+      "pingshui:rising:06",
+      "pingshui:departing:06",
+      "pingshui:entering:10"
+    ],
+    "葭": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:12"
+    ],
+    "葯": [
+      "pingshui:entering:03",
+      "pingshui:entering:10"
+    ],
+    "葽": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "蒘": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06"
+    ],
+    "蒟": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "蒼": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "蓰": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "蓷": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:10"
+    ],
+    "蓼": [
+      "pingshui:rising:17",
+      "pingshui:entering:01"
+    ],
+    "蔇": [
+      "pingshui:departing:04",
+      "pingshui:departing:05"
+    ],
+    "蔚": [
+      "pingshui:departing:05",
+      "pingshui:entering:05"
+    ],
+    "蔞": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11",
+      "pingshui:rising:07"
+    ],
+    "蔟": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "蔣": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "蕢": [
+      "pingshui:departing:04",
+      "pingshui:departing:10"
+    ],
+    "蕩": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "薺": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:08"
+    ],
+    "藇": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "藉": [
+      "pingshui:departing:22",
+      "pingshui:entering:11"
+    ],
+    "藏": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "蘄": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:12"
+    ],
+    "蘊": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:12"
+    ],
+    "處": [
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "號": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "虹": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:03"
+    ],
+    "虺": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:05"
+    ],
+    "蚑": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "蛇": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:06"
+    ],
+    "蛙": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "蛣": [
+      "pingshui:entering:04",
+      "pingshui:entering:09"
+    ],
+    "蛬": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "蛭": [
+      "pingshui:entering:04",
+      "pingshui:entering:09"
+    ],
+    "蛸": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:03"
+    ],
+    "蛻": [
+      "pingshui:departing:08",
+      "pingshui:departing:09"
+    ],
+    "蜃": [
+      "pingshui:rising:11",
+      "pingshui:departing:12"
+    ],
+    "蜆": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "蜎": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "蜓": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:16"
+    ],
+    "蜚": [
+      "pingshui:rising:05",
+      "pingshui:departing:05"
+    ],
+    "蜺": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:09"
+    ],
+    "蜼": [
+      "pingshui:departing:04",
+      "pingshui:departing:26"
+    ],
+    "蜿": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "蝸": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "蝹": [
+      "pingshui:upper_level:12",
+      "pingshui:rising:19"
+    ],
+    "螘": [
+      "pingshui:rising:04",
+      "pingshui:rising:05"
+    ],
+    "螣": [
+      "pingshui:lower_level:10",
+      "pingshui:entering:13"
+    ],
+    "蟉": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "蟫": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:13"
+    ],
+    "蠙": [
+      "pingshui:upper_level:11",
+      "pingshui:lower_level:01"
+    ],
+    "蠡": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "行": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08",
+      "pingshui:departing:23",
+      "pingshui:departing:24"
+    ],
+    "衍": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "衎": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "術": [
+      "pingshui:departing:04",
+      "pingshui:entering:04"
+    ],
+    "衙": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06",
+      "pingshui:rising:06"
+    ],
+    "衡": [
+      "pingshui:upper_level:02",
+      "pingshui:lower_level:08"
+    ],
+    "衣": [
+      "pingshui:upper_level:05",
+      "pingshui:departing:05"
+    ],
+    "衷": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "衽": [
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "被": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "裁": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "裎": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:23"
+    ],
+    "裏": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "裛": [
+      "pingshui:entering:14",
+      "pingshui:entering:16"
+    ],
+    "裯": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:04",
+      "pingshui:lower_level:11"
+    ],
+    "褆": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:04"
+    ],
+    "褕": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:02"
+    ],
+    "褫": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "褶": [
+      "pingshui:entering:14",
+      "pingshui:entering:16"
+    ],
+    "要": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "覆": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "覈": [
+      "pingshui:entering:09",
+      "pingshui:entering:11"
+    ],
+    "親": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "覺": [
+      "pingshui:departing:19",
+      "pingshui:entering:03"
+    ],
+    "觀": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "觜": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "解": [
+      "pingshui:rising:09",
+      "pingshui:departing:10"
+    ],
+    "觳": [
+      "pingshui:entering:01",
+      "pingshui:entering:03"
+    ],
+    "觶": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "訐": [
+      "pingshui:entering:06",
+      "pingshui:entering:09"
+    ],
+    "訕": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "訬": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:17"
+    ],
+    "診": [
+      "pingshui:rising:11",
+      "pingshui:departing:12"
+    ],
+    "訾": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "詀": [
+      "pingshui:lower_level:14",
+      "pingshui:lower_level:15"
+    ],
+    "詆": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "詎": [
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "詒": [
+      "pingshui:rising:10",
+      "pingshui:departing:04"
+    ],
+    "評": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "詖": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "詗": [
+      "pingshui:rising:24",
+      "pingshui:departing:24"
+    ],
+    "詷": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "誖": [
+      "pingshui:departing:11",
+      "pingshui:entering:06"
+    ],
+    "語": [
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "說": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "誶": [
+      "pingshui:departing:04",
+      "pingshui:departing:11"
+    ],
+    "誹": [
+      "pingshui:upper_level:05",
+      "pingshui:rising:05",
+      "pingshui:departing:05"
+    ],
+    "誾": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:12"
+    ],
+    "調": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:departing:18"
+    ],
+    "諄": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "請": [
+      "pingshui:rising:23",
+      "pingshui:departing:24"
+    ],
+    "諏": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "諓": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "論": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "諝": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "謷": [
+      "pingshui:lower_level:03",
+      "pingshui:lower_level:04"
+    ],
+    "謾": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15",
+      "pingshui:departing:16"
+    ],
+    "譔": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "識": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "譽": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "讀": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "讒": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "讕": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "讞": [
+      "pingshui:rising:16",
+      "pingshui:entering:09"
+    ],
+    "豬": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:05"
+    ],
+    "豻": [
+      "pingshui:upper_level:14",
+      "pingshui:upper_level:15",
+      "pingshui:departing:15"
+    ],
+    "貆": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14"
+    ],
+    "貤": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "貰": [
+      "pingshui:departing:08",
+      "pingshui:departing:22"
+    ],
+    "賁": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:13",
+      "pingshui:departing:04"
+    ],
+    "賈": [
+      "pingshui:rising:07",
+      "pingshui:rising:21"
+    ],
+    "賑": [
+      "pingshui:rising:11",
+      "pingshui:departing:12"
+    ],
+    "贙": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "贛": [
+      "pingshui:rising:27",
+      "pingshui:departing:01"
+    ],
+    "走": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "趁": [
+      "pingshui:rising:16",
+      "pingshui:departing:12"
+    ],
+    "越": [
+      "pingshui:entering:06",
+      "pingshui:entering:07"
+    ],
+    "趣": [
+      "pingshui:rising:25",
+      "pingshui:departing:07"
+    ],
+    "足": [
+      "pingshui:departing:07",
+      "pingshui:entering:02"
+    ],
+    "趼": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "跂": [
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "跧": [
+      "pingshui:upper_level:15",
+      "pingshui:lower_level:01"
+    ],
+    "跫": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03"
+    ],
+    "踔": [
+      "pingshui:departing:19",
+      "pingshui:entering:03"
+    ],
+    "踖": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "踦": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "踧": [
+      "pingshui:entering:01",
+      "pingshui:entering:12"
+    ],
+    "蹂": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "蹇": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13",
+      "pingshui:rising:16"
+    ],
+    "蹕": [
+      "pingshui:departing:04",
+      "pingshui:entering:04"
+    ],
+    "蹶": [
+      "pingshui:departing:08",
+      "pingshui:entering:06"
+    ],
+    "蹻": [
+      "pingshui:rising:17",
+      "pingshui:entering:10"
+    ],
+    "躇": [
+      "pingshui:upper_level:06",
+      "pingshui:entering:10"
+    ],
+    "車": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06"
+    ],
+    "軑": [
+      "pingshui:departing:08",
+      "pingshui:departing:09"
+    ],
+    "軥": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "軻": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "軼": [
+      "pingshui:entering:04",
+      "pingshui:entering:09"
+    ],
+    "軿": [
+      "pingshui:lower_level:01",
+      "pingshui:lower_level:09"
+    ],
+    "較": [
+      "pingshui:departing:19",
+      "pingshui:entering:03"
+    ],
+    "載": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "輕": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "輚": [
+      "pingshui:rising:15",
+      "pingshui:departing:16"
+    ],
+    "輠": [
+      "pingshui:rising:20",
+      "pingshui:rising:21"
+    ],
+    "輶": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "輸": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "輻": [
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "輾": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "轉": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "轎": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "迋": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "迎": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "近": [
+      "pingshui:rising:12",
+      "pingshui:departing:04",
+      "pingshui:departing:13"
+    ],
+    "迦": [
+      "pingshui:lower_level:05",
+      "pingshui:lower_level:06"
+    ],
+    "造": [
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "逢": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03"
+    ],
+    "逮": [
+      "pingshui:departing:08",
+      "pingshui:departing:11"
+    ],
+    "逴": [
+      "pingshui:entering:03",
+      "pingshui:entering:10"
+    ],
+    "過": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "遞": [
+      "pingshui:rising:08",
+      "pingshui:departing:08"
+    ],
+    "遠": [
+      "pingshui:rising:13",
+      "pingshui:departing:14"
+    ],
+    "遣": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "適": [
+      "pingshui:entering:11",
+      "pingshui:entering:12"
+    ],
+    "遯": [
+      "pingshui:rising:13",
+      "pingshui:departing:14"
+    ],
+    "遲": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "選": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "遺": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "還": [
+      "pingshui:upper_level:15",
+      "pingshui:lower_level:01"
+    ],
+    "那": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "邴": [
+      "pingshui:rising:23",
+      "pingshui:departing:24"
+    ],
+    "郤": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "鄗": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:19",
+      "pingshui:entering:10"
+    ],
+    "鄞": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:12"
+    ],
+    "鄢": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:13"
+    ],
+    "酇": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "酏": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "酤": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "酹": [
+      "pingshui:departing:09",
+      "pingshui:departing:11"
+    ],
+    "酺": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "醊": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "醒": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24",
+      "pingshui:departing:25"
+    ],
+    "醟": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "醰": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "醵": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06",
+      "pingshui:entering:10"
+    ],
+    "醹": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "釃": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "采": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "重": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02",
+      "pingshui:departing:02"
+    ],
+    "量": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "釘": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "釭": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:03"
+    ],
+    "釱": [
+      "pingshui:departing:08",
+      "pingshui:departing:09"
+    ],
+    "鈒": [
+      "pingshui:entering:14",
+      "pingshui:entering:15"
+    ],
+    "鈔": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "鈴": [
+      "pingshui:lower_level:09",
+      "pingshui:lower_level:14"
+    ],
+    "鈿": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "銚": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "鋘": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:06"
+    ],
+    "鋪": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "錍": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "錞": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:10"
+    ],
+    "錡": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "錢": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "錯": [
+      "pingshui:departing:07",
+      "pingshui:entering:10"
+    ],
+    "鍛": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:15"
+    ],
+    "鍭": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "鍵": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "鍼": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:14"
+    ],
+    "鎚": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:10"
+    ],
+    "鎧": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "鎩": [
+      "pingshui:departing:10",
+      "pingshui:entering:08"
+    ],
+    "鏤": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:26"
+    ],
+    "鏦": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03"
+    ],
+    "鏨": [
+      "pingshui:rising:27",
+      "pingshui:departing:28"
+    ],
+    "鐻": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "鑱": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "鑽": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "鑿": [
+      "pingshui:departing:20",
+      "pingshui:entering:10"
+    ],
+    "長": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "閉": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "間": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "閜": [
+      "pingshui:rising:20",
+      "pingshui:rising:21"
+    ],
+    "閼": [
+      "pingshui:entering:06",
+      "pingshui:entering:07"
+    ],
+    "闇": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "闍": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:06"
+    ],
+    "闞": [
+      "pingshui:rising:29",
+      "pingshui:departing:28",
+      "pingshui:departing:30"
+    ],
+    "阮": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "防": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "陂": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "降": [
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "除": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "陶": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:04"
+    ],
+    "隗": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "障": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "隱": [
+      "pingshui:rising:12",
+      "pingshui:departing:13"
+    ],
+    "雇": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "雍": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "雎": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:06"
+    ],
+    "離": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:08"
+    ],
+    "難": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "雨": [
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "零": [
+      "pingshui:lower_level:01",
+      "pingshui:lower_level:09"
+    ],
+    "雺": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:02",
+      "pingshui:departing:26"
+    ],
+    "霅": [
+      "pingshui:entering:16",
+      "pingshui:entering:17"
+    ],
+    "霎": [
+      "pingshui:entering:16",
+      "pingshui:entering:17"
+    ],
+    "霓": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:12"
+    ],
+    "霸": [
+      "pingshui:departing:22",
+      "pingshui:entering:11"
+    ],
+    "霹": [
+      "pingshui:entering:11",
+      "pingshui:entering:12"
+    ],
+    "靚": [
+      "pingshui:rising:23",
+      "pingshui:departing:24"
+    ],
+    "靬": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:15"
+    ],
+    "靷": [
+      "pingshui:rising:11",
+      "pingshui:departing:12"
+    ],
+    "鞣": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "鞬": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:16"
+    ],
+    "韐": [
+      "pingshui:entering:15",
+      "pingshui:entering:17"
+    ],
+    "韽": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:30"
+    ],
+    "頃": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:23"
+    ],
+    "頏": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "頗": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "頡": [
+      "pingshui:entering:08",
+      "pingshui:entering:09"
+    ],
+    "頦": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "頷": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "題": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "颮": [
+      "pingshui:lower_level:03",
+      "pingshui:entering:03"
+    ],
+    "颺": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "飂": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "食": [
+      "pingshui:departing:04",
+      "pingshui:entering:13"
+    ],
+    "飯": [
+      "pingshui:rising:13",
+      "pingshui:departing:14"
+    ],
+    "飲": [
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "養": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "餔": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "餞": [
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "餧": [
+      "pingshui:rising:10",
+      "pingshui:departing:04"
+    ],
+    "館": [
+      "pingshui:rising:14",
+      "pingshui:departing:15"
+    ],
+    "餲": [
+      "pingshui:departing:10",
+      "pingshui:entering:07"
+    ],
+    "饟": [
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "首": [
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "馗": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:11"
+    ],
+    "馮": [
+      "pingshui:upper_level:01",
+      "pingshui:lower_level:10"
+    ],
+    "馱": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "馵": [
+      "pingshui:departing:07",
+      "pingshui:entering:14"
+    ],
+    "駘": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "駣": [
+      "pingshui:rising:17",
+      "pingshui:rising:19"
+    ],
+    "騎": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "騧": [
+      "pingshui:upper_level:09",
+      "pingshui:lower_level:06"
+    ],
+    "騩": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:05"
+    ],
+    "騶": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11"
+    ],
+    "驁": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "驅": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "驎": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "驙": [
+      "pingshui:upper_level:14",
+      "pingshui:lower_level:01"
+    ],
+    "驪": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "骭": [
+      "pingshui:departing:15",
+      "pingshui:departing:16"
+    ],
+    "骴": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "髀": [
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "髟": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:lower_level:15"
+    ],
+    "鬋": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "鬨": [
+      "pingshui:departing:01",
+      "pingshui:departing:03"
+    ],
+    "鬲": [
+      "pingshui:entering:11",
+      "pingshui:entering:12"
+    ],
+    "鬷": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "魄": [
+      "pingshui:entering:10",
+      "pingshui:entering:11"
+    ],
+    "魘": [
+      "pingshui:rising:28",
+      "pingshui:entering:16"
+    ],
+    "鮦": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:02"
+    ],
+    "鮮": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "鯫": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "鯽": [
+      "pingshui:entering:11",
+      "pingshui:entering:13"
+    ],
+    "鱖": [
+      "pingshui:departing:08",
+      "pingshui:entering:06"
+    ],
+    "鴰": [
+      "pingshui:entering:07",
+      "pingshui:entering:08"
+    ],
+    "鵀": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "鵃": [
+      "pingshui:lower_level:03",
+      "pingshui:lower_level:11"
+    ],
+    "鵌": [
+      "pingshui:upper_level:06",
+      "pingshui:upper_level:07"
+    ],
+    "鵽": [
+      "pingshui:entering:07",
+      "pingshui:entering:08"
+    ],
+    "鶩": [
+      "pingshui:departing:07",
+      "pingshui:entering:01"
+    ],
+    "鶻": [
+      "pingshui:entering:06",
+      "pingshui:entering:08"
+    ],
+    "鷂": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "鷩": [
+      "pingshui:departing:08",
+      "pingshui:entering:09"
+    ],
+    "鷯": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "鷷": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:13"
+    ],
+    "鸝": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "鹽": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "麃": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:03",
+      "pingshui:rising:17"
+    ],
+    "麌": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "麗": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:08"
+    ],
+    "麼": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "黂": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:05"
+    ],
+    "黔": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:14"
+    ],
+    "黧": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08"
+    ],
+    "黽": [
+      "pingshui:rising:11",
+      "pingshui:rising:16",
+      "pingshui:rising:23"
+    ],
+    "鼐": [
+      "pingshui:rising:10",
+      "pingshui:departing:11"
+    ],
+    "齊": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "齔": [
+      "pingshui:rising:12",
+      "pingshui:departing:12"
+    ],
+    "齗": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:12"
+    ],
+    "齬": [
+      "pingshui:upper_level:06",
+      "pingshui:upper_level:07",
+      "pingshui:rising:06"
+    ],
+    "齲": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "齾": [
+      "pingshui:entering:07",
+      "pingshui:entering:08"
+    ],
+    "龍": [
+      "pingshui:upper_level:02",
+      "pingshui:entering:14"
+    ],
+    "龐": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:03"
+    ],
+    "龜": [
+      "pingshui:upper_level:04",
+      "pingshui:lower_level:11"
+    ]
+  },
+  "cross_tone_memberships": {
+    "三": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "不": [
+      "pingshui:lower_level:11",
+      "pingshui:entering:05"
+    ],
+    "且": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:21"
+    ],
+    "中": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "乘": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "了": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:17"
+    ],
+    "予": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "些": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:21"
+    ],
+    "亢": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "亹": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:05"
+    ],
+    "令": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "任": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "佃": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "佻": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "佼": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "侗": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "供": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "侲": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "便": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "偵": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "傀": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:04"
+    ],
+    "傍": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "傳": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "僂": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:07",
+      "pingshui:departing:26"
+    ],
+    "僄": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "僚": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "儐": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "償": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "儳": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "儺": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "兒": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08",
+      "pingshui:entering:03"
+    ],
+    "共": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "其": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "兼": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "冠": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "冢": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:02"
+    ],
+    "凝": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "分": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:13"
+    ],
+    "剞": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "創": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "剽": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "劑": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:08"
+    ],
+    "劭": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "勝": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "勞": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "匜": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "占": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "卣": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "卷": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "參": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "反": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "叟": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "句": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11",
+      "pingshui:departing:07",
+      "pingshui:departing:26"
+    ],
+    "司": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "吟": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "吭": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "吹": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "呿": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "咀": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "和": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "咎": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:25"
+    ],
+    "咮": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07",
+      "pingshui:departing:26"
+    ],
+    "咺": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "咻": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:07"
+    ],
+    "咽": [
+      "pingshui:lower_level:01",
+      "pingshui:entering:09"
+    ],
+    "哆": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:04",
+      "pingshui:rising:20",
+      "pingshui:rising:21",
+      "pingshui:departing:04"
+    ],
+    "員": [
+      "pingshui:upper_level:12",
+      "pingshui:lower_level:01",
+      "pingshui:departing:13"
+    ],
+    "哨": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "售": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "啞": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:21",
+      "pingshui:entering:11"
+    ],
+    "喑": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "喪": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "單": [
+      "pingshui:upper_level:14",
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "嗃": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19",
+      "pingshui:entering:10"
+    ],
+    "嗺": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "嘹": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "噓": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "噞": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "噫": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:10"
+    ],
+    "噴": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "回": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "囷": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "圮": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "坻": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "培": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:25"
+    ],
+    "堋": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "填": [
+      "pingshui:upper_level:11",
+      "pingshui:lower_level:01",
+      "pingshui:departing:12",
+      "pingshui:departing:17"
+    ],
+    "墐": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "墮": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:20"
+    ],
+    "墳": [
+      "pingshui:upper_level:12",
+      "pingshui:rising:12"
+    ],
+    "壅": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02",
+      "pingshui:departing:02"
+    ],
+    "壘": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:04"
+    ],
+    "壝": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "夢": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "夭": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:rising:19"
+    ],
+    "如": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "妊": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "妨": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "妻": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "姁": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "委": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "姣": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "姺": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:16"
+    ],
+    "姼": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "娉": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:24"
+    ],
+    "娑": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "娗": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "娠": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "媌": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "媞": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "嫇": [
+      "pingshui:lower_level:08",
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "嬈": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "嬌": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "宄": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:04"
+    ],
+    "宛": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "宦": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:16"
+    ],
+    "封": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "將": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "尼": [
+      "pingshui:upper_level:04",
+      "pingshui:entering:04"
+    ],
+    "屏": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:23"
+    ],
+    "峨": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "嵌": [
+      "pingshui:lower_level:15",
+      "pingshui:rising:27"
+    ],
+    "嵬": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "嵷": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "嶙": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "嶠": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "嶲": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:04"
+    ],
+    "嶷": [
+      "pingshui:upper_level:04",
+      "pingshui:entering:13"
+    ],
+    "巉": [
+      "pingshui:lower_level:15",
+      "pingshui:rising:29"
+    ],
+    "帆": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "帑": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:22"
+    ],
+    "師": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "幢": [
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "幨": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "幪": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01",
+      "pingshui:departing:01"
+    ],
+    "并": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "幾": [
+      "pingshui:upper_level:05",
+      "pingshui:rising:05",
+      "pingshui:departing:04"
+    ],
+    "庭": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "庮": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "庱": [
+      "pingshui:lower_level:10",
+      "pingshui:rising:24"
+    ],
+    "庳": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "弁": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:17"
+    ],
+    "弮": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "張": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "彈": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "從": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "徠": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "徯": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "徵": [
+      "pingshui:lower_level:10",
+      "pingshui:rising:04"
+    ],
+    "徼": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "忘": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "思": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "怨": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "恟": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "恫": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "悝": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:04"
+    ],
+    "患": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "惡": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07",
+      "pingshui:entering:10"
+    ],
+    "慶": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:24"
+    ],
+    "憧": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:03"
+    ],
+    "憨": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "憮": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "應": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "懠": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "懵": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:02",
+      "pingshui:rising:01"
+    ],
+    "戲": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "扁": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "扇": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "批": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:09"
+    ],
+    "折": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:09"
+    ],
+    "挑": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:04",
+      "pingshui:rising:17"
+    ],
+    "振": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "掊": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:25"
+    ],
+    "掫": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "搒": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:23"
+    ],
+    "搖": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "搶": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "摻": [
+      "pingshui:lower_level:04",
+      "pingshui:lower_level:15",
+      "pingshui:rising:29"
+    ],
+    "摽": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "撓": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:18"
+    ],
+    "撞": [
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "操": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "擐": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "擔": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "擠": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "攘": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "攤": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "收": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "教": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "敦": [
+      "pingshui:upper_level:13",
+      "pingshui:upper_level:14",
+      "pingshui:departing:11",
+      "pingshui:departing:14"
+    ],
+    "敲": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "料": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "斤": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:13"
+    ],
+    "施": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "旄": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "旋": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "昭": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "昴": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:18"
+    ],
+    "暝": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "更": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "曼": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:14"
+    ],
+    "望": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "杓": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:10"
+    ],
+    "杷": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:22"
+    ],
+    "枸": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "柴": [
+      "pingshui:upper_level:09",
+      "pingshui:departing:04"
+    ],
+    "栩": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:07"
+    ],
+    "栽": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "桁": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08",
+      "pingshui:departing:23"
+    ],
+    "椐": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "楰": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "楷": [
+      "pingshui:upper_level:09",
+      "pingshui:rising:09"
+    ],
+    "榜": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:22",
+      "pingshui:departing:24"
+    ],
+    "榦": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "槮": [
+      "pingshui:lower_level:12",
+      "pingshui:rising:27"
+    ],
+    "標": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "樺": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:22"
+    ],
+    "橇": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:09"
+    ],
+    "橈": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:19"
+    ],
+    "橑": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:19"
+    ],
+    "橙": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:25"
+    ],
+    "橫": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "檠": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "欙": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "欷": [
+      "pingshui:upper_level:05",
+      "pingshui:departing:05"
+    ],
+    "欸": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "歎": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "歐": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "正": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "殷": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:15",
+      "pingshui:rising:12"
+    ],
+    "母": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:25"
+    ],
+    "比": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:departing:04"
+    ],
+    "氏": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "汎": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:12",
+      "pingshui:departing:30"
+    ],
+    "汗": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "汙": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:07"
+    ],
+    "汧": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "沈": [
+      "pingshui:lower_level:12",
+      "pingshui:rising:26",
+      "pingshui:departing:27"
+    ],
+    "沮": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "沱": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "油": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "治": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "沾": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "泥": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "泯": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "泱": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "洚": [
+      "pingshui:upper_level:01",
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "洳": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "洶": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "浪": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "涑": [
+      "pingshui:lower_level:11",
+      "pingshui:entering:01"
+    ],
+    "涷": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "淙": [
+      "pingshui:upper_level:02",
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "淞": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:01"
+    ],
+    "淤": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "淦": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:07",
+      "pingshui:departing:28"
+    ],
+    "深": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "淹": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:30"
+    ],
+    "湑": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "湛": [
+      "pingshui:lower_level:12",
+      "pingshui:lower_level:13",
+      "pingshui:rising:29"
+    ],
+    "湫": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:17"
+    ],
+    "湯": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "溟": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "溶": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "溷": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "漂": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "漊": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:25"
+    ],
+    "漕": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "漚": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "漫": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "漸": [
+      "pingshui:lower_level:14",
+      "pingshui:rising:28"
+    ],
+    "漼": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "潛": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "潢": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "潸": [
+      "pingshui:upper_level:15",
+      "pingshui:rising:15"
+    ],
+    "澇": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:19",
+      "pingshui:departing:20"
+    ],
+    "澌": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08",
+      "pingshui:departing:04"
+    ],
+    "澹": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27",
+      "pingshui:departing:28"
+    ],
+    "濺": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "瀏": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "瀰": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04",
+      "pingshui:rising:08"
+    ],
+    "瀾": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "灘": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "為": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "烝": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "煎": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "煬": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "熇": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:01",
+      "pingshui:entering:02",
+      "pingshui:entering:10"
+    ],
+    "燀": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "燋": [
+      "pingshui:lower_level:02",
+      "pingshui:entering:10"
+    ],
+    "燎": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17",
+      "pingshui:departing:18"
+    ],
+    "燒": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "燕": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "爹": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:20"
+    ],
+    "牽": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "狙": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "狿": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "猭": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "猶": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "獻": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:14"
+    ],
+    "王": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "玼": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "瑩": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:25"
+    ],
+    "瑳": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "璡": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "瓠": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "瓿": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:25"
+    ],
+    "甔": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:28"
+    ],
+    "甗": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "町": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "留": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "畛": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "當": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "疋": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:21"
+    ],
+    "疏": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "痁": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "痱": [
+      "pingshui:upper_level:05",
+      "pingshui:departing:05"
+    ],
+    "瘉": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "瘕": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:21"
+    ],
+    "瘤": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "瘥": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:10"
+    ],
+    "癉": [
+      "pingshui:upper_level:14",
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "癬": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "盛": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "盟": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "監": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "相": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "眅": [
+      "pingshui:upper_level:15",
+      "pingshui:rising:15"
+    ],
+    "眈": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "看": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "眴": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:17"
+    ],
+    "睛": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:23"
+    ],
+    "睢": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "瞀": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26",
+      "pingshui:entering:03"
+    ],
+    "瞑": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:17"
+    ],
+    "瞢": [
+      "pingshui:upper_level:01",
+      "pingshui:lower_level:10",
+      "pingshui:departing:01"
+    ],
+    "瞵": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "瞿": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "矇": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "砅": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:08"
+    ],
+    "研": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "砭": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "砮": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "硪": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "碬": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:15"
+    ],
+    "碭": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "磋": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "磨": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "礱": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "祖": [
+      "pingshui:lower_level:06",
+      "pingshui:rising:07"
+    ],
+    "祲": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "禁": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "禜": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "禪": [
+      "pingshui:upper_level:14",
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "秅": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:07"
+    ],
+    "秠": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "稌": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "稍": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "稱": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "穰": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "空": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01",
+      "pingshui:departing:01"
+    ],
+    "穿": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "窌": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19",
+      "pingshui:departing:26"
+    ],
+    "筊": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:18"
+    ],
+    "箘": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:11"
+    ],
+    "箠": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "篻": [
+      "pingshui:lower_level:02",
+      "pingshui:rising:17"
+    ],
+    "簍": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:07",
+      "pingshui:rising:25"
+    ],
+    "籠": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "糈": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "紓": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "純": [
+      "pingshui:upper_level:11",
+      "pingshui:upper_level:13",
+      "pingshui:lower_level:01",
+      "pingshui:rising:11"
+    ],
+    "紟": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "絧": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "經": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "維": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:27"
+    ],
+    "締": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "緣": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "緹": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "縕": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:13",
+      "pingshui:departing:13"
+    ],
+    "縫": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "縱": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "繅": [
+      "pingshui:lower_level:04",
+      "pingshui:rising:19"
+    ],
+    "繆": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26",
+      "pingshui:entering:01"
+    ],
+    "繇": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "繪": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:09"
+    ],
+    "纍": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "纏": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "纚": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "翰": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "翿": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "聞": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:13"
+    ],
+    "聽": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "胖": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "胠": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "脢": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "腄": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "膏": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "膜": [
+      "pingshui:upper_level:07",
+      "pingshui:entering:10"
+    ],
+    "膠": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "膴": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "臨": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "與": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "興": [
+      "pingshui:lower_level:10",
+      "pingshui:departing:25"
+    ],
+    "艟": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:03"
+    ],
+    "芊": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:04"
+    ],
+    "芋": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "芼": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "苫": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "苴": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06",
+      "pingshui:rising:06"
+    ],
+    "茸": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "茹": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "荷": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "莚": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "莛": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24"
+    ],
+    "莞": [
+      "pingshui:upper_level:14",
+      "pingshui:rising:15"
+    ],
+    "菟": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "菫": [
+      "pingshui:upper_level:12",
+      "pingshui:rising:12"
+    ],
+    "菲": [
+      "pingshui:upper_level:05",
+      "pingshui:rising:05"
+    ],
+    "萎": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "葑": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "葭": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:12"
+    ],
+    "葽": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "蒼": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "蓰": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "蔞": [
+      "pingshui:upper_level:07",
+      "pingshui:lower_level:11",
+      "pingshui:rising:07"
+    ],
+    "蔣": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22"
+    ],
+    "薺": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:08"
+    ],
+    "藇": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "藏": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "蘊": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:12"
+    ],
+    "號": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "虹": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:03"
+    ],
+    "虺": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:05"
+    ],
+    "蚑": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "蛬": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02"
+    ],
+    "蜎": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "蜓": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:16"
+    ],
+    "蜺": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:09"
+    ],
+    "蜿": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "蝹": [
+      "pingshui:upper_level:12",
+      "pingshui:rising:19"
+    ],
+    "螣": [
+      "pingshui:lower_level:10",
+      "pingshui:entering:13"
+    ],
+    "蟉": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "蠡": [
+      "pingshui:upper_level:04",
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "行": [
+      "pingshui:lower_level:07",
+      "pingshui:lower_level:08",
+      "pingshui:departing:23",
+      "pingshui:departing:24"
+    ],
+    "衙": [
+      "pingshui:upper_level:06",
+      "pingshui:lower_level:06",
+      "pingshui:rising:06"
+    ],
+    "衣": [
+      "pingshui:upper_level:05",
+      "pingshui:departing:05"
+    ],
+    "衷": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "裁": [
+      "pingshui:upper_level:10",
+      "pingshui:departing:11"
+    ],
+    "裎": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:23"
+    ],
+    "褆": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:04"
+    ],
+    "褫": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "要": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "親": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "觀": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "觜": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "觶": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "訕": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "訬": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:17"
+    ],
+    "訾": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "詆": [
+      "pingshui:upper_level:08",
+      "pingshui:rising:08"
+    ],
+    "評": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "詖": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "詷": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:01"
+    ],
+    "誹": [
+      "pingshui:upper_level:05",
+      "pingshui:rising:05",
+      "pingshui:departing:05"
+    ],
+    "調": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:departing:18"
+    ],
+    "諄": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "諓": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "論": [
+      "pingshui:upper_level:13",
+      "pingshui:departing:14"
+    ],
+    "諝": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06"
+    ],
+    "謾": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15",
+      "pingshui:departing:16"
+    ],
+    "譽": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "讒": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "讕": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "豬": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:05"
+    ],
+    "豻": [
+      "pingshui:upper_level:14",
+      "pingshui:upper_level:15",
+      "pingshui:departing:15"
+    ],
+    "貤": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "賁": [
+      "pingshui:upper_level:12",
+      "pingshui:upper_level:13",
+      "pingshui:departing:04"
+    ],
+    "踦": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "蹂": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25",
+      "pingshui:departing:26"
+    ],
+    "蹇": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13",
+      "pingshui:rising:16"
+    ],
+    "躇": [
+      "pingshui:upper_level:06",
+      "pingshui:entering:10"
+    ],
+    "軻": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "輕": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "輶": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "輸": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "轎": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "迎": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "過": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "遲": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "遺": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "那": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20",
+      "pingshui:departing:21"
+    ],
+    "鄗": [
+      "pingshui:lower_level:03",
+      "pingshui:rising:19",
+      "pingshui:entering:10"
+    ],
+    "鄢": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:13"
+    ],
+    "酏": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "酤": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07",
+      "pingshui:departing:07"
+    ],
+    "酺": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "醒": [
+      "pingshui:lower_level:09",
+      "pingshui:rising:24",
+      "pingshui:departing:25"
+    ],
+    "醟": [
+      "pingshui:lower_level:08",
+      "pingshui:departing:24"
+    ],
+    "醰": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "醵": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06",
+      "pingshui:entering:10"
+    ],
+    "醹": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "釃": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "重": [
+      "pingshui:upper_level:02",
+      "pingshui:rising:02",
+      "pingshui:departing:02"
+    ],
+    "量": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "釘": [
+      "pingshui:lower_level:09",
+      "pingshui:departing:25"
+    ],
+    "鈔": [
+      "pingshui:lower_level:03",
+      "pingshui:departing:19"
+    ],
+    "鈿": [
+      "pingshui:lower_level:01",
+      "pingshui:departing:17"
+    ],
+    "銚": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "鋪": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "錞": [
+      "pingshui:upper_level:11",
+      "pingshui:rising:10"
+    ],
+    "錡": [
+      "pingshui:upper_level:04",
+      "pingshui:rising:04"
+    ],
+    "錢": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "鍛": [
+      "pingshui:lower_level:06",
+      "pingshui:departing:15"
+    ],
+    "鍭": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "鍵": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "鏤": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:26"
+    ],
+    "鐻": [
+      "pingshui:upper_level:06",
+      "pingshui:rising:06",
+      "pingshui:departing:06"
+    ],
+    "鑱": [
+      "pingshui:lower_level:15",
+      "pingshui:departing:30"
+    ],
+    "鑽": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "長": [
+      "pingshui:lower_level:07",
+      "pingshui:rising:22",
+      "pingshui:departing:23"
+    ],
+    "間": [
+      "pingshui:upper_level:15",
+      "pingshui:departing:16"
+    ],
+    "闇": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "阮": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:13"
+    ],
+    "防": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "陂": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "降": [
+      "pingshui:upper_level:03",
+      "pingshui:departing:03"
+    ],
+    "除": [
+      "pingshui:upper_level:06",
+      "pingshui:departing:06"
+    ],
+    "隗": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "障": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "雍": [
+      "pingshui:upper_level:02",
+      "pingshui:departing:02"
+    ],
+    "離": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:08"
+    ],
+    "難": [
+      "pingshui:upper_level:14",
+      "pingshui:departing:15"
+    ],
+    "雺": [
+      "pingshui:upper_level:01",
+      "pingshui:departing:02",
+      "pingshui:departing:26"
+    ],
+    "霓": [
+      "pingshui:upper_level:08",
+      "pingshui:entering:12"
+    ],
+    "鞣": [
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "鞬": [
+      "pingshui:upper_level:13",
+      "pingshui:rising:16"
+    ],
+    "韽": [
+      "pingshui:lower_level:13",
+      "pingshui:departing:30"
+    ],
+    "頃": [
+      "pingshui:lower_level:08",
+      "pingshui:rising:23"
+    ],
+    "頏": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "頗": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "頦": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "頷": [
+      "pingshui:lower_level:13",
+      "pingshui:rising:27"
+    ],
+    "題": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "颮": [
+      "pingshui:lower_level:03",
+      "pingshui:entering:03"
+    ],
+    "颺": [
+      "pingshui:lower_level:07",
+      "pingshui:departing:23"
+    ],
+    "飂": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:11",
+      "pingshui:departing:26"
+    ],
+    "餔": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "馱": [
+      "pingshui:lower_level:05",
+      "pingshui:departing:21"
+    ],
+    "駘": [
+      "pingshui:upper_level:10",
+      "pingshui:rising:10"
+    ],
+    "騎": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "驁": [
+      "pingshui:lower_level:04",
+      "pingshui:departing:20"
+    ],
+    "驅": [
+      "pingshui:upper_level:07",
+      "pingshui:departing:07"
+    ],
+    "驎": [
+      "pingshui:upper_level:11",
+      "pingshui:departing:12"
+    ],
+    "骴": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:04"
+    ],
+    "鬋": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16",
+      "pingshui:departing:17"
+    ],
+    "鬷": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:01"
+    ],
+    "鮦": [
+      "pingshui:upper_level:01",
+      "pingshui:rising:02"
+    ],
+    "鮮": [
+      "pingshui:lower_level:01",
+      "pingshui:rising:16"
+    ],
+    "鯫": [
+      "pingshui:lower_level:11",
+      "pingshui:rising:25"
+    ],
+    "鵀": [
+      "pingshui:lower_level:12",
+      "pingshui:departing:27"
+    ],
+    "鷂": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "鷯": [
+      "pingshui:lower_level:02",
+      "pingshui:departing:18"
+    ],
+    "鹽": [
+      "pingshui:lower_level:14",
+      "pingshui:departing:29"
+    ],
+    "麃": [
+      "pingshui:lower_level:02",
+      "pingshui:lower_level:03",
+      "pingshui:rising:17"
+    ],
+    "麌": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "麗": [
+      "pingshui:upper_level:04",
+      "pingshui:departing:08"
+    ],
+    "麼": [
+      "pingshui:lower_level:05",
+      "pingshui:rising:20"
+    ],
+    "黂": [
+      "pingshui:upper_level:12",
+      "pingshui:departing:05"
+    ],
+    "齊": [
+      "pingshui:upper_level:08",
+      "pingshui:departing:08"
+    ],
+    "齬": [
+      "pingshui:upper_level:06",
+      "pingshui:upper_level:07",
+      "pingshui:rising:06"
+    ],
+    "齲": [
+      "pingshui:upper_level:07",
+      "pingshui:rising:07"
+    ],
+    "龍": [
+      "pingshui:upper_level:02",
+      "pingshui:entering:14"
+    ]
+  },
+  "open_issues": [
+    {
+      "issue_id": "PS8264804-001",
+      "character": "先",
+      "kind": "source_head_character_omitted_from_main_list",
+      "group_id": "pingshui:lower_level:01",
+      "source_state": "The heading is 一先; 先 is absent from its main and supplement lists. The main index has 先 in 去聲十七霰 only.",
+      "evidence": {
+        "source_file": "guangyun_revision_770099_api.json",
+        "title": "重修廣韻 (四庫全書本)/卷2",
+        "revision_id": 770099,
+        "url": "https://zh.wikisource.org/w/index.php?oldid=770099",
+        "wikitext_codepoint_offset": 929,
+        "exact_wikitext_excerpt": "先{{SK notes|先後也又姓左傳晉有先軫蘇前切又蘇薦切四}}",
+        "context": "卷二下平聲一先; the entry explicitly records both 蘇前切 and another reading 蘇薦切."
+      },
+      "candidate_editorial_action": "Add a level-tone 一先 candidate only after approving an explicit editorial overlay; retain the existing departing-tone candidate.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-002",
+      "character": "啼",
+      "kind": "common_historical_character_absent_from_reference",
+      "group_id": "pingshui:upper_level:08",
+      "source_state": "啼 is absent from all main and supplemental lists.",
+      "evidence": {
+        "source_file": "guangyun_revision_770095_api.json",
+        "title": "重修廣韻 (四庫全書本)/卷1",
+        "revision_id": 770095,
+        "url": "https://zh.wikisource.org/w/index.php?oldid=770095",
+        "wikitext_codepoint_offset": 73274,
+        "exact_wikitext_excerpt": "嗁{{SK notes|泣也説文曰號也杜奚切六十}}　啼㖒{{SK notes|竝上同}}",
+        "context": "卷一上平聲十二齊; 啼 is listed with 嗁, 杜奚切. Assignment to Pingshui 八齊 requires an explicit editorial mapping."
+      },
+      "candidate_editorial_action": "Review the absent 八齊 candidate against a second Pingshui edition before adding it to an operational overlay.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-003",
+      "character": "頹",
+      "kind": "suspicious_assignment_with_variant_sensitive_witness",
+      "group_id": "pingshui:entering:01",
+      "source_state": "頹 occurs in 入聲一屋 main text and 上平聲十灰 【詞】 supplement. The main index retains only the former, with this warning.",
+      "evidence": {
+        "source_file": "guangyun_revision_770095_api.json",
+        "title": "重修廣韻 (四庫全書本)/卷1",
+        "revision_id": 770095,
+        "url": "https://zh.wikisource.org/w/index.php?oldid=770095",
+        "wikitext_codepoint_offset": 85091,
+        "exact_wikitext_excerpt": "穨{{SK notes|暴風也杜囘切十三}}頽{{SK notes|上同}}",
+        "context": "卷一上平聲十五灰 records 頽, not the same Unicode character as 頹. No alias conversion is applied here."
+      },
+      "candidate_editorial_action": "Review 頹/頽 variant evidence and an independent Pingshui edition; do not silently move or merge either glyph.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-004",
+      "character": "龍",
+      "kind": "suspicious_cross_tone_assignment_unresolved",
+      "group_id": "pingshui:entering:14",
+      "source_state": "The same glyph 龍 occurs in 上平聲二冬 and 入聲十四緝 main text.",
+      "evidence": null,
+      "candidate_editorial_action": "Retain both source candidates and require edition/reading review before using the entering-tone candidate.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-005",
+      "character": null,
+      "kind": "group_label_convention_requires_explicit_alias",
+      "group_id": "pingshui:rising:28",
+      "source_state": "The frozen source labels this group 二十八琰; other Pingshui lists commonly use 二十八儉. This build preserves 琰 and uses section+ordinal for identity.",
+      "evidence": null,
+      "candidate_editorial_action": "Keep any cross-edition label aliases in a separately sourced table; do not rename this source label.",
+      "applied": false
+    }
+  ],
+  "known_limitations": [
+    "No identifiable printed exemplar or page-image collation in this Pingshui transcription.",
+    "Source membership is neither a context-sensitive pronunciation nor a gold tone label.",
+    "106 complete headings do not imply a complete character inventory.",
+    "Unidentified supplemental-list provenance prevents default inclusion.",
+    "Original and variant glyphs remain separate; unknown coverage is possible for the traditional corpus.",
+    "Flagged defects are not exhaustive; unflagged entries have not all been individually verified.",
+    "Guangyun witness excerpts support issue review, not automatic Pingshui reassignment or variant equivalence."
+  ]
+}

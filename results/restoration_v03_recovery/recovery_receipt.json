@@ -1,0 +1,17 @@
+{
+  "status": "exact_frozen_checkpoint_recovered",
+  "observed_at_utc": "2026-10-29T02:04:58.678910+00:00",
+  "expected_sha256": "be4b02abfb1a3bce4ec4aca64757aad465d12bdf9fbafaface54cbb0d2e7884a",
+  "observed_sha256": "4870c6956f32e6d682bd240bc1842f4dcbd8e0ea2fb2cb053fdd37e7e74126d4",
+  "replayed_sha256": "be4b02abfb1a3bce4ec4aca64757aad465d12bdf9fbafaface54cbb0d2e7884a",
+  "expected_update": 200,
+  "observed_update": 100,
+  "replayed_update": 200,
+  "replay_last100_loss": 1.984610412467776,
+  "config_changed": false,
+  "data_changed": false,
+  "selection_changed": false,
+  "test_results_used_for_recovery": false,
+  "cause": "not_determined; original file had earlier checkpoint content after selection; preserved without modification",
+  "frozen_source_and_input_hashes_verified": true
+}

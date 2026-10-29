@@ -1,0 +1,41 @@
+{
+  "classification": "engineering_only_not_formal_selected",
+  "optimizer_updates": 20,
+  "training_task_presentations": 640,
+  "seed": 172905,
+  "split": "train",
+  "dev_or_confirmation_selection": false,
+  "source_bytes_preserved": true,
+  "files": [
+    {
+      "original_path": "/workspace/scratch/c6b13db58303/tmp/matching-v05-preflight-2fr13wvv/driver.py",
+      "packaged_path": "results/matching_v05_engineering/preflight/driver.py",
+      "bytes": 6912,
+      "sha256": "17b4c0aa65268f3b7b249b84f64af765916ae9508e82eee93d50861167bbced2"
+    },
+    {
+      "original_path": "/workspace/scratch/c6b13db58303/tmp/matching-v05-preflight-2fr13wvv/freeze.json",
+      "packaged_path": "results/matching_v05_engineering/preflight/freeze.json",
+      "bytes": 1784,
+      "sha256": "086c2d8743de115f3693a01e3473e85804843bd5cdb27e8ce09ac3cbf8d222b9"
+    },
+    {
+      "original_path": "/workspace/scratch/c6b13db58303/tmp/matching-v05-preflight-2fr13wvv/sampling.json",
+      "packaged_path": "results/matching_v05_engineering/preflight/sampling.json",
+      "bytes": 33455,
+      "sha256": "37ff3cda85bf939d492e468dc4c1d99904acfee99d8a9882df3ed2da89aab4f0"
+    },
+    {
+      "original_path": "/workspace/scratch/c6b13db58303/tmp/matching-v05-preflight-2fr13wvv/receipt.json",
+      "packaged_path": "results/matching_v05_engineering/preflight/receipt.json",
+      "bytes": 8712,
+      "sha256": "a265eec654e9b15f67110c595e2e853ca536455045f21276646f6e0bde3e5029"
+    },
+    {
+      "original_path": "/workspace/scratch/c6b13db58303/tmp/matching-v05-preflight-2fr13wvv/engineering_update20.npz",
+      "packaged_path": "results/matching_v05_engineering/preflight/engineering_update20.npz",
+      "bytes": 900871,
+      "sha256": "83b7ff6bc5a972b39a79cee31dfa233c3a3261d590fc5ad0210c9723a5ae4dfa"
+    }
+  ]
+}

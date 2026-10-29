@@ -1,0 +1,22 @@
+{
+  "status": "source_artifacts_verified_before_atomic_rebuild",
+  "frozen_and_source_hash_checks": 149,
+  "unchanged_v03_artifact_hashes_checked": 191,
+  "historical_intentionally_updated_files": [
+    "README.md",
+    "docs/STATUS.md",
+    "docs/VerseMatrix_Progress.pdf",
+    "pyproject.toml",
+    "results/project_status.json",
+    "results/test_receipt.json",
+    "results/tests.log",
+    "src/wordconv_lab/__init__.py"
+  ],
+  "old_zip_observed_sha256": "dec629a7db0884675dc7e27a045d07c35128acd196835a259bb9f733fea21190",
+  "old_zip_observed_bytes": 19263889,
+  "old_zip_valid": false,
+  "old_test_receipt_recovered": false,
+  "scientific_experiment_results_changed": false,
+  "archive_method": "temporary_closed_verified_then_atomic_replace",
+  "saved_copy_verification": "must_be_completed_after_save_before_delivery"
+}

@@ -1,0 +1,56 @@
+{
+  "status": "design_not_executed",
+  "version": "0.1.0",
+  "matrix_search": {
+    "policies": [
+      "fifo",
+      "priority"
+    ],
+    "same_state_graph": true,
+    "same_actions": true,
+    "same_constraints": true,
+    "formal_test_design": {
+      "dev_problems": 60,
+      "test_problems": 240,
+      "proposal_budgets": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "primary_proposal_budget": 32
+    },
+    "go_rule": {
+      "relative_mean_normalized_regret_reduction_min": 0.2,
+      "paired_improvement_interval_required": true
+    }
+  },
+  "wordconv": {
+    "strong_nonconv_baseline": "same_receptive_field_local_attention",
+    "parameter_cap": 2000000,
+    "optimizer_update_cap": 2000,
+    "batch_size": 32,
+    "grad_accumulation_steps": 1,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "data_targets": {
+      "train_poem_families_min": 5000,
+      "dev_poem_families": 500,
+      "test_poem_families": 1000
+    },
+    "human_reviewers_per_task_target": 3,
+    "go_rule": {
+      "preference_score_min": 0.55,
+      "preference_ci_lower_gt": 0.5,
+      "equivalent_delta_min": 0.1,
+      "equivalent_delta_ci_lower_gt": 0.0
+    },
+    "formal_protocol_freeze": "before_test_unblinding_after_development_pilot"
+  },
+  "scope": "one_couplet_first; full_grid_organization_engine; no_claim_of_poetry_quality_from_synthetic_data"
+}

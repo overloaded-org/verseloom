@@ -1,0 +1,22 @@
+{
+  "all_source_hashes_rechecked_after_tests": true,
+  "archive_bytes": 15125075,
+  "archive_sha256": "b8be2935fe859c8f5e3f829673363f96ad6b9a77d8ab52fbc9f4504f513acfc7",
+  "bootstrap_commit": "817358ffaf9badf2d6d659492091def871c447fb",
+  "ci_final_path": ".github/workflows/ci.yml",
+  "ci_staging_path": ".verseloom-import/ci-source.yml",
+  "note": "The preserved upload manifest describes the prepared archive. Final README branding is a later explicit edit.",
+  "poem_generation_executed": false,
+  "source_bytes": 58966670,
+  "source_files": 364,
+  "source_manifest": "docs/GITHUB_UPLOAD_MANIFEST.json",
+  "status": "VERIFIED_FOR_SOURCE_IMPORT",
+  "unit_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests_run": 175,
+    "unexpected_successes": 0
+  },
+  "workflow_run_url": "https://github.com/overloaded-org/verseloom/actions/runs/40919929884"
+}

@@ -1,0 +1,64 @@
+{
+  "candidate_vocabulary_built": false,
+  "checks": {
+    "all_old_splits_excluded": "passed",
+    "four_tasks_per_selected_poem": "passed",
+    "selected_edge_boundary": "passed",
+    "transitive_family_exclusion": "passed",
+    "whole_family_selection": "passed"
+  },
+  "eligible_families": 3997,
+  "eligible_poems": 4101,
+  "eligible_unselected_poems": 3577,
+  "family_cap": 512,
+  "joint_bigram_jaccard_pairs": 183,
+  "joint_components": 7379,
+  "joint_relation_pairs": 630,
+  "joint_shared_line_pairs": 630,
+  "joint_unique_text_poems": 7825,
+  "limits": [
+    "Eight equal-length lines are a shape filter, not a strict-lushi certificate.",
+    "Exact Unicode code points only; variant glyph and edition-level relations can remain undetected.",
+    "Families use the declared surface relation, not exhaustive philological identity.",
+    "Authors can appear in both old data and confirmation; this is not author-held-out evaluation.",
+    "Fixed consecutive repository shards are not a random population sample of poetry.",
+    "Observed original text is a restoration target, not a literary-quality gold label.",
+    "Unselected new families are retained as exclusion/selection evidence and are not used for development."
+  ],
+  "new_components_excluded_by_prior": 173,
+  "new_exact_text_already_in_prior": 38,
+  "new_poems_excluded_by_prior_component": 183,
+  "new_unique_text_poems": 4284,
+  "prior_exclusion_by_split": {
+    "dev": 547,
+    "test": 530,
+    "train": 2502
+  },
+  "prior_exclusion_poems": 3579,
+  "schema": "versematrix.confirmation-selection.v0.4",
+  "scorers_or_retrieval_used": false,
+  "selected_authors_also_present_in_prior": 24,
+  "selected_families": 512,
+  "selected_poems": 524,
+  "selected_poems_by_length": {
+    "5": 373,
+    "7": 151
+  },
+  "selected_tasks": 2096,
+  "selected_tasks_by_length": {
+    "5": 1492,
+    "7": 604
+  },
+  "source_record_audit": {
+    "accepted_source_records": 4286,
+    "exact_duplicate_excess_records": 2,
+    "exact_duplicate_groups": 2,
+    "raw_records": 10003,
+    "rejected": {
+      "non_cjk_body": 1,
+      "not_8_by_5_or_7": 5716
+    },
+    "unique_text_poems": 4284
+  },
+  "source_restoration_hits_computed": false
+}

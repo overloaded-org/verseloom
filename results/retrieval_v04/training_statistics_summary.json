@@ -1,0 +1,85 @@
+{
+  "schema": "versematrix.phrase-retriever.v0.4",
+  "fit_poems": 2502,
+  "fit_poem_ids_sha256": "516ee2648b172bfd77fa07e2c3e0ddaca49ec0bd2ad9f94d098ac4804481cfba",
+  "baseline": {
+    "fit_poems": 2502,
+    "fit_poem_ids_sha256": "516ee2648b172bfd77fa07e2c3e0ddaca49ec0bd2ad9f94d098ac4804481cfba",
+    "vocabulary_size_with_unk": 3068,
+    "alpha": 0.1,
+    "weights": [
+      0.1,
+      0.3,
+      0.6
+    ],
+    "aligned_weight": 0.5,
+    "aligned_strength": 5.0,
+    "direction_unique_counts": [
+      {
+        "unigram": 3069,
+        "bigram": 59520,
+        "trigram": 90571,
+        "context1": 3069,
+        "context2": 57399
+      },
+      {
+        "unigram": 3069,
+        "bigram": 59520,
+        "trigram": 90659,
+        "context1": 3069,
+        "context2": 57487
+      }
+    ],
+    "aligned_unique_pairs": 40779,
+    "target_kind": "observed_source_restoration"
+  },
+  "candidates_by_length": {
+    "5": {
+      "wide": 10375,
+      "narrow": 1317,
+      "wide_candidate_sha256": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+      "candidate_unknown_characters": []
+    },
+    "7": {
+      "wide": 1504,
+      "narrow": 97,
+      "wide_candidate_sha256": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e",
+      "candidate_unknown_characters": []
+    }
+  },
+  "associations": {
+    "alignment": {
+      "5": {
+        "contexts": 11977,
+        "unique_context_span_pairs": 15301,
+        "events": 16651
+      },
+      "7": {
+        "contexts": 1626,
+        "unique_context_span_pairs": 1749,
+        "events": 1952
+      }
+    },
+    "boundary": {
+      "5": {
+        "contexts": 11767,
+        "unique_context_span_pairs": 14338,
+        "events": 15673
+      },
+      "7": {
+        "contexts": 2069,
+        "unique_context_span_pairs": 2221,
+        "events": 2484
+      }
+    }
+  },
+  "prior_alpha": 0.1,
+  "association_strength": 5.0,
+  "bonus": "log1p(count(context, span) / (5 * train_span_prior))",
+  "association_length_scope": "each poem length separately; eligible wide targets only",
+  "baseline_numerics": "original math.log and complete sentence summation order; no score rounding",
+  "baseline_builtin_sum_mode": "Neumaier compensation",
+  "tie_rule": "descending exact floating score, then source-text lexicographic order",
+  "unknown_policy": "baseline character UNK 0; association keys retain exact source text",
+  "target_kind": "observed source restoration, not literary quality"
+}

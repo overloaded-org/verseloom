@@ -1,0 +1,13 @@
+{
+  "schema": "versematrix.completion-examples.v0.5",
+  "selection_policy": "fixed_before_model_training_and_prediction; examples_are_not_evaluation_evidence",
+  "method": "compare",
+  "seed": 0,
+  "limit": 16,
+  "examples": [
+    {"id": "five_known", "upper": "空山新雨後", "suffix": "晚來秋", "kind": "familiar_public_domain_text_for_interface_demonstration"},
+    {"id": "seven_known", "upper": "風急天高猿嘯哀", "suffix": "沙白鳥飛回", "kind": "familiar_public_domain_text_for_interface_demonstration"},
+    {"id": "five_constructed", "upper": "江雨催寒色", "suffix": "過遠村", "kind": "assistant_constructed_query_not_a_quality_gold_label"},
+    {"id": "seven_constructed", "upper": "一夜江風吹客夢", "suffix": "明月照孤舟", "kind": "assistant_constructed_query_not_a_quality_gold_label"}
+  ]
+}

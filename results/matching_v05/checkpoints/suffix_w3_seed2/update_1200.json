@@ -1,0 +1,246 @@
+{
+  "accounting": {
+    "batch_size": 32,
+    "distinct_families_presented": 2247,
+    "distinct_poems_presented": 2375,
+    "distinct_tasks_presented": 5951,
+    "gradient_accumulation": 1,
+    "micro_steps": 1200,
+    "optimizer_updates": 1200,
+    "sample_presentations": 38400,
+    "sample_presentations_by_length": {
+      "5": 35456,
+      "7": 2944
+    },
+    "task_presentation_count_sha256": "c68e6dc4611a0dc3069550a50a1554daf0ce9041c66c94d72259fefc1c526c06"
+  },
+  "dev_metrics": {
+    "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+    "by_length": {
+      "5": {
+        "families": 423,
+        "metrics": {
+          "mrr": {
+            "families": 423,
+            "family_macro": 0.001615849171446187,
+            "task_micro": 0.0016007719643620938,
+            "tasks": 1820
+          },
+          "recall_at_16": {
+            "families": 423,
+            "family_macro": 0.004137115839243499,
+            "task_micro": 0.0038461538461538464,
+            "tasks": 1820
+          },
+          "top1": {
+            "families": 423,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 1820
+          }
+        },
+        "tasks": 1820
+      },
+      "7": {
+        "families": 85,
+        "metrics": {
+          "mrr": {
+            "families": 85,
+            "family_macro": 0.002392836666528168,
+            "task_micro": 0.0031909226604455395,
+            "tasks": 368
+          },
+          "recall_at_16": {
+            "families": 85,
+            "family_macro": 0.0029411764705882353,
+            "task_micro": 0.005434782608695652,
+            "tasks": 368
+          },
+          "top1": {
+            "families": 85,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 368
+          }
+        },
+        "tasks": 368
+      }
+    },
+    "by_prefix_positive_bucket": {
+      "in_W_never_prefix_positive": {
+        "families": 186,
+        "metrics": {
+          "mrr": {
+            "families": 186,
+            "family_macro": 0.0038753566028130963,
+            "task_micro": 0.00468310866132975,
+            "tasks": 250
+          },
+          "recall_at_16": {
+            "families": 186,
+            "family_macro": 0.010752688172043012,
+            "task_micro": 0.012,
+            "tasks": 250
+          },
+          "top1": {
+            "families": 186,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 250
+          }
+        },
+        "tasks": 250
+      },
+      "outside_W": {
+        "families": 483,
+        "metrics": {
+          "mrr": {
+            "families": 483,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 1291
+          },
+          "recall_at_16": {
+            "families": 483,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 1291
+          },
+          "top1": {
+            "families": 483,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 1291
+          }
+        },
+        "tasks": 1291
+      },
+      "seen_prefix_positive": {
+        "families": 349,
+        "metrics": {
+          "mrr": {
+            "families": 349,
+            "family_macro": 0.004689532950938443,
+            "task_micro": 0.004508326659738071,
+            "tasks": 647
+          },
+          "recall_at_16": {
+            "families": 349,
+            "family_macro": 0.009073543457497613,
+            "task_micro": 0.00927357032457496,
+            "tasks": 647
+          },
+          "top1": {
+            "families": 349,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 647
+          }
+        },
+        "tasks": 647
+      }
+    },
+    "families": 508,
+    "metrics": {
+      "mrr": {
+        "families": 508,
+        "family_macro": 0.0017458569216075423,
+        "task_micro": 0.0018682196134291451,
+        "tasks": 2188
+      },
+      "recall_at_16": {
+        "families": 508,
+        "family_macro": 0.003937007874015748,
+        "task_micro": 0.004113345521023766,
+        "tasks": 2188
+      },
+      "top1": {
+        "families": 508,
+        "family_macro": 0.0,
+        "task_micro": 0.0,
+        "tasks": 2188
+      }
+    },
+    "seed_count": 1,
+    "tasks": 2188
+  },
+  "parameters": {
+    "adam_state_scalars_allocated": 85456,
+    "by_tensor": {
+      "context_bias": {
+        "shape": [
+          24
+        ],
+        "stored": 24,
+        "trainable": 24
+      },
+      "context_kernel": {
+        "shape": [
+          3,
+          12,
+          24
+        ],
+        "stored": 864,
+        "trainable": 864
+      },
+      "embedding": {
+        "shape": [
+          3068,
+          12
+        ],
+        "stored": 36816,
+        "trainable": 36804
+      },
+      "query_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      },
+      "query_projection": {
+        "shape": [
+          288,
+          16
+        ],
+        "stored": 4608,
+        "trainable": 1920
+      },
+      "span_projection": {
+        "shape": [
+          24,
+          16
+        ],
+        "stored": 384,
+        "trainable": 384
+      },
+      "span_projection_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      }
+    },
+    "candidate_id_embeddings": false,
+    "context_mode": "suffix",
+    "dtype": "float64",
+    "frozen_inactive_query_projection_parameters": 2688,
+    "frozen_parameters": 2700,
+    "frozen_unk_parameters": 12,
+    "independent_candidate_bias": false,
+    "norm_epsilon": 1e-06,
+    "output_bias": "identically_zero",
+    "representation_dim": 16,
+    "step_count": 1200,
+    "stored_parameters": 42728,
+    "temperature": 0.1,
+    "trainable_parameters": 40028
+  },
+  "path": "models/suffix_w3_seed2/update_1200.npz",
+  "predictions_path": "predictions/suffix_w3_seed2/update_1200.jsonl",
+  "predictions_sha256": "450238f46d1a092d5d80dfc709116fa2f50d40d169c8b2329f01539554ade7f4",
+  "seed": 2,
+  "sha256": "c3e7f082d7b3ba1383a7fab2a18a8efdbe5858a25764002d25ac27bdb944c105",
+  "step": 1200
+}

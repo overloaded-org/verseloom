@@ -1,0 +1,80 @@
+{
+  "schema_version": "0.2",
+  "corrections_applied": 0,
+  "issues": [
+    {
+      "issue_id": "PS8264804-001",
+      "character": "先",
+      "kind": "source_head_character_omitted_from_main_list",
+      "group_id": "pingshui:lower_level:01",
+      "source_state": "The heading is 一先; 先 is absent from its main and supplement lists. The main index has 先 in 去聲十七霰 only.",
+      "evidence": {
+        "source_file": "guangyun_revision_770099_api.json",
+        "title": "重修廣韻 (四庫全書本)/卷2",
+        "revision_id": 770099,
+        "url": "https://zh.wikisource.org/w/index.php?oldid=770099",
+        "wikitext_codepoint_offset": 929,
+        "exact_wikitext_excerpt": "先{{SK notes|先後也又姓左傳晉有先軫蘇前切又蘇薦切四}}",
+        "context": "卷二下平聲一先; the entry explicitly records both 蘇前切 and another reading 蘇薦切."
+      },
+      "candidate_editorial_action": "Add a level-tone 一先 candidate only after approving an explicit editorial overlay; retain the existing departing-tone candidate.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-002",
+      "character": "啼",
+      "kind": "common_historical_character_absent_from_reference",
+      "group_id": "pingshui:upper_level:08",
+      "source_state": "啼 is absent from all main and supplemental lists.",
+      "evidence": {
+        "source_file": "guangyun_revision_770095_api.json",
+        "title": "重修廣韻 (四庫全書本)/卷1",
+        "revision_id": 770095,
+        "url": "https://zh.wikisource.org/w/index.php?oldid=770095",
+        "wikitext_codepoint_offset": 73274,
+        "exact_wikitext_excerpt": "嗁{{SK notes|泣也説文曰號也杜奚切六十}}　啼㖒{{SK notes|竝上同}}",
+        "context": "卷一上平聲十二齊; 啼 is listed with 嗁, 杜奚切. Assignment to Pingshui 八齊 requires an explicit editorial mapping."
+      },
+      "candidate_editorial_action": "Review the absent 八齊 candidate against a second Pingshui edition before adding it to an operational overlay.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-003",
+      "character": "頹",
+      "kind": "suspicious_assignment_with_variant_sensitive_witness",
+      "group_id": "pingshui:entering:01",
+      "source_state": "頹 occurs in 入聲一屋 main text and 上平聲十灰 【詞】 supplement. The main index retains only the former, with this warning.",
+      "evidence": {
+        "source_file": "guangyun_revision_770095_api.json",
+        "title": "重修廣韻 (四庫全書本)/卷1",
+        "revision_id": 770095,
+        "url": "https://zh.wikisource.org/w/index.php?oldid=770095",
+        "wikitext_codepoint_offset": 85091,
+        "exact_wikitext_excerpt": "穨{{SK notes|暴風也杜囘切十三}}頽{{SK notes|上同}}",
+        "context": "卷一上平聲十五灰 records 頽, not the same Unicode character as 頹. No alias conversion is applied here."
+      },
+      "candidate_editorial_action": "Review 頹/頽 variant evidence and an independent Pingshui edition; do not silently move or merge either glyph.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-004",
+      "character": "龍",
+      "kind": "suspicious_cross_tone_assignment_unresolved",
+      "group_id": "pingshui:entering:14",
+      "source_state": "The same glyph 龍 occurs in 上平聲二冬 and 入聲十四緝 main text.",
+      "evidence": null,
+      "candidate_editorial_action": "Retain both source candidates and require edition/reading review before using the entering-tone candidate.",
+      "applied": false
+    },
+    {
+      "issue_id": "PS8264804-005",
+      "character": null,
+      "kind": "group_label_convention_requires_explicit_alias",
+      "group_id": "pingshui:rising:28",
+      "source_state": "The frozen source labels this group 二十八琰; other Pingshui lists commonly use 二十八儉. This build preserves 琰 and uses section+ordinal for identity.",
+      "evidence": null,
+      "candidate_editorial_action": "Keep any cross-edition label aliases in a separately sourced table; do not rename this source label.",
+      "applied": false
+    }
+  ]
+}

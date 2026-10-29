@@ -1,0 +1,597 @@
+{
+  "schema": "versematrix.retrieval-confirmation.v0.4",
+  "status": "completed_confirmation_now_exposed",
+  "completed_at_utc": "2026-10-29T03:19:08.764539+00:00",
+  "selected_method": {
+    "id": "wide_a1_b1",
+    "pool": "wide",
+    "alignment_weight": 0.25,
+    "boundary_weight": 0.25
+  },
+  "metrics": {
+    "narrow_ngram": {
+      "method": {
+        "id": "narrow_ngram",
+        "pool": "narrow",
+        "alignment_weight": 0.0,
+        "boundary_weight": 0.0
+      },
+      "overall": {
+        "vocabulary_coverage": {
+          "family_macro": 0.14453125,
+          "task_micro": 0.1450381679389313,
+          "tasks": 2096,
+          "families": 512
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.012687534270644021,
+          "task_micro": 0.012578069107360727,
+          "tasks": 2096,
+          "families": 512
+        },
+        "top1": {
+          "family_macro": 0.00537109375,
+          "task_micro": 0.005248091603053435,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_8": {
+          "family_macro": 0.022705078125,
+          "task_micro": 0.022423664122137404,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_16": {
+          "family_macro": 0.030029296875,
+          "task_micro": 0.030057251908396948,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_32": {
+          "family_macro": 0.036865234375,
+          "task_micro": 0.036736641221374045,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_64": {
+          "family_macro": 0.050862630208333336,
+          "task_micro": 0.05104961832061069,
+          "tasks": 2096,
+          "families": 512
+        },
+        "tasks": 2096,
+        "poems": 524,
+        "families": 512,
+        "ranked_candidates_per_task": {
+          "minimum": 97,
+          "maximum": 1317,
+          "total": 2023552
+        }
+      },
+      "5": {
+        "vocabulary_coverage": {
+          "family_macro": 0.19008264462809918,
+          "task_micro": 0.1903485254691689,
+          "tasks": 1492,
+          "families": 363
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.01287403893114584,
+          "task_micro": 0.012783289001858501,
+          "tasks": 1492,
+          "families": 363
+        },
+        "top1": {
+          "family_macro": 0.004132231404958678,
+          "task_micro": 0.004021447721179625,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_8": {
+          "family_macro": 0.023760330578512397,
+          "task_micro": 0.023458445040214475,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_16": {
+          "family_macro": 0.03271349862258953,
+          "task_micro": 0.03284182305630027,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_32": {
+          "family_macro": 0.040289256198347105,
+          "task_micro": 0.040214477211796246,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_64": {
+          "family_macro": 0.05865472910927456,
+          "task_micro": 0.058981233243967826,
+          "tasks": 1492,
+          "families": 363
+        },
+        "tasks": 1492,
+        "poems": 373,
+        "families": 363,
+        "ranked_candidates_per_task": {
+          "minimum": 1317,
+          "maximum": 1317,
+          "total": 1964964
+        }
+      },
+      "7": {
+        "vocabulary_coverage": {
+          "family_macro": 0.03355704697986577,
+          "task_micro": 0.033112582781456956,
+          "tasks": 604,
+          "families": 149
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.01223316385613288,
+          "task_micro": 0.012071135195786748,
+          "tasks": 604,
+          "families": 149
+        },
+        "top1": {
+          "family_macro": 0.008389261744966443,
+          "task_micro": 0.008278145695364239,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_8": {
+          "family_macro": 0.020134228187919462,
+          "task_micro": 0.019867549668874173,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_16": {
+          "family_macro": 0.02348993288590604,
+          "task_micro": 0.023178807947019868,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_32": {
+          "family_macro": 0.028523489932885907,
+          "task_micro": 0.028145695364238412,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_64": {
+          "family_macro": 0.031879194630872486,
+          "task_micro": 0.03145695364238411,
+          "tasks": 604,
+          "families": 149
+        },
+        "tasks": 604,
+        "poems": 151,
+        "families": 149,
+        "ranked_candidates_per_task": {
+          "minimum": 97,
+          "maximum": 97,
+          "total": 58588
+        }
+      }
+    },
+    "wide_ngram": {
+      "method": {
+        "id": "wide_ngram",
+        "pool": "wide",
+        "alignment_weight": 0.0,
+        "boundary_weight": 0.0
+      },
+      "overall": {
+        "vocabulary_coverage": {
+          "family_macro": 0.3433430989583333,
+          "task_micro": 0.34685114503816794,
+          "tasks": 2096,
+          "families": 512
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.012279324601140486,
+          "task_micro": 0.012194480848813449,
+          "tasks": 2096,
+          "families": 512
+        },
+        "top1": {
+          "family_macro": 0.00439453125,
+          "task_micro": 0.004293893129770993,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_8": {
+          "family_macro": 0.020751953125,
+          "task_micro": 0.02051526717557252,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_16": {
+          "family_macro": 0.033447265625,
+          "task_micro": 0.032919847328244274,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_32": {
+          "family_macro": 0.045166015625,
+          "task_micro": 0.04532442748091603,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_64": {
+          "family_macro": 0.064208984375,
+          "task_micro": 0.06440839694656489,
+          "tasks": 2096,
+          "families": 512
+        },
+        "tasks": 2096,
+        "poems": 524,
+        "families": 512,
+        "ranked_candidates_per_task": {
+          "minimum": 1504,
+          "maximum": 10375,
+          "total": 16387916
+        }
+      },
+      "5": {
+        "vocabulary_coverage": {
+          "family_macro": 0.4222910927456382,
+          "task_micro": 0.42560321715817695,
+          "tasks": 1492,
+          "families": 363
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.011871642465927871,
+          "task_micro": 0.01181221873344003,
+          "tasks": 1492,
+          "families": 363
+        },
+        "top1": {
+          "family_macro": 0.0027548209366391185,
+          "task_micro": 0.002680965147453083,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_8": {
+          "family_macro": 0.02169421487603306,
+          "task_micro": 0.021447721179624665,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_16": {
+          "family_macro": 0.03340220385674931,
+          "task_micro": 0.03284182305630027,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_32": {
+          "family_macro": 0.04648760330578512,
+          "task_micro": 0.04691689008042895,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_64": {
+          "family_macro": 0.06852617079889807,
+          "task_micro": 0.06836461126005362,
+          "tasks": 1492,
+          "families": 363
+        },
+        "tasks": 1492,
+        "poems": 373,
+        "families": 363,
+        "ranked_candidates_per_task": {
+          "minimum": 10375,
+          "maximum": 10375,
+          "total": 15479500
+        }
+      },
+      "7": {
+        "vocabulary_coverage": {
+          "family_macro": 0.15100671140939598,
+          "task_micro": 0.152317880794702,
+          "tasks": 604,
+          "families": 149
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.013272536782900074,
+          "task_micro": 0.01313874421990143,
+          "tasks": 604,
+          "families": 149
+        },
+        "top1": {
+          "family_macro": 0.008389261744966443,
+          "task_micro": 0.008278145695364239,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_8": {
+          "family_macro": 0.018456375838926176,
+          "task_micro": 0.018211920529801324,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_16": {
+          "family_macro": 0.03355704697986577,
+          "task_micro": 0.033112582781456956,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_32": {
+          "family_macro": 0.04194630872483222,
+          "task_micro": 0.041390728476821195,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_64": {
+          "family_macro": 0.053691275167785234,
+          "task_micro": 0.054635761589403975,
+          "tasks": 604,
+          "families": 149
+        },
+        "tasks": 604,
+        "poems": 151,
+        "families": 149,
+        "ranked_candidates_per_task": {
+          "minimum": 1504,
+          "maximum": 1504,
+          "total": 908416
+        }
+      }
+    },
+    "selected": {
+      "method": {
+        "id": "selected",
+        "pool": "wide",
+        "alignment_weight": 0.25,
+        "boundary_weight": 0.25
+      },
+      "overall": {
+        "vocabulary_coverage": {
+          "family_macro": 0.3433430989583333,
+          "task_micro": 0.34685114503816794,
+          "tasks": 2096,
+          "families": 512
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.013470102788581762,
+          "task_micro": 0.013315491085776149,
+          "tasks": 2096,
+          "families": 512
+        },
+        "top1": {
+          "family_macro": 0.00634765625,
+          "task_micro": 0.006202290076335878,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_8": {
+          "family_macro": 0.022216796875,
+          "task_micro": 0.02194656488549618,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_16": {
+          "family_macro": 0.033447265625,
+          "task_micro": 0.032919847328244274,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_32": {
+          "family_macro": 0.044677734375,
+          "task_micro": 0.04484732824427481,
+          "tasks": 2096,
+          "families": 512
+        },
+        "recall_at_64": {
+          "family_macro": 0.063232421875,
+          "task_micro": 0.06345419847328244,
+          "tasks": 2096,
+          "families": 512
+        },
+        "tasks": 2096,
+        "poems": 524,
+        "families": 512,
+        "ranked_candidates_per_task": {
+          "minimum": 1504,
+          "maximum": 10375,
+          "total": 16387916
+        }
+      },
+      "5": {
+        "vocabulary_coverage": {
+          "family_macro": 0.4222910927456382,
+          "task_micro": 0.42560321715817695,
+          "tasks": 1492,
+          "families": 363
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.01396525610155978,
+          "task_micro": 0.01379000072253629,
+          "tasks": 1492,
+          "families": 363
+        },
+        "top1": {
+          "family_macro": 0.006887052341597796,
+          "task_micro": 0.006702412868632708,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_8": {
+          "family_macro": 0.023071625344352618,
+          "task_micro": 0.022788203753351208,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_16": {
+          "family_macro": 0.03340220385674931,
+          "task_micro": 0.03284182305630027,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_32": {
+          "family_macro": 0.04579889807162534,
+          "task_micro": 0.04624664879356569,
+          "tasks": 1492,
+          "families": 363
+        },
+        "recall_at_64": {
+          "family_macro": 0.06714876033057851,
+          "task_micro": 0.06702412868632708,
+          "tasks": 1492,
+          "families": 363
+        },
+        "tasks": 1492,
+        "poems": 373,
+        "families": 363,
+        "ranked_candidates_per_task": {
+          "minimum": 10375,
+          "maximum": 10375,
+          "total": 15479500
+        }
+      },
+      "7": {
+        "vocabulary_coverage": {
+          "family_macro": 0.15100671140939598,
+          "task_micro": 0.152317880794702,
+          "tasks": 604,
+          "families": 149
+        },
+        "mrr_full_lexicon": {
+          "family_macro": 0.012263789683809808,
+          "task_micro": 0.012143358009540839,
+          "tasks": 604,
+          "families": 149
+        },
+        "top1": {
+          "family_macro": 0.0050335570469798654,
+          "task_micro": 0.004966887417218543,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_8": {
+          "family_macro": 0.020134228187919462,
+          "task_micro": 0.019867549668874173,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_16": {
+          "family_macro": 0.03355704697986577,
+          "task_micro": 0.033112582781456956,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_32": {
+          "family_macro": 0.04194630872483222,
+          "task_micro": 0.041390728476821195,
+          "tasks": 604,
+          "families": 149
+        },
+        "recall_at_64": {
+          "family_macro": 0.053691275167785234,
+          "task_micro": 0.054635761589403975,
+          "tasks": 604,
+          "families": 149
+        },
+        "tasks": 604,
+        "poems": 151,
+        "families": 149,
+        "ranked_candidates_per_task": {
+          "minimum": 1504,
+          "maximum": 1504,
+          "total": 908416
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "selected_minus_narrow": {
+      "left": "selected",
+      "right": "narrow_ngram",
+      "families": 512,
+      "mean_difference": 0.00341796875,
+      "interval": [
+        -0.00244140625,
+        0.009289550781249822
+      ],
+      "repeats": 5000,
+      "seed": 2026102904,
+      "family_order": "lexicographic",
+      "percentile_method": "linear",
+      "confidence": 0.95,
+      "estimand": "paired_equal_family_all_task_recall_at_16_difference_of_frozen_deterministic_retrievers",
+      "limitation": "conditional on selected retriever, source construction and fixed output K; no literary-quality or equal-compute claim"
+    },
+    "wide_minus_narrow": {
+      "left": "wide_ngram",
+      "right": "narrow_ngram",
+      "families": 512,
+      "mean_difference": 0.00341796875,
+      "interval": [
+        -0.001953125,
+        0.00927734375
+      ],
+      "repeats": 5000,
+      "seed": 2026102904,
+      "family_order": "lexicographic",
+      "percentile_method": "linear",
+      "confidence": 0.95,
+      "estimand": "paired_equal_family_all_task_recall_at_16_difference_of_frozen_deterministic_retrievers",
+      "limitation": "conditional on selected retriever, source construction and fixed output K; no literary-quality or equal-compute claim"
+    },
+    "selected_minus_wide": {
+      "left": "selected",
+      "right": "wide_ngram",
+      "families": 512,
+      "mean_difference": 0.0,
+      "interval": [
+        -0.00244140625,
+        0.00244140625
+      ],
+      "repeats": 5000,
+      "seed": 2026102904,
+      "family_order": "lexicographic",
+      "percentile_method": "linear",
+      "confidence": 0.95,
+      "estimand": "paired_equal_family_all_task_recall_at_16_difference_of_frozen_deterministic_retrievers",
+      "limitation": "conditional on selected retriever, source construction and fixed output K; no literary-quality or equal-compute claim"
+    }
+  },
+  "primary_comparison": "selected_minus_narrow",
+  "secondary_comparisons_descriptive_only": [
+    "wide_minus_narrow",
+    "selected_minus_wide"
+  ],
+  "promotion_gate": {
+    "minimum_point_gain": 0.02,
+    "ci_lower_strictly_above": 0.0
+  },
+  "promotion_decision": "DO_NOT_PROMOTE_RETRIEVER",
+  "evaluation_seconds_three_methods_shared_components": 40.48496995200003,
+  "compute_accounting": {
+    "shared_component_query_evaluations": 2096,
+    "ngram_candidate_items_in_shared_wide_evaluation": 16387916,
+    "association_components": [
+      "alignment_bonus",
+      "boundary_bonus"
+    ],
+    "method_rankings": 6288,
+    "ranked_items_by_method": {
+      "narrow_ngram": 2023552,
+      "wide_ngram": 16387916,
+      "selected": 16387916
+    },
+    "interpretation": "All methods share the wide component calculation in this benchmark; narrow ranked-item counts do not claim separately measured narrow scoring work or timing.",
+    "fixed_output_K_not_fixed_computation": true
+  },
+  "neural_training_updates": 0,
+  "literary_quality_evaluated": false,
+  "contextual_prosody_gold": false,
+  "old_test_evaluated": false,
+  "limits": [
+    "A frozen source-prefix retrieval target is not a preferred-wording or poetry-quality gold label.",
+    "K=16 fixes the output pool size, not retrieval scoring work; wider vocabulary is costlier.",
+    "Source corpus is shape-filtered, family-isolated by specified surface rules, not author-held-out or exhaustively edition-independent.",
+    "Local freeze is not external preregistration. Confirmation is now exposed and cannot validate future adaptive changes.",
+    "Only selected-minus-narrow recall@16 is confirmatory; other K, MRR, top1 and comparisons are descriptive.",
+    "CI lower above zero supports positive gain; it does not show the true gain is at least 2 percentage points."
+  ]
+}

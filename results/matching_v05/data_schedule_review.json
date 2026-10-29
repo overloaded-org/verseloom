@@ -1,0 +1,142 @@
+{
+  "schema": "versematrix.matching-data-schedule-review.v0.5",
+  "status": "PASS_STATIC_FROZEN_DATA_AND_SCHEDULES",
+  "reviewed_at_utc": "2026-10-29T08:36:33.990339+00:00",
+  "method": "Independent direct Counter/set reconstruction from allowed train/dev source records; did not import the experiment loader, candidate builder or sampler.",
+  "scope": "Data and committed schedule evidence only. The formal run is in progress; this review does not claim that all scheduled updates have been applied. Completed training receipts and result metrics are reviewed separately.",
+  "old_test_rows_skipped_before_json_decode": 530,
+  "old_test_or_confirmation_content_decoded": false,
+  "model_scores_or_predictions_read": false,
+  "candidate_checks": {
+    "5": {
+      "candidates": 10375,
+      "all_position_counts_exact": true,
+      "prefix_positive_counts_exact": true,
+      "exact_source_poem_sets": true,
+      "zero_prefix_positive_candidates": 7233,
+      "total_training_prefix_positive_events_in_W": 5494
+    },
+    "7": {
+      "candidates": 1504,
+      "all_position_counts_exact": true,
+      "prefix_positive_counts_exact": true,
+      "exact_source_poem_sets": true,
+      "zero_prefix_positive_candidates": 1168,
+      "total_training_prefix_positive_events_in_W": 457
+    }
+  },
+  "target_buckets": {
+    "train": {
+      "seen_prefix_positive": 5951,
+      "in_W_never_prefix_positive": 0,
+      "outside_W": 4057
+    },
+    "dev": {
+      "seen_prefix_positive": 647,
+      "in_W_never_prefix_positive": 250,
+      "outside_W": 1291
+    }
+  },
+  "training_tasks": 10008,
+  "eligible_training_tasks": 5951,
+  "seed_schedule_checks": {
+    "0": {
+      "updates": 1200,
+      "presentations": 38400,
+      "distinct_tasks": 5951,
+      "distinct_poems": 2375,
+      "distinct_families": 2247,
+      "all_tasks_training_eligible": true,
+      "no_dev_task_ids": true,
+      "all_batches_exactly_32_and_same_length": true,
+      "cycles": {
+        "5": {
+          "eligible_tasks": 5494,
+          "presentations": 35456,
+          "complete_without_replacement_cycles": 6,
+          "partial_cycle_presentations": 2492,
+          "all_cycles_and_tail_validated": true
+        },
+        "7": {
+          "eligible_tasks": 457,
+          "presentations": 2944,
+          "complete_without_replacement_cycles": 6,
+          "partial_cycle_presentations": 202,
+          "all_cycles_and_tail_validated": true
+        }
+      },
+      "within_batch_duplicate_task_counted_batches": 2,
+      "duplicate_note": "A batch may cross two independent shuffled cycles; repeated task IDs across that boundary are permitted by the frozen full-batch sampler. Every complete within-length cycle is independently verified without replacement.",
+      "schedule_sha256": "daa3c35ec9e6d2a9d9b1ec08c871660813fba9ff8e5dce4c25679d4dcc3685c8",
+      "task_presentation_count_sha256": "5fa47e200085df9ef870159affe00d29ebcd98896451f72373aa6e060cbf71fd"
+    },
+    "1": {
+      "updates": 1200,
+      "presentations": 38400,
+      "distinct_tasks": 5951,
+      "distinct_poems": 2375,
+      "distinct_families": 2247,
+      "all_tasks_training_eligible": true,
+      "no_dev_task_ids": true,
+      "all_batches_exactly_32_and_same_length": true,
+      "cycles": {
+        "5": {
+          "eligible_tasks": 5494,
+          "presentations": 35456,
+          "complete_without_replacement_cycles": 6,
+          "partial_cycle_presentations": 2492,
+          "all_cycles_and_tail_validated": true
+        },
+        "7": {
+          "eligible_tasks": 457,
+          "presentations": 2944,
+          "complete_without_replacement_cycles": 6,
+          "partial_cycle_presentations": 202,
+          "all_cycles_and_tail_validated": true
+        }
+      },
+      "within_batch_duplicate_task_counted_batches": 4,
+      "duplicate_note": "A batch may cross two independent shuffled cycles; repeated task IDs across that boundary are permitted by the frozen full-batch sampler. Every complete within-length cycle is independently verified without replacement.",
+      "schedule_sha256": "4fa23a77c9ef5f7f2a1586dbb3065e5c4c304d915445dc4454315b59ef6c5501",
+      "task_presentation_count_sha256": "7d97cecc9a1775a759d5939bd2eec5b27dcf85d5f870fb9403264ef3784884ee"
+    },
+    "2": {
+      "updates": 1200,
+      "presentations": 38400,
+      "distinct_tasks": 5951,
+      "distinct_poems": 2375,
+      "distinct_families": 2247,
+      "all_tasks_training_eligible": true,
+      "no_dev_task_ids": true,
+      "all_batches_exactly_32_and_same_length": true,
+      "cycles": {
+        "5": {
+          "eligible_tasks": 5494,
+          "presentations": 35456,
+          "complete_without_replacement_cycles": 6,
+          "partial_cycle_presentations": 2492,
+          "all_cycles_and_tail_validated": true
+        },
+        "7": {
+          "eligible_tasks": 457,
+          "presentations": 2944,
+          "complete_without_replacement_cycles": 6,
+          "partial_cycle_presentations": 202,
+          "all_cycles_and_tail_validated": true
+        }
+      },
+      "within_batch_duplicate_task_counted_batches": 3,
+      "duplicate_note": "A batch may cross two independent shuffled cycles; repeated task IDs across that boundary are permitted by the frozen full-batch sampler. Every complete within-length cycle is independently verified without replacement.",
+      "schedule_sha256": "683ac84f3610251b67be4419eca61794f464f420ae42b2b9e746c529fda76b6f",
+      "task_presentation_count_sha256": "c68e6dc4611a0dc3069550a50a1554daf0ce9041c66c94d72259fefc1c526c06"
+    }
+  },
+  "distinct_seed_schedule_hashes": 3,
+  "same_seed_arm_schedule_contract": "One frozen schedule file per seed is referenced by the runner for all four declared arms; actual application belongs to completed run receipts.",
+  "source_sha256": {
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "results/matching_v05/freeze.json": "7902197f93d8376c97dfe72d90d61285494dbdb3c91f2ff621847c2bb29aec2a",
+    "results/matching_v05/candidate_resources.json": "d1ab814edc12f8e244be10eb62a2989209c6aaf4df8a87f6e3afc261108dc967",
+    "results/matching_v05/coverage.json": "93d7c7aa9a56d2fc22e34c7e98e1e24daf8448a4c0742ae518c9b6ddc12ddadd"
+  }
+}

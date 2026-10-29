@@ -1,0 +1,18 @@
+{
+  "status": "frozen_before_execution",
+  "seeds": [
+    0,
+    1
+  ],
+  "lengths": [
+    5,
+    7
+  ],
+  "domain": "two binary token choices in each line at each column; four superstates",
+  "source_sha256": {
+    "src/wordconv_lab/factor_dp.py": "86d83a7516438e650b1d54d37fc2d38307bbd8b29400a911f9a19925fec7c1bc",
+    "src/wordconv_lab/prosody.py": "bcb4b2a8e7761045e5e4299a69840754815cb8c9e8880f8054ea57deee99fec5",
+    "src/wordconv_lab/convolution.py": "10da4e90e6b1cc35520fee2a497a091d58b123142976ffba0e9765c548ef9006",
+    "scripts/run_discovery_v02.py": "246fc46640fd7fdd9a49a92b5882c956382f865af69bafca1dcda229669b9733"
+  }
+}

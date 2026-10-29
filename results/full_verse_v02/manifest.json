@@ -1,0 +1,63 @@
+{
+  "status": "frozen_before_case_generation_and_execution",
+  "created_utc": "2026-10-29T01:34:07.019201+00:00",
+  "config": {
+    "schema": "versematrix.full-verse-exact.synthetic.v0.2",
+    "lengths": [
+      5,
+      7
+    ],
+    "scorer_seeds": {
+      "5": 117,
+      "7": 223
+    },
+    "start_second_tones": {
+      "5": "P",
+      "7": "Z"
+    },
+    "first_rhymed": [
+      false,
+      true
+    ],
+    "rhyme_groups": [
+      "R1",
+      "R2"
+    ],
+    "configurations_per_case": 4,
+    "profile": "strict_basic_templates_only",
+    "model": {
+      "feature_dim": 6,
+      "channels": 4,
+      "kernel_width": 3,
+      "trained": false
+    },
+    "features": "[token==A, token==B, token==C, global_row/7, column/(length-1), 1]",
+    "free_same_tone_cells": [
+      [
+        2,
+        0
+      ],
+      [
+        6,
+        "last"
+      ]
+    ],
+    "generator": "base template in every cell; alternate first-line tones; two rhyme groups at all possible rhyme endings; two same-tone binary cells",
+    "absolute_tolerance": 1e-12,
+    "oracle": "enumerate all raw full-matrix candidates, score all four original couplets, independently check every template/rhyme configuration",
+    "quality_claim": "synthetic untrained mechanism verification only"
+  },
+  "config_sha256": "0d081ecbc79d1c120db7ea6c364c90d42adcd01fc67f01a3a8ee1e96b98b44c2",
+  "source_sha256": {
+    "src/wordconv_lab/verse_solver.py": "c5569e87700fc4bbab9e764df78cb73d95b25ab9fb6b617feee8bb95ad330a74",
+    "src/wordconv_lab/factor_dp.py": "86d83a7516438e650b1d54d37fc2d38307bbd8b29400a911f9a19925fec7c1bc",
+    "src/wordconv_lab/prosody.py": "bcb4b2a8e7761045e5e4299a69840754815cb8c9e8880f8054ea57deee99fec5",
+    "src/wordconv_lab/convolution.py": "10da4e90e6b1cc35520fee2a497a091d58b123142976ffba0e9765c548ef9006",
+    "scripts/run_full_verse_v02.py": "d71c0f6d1cd28a01af84fa7c2bacd3e0c40046b91e0b7bfee16ba91a61a6cadc"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "registration_note": "local before-execution manifest; not an external preregistration"
+}

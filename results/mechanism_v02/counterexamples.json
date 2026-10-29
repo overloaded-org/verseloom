@@ -1,0 +1,89 @@
+{
+  "counterexample_count": 19,
+  "examples": [
+    {
+      "problem_id": "test-local_trap-004",
+      "family": "local_trap",
+      "domain_size": 4,
+      "n_variables": 2,
+      "initial_values": [
+        0,
+        0
+      ],
+      "target": [
+        3,
+        2
+      ],
+      "fifo_best_values": [
+        "3",
+        "2"
+      ],
+      "priority_best_values": [
+        "0",
+        "0"
+      ],
+      "fifo_regret": 0.0,
+      "priority_regret": 0.3450714908146741,
+      "fifo_proposals": 32,
+      "priority_proposals": 32,
+      "case_sha256": "aac846fd863383948e30e0e24dc3bd489c99dd58771d4ec33bd148c0cfbeb740",
+      "selection": "posthoc_smallest_state_space_counterexample_for_explanation_not_a_new_primary_test"
+    },
+    {
+      "problem_id": "test-local_trap-005",
+      "family": "local_trap",
+      "domain_size": 4,
+      "n_variables": 2,
+      "initial_values": [
+        0,
+        0
+      ],
+      "target": [
+        3,
+        3
+      ],
+      "fifo_best_values": [
+        "3",
+        "3"
+      ],
+      "priority_best_values": [
+        "0",
+        "0"
+      ],
+      "fifo_regret": 0.0,
+      "priority_regret": 0.34439313939897914,
+      "fifo_proposals": 32,
+      "priority_proposals": 32,
+      "case_sha256": "ebbe77d0c0b450fa0cbd7ebdeec357250f93402667f2faef02464bef6c9ebc33",
+      "selection": "posthoc_smallest_state_space_counterexample_for_explanation_not_a_new_primary_test"
+    },
+    {
+      "problem_id": "test-local_trap-012",
+      "family": "local_trap",
+      "domain_size": 4,
+      "n_variables": 2,
+      "initial_values": [
+        0,
+        0
+      ],
+      "target": [
+        3,
+        2
+      ],
+      "fifo_best_values": [
+        "3",
+        "2"
+      ],
+      "priority_best_values": [
+        "0",
+        "0"
+      ],
+      "fifo_regret": 0.0,
+      "priority_regret": 0.3442799136002411,
+      "fifo_proposals": 32,
+      "priority_proposals": 32,
+      "case_sha256": "eb80094e0e5dc870c93d377d7ceb7c67f97512d9149a50b9773bf6ea942ecf8f",
+      "selection": "posthoc_smallest_state_space_counterexample_for_explanation_not_a_new_primary_test"
+    }
+  ]
+}

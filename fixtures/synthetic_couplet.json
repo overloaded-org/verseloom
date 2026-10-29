@@ -1,0 +1,284 @@
+{
+  "schema_version": "versematrix.synthetic-fixture.v1",
+  "synthetic": true,
+  "warning": "Abstract tokens and hand-authored phonological labels are engineering fixtures, not real poems, training gold, or human aesthetic judgments.",
+  "lexicon": {
+    "U1": [
+      {
+        "id": "U1-1",
+        "tone": "P",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:U1",
+        "status": "verified"
+      }
+    ],
+    "U2": [
+      {
+        "id": "U2-1",
+        "tone": "Z",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:U2",
+        "status": "verified"
+      }
+    ],
+    "U3": [
+      {
+        "id": "U3-1",
+        "tone": "P",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:U3",
+        "status": "verified"
+      }
+    ],
+    "U4": [
+      {
+        "id": "U4-1",
+        "tone": "P",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:U4",
+        "status": "verified"
+      }
+    ],
+    "U5": [
+      {
+        "id": "U5-1",
+        "tone": "Z",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:U5",
+        "status": "verified"
+      }
+    ],
+    "A": [
+      {
+        "id": "A-1",
+        "tone": "P",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:A",
+        "status": "verified"
+      }
+    ],
+    "B": [
+      {
+        "id": "B-1",
+        "tone": "P",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:B",
+        "status": "verified"
+      }
+    ],
+    "C": [
+      {
+        "id": "C-1",
+        "tone": "Z",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:C",
+        "status": "verified"
+      }
+    ],
+    "D": [
+      {
+        "id": "D-1",
+        "tone": "Z",
+        "rhyme": "R0",
+        "source_ref": "synthetic-fixture-v1:D",
+        "status": "verified"
+      }
+    ],
+    "RA": [
+      {
+        "id": "RA-1",
+        "tone": "P",
+        "rhyme": "R1",
+        "source_ref": "synthetic-fixture-v1:RA",
+        "status": "verified"
+      }
+    ],
+    "RB": [
+      {
+        "id": "RB-1",
+        "tone": "P",
+        "rhyme": "R1",
+        "source_ref": "synthetic-fixture-v1:RB",
+        "status": "verified"
+      }
+    ],
+    "WRONG": [
+      {
+        "id": "WRONG-1",
+        "tone": "P",
+        "rhyme": "R2",
+        "source_ref": "synthetic-fixture-v1:WRONG",
+        "status": "verified"
+      }
+    ],
+    "POLY": [
+      {
+        "id": "poly-p",
+        "tone": "P",
+        "rhyme": "R2",
+        "source_ref": "synthetic-fixture-v1:poly-p",
+        "status": "verified"
+      },
+      {
+        "id": "poly-z",
+        "tone": "Z",
+        "rhyme": "R1",
+        "source_ref": "synthetic-fixture-v1:poly-z",
+        "status": "verified"
+      }
+    ]
+  },
+  "task": {
+    "task_id": "synthetic-couplet-01",
+    "source_poem_id": "synthetic-dev-01",
+    "duplicate_cluster": "synthetic-cluster-dev-01",
+    "split": "dev",
+    "upper": [
+      "U1",
+      "U2",
+      "U3",
+      "U4",
+      "U5"
+    ],
+    "upper_readings": [
+      "U1-1",
+      "U2-1",
+      "U3-1",
+      "U4-1",
+      "U5-1"
+    ],
+    "patterns": [
+      "PZPPZ",
+      "PPZZP"
+    ],
+    "rhyme_positions": [
+      [
+        1,
+        4
+      ]
+    ],
+    "rhyme_group": "R1",
+    "candidates": [
+      {
+        "candidate_id": "c01",
+        "tokens": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "RA"
+        ],
+        "reading_ids": [
+          "A-1",
+          "B-1",
+          "C-1",
+          "D-1",
+          "RA-1"
+        ],
+        "origin": {
+          "pool_split": "train",
+          "source_poem_ids": [
+            "synthetic-train-01"
+          ],
+          "uses_heldout_reference": false
+        }
+      },
+      {
+        "candidate_id": "c02",
+        "tokens": [
+          "B",
+          "A",
+          "D",
+          "C",
+          "RB"
+        ],
+        "reading_ids": [
+          "B-1",
+          "A-1",
+          "D-1",
+          "C-1",
+          "RB-1"
+        ],
+        "origin": {
+          "pool_split": "train",
+          "source_poem_ids": [
+            "synthetic-train-01"
+          ],
+          "uses_heldout_reference": false
+        }
+      },
+      {
+        "candidate_id": "c03_wrong_rhyme",
+        "tokens": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "WRONG"
+        ],
+        "reading_ids": [
+          "A-1",
+          "B-1",
+          "C-1",
+          "D-1",
+          "WRONG-1"
+        ],
+        "origin": {
+          "pool_split": "train",
+          "source_poem_ids": [
+            "synthetic-train-01"
+          ],
+          "uses_heldout_reference": false
+        }
+      },
+      {
+        "candidate_id": "c04_cross_reading_trap",
+        "tokens": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "POLY"
+        ],
+        "reading_ids": [
+          "A-1",
+          "B-1",
+          "C-1",
+          "D-1",
+          "poly-p"
+        ],
+        "origin": {
+          "pool_split": "train",
+          "source_poem_ids": [
+            "synthetic-train-01"
+          ],
+          "uses_heldout_reference": false
+        }
+      },
+      {
+        "candidate_id": "c05_unknown",
+        "tokens": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "UNKNOWN"
+        ],
+        "reading_ids": [
+          "A-1",
+          "B-1",
+          "C-1",
+          "D-1",
+          null
+        ],
+        "origin": {
+          "pool_split": "train",
+          "source_poem_ids": [
+            "synthetic-train-01"
+          ],
+          "uses_heldout_reference": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "versematrix.history-preservation.v0.5",
+  "verified_at_utc": "2026-10-29T08:23:43.934365+00:00",
+  "previous_version": "0.4.0",
+  "previous_artifacts_checked": 267,
+  "all_previous_artifacts_match": true,
+  "historical_copies": [
+    {
+      "source": "README.md",
+      "copy": "docs/README_v0.4.md",
+      "sha256": "6e10778ed866352dda91dd9329b29d99012614769ba8aff73e3b9b72151e0904"
+    },
+    {
+      "source": "docs/STATUS.md",
+      "copy": "docs/STATUS_v0.4.md",
+      "sha256": "cf985fcddd46a7a69f55a74ab50626c5dbb717d8fafe601ed2b30bc38455f94c"
+    },
+    {
+      "source": "docs/VerseMatrix_Progress.pdf",
+      "copy": "docs/VerseMatrix_Progress_v0.4.pdf",
+      "sha256": "3208d0fe933225603851dc20f67b3bf0a69331f094ee0a83b11fb6e5cccb711d"
+    },
+    {
+      "source": "ARTIFACT_MANIFEST.json",
+      "copy": "docs/ARTIFACT_MANIFEST_v0.4.json",
+      "sha256": "322ab0d67acc6c12095dd213f289db5d6b147db18a647d9aed428f7b6ad8f2b8"
+    },
+    {
+      "source": "results/project_status.json",
+      "copy": "results/project_status_v0.4.json",
+      "sha256": "5d7f57e526811e6d5c4d650c7e361c15bc8ab4c3ed20af50e2742d2d1646a2e8"
+    },
+    {
+      "source": "results/test_receipt.json",
+      "copy": "results/test_receipt_v0.4.json",
+      "sha256": "543592c42bb560f3e0429e8323cf109b58c8457f350d876e1456642abf11c738"
+    },
+    {
+      "source": "results/tests.log",
+      "copy": "results/tests_v0.4.log",
+      "sha256": "005998d132183145603ffbcc694dc7eb5a0f5cead55a06ed4e2ad4bed2d78bb9"
+    }
+  ]
+}

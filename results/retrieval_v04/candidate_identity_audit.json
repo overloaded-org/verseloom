@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "narrow_text_and_counts_exact_v03": true,
+  "wide_text_and_counts_exact_independent_v03_diagnostic": true,
+  "all_candidate_origins_train_only": true,
+  "counts": {
+    "5": {
+      "narrow": 1317,
+      "wide": 10375
+    },
+    "7": {
+      "narrow": 97,
+      "wide": 1504
+    }
+  }
+}

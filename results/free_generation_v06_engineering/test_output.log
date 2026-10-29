@@ -1,0 +1,15 @@
+test_extension_rejects_duplicate_lines_and_excessive_repetition (tests.test_free_generation.FreeGenerationBoundaryTests.test_extension_rejects_duplicate_lines_and_excessive_repetition) ... ok
+test_line_shape_whole_source_copy_and_internal_repetition (tests.test_free_generation.FreeGenerationBoundaryTests.test_line_shape_whole_source_copy_and_internal_repetition) ... ok
+test_loader_skips_held_out_rows_before_decoding (tests.test_free_generation.FreeGenerationBoundaryTests.test_loader_skips_held_out_rows_before_decoding) ... ok
+test_output_write_is_create_only_and_keeps_original_bytes (tests.test_free_generation.FreeGenerationBoundaryTests.test_output_write_is_create_only_and_keeps_original_bytes) ... ok
+test_rhyme_repetition_and_middle_couplet_same_position_are_rejected (tests.test_free_generation.FreeGenerationBoundaryTests.test_rhyme_repetition_and_middle_couplet_same_position_are_rejected) ... ok
+test_same_tone_multiple_groups_cannot_supply_unique_rhyme (tests.test_free_generation.FreeGenerationBoundaryTests.test_same_tone_multiple_groups_cannot_supply_unique_rhyme) ... ok
+test_spans_preserve_every_exact_origin_and_threshold (tests.test_free_generation.FreeGenerationBoundaryTests.test_spans_preserve_every_exact_origin_and_threshold) ... ok
+test_train_only_input_rejects_held_out_records (tests.test_free_generation.FreeGenerationBoundaryTests.test_train_only_input_rejects_held_out_records) ... ok
+test_unknown_mixed_tone_and_editorial_characters_are_not_resolved (tests.test_free_generation.FreeGenerationBoundaryTests.test_unknown_mixed_tone_and_editorial_characters_are_not_resolved) ... ok
+test_vector_language_scores_match_independent_scalar_sentence_formula (tests.test_free_generation.FreeGenerationBoundaryTests.test_vector_language_scores_match_independent_scalar_sentence_formula) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+OK

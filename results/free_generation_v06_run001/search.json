@@ -1,0 +1,1280 @@
+{
+  "scope": "finite candidate pools and bounded beam; no global optimality claim",
+  "selected": {
+    "best": {
+      "lines": [
+        "日暮春風起",
+        "青山美少年",
+        "誰知何處去",
+        "獨有白雲天",
+        "萬里無人到",
+        "還家越水邊",
+        "江南歸路遠",
+        "草木落花前"
+      ],
+      "score": -34.12251738790631,
+      "selected": [
+        {
+          "lm_score": -4.140601463339935,
+          "prefix": "日暮",
+          "rhyme_group": null,
+          "suffix": "春風起",
+          "text": "日暮春風起",
+          "tones": "ZZPPZ"
+        },
+        {
+          "lm_score": -4.8427729273123905,
+          "prefix": "青山",
+          "rhyme_group": "pingshui:lower_level:01",
+          "suffix": "美少年",
+          "text": "青山美少年",
+          "tones": "PPZZP"
+        },
+        {
+          "lm_score": -4.302996437689158,
+          "prefix": "誰知",
+          "rhyme_group": null,
+          "suffix": "何處去",
+          "text": "誰知何處去",
+          "tones": "PPPZZ"
+        },
+        {
+          "lm_score": -4.581898120808042,
+          "prefix": "獨有",
+          "rhyme_group": "pingshui:lower_level:01",
+          "suffix": "白雲天",
+          "text": "獨有白雲天",
+          "tones": "ZZZPP"
+        },
+        {
+          "lm_score": -4.454825569091918,
+          "prefix": "萬里",
+          "rhyme_group": null,
+          "suffix": "無人到",
+          "text": "萬里無人到",
+          "tones": "ZZPPZ"
+        },
+        {
+          "lm_score": -4.905981889662135,
+          "prefix": "還家",
+          "rhyme_group": "pingshui:lower_level:01",
+          "suffix": "越水邊",
+          "text": "還家越水邊",
+          "tones": "PPZZP"
+        },
+        {
+          "lm_score": -4.3892981530435335,
+          "prefix": "江南",
+          "rhyme_group": null,
+          "suffix": "歸路遠",
+          "text": "江南歸路遠",
+          "tones": "PPPZZ"
+        },
+        {
+          "lm_score": -4.952541767503239,
+          "prefix": "草木",
+          "rhyme_group": "pingshui:lower_level:01",
+          "suffix": "落花前",
+          "text": "草木落花前",
+          "tones": "ZZZPP"
+        }
+      ],
+      "terms": [
+        {
+          "coherence_raw": 0.0,
+          "coherence_weighted": 0.0,
+          "increment": -4.140601463339935,
+          "lm": -4.140601463339935,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.6415981290943615,
+          "coherence_weighted": 0.32079906454718077,
+          "increment": -4.5219738627652095,
+          "lm": -4.8427729273123905,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.6917866826045076,
+          "coherence_weighted": 0.3458933413022538,
+          "increment": -3.9571030963869043,
+          "lm": -4.302996437689158,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.7136583458422486,
+          "coherence_weighted": 0.3568291729211243,
+          "increment": -4.225068947886918,
+          "lm": -4.581898120808042,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.7065073705787354,
+          "coherence_weighted": 0.3532536852893677,
+          "increment": -4.10157188380255,
+          "lm": -4.454825569091918,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.6991900459884655,
+          "coherence_weighted": 0.34959502299423273,
+          "increment": -4.556386866667902,
+          "lm": -4.905981889662135,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.7396075103759281,
+          "coherence_weighted": 0.36980375518796404,
+          "increment": -4.01949439785557,
+          "lm": -4.3892981530435335,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        },
+        {
+          "coherence_raw": 0.7044497966038318,
+          "coherence_weighted": 0.3522248983019159,
+          "increment": -4.600316869201323,
+          "lm": -4.952541767503239,
+          "previous_character_occurrences": 0,
+          "repetition_penalty": 0.0
+        }
+      ]
+    },
+    "core": [
+      "ZZPPZ",
+      "PPZZP",
+      "PPPZZ",
+      "ZZZPP",
+      "ZZPPZ",
+      "PPZZP",
+      "PPPZZ",
+      "ZZZPP"
+    ],
+    "rhyme_rows": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "rows": [
+      {
+        "candidate_pool_size": 128,
+        "counts": {
+          "attempted_extensions": 128,
+          "beam_pruned": 96,
+          "legal_extensions": 128,
+          "retained_states": 32
+        },
+        "row": 0
+      },
+      {
+        "candidate_pool_size": 96,
+        "counts": {
+          "attempted_extensions": 3072,
+          "beam_pruned": 3040,
+          "legal_extensions": 3072,
+          "retained_states": 32
+        },
+        "row": 1
+      },
+      {
+        "candidate_pool_size": 128,
+        "counts": {
+          "attempted_extensions": 4096,
+          "beam_pruned": 4064,
+          "legal_extensions": 4096,
+          "retained_states": 32
+        },
+        "row": 2
+      },
+      {
+        "candidate_pool_size": 96,
+        "counts": {
+          "attempted_extensions": 3072,
+          "beam_pruned": 2848,
+          "legal_extensions": 2880,
+          "repeated_rhyme_character": 192,
+          "retained_states": 32
+        },
+        "row": 3
+      },
+      {
+        "candidate_pool_size": 128,
+        "counts": {
+          "attempted_extensions": 4096,
+          "beam_pruned": 4032,
+          "legal_extensions": 4064,
+          "repeated_line": 32,
+          "retained_states": 32
+        },
+        "row": 4
+      },
+      {
+        "candidate_pool_size": 96,
+        "counts": {
+          "attempted_extensions": 3072,
+          "beam_pruned": 2308,
+          "legal_extensions": 2340,
+          "repeated_line": 32,
+          "repeated_rhyme_character": 700,
+          "retained_states": 32
+        },
+        "row": 5
+      },
+      {
+        "candidate_pool_size": 128,
+        "counts": {
+          "attempted_extensions": 4096,
+          "beam_pruned": 4032,
+          "legal_extensions": 4064,
+          "repeated_line": 32,
+          "retained_states": 32
+        },
+        "row": 6
+      },
+      {
+        "candidate_pool_size": 96,
+        "counts": {
+          "attempted_extensions": 3072,
+          "beam_pruned": 1888,
+          "legal_extensions": 1920,
+          "repeated_line": 32,
+          "repeated_rhyme_character": 1120,
+          "retained_states": 32
+        },
+        "row": 7
+      }
+    ],
+    "status": "complete",
+    "template_id": "L5-Z-R0"
+  },
+  "template_searches": [
+    {
+      "best": {
+        "lines": [
+          "誰知何處去",
+          "獨有白雲天",
+          "日暮春風起",
+          "青山美少年",
+          "江南歸路遠",
+          "對此夕陽邊",
+          "萬里無人到",
+          "平生在法筵"
+        ],
+        "score": -34.19974818830675,
+        "selected": [
+          {
+            "lm_score": -4.302996437689158,
+            "prefix": "誰知",
+            "rhyme_group": null,
+            "suffix": "何處去",
+            "text": "誰知何處去",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.581898120808042,
+            "prefix": "獨有",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "白雲天",
+            "text": "獨有白雲天",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.140601463339935,
+            "prefix": "日暮",
+            "rhyme_group": null,
+            "suffix": "春風起",
+            "text": "日暮春風起",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -4.8427729273123905,
+            "prefix": "青山",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "美少年",
+            "text": "青山美少年",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.3892981530435335,
+            "prefix": "江南",
+            "rhyme_group": null,
+            "suffix": "歸路遠",
+            "text": "江南歸路遠",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.850042487192029,
+            "prefix": "對此",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "夕陽邊",
+            "text": "對此夕陽邊",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.454825569091918,
+            "prefix": "萬里",
+            "rhyme_group": null,
+            "suffix": "無人到",
+            "text": "萬里無人到",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -5.080341124588502,
+            "prefix": "平生",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "在法筵",
+            "text": "平生在法筵",
+            "tones": "PPZZP"
+          }
+        ],
+        "terms": [
+          {
+            "coherence_raw": 0.0,
+            "coherence_weighted": 0.0,
+            "increment": -4.302996437689158,
+            "lm": -4.302996437689158,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7265455026715095,
+            "coherence_weighted": 0.36327275133575476,
+            "increment": -4.218625369472287,
+            "lm": -4.581898120808042,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6945661036900573,
+            "coherence_weighted": 0.34728305184502867,
+            "increment": -3.793318411494906,
+            "lm": -4.140601463339935,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6834896072594994,
+            "coherence_weighted": 0.3417448036297497,
+            "increment": -4.501028123682641,
+            "lm": -4.8427729273123905,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7310620707854837,
+            "coherence_weighted": 0.36553103539274184,
+            "increment": -4.023767117650792,
+            "lm": -4.3892981530435335,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6913842650306156,
+            "coherence_weighted": 0.3456921325153078,
+            "increment": -4.504350354676721,
+            "lm": -4.850042487192029,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7089707211390667,
+            "coherence_weighted": 0.35448536056953334,
+            "increment": -4.100340208522384,
+            "lm": -4.454825569091918,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.650037918941278,
+            "coherence_weighted": 0.325018959470639,
+            "increment": -4.755322165117863,
+            "lm": -5.080341124588502,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          }
+        ]
+      },
+      "core": [
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP"
+      ],
+      "rhyme_rows": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": [
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 128,
+            "beam_pruned": 96,
+            "legal_extensions": 128,
+            "retained_states": 32
+          },
+          "row": 0
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 3040,
+            "legal_extensions": 3072,
+            "retained_states": 32
+          },
+          "row": 1
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4064,
+            "legal_extensions": 4096,
+            "retained_states": 32
+          },
+          "row": 2
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2848,
+            "legal_extensions": 2880,
+            "repeated_rhyme_character": 192,
+            "retained_states": 32
+          },
+          "row": 3
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4032,
+            "legal_extensions": 4064,
+            "repeated_line": 32,
+            "retained_states": 32
+          },
+          "row": 4
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2416,
+            "legal_extensions": 2448,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 592,
+            "retained_states": 32
+          },
+          "row": 5
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4032,
+            "legal_extensions": 4064,
+            "repeated_line": 32,
+            "retained_states": 32
+          },
+          "row": 6
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2248,
+            "character_use_limit": 23,
+            "legal_extensions": 2280,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 737,
+            "retained_states": 32
+          },
+          "row": 7
+        }
+      ],
+      "status": "complete",
+      "template_id": "L5-P-R0"
+    },
+    {
+      "best": {
+        "lines": [
+          "青山欲問邊",
+          "獨有白雲天",
+          "日暮春風起",
+          "東南美少年",
+          "平生何處去",
+          "草木落花前",
+          "萬里無人到",
+          "誰能見虎眠"
+        ],
+        "score": -34.803843288991274,
+        "selected": [
+          {
+            "lm_score": -4.80657510199938,
+            "prefix": "青山",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "欲問邊",
+            "text": "青山欲問邊",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.581898120808042,
+            "prefix": "獨有",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "白雲天",
+            "text": "獨有白雲天",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.140601463339935,
+            "prefix": "日暮",
+            "rhyme_group": null,
+            "suffix": "春風起",
+            "text": "日暮春風起",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -4.934596386536717,
+            "prefix": "東南",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "美少年",
+            "text": "東南美少年",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.3316710765956845,
+            "prefix": "平生",
+            "rhyme_group": null,
+            "suffix": "何處去",
+            "text": "平生何處去",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.952541767503239,
+            "prefix": "草木",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "落花前",
+            "text": "草木落花前",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.454825569091918,
+            "prefix": "萬里",
+            "rhyme_group": null,
+            "suffix": "無人到",
+            "text": "萬里無人到",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -5.035546582460022,
+            "prefix": "誰能",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "見虎眠",
+            "text": "誰能見虎眠",
+            "tones": "PPZZP"
+          }
+        ],
+        "terms": [
+          {
+            "coherence_raw": 0.0,
+            "coherence_weighted": 0.0,
+            "increment": -4.80657510199938,
+            "lm": -4.80657510199938,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7138979064946291,
+            "coherence_weighted": 0.35694895324731457,
+            "increment": -4.224949167560727,
+            "lm": -4.581898120808042,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6806043147012855,
+            "coherence_weighted": 0.34030215735064273,
+            "increment": -3.800299305989292,
+            "lm": -4.140601463339935,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7072258755664734,
+            "coherence_weighted": 0.3536129377832367,
+            "increment": -4.58098344875348,
+            "lm": -4.934596386536717,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7059860022134614,
+            "coherence_weighted": 0.3529930011067307,
+            "increment": -3.9786780754889537,
+            "lm": -4.3316710765956845,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7054114834659357,
+            "coherence_weighted": 0.35270574173296787,
+            "increment": -4.599836025770271,
+            "lm": -4.952541767503239,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7114561751301474,
+            "coherence_weighted": 0.3557280875650737,
+            "increment": -4.099097481526845,
+            "lm": -4.454825569091918,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6442438011153865,
+            "coherence_weighted": 0.32212190055769324,
+            "increment": -4.713424681902328,
+            "lm": -5.035546582460022,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          }
+        ]
+      },
+      "core": [
+        "PPZZP",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP"
+      ],
+      "rhyme_rows": [
+        0,
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": [
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 96,
+            "beam_pruned": 64,
+            "legal_extensions": 96,
+            "retained_states": 32
+          },
+          "row": 0
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2836,
+            "legal_extensions": 2868,
+            "repeated_rhyme_character": 204,
+            "retained_states": 32
+          },
+          "row": 1
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4064,
+            "legal_extensions": 4096,
+            "retained_states": 32
+          },
+          "row": 2
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2512,
+            "legal_extensions": 2544,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 496,
+            "retained_states": 32
+          },
+          "row": 3
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4064,
+            "legal_extensions": 4096,
+            "retained_states": 32
+          },
+          "row": 4
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2164,
+            "legal_extensions": 2196,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 844,
+            "retained_states": 32
+          },
+          "row": 5
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4032,
+            "legal_extensions": 4064,
+            "repeated_line": 32,
+            "retained_states": 32
+          },
+          "row": 6
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 1888,
+            "legal_extensions": 1920,
+            "repeated_line": 64,
+            "repeated_rhyme_character": 1088,
+            "retained_states": 32
+          },
+          "row": 7
+        }
+      ],
+      "status": "complete",
+      "template_id": "L5-P-R1"
+    },
+    {
+      "best": {
+        "lines": [
+          "日暮春風起",
+          "青山美少年",
+          "誰知何處去",
+          "獨有白雲天",
+          "萬里無人到",
+          "還家越水邊",
+          "江南歸路遠",
+          "草木落花前"
+        ],
+        "score": -34.12251738790631,
+        "selected": [
+          {
+            "lm_score": -4.140601463339935,
+            "prefix": "日暮",
+            "rhyme_group": null,
+            "suffix": "春風起",
+            "text": "日暮春風起",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -4.8427729273123905,
+            "prefix": "青山",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "美少年",
+            "text": "青山美少年",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.302996437689158,
+            "prefix": "誰知",
+            "rhyme_group": null,
+            "suffix": "何處去",
+            "text": "誰知何處去",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.581898120808042,
+            "prefix": "獨有",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "白雲天",
+            "text": "獨有白雲天",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.454825569091918,
+            "prefix": "萬里",
+            "rhyme_group": null,
+            "suffix": "無人到",
+            "text": "萬里無人到",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -4.905981889662135,
+            "prefix": "還家",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "越水邊",
+            "text": "還家越水邊",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.3892981530435335,
+            "prefix": "江南",
+            "rhyme_group": null,
+            "suffix": "歸路遠",
+            "text": "江南歸路遠",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.952541767503239,
+            "prefix": "草木",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "落花前",
+            "text": "草木落花前",
+            "tones": "ZZZPP"
+          }
+        ],
+        "terms": [
+          {
+            "coherence_raw": 0.0,
+            "coherence_weighted": 0.0,
+            "increment": -4.140601463339935,
+            "lm": -4.140601463339935,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6415981290943615,
+            "coherence_weighted": 0.32079906454718077,
+            "increment": -4.5219738627652095,
+            "lm": -4.8427729273123905,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6917866826045076,
+            "coherence_weighted": 0.3458933413022538,
+            "increment": -3.9571030963869043,
+            "lm": -4.302996437689158,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7136583458422486,
+            "coherence_weighted": 0.3568291729211243,
+            "increment": -4.225068947886918,
+            "lm": -4.581898120808042,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7065073705787354,
+            "coherence_weighted": 0.3532536852893677,
+            "increment": -4.10157188380255,
+            "lm": -4.454825569091918,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6991900459884655,
+            "coherence_weighted": 0.34959502299423273,
+            "increment": -4.556386866667902,
+            "lm": -4.905981889662135,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7396075103759281,
+            "coherence_weighted": 0.36980375518796404,
+            "increment": -4.01949439785557,
+            "lm": -4.3892981530435335,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7044497966038318,
+            "coherence_weighted": 0.3522248983019159,
+            "increment": -4.600316869201323,
+            "lm": -4.952541767503239,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          }
+        ]
+      },
+      "core": [
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP"
+      ],
+      "rhyme_rows": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": [
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 128,
+            "beam_pruned": 96,
+            "legal_extensions": 128,
+            "retained_states": 32
+          },
+          "row": 0
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 3040,
+            "legal_extensions": 3072,
+            "retained_states": 32
+          },
+          "row": 1
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4064,
+            "legal_extensions": 4096,
+            "retained_states": 32
+          },
+          "row": 2
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2848,
+            "legal_extensions": 2880,
+            "repeated_rhyme_character": 192,
+            "retained_states": 32
+          },
+          "row": 3
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4032,
+            "legal_extensions": 4064,
+            "repeated_line": 32,
+            "retained_states": 32
+          },
+          "row": 4
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2308,
+            "legal_extensions": 2340,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 700,
+            "retained_states": 32
+          },
+          "row": 5
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4032,
+            "legal_extensions": 4064,
+            "repeated_line": 32,
+            "retained_states": 32
+          },
+          "row": 6
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 1888,
+            "legal_extensions": 1920,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 1120,
+            "retained_states": 32
+          },
+          "row": 7
+        }
+      ],
+      "status": "complete",
+      "template_id": "L5-Z-R0"
+    },
+    {
+      "best": {
+        "lines": [
+          "漢月滿山川",
+          "風花落日圓",
+          "誰知何處去",
+          "獨有白雲天",
+          "萬里無人到",
+          "金陵俠少年",
+          "江南歸路遠",
+          "對此夕陽邊"
+        ],
+        "score": -34.467242900724415,
+        "selected": [
+          {
+            "lm_score": -4.641848051927889,
+            "prefix": "漢月",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "滿山川",
+            "text": "漢月滿山川",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.704647679215169,
+            "prefix": "風花",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "落日圓",
+            "text": "風花落日圓",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.302996437689158,
+            "prefix": "誰知",
+            "rhyme_group": null,
+            "suffix": "何處去",
+            "text": "誰知何處去",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.581898120808042,
+            "prefix": "獨有",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "白雲天",
+            "text": "獨有白雲天",
+            "tones": "ZZZPP"
+          },
+          {
+            "lm_score": -4.454825569091918,
+            "prefix": "萬里",
+            "rhyme_group": null,
+            "suffix": "無人到",
+            "text": "萬里無人到",
+            "tones": "ZZPPZ"
+          },
+          {
+            "lm_score": -4.932187789265631,
+            "prefix": "金陵",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "俠少年",
+            "text": "金陵俠少年",
+            "tones": "PPZZP"
+          },
+          {
+            "lm_score": -4.3892981530435335,
+            "prefix": "江南",
+            "rhyme_group": null,
+            "suffix": "歸路遠",
+            "text": "江南歸路遠",
+            "tones": "PPPZZ"
+          },
+          {
+            "lm_score": -4.850042487192029,
+            "prefix": "對此",
+            "rhyme_group": "pingshui:lower_level:01",
+            "suffix": "夕陽邊",
+            "text": "對此夕陽邊",
+            "tones": "ZZZPP"
+          }
+        ],
+        "terms": [
+          {
+            "coherence_raw": 0.0,
+            "coherence_weighted": 0.0,
+            "increment": -4.641848051927889,
+            "lm": -4.641848051927889,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7698734736188443,
+            "coherence_weighted": 0.38493673680942214,
+            "increment": -4.319710942405747,
+            "lm": -4.704647679215169,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6356170380213861,
+            "coherence_weighted": 0.31780851901069307,
+            "increment": -3.985187918678465,
+            "lm": -4.302996437689158,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6798471819253377,
+            "coherence_weighted": 0.33992359096266883,
+            "increment": -4.241974529845373,
+            "lm": -4.581898120808042,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.674816113488834,
+            "coherence_weighted": 0.337408056744417,
+            "increment": -4.117417512347501,
+            "lm": -4.454825569091918,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6177718111838912,
+            "coherence_weighted": 0.3088859055919456,
+            "increment": -4.623301883673686,
+            "lm": -4.932187789265631,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.7109470654756381,
+            "coherence_weighted": 0.35547353273781906,
+            "increment": -4.033824620305714,
+            "lm": -4.3892981530435335,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          },
+          {
+            "coherence_raw": 0.6921300913039795,
+            "coherence_weighted": 0.34606504565198976,
+            "increment": -4.503977441540039,
+            "lm": -4.850042487192029,
+            "previous_character_occurrences": 0,
+            "repetition_penalty": 0.0
+          }
+        ]
+      },
+      "core": [
+        "ZZZPP",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP"
+      ],
+      "rhyme_rows": [
+        0,
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": [
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 96,
+            "beam_pruned": 64,
+            "legal_extensions": 96,
+            "retained_states": 32
+          },
+          "row": 0
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2824,
+            "legal_extensions": 2856,
+            "repeated_rhyme_character": 216,
+            "retained_states": 32
+          },
+          "row": 1
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4064,
+            "legal_extensions": 4096,
+            "retained_states": 32
+          },
+          "row": 2
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2632,
+            "legal_extensions": 2664,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 376,
+            "retained_states": 32
+          },
+          "row": 3
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4064,
+            "legal_extensions": 4096,
+            "retained_states": 32
+          },
+          "row": 4
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 2272,
+            "legal_extensions": 2304,
+            "repeated_line": 32,
+            "repeated_rhyme_character": 736,
+            "retained_states": 32
+          },
+          "row": 5
+        },
+        {
+          "candidate_pool_size": 128,
+          "counts": {
+            "attempted_extensions": 4096,
+            "beam_pruned": 4032,
+            "legal_extensions": 4064,
+            "repeated_line": 32,
+            "retained_states": 32
+          },
+          "row": 6
+        },
+        {
+          "candidate_pool_size": 96,
+          "counts": {
+            "attempted_extensions": 3072,
+            "beam_pruned": 1876,
+            "legal_extensions": 1908,
+            "repeated_line": 64,
+            "repeated_rhyme_character": 1100,
+            "retained_states": 32
+          },
+          "row": 7
+        }
+      ],
+      "status": "complete",
+      "template_id": "L5-Z-R1"
+    }
+  ]
+}

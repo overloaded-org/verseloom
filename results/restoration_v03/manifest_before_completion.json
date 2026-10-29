@@ -1,0 +1,90 @@
+{
+  "schema": "versematrix.restoration-freeze.v0.3",
+  "stage": "frozen_before_model_evaluation",
+  "frozen_at_utc": "2026-10-29T01:59:47.922797+00:00",
+  "config": {
+    "version": "0.3.0",
+    "task": "observed_source_initial_two_character_restoration",
+    "literary_quality_gold": false,
+    "formal_H_C_completed": false,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "optimizer_updates": 400,
+    "batch_size": 32,
+    "gradient_accumulation": 1,
+    "training_candidates": 8,
+    "hard_negative_count": 3,
+    "proposal_pool_size": 16,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "optimizer": "Adam_decoupled_weight_decay",
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "checkpoint_updates": [
+      100,
+      200,
+      300,
+      400
+    ],
+    "checkpoint_metric": "all_dev_tasks_equal_family_top1_uncovered_zero_earliest_tie",
+    "arms": {
+      "cnn_w3": {
+        "kernel_width": 3,
+        "channels": 12
+      },
+      "aligned_w1": {
+        "kernel_width": 1,
+        "channels": 20
+      }
+    },
+    "embedding_dim": 8,
+    "fixed_feature_dim": 4,
+    "ngram": {
+      "alpha": 0.1,
+      "weights": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "aligned_weight": 0.5,
+      "aligned_strength": 5.0
+    },
+    "candidate_origin": "train_only_spans_count_at_least_2",
+    "test_target_injection": false,
+    "test_tie_rule": "lexicographic_candidate",
+    "bootstrap_repeats": 5000,
+    "bootstrap_seed": 2026102903,
+    "dp_check": "first_24_test_task_hashes_per_length_for_each_selected_cnn_seed",
+    "go_rule_proxy_only": {
+      "min_absolute_family_accuracy_gain_over_each_comparator": 0.02,
+      "paired_ci_lower_gt": 0
+    },
+    "scope": "fixed_shards_shape_only_poems_ngram_proposed_pool_not_poetry_quality"
+  },
+  "config_sha256": "109ac929fd5813d7040f0c895923a68bcd336e2b8699c5a5a977963d045f5372",
+  "source_sha256": {
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+    "src/wordconv_lab/learned_conv.py": "7950d4608d49e9ab8e0ed0d498b069481219d9e181f12d6196ca511e98b6817b",
+    "src/wordconv_lab/span_solver.py": "b21734872bd39b64dcbdca1a7056c6712f0c5bde37bfeccac6a7642e46c55e89",
+    "src/wordconv_lab/factor_dp.py": "86d83a7516438e650b1d54d37fc2d38307bbd8b29400a911f9a19925fec7c1bc",
+    "src/wordconv_lab/convolution.py": "10da4e90e6b1cc35520fee2a497a091d58b123142976ffba0e9765c548ef9006",
+    "scripts/run_restoration_v03.py": "6d05ef92a7e28cbf74267252b4764ac2dfd6e5d244fd54320c1528a4d29ea1a9"
+  },
+  "input_sha256": {
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/corpus_v03/tasks.jsonl": "372c71e4081ac68601d5ddc97c92d26a3b03d6eecb165e0e3afcd2f5c684c396",
+    "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc",
+    "data/corpus_v03/candidate_spans.json": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6",
+    "data/corpus_v03/build_manifest.json": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301"
+  },
+  "external_preregistration": false,
+  "test_status": "not_evaluated",
+  "python": "3.12.14",
+  "numpy": "2.3.5"
+}

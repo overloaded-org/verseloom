@@ -1,0 +1,173 @@
+{
+  "all_four_policies_reported": true,
+  "checks": {
+    "dev_task_denominator": "passed",
+    "independent_training_counts": "passed",
+    "original_baseline_identity": "passed"
+  },
+  "dev_families": 508,
+  "dev_tasks": 2188,
+  "limits": [
+    "This diagnostic was proposed after the pilot; it is exploratory development work.",
+    "No test tasks, models or predictions were opened; test corpus records were skipped before JSON decoding.",
+    "Full source-file SHA covers the frozen mixed-split file bytes without interpreting skipped test records.",
+    "Vocabulary coverage is an upper bound for exact restoration under this vocabulary, not actual ranking accuracy.",
+    "These are not top-16 retrieval-recall measurements and do not establish test improvement.",
+    "Pools remain separate for five/seven characters; total length-tagged count can include the same text twice.",
+    "No original experiment pool, training run, test output or corpus source was changed."
+  ],
+  "results": [
+    {
+      "by_length": {
+        "5": {
+          "covered_dev_tasks": 414,
+          "dev_families": 423,
+          "dev_tasks": 1820,
+          "family_equal_weight_vocabulary_coverage": 0.22453703703703703,
+          "task_weighted_vocabulary_coverage": 0.22747252747252747
+        },
+        "7": {
+          "covered_dev_tasks": 12,
+          "dev_families": 85,
+          "dev_tasks": 368,
+          "family_equal_weight_vocabulary_coverage": 0.03529411764705882,
+          "task_weighted_vocabulary_coverage": 0.03260869565217391
+        }
+      },
+      "candidate_count_by_length": {
+        "5": 1317,
+        "7": 97
+      },
+      "candidate_count_total_length_tagged": 1414,
+      "candidate_count_unique_text_across_lengths": 1375,
+      "overall": {
+        "covered_dev_tasks": 426,
+        "dev_families": 508,
+        "dev_tasks": 2188,
+        "family_equal_weight_vocabulary_coverage": 0.192872375328084,
+        "task_weighted_vocabulary_coverage": 0.19469835466179158
+      },
+      "policy": {
+        "id": "even_prefix_min2",
+        "min_count": 2,
+        "rows": "even",
+        "spans": "prefix"
+      }
+    },
+    {
+      "by_length": {
+        "5": {
+          "covered_dev_tasks": 700,
+          "dev_families": 423,
+          "dev_tasks": 1820,
+          "family_equal_weight_vocabulary_coverage": 0.375640267927502,
+          "task_weighted_vocabulary_coverage": 0.38461538461538464
+        },
+        "7": {
+          "covered_dev_tasks": 51,
+          "dev_families": 85,
+          "dev_tasks": 368,
+          "family_equal_weight_vocabulary_coverage": 0.1338235294117647,
+          "task_weighted_vocabulary_coverage": 0.13858695652173914
+        }
+      },
+      "candidate_count_by_length": {
+        "5": 6460,
+        "7": 1075
+      },
+      "candidate_count_total_length_tagged": 7535,
+      "candidate_count_unique_text_across_lengths": 7231,
+      "overall": {
+        "covered_dev_tasks": 751,
+        "dev_families": 508,
+        "dev_tasks": 2188,
+        "family_equal_weight_vocabulary_coverage": 0.3351788057742782,
+        "task_weighted_vocabulary_coverage": 0.34323583180987205
+      },
+      "policy": {
+        "id": "even_prefix_min1",
+        "min_count": 1,
+        "rows": "even",
+        "spans": "prefix"
+      }
+    },
+    {
+      "by_length": {
+        "5": {
+          "covered_dev_tasks": 574,
+          "dev_families": 423,
+          "dev_tasks": 1820,
+          "family_equal_weight_vocabulary_coverage": 0.30905240346729707,
+          "task_weighted_vocabulary_coverage": 0.3153846153846154
+        },
+        "7": {
+          "covered_dev_tasks": 30,
+          "dev_families": 85,
+          "dev_tasks": 368,
+          "family_equal_weight_vocabulary_coverage": 0.07647058823529412,
+          "task_weighted_vocabulary_coverage": 0.08152173913043478
+        }
+      },
+      "candidate_count_by_length": {
+        "5": 4878,
+        "7": 621
+      },
+      "candidate_count_total_length_tagged": 5499,
+      "candidate_count_unique_text_across_lengths": 5239,
+      "overall": {
+        "covered_dev_tasks": 604,
+        "dev_families": 508,
+        "dev_tasks": 2188,
+        "family_equal_weight_vocabulary_coverage": 0.270136154855643,
+        "task_weighted_vocabulary_coverage": 0.2760511882998172
+      },
+      "policy": {
+        "id": "even_adjacent_min2",
+        "min_count": 2,
+        "rows": "even",
+        "spans": "all_adjacent"
+      }
+    },
+    {
+      "by_length": {
+        "5": {
+          "covered_dev_tasks": 824,
+          "dev_families": 423,
+          "dev_tasks": 1820,
+          "family_equal_weight_vocabulary_coverage": 0.4434101654846336,
+          "task_weighted_vocabulary_coverage": 0.45274725274725275
+        },
+        "7": {
+          "covered_dev_tasks": 73,
+          "dev_families": 85,
+          "dev_tasks": 368,
+          "family_equal_weight_vocabulary_coverage": 0.19558823529411765,
+          "task_weighted_vocabulary_coverage": 0.1983695652173913
+        }
+      },
+      "candidate_count_by_length": {
+        "5": 10375,
+        "7": 1504
+      },
+      "candidate_count_total_length_tagged": 11879,
+      "candidate_count_unique_text_across_lengths": 11066,
+      "overall": {
+        "covered_dev_tasks": 897,
+        "dev_families": 508,
+        "dev_tasks": 2188,
+        "family_equal_weight_vocabulary_coverage": 0.40194389763779526,
+        "task_weighted_vocabulary_coverage": 0.409963436928702
+      },
+      "policy": {
+        "id": "all_adjacent_min2",
+        "min_count": 2,
+        "rows": "all",
+        "spans": "all_adjacent"
+      }
+    }
+  ],
+  "schema": "versematrix.dev-candidate-source-results.v0.3",
+  "source_dev_poems": 547,
+  "source_train_poems": 2502,
+  "status": "completed_dev_only_diagnostic"
+}

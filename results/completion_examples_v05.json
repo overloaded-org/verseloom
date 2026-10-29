@@ -1,0 +1,980 @@
+{
+  "schema": "versematrix.completion-examples-results.v0.5",
+  "created_at_utc": "2026-10-29T08:41:46.208696+00:00",
+  "config_sha256": "90ff8254ac1dbfa39c93e3a364d7f91028e0010e57bde9c55ce361ee7e70159d",
+  "input_selection": "fixed_before_model_training_and_prediction; examples_are_not_evaluation_evidence",
+  "seed": 0,
+  "independent_evaluation": false,
+  "examples": [
+    {
+      "id": "five_known",
+      "kind": "familiar_public_domain_text_for_interface_demonstration",
+      "output": {
+        "schema": "versematrix.completion.v0.5",
+        "query": {
+          "length": 5,
+          "upper_line": "空山新雨後",
+          "lower_suffix": "晚來秋",
+          "start": 0,
+          "mask_length": 2
+        },
+        "query_hash": "ed7986659b1c58fdf8bdf54add429c312d207ef889277f33c93b3b24e1e58792",
+        "requested_candidates": 16,
+        "task": "initial_two_character_source_span_completion",
+        "interpretation": "候选补句；分数衡量语料原文匹配，不是格律认证或文学质量评分。",
+        "orthography": "exact_codepoints_no_simplified_traditional_conversion",
+        "methods": {
+          "statistical": {
+            "label": "固定统计基线",
+            "candidate_count": 10375,
+            "candidate_vocabulary_hash": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "天氣",
+                "completed_lower_line": "天氣晚來秋",
+                "score": -3.4298642867643037
+              },
+              {
+                "rank": 2,
+                "span": "中夜",
+                "completed_lower_line": "中夜晚來秋",
+                "score": -6.166932059223138
+              },
+              {
+                "rank": 3,
+                "span": "笙鶴",
+                "completed_lower_line": "笙鶴晚來秋",
+                "score": -6.322895117880776
+              },
+              {
+                "rank": 4,
+                "span": "落日",
+                "completed_lower_line": "落日晚來秋",
+                "score": -7.075139102216044
+              },
+              {
+                "rank": 5,
+                "span": "獨向",
+                "completed_lower_line": "獨向晚來秋",
+                "score": -7.159764735893028
+              },
+              {
+                "rank": 6,
+                "span": "日日",
+                "completed_lower_line": "日日晚來秋",
+                "score": -7.1866246392185165
+              },
+              {
+                "rank": 7,
+                "span": "風日",
+                "completed_lower_line": "風日晚來秋",
+                "score": -7.207831510014421
+              },
+              {
+                "rank": 8,
+                "span": "何日",
+                "completed_lower_line": "何日晚來秋",
+                "score": -7.211135441227342
+              },
+              {
+                "rank": 9,
+                "span": "風向",
+                "completed_lower_line": "風向晚來秋",
+                "score": -7.291750816655327
+              },
+              {
+                "rank": 10,
+                "span": "寒日",
+                "completed_lower_line": "寒日晚來秋",
+                "score": -7.303828311392584
+              },
+              {
+                "rank": 11,
+                "span": "一日",
+                "completed_lower_line": "一日晚來秋",
+                "score": -7.3057297627095625
+              },
+              {
+                "rank": 12,
+                "span": "秋日",
+                "completed_lower_line": "秋日晚來秋",
+                "score": -7.311989501657451
+              },
+              {
+                "rank": 13,
+                "span": "秋風",
+                "completed_lower_line": "秋風晚來秋",
+                "score": -7.3238663773257535
+              },
+              {
+                "rank": 14,
+                "span": "不可",
+                "completed_lower_line": "不可晚來秋",
+                "score": -7.324631082015078
+              },
+              {
+                "rank": 15,
+                "span": "風花",
+                "completed_lower_line": "風花晚來秋",
+                "score": -7.32715399558394
+              },
+              {
+                "rank": 16,
+                "span": "青春",
+                "completed_lower_line": "青春晚來秋",
+                "score": -7.3315357787820385
+              }
+            ]
+          },
+          "matching": {
+            "label": "上下文矩阵匹配（实验模型）",
+            "candidate_count": 10375,
+            "candidate_vocabulary_hash": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+            "checkpoint": {
+              "arm": "full_w3",
+              "seed": 0,
+              "step": 800,
+              "sha256": "7ddfbd26ccaeae03e6af5f0015ac05da5c8d4f92523aaf093a9063d4041f8b52",
+              "selection_scope": "dev_only_not_independent_confirmation"
+            },
+            "seed_policy": "default seed 0 fixed before evaluation; not a selected best seed or ensemble",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "秋雨",
+                "completed_lower_line": "秋雨晚來秋",
+                "score": 8.230516765400303
+              },
+              {
+                "rank": 2,
+                "span": "關雪",
+                "completed_lower_line": "關雪晚來秋",
+                "score": 8.162089980760863
+              },
+              {
+                "rank": 3,
+                "span": "微雨",
+                "completed_lower_line": "微雨晚來秋",
+                "score": 8.058949542269605
+              },
+              {
+                "rank": 4,
+                "span": "春雨",
+                "completed_lower_line": "春雨晚來秋",
+                "score": 7.963178668415093
+              },
+              {
+                "rank": 5,
+                "span": "飛雪",
+                "completed_lower_line": "飛雪晚來秋",
+                "score": 7.924183358396672
+              },
+              {
+                "rank": 6,
+                "span": "積雨",
+                "completed_lower_line": "積雨晚來秋",
+                "score": 7.919777878618522
+              },
+              {
+                "rank": 7,
+                "span": "空蕩",
+                "completed_lower_line": "空蕩晚來秋",
+                "score": 7.8853570017806724
+              },
+              {
+                "rank": 8,
+                "span": "霜雪",
+                "completed_lower_line": "霜雪晚來秋",
+                "score": 7.841418464770947
+              },
+              {
+                "rank": 9,
+                "span": "留醉",
+                "completed_lower_line": "留醉晚來秋",
+                "score": 7.7725652222124
+              },
+              {
+                "rank": 10,
+                "span": "回雪",
+                "completed_lower_line": "回雪晚來秋",
+                "score": 7.671834260050887
+              },
+              {
+                "rank": 11,
+                "span": "積雪",
+                "completed_lower_line": "積雪晚來秋",
+                "score": 7.670725557425776
+              },
+              {
+                "rank": 12,
+                "span": "送舞",
+                "completed_lower_line": "送舞晚來秋",
+                "score": 7.666239540796443
+              },
+              {
+                "rank": 13,
+                "span": "都護",
+                "completed_lower_line": "都護晚來秋",
+                "score": 7.657299385410561
+              },
+              {
+                "rank": 14,
+                "span": "苔色",
+                "completed_lower_line": "苔色晚來秋",
+                "score": 7.647006506952696
+              },
+              {
+                "rank": 15,
+                "span": "行雨",
+                "completed_lower_line": "行雨晚來秋",
+                "score": 7.6142021815171415
+              },
+              {
+                "rank": 16,
+                "span": "瑞雪",
+                "completed_lower_line": "瑞雪晚來秋",
+                "score": 7.584881861257381
+              }
+            ]
+          }
+        },
+        "unknown_visible_characters": []
+      },
+      "training_overlap": {
+        "upper_line_occurrences": 1,
+        "exact_visible_training_task_matches": 1,
+        "matching_training_task_ids": [
+          "poem_212daaa9f4d474734903057e:couplet0"
+        ],
+        "interpretation": "interface demonstration; source familiarity or absence here does not establish independent evaluation"
+      }
+    },
+    {
+      "id": "seven_known",
+      "kind": "familiar_public_domain_text_for_interface_demonstration",
+      "output": {
+        "schema": "versematrix.completion.v0.5",
+        "query": {
+          "length": 7,
+          "upper_line": "風急天高猿嘯哀",
+          "lower_suffix": "沙白鳥飛回",
+          "start": 0,
+          "mask_length": 2
+        },
+        "query_hash": "16794fa673057bd0289b9bda2383171a985f3aa2a8bbfc12090239c35f9d9962",
+        "requested_candidates": 16,
+        "task": "initial_two_character_source_span_completion",
+        "interpretation": "候选补句；分数衡量语料原文匹配，不是格律认证或文学质量评分。",
+        "orthography": "exact_codepoints_no_simplified_traditional_conversion",
+        "methods": {
+          "statistical": {
+            "label": "固定统计基线",
+            "candidate_count": 1504,
+            "candidate_vocabulary_hash": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "天長",
+                "completed_lower_line": "天長沙白鳥飛回",
+                "score": -7.756057609833641
+              },
+              {
+                "rank": 2,
+                "span": "路長",
+                "completed_lower_line": "路長沙白鳥飛回",
+                "score": -7.966936367946962
+              },
+              {
+                "rank": 3,
+                "span": "夜長",
+                "completed_lower_line": "夜長沙白鳥飛回",
+                "score": -7.982415530004684
+              },
+              {
+                "rank": 4,
+                "span": "日暮",
+                "completed_lower_line": "日暮沙白鳥飛回",
+                "score": -7.995473116610526
+              },
+              {
+                "rank": 5,
+                "span": "天寒",
+                "completed_lower_line": "天寒沙白鳥飛回",
+                "score": -8.073516324891873
+              },
+              {
+                "rank": 6,
+                "span": "人長",
+                "completed_lower_line": "人長沙白鳥飛回",
+                "score": -8.093655197997034
+              },
+              {
+                "rank": 7,
+                "span": "雲飛",
+                "completed_lower_line": "雲飛沙白鳥飛回",
+                "score": -8.120010667319859
+              },
+              {
+                "rank": 8,
+                "span": "向長",
+                "completed_lower_line": "向長沙白鳥飛回",
+                "score": -8.210389107942591
+              },
+              {
+                "rank": 9,
+                "span": "不見",
+                "completed_lower_line": "不見沙白鳥飛回",
+                "score": -8.24829960338556
+              },
+              {
+                "rank": 10,
+                "span": "日照",
+                "completed_lower_line": "日照沙白鳥飛回",
+                "score": -8.276889373057115
+              },
+              {
+                "rank": 11,
+                "span": "月照",
+                "completed_lower_line": "月照沙白鳥飛回",
+                "score": -8.28099824107977
+              },
+              {
+                "rank": 12,
+                "span": "春寒",
+                "completed_lower_line": "春寒沙白鳥飛回",
+                "score": -8.312535754881562
+              },
+              {
+                "rank": 13,
+                "span": "日月",
+                "completed_lower_line": "日月沙白鳥飛回",
+                "score": -8.314578362570696
+              },
+              {
+                "rank": 14,
+                "span": "黃金",
+                "completed_lower_line": "黃金沙白鳥飛回",
+                "score": -8.314631433194094
+              },
+              {
+                "rank": 15,
+                "span": "春風",
+                "completed_lower_line": "春風沙白鳥飛回",
+                "score": -8.339534743296143
+              },
+              {
+                "rank": 16,
+                "span": "此去",
+                "completed_lower_line": "此去沙白鳥飛回",
+                "score": -8.346517431166408
+              }
+            ]
+          },
+          "matching": {
+            "label": "上下文矩阵匹配（实验模型）",
+            "candidate_count": 1504,
+            "candidate_vocabulary_hash": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e",
+            "checkpoint": {
+              "arm": "full_w3",
+              "seed": 0,
+              "step": 800,
+              "sha256": "7ddfbd26ccaeae03e6af5f0015ac05da5c8d4f92523aaf093a9063d4041f8b52",
+              "selection_scope": "dev_only_not_independent_confirmation"
+            },
+            "seed_policy": "default seed 0 fixed before evaluation; not a selected best seed or ensemble",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "琱輿",
+                "completed_lower_line": "琱輿沙白鳥飛回",
+                "score": 6.5752851263016305
+              },
+              {
+                "rank": 2,
+                "span": "何須",
+                "completed_lower_line": "何須沙白鳥飛回",
+                "score": 6.115888671045299
+              },
+              {
+                "rank": 3,
+                "span": "乘輿",
+                "completed_lower_line": "乘輿沙白鳥飛回",
+                "score": 6.102280138141563
+              },
+              {
+                "rank": 4,
+                "span": "秋天",
+                "completed_lower_line": "秋天沙白鳥飛回",
+                "score": 6.009449716866645
+              },
+              {
+                "rank": 5,
+                "span": "三更",
+                "completed_lower_line": "三更沙白鳥飛回",
+                "score": 5.954788315008809
+              },
+              {
+                "rank": 6,
+                "span": "時經",
+                "completed_lower_line": "時經沙白鳥飛回",
+                "score": 5.763145018714512
+              },
+              {
+                "rank": 7,
+                "span": "蕭蕭",
+                "completed_lower_line": "蕭蕭沙白鳥飛回",
+                "score": 5.752164315083254
+              },
+              {
+                "rank": 8,
+                "span": "千種",
+                "completed_lower_line": "千種沙白鳥飛回",
+                "score": 5.700803538873757
+              },
+              {
+                "rank": 9,
+                "span": "征戰",
+                "completed_lower_line": "征戰沙白鳥飛回",
+                "score": 5.604929089995948
+              },
+              {
+                "rank": 10,
+                "span": "千條",
+                "completed_lower_line": "千條沙白鳥飛回",
+                "score": 5.557435536466574
+              },
+              {
+                "rank": 11,
+                "span": "知何",
+                "completed_lower_line": "知何沙白鳥飛回",
+                "score": 5.536326627373715
+              },
+              {
+                "rank": 12,
+                "span": "三三",
+                "completed_lower_line": "三三沙白鳥飛回",
+                "score": 5.429718095554805
+              },
+              {
+                "rank": 13,
+                "span": "南方",
+                "completed_lower_line": "南方沙白鳥飛回",
+                "score": 5.415927147210396
+              },
+              {
+                "rank": 14,
+                "span": "何曾",
+                "completed_lower_line": "何曾沙白鳥飛回",
+                "score": 5.378263913105794
+              },
+              {
+                "rank": 15,
+                "span": "何所",
+                "completed_lower_line": "何所沙白鳥飛回",
+                "score": 5.367402179187951
+              },
+              {
+                "rank": 16,
+                "span": "何愁",
+                "completed_lower_line": "何愁沙白鳥飛回",
+                "score": 5.252054149545878
+              }
+            ]
+          }
+        },
+        "unknown_visible_characters": []
+      },
+      "training_overlap": {
+        "upper_line_occurrences": 0,
+        "exact_visible_training_task_matches": 0,
+        "matching_training_task_ids": [],
+        "interpretation": "interface demonstration; source familiarity or absence here does not establish independent evaluation"
+      }
+    },
+    {
+      "id": "five_constructed",
+      "kind": "assistant_constructed_query_not_a_quality_gold_label",
+      "output": {
+        "schema": "versematrix.completion.v0.5",
+        "query": {
+          "length": 5,
+          "upper_line": "江雨催寒色",
+          "lower_suffix": "過遠村",
+          "start": 0,
+          "mask_length": 2
+        },
+        "query_hash": "c94b809f40c7a7f6336fbdce23cf6088a8bc958ec41896f2e594a54cfef58747",
+        "requested_candidates": 16,
+        "task": "initial_two_character_source_span_completion",
+        "interpretation": "候选补句；分数衡量语料原文匹配，不是格律认证或文学质量评分。",
+        "orthography": "exact_codepoints_no_simplified_traditional_conversion",
+        "methods": {
+          "statistical": {
+            "label": "固定统计基线",
+            "candidate_count": 10375,
+            "candidate_vocabulary_hash": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "春風",
+                "completed_lower_line": "春風過遠村",
+                "score": -8.545612979891605
+              },
+              {
+                "rank": 2,
+                "span": "秋風",
+                "completed_lower_line": "秋風過遠村",
+                "score": -8.644393980020801
+              },
+              {
+                "rank": 3,
+                "span": "歸來",
+                "completed_lower_line": "歸來過遠村",
+                "score": -8.74395631590229
+              },
+              {
+                "rank": 4,
+                "span": "山雲",
+                "completed_lower_line": "山雲過遠村",
+                "score": -8.777232471611935
+              },
+              {
+                "rank": 5,
+                "span": "山川",
+                "completed_lower_line": "山川過遠村",
+                "score": -8.795776859814644
+              },
+              {
+                "rank": 6,
+                "span": "山風",
+                "completed_lower_line": "山風過遠村",
+                "score": -8.81621917949538
+              },
+              {
+                "rank": 7,
+                "span": "江山",
+                "completed_lower_line": "江山過遠村",
+                "score": -8.849553184572844
+              },
+              {
+                "rank": 8,
+                "span": "南山",
+                "completed_lower_line": "南山過遠村",
+                "score": -8.898156211059161
+              },
+              {
+                "rank": 9,
+                "span": "風來",
+                "completed_lower_line": "風來過遠村",
+                "score": -8.937310843005775
+              },
+              {
+                "rank": 10,
+                "span": "春來",
+                "completed_lower_line": "春來過遠村",
+                "score": -8.93793497524077
+              },
+              {
+                "rank": 11,
+                "span": "山河",
+                "completed_lower_line": "山河過遠村",
+                "score": -8.955103789940068
+              },
+              {
+                "rank": 12,
+                "span": "雲山",
+                "completed_lower_line": "雲山過遠村",
+                "score": -8.957718899805261
+              },
+              {
+                "rank": 13,
+                "span": "天山",
+                "completed_lower_line": "天山過遠村",
+                "score": -8.966994520629727
+              },
+              {
+                "rank": 14,
+                "span": "日月",
+                "completed_lower_line": "日月過遠村",
+                "score": -8.971657598430781
+              },
+              {
+                "rank": 15,
+                "span": "山花",
+                "completed_lower_line": "山花過遠村",
+                "score": -8.973804428223653
+              },
+              {
+                "rank": 16,
+                "span": "山月",
+                "completed_lower_line": "山月過遠村",
+                "score": -8.976336535502577
+              }
+            ]
+          },
+          "matching": {
+            "label": "上下文矩阵匹配（实验模型）",
+            "candidate_count": 10375,
+            "candidate_vocabulary_hash": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+            "checkpoint": {
+              "arm": "full_w3",
+              "seed": 0,
+              "step": 800,
+              "sha256": "7ddfbd26ccaeae03e6af5f0015ac05da5c8d4f92523aaf093a9063d4041f8b52",
+              "selection_scope": "dev_only_not_independent_confirmation"
+            },
+            "seed_policy": "default seed 0 fixed before evaluation; not a selected best seed or ensemble",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "青松",
+                "completed_lower_line": "青松過遠村",
+                "score": 8.447508491006325
+              },
+              {
+                "rank": 2,
+                "span": "幽林",
+                "completed_lower_line": "幽林過遠村",
+                "score": 8.293003902257833
+              },
+              {
+                "rank": 3,
+                "span": "梅花",
+                "completed_lower_line": "梅花過遠村",
+                "score": 8.28118450041598
+              },
+              {
+                "rank": 4,
+                "span": "青林",
+                "completed_lower_line": "青林過遠村",
+                "score": 8.222882318113346
+              },
+              {
+                "rank": 5,
+                "span": "青山",
+                "completed_lower_line": "青山過遠村",
+                "score": 8.053137128477854
+              },
+              {
+                "rank": 6,
+                "span": "征帆",
+                "completed_lower_line": "征帆過遠村",
+                "score": 7.95622271361526
+              },
+              {
+                "rank": 7,
+                "span": "蕭然",
+                "completed_lower_line": "蕭然過遠村",
+                "score": 7.8370989998163605
+              },
+              {
+                "rank": 8,
+                "span": "桃花",
+                "completed_lower_line": "桃花過遠村",
+                "score": 7.79651058732614
+              },
+              {
+                "rank": 9,
+                "span": "幽人",
+                "completed_lower_line": "幽人過遠村",
+                "score": 7.77259484724231
+              },
+              {
+                "rank": 10,
+                "span": "南山",
+                "completed_lower_line": "南山過遠村",
+                "score": 7.771455036248609
+              },
+              {
+                "rank": 11,
+                "span": "還如",
+                "completed_lower_line": "還如過遠村",
+                "score": 7.755146591295347
+              },
+              {
+                "rank": 12,
+                "span": "梁王",
+                "completed_lower_line": "梁王過遠村",
+                "score": 7.744753668880559
+              },
+              {
+                "rank": 13,
+                "span": "空林",
+                "completed_lower_line": "空林過遠村",
+                "score": 7.7173906373017624
+              },
+              {
+                "rank": 14,
+                "span": "青蓮",
+                "completed_lower_line": "青蓮過遠村",
+                "score": 7.717275179122509
+              },
+              {
+                "rank": 15,
+                "span": "回車",
+                "completed_lower_line": "回車過遠村",
+                "score": 7.715173831085691
+              },
+              {
+                "rank": 16,
+                "span": "其如",
+                "completed_lower_line": "其如過遠村",
+                "score": 7.659049565812641
+              }
+            ]
+          }
+        },
+        "unknown_visible_characters": []
+      },
+      "training_overlap": {
+        "upper_line_occurrences": 0,
+        "exact_visible_training_task_matches": 0,
+        "matching_training_task_ids": [],
+        "interpretation": "interface demonstration; source familiarity or absence here does not establish independent evaluation"
+      }
+    },
+    {
+      "id": "seven_constructed",
+      "kind": "assistant_constructed_query_not_a_quality_gold_label",
+      "output": {
+        "schema": "versematrix.completion.v0.5",
+        "query": {
+          "length": 7,
+          "upper_line": "一夜江風吹客夢",
+          "lower_suffix": "明月照孤舟",
+          "start": 0,
+          "mask_length": 2
+        },
+        "query_hash": "ad2400b3beff3091788b5c4378a68385492aa4823de1db5ec773f117cb0c50eb",
+        "requested_candidates": 16,
+        "task": "initial_two_character_source_span_completion",
+        "interpretation": "候选补句；分数衡量语料原文匹配，不是格律认证或文学质量评分。",
+        "orthography": "exact_codepoints_no_simplified_traditional_conversion",
+        "methods": {
+          "statistical": {
+            "label": "固定统计基线",
+            "candidate_count": 1504,
+            "candidate_vocabulary_hash": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "長懸",
+                "completed_lower_line": "長懸明月照孤舟",
+                "score": -6.91816071236456
+              },
+              {
+                "rank": 2,
+                "span": "波搖",
+                "completed_lower_line": "波搖明月照孤舟",
+                "score": -7.389913273217073
+              },
+              {
+                "rank": 3,
+                "span": "萬里",
+                "completed_lower_line": "萬里明月照孤舟",
+                "score": -7.471445972579766
+              },
+              {
+                "rank": 4,
+                "span": "青春",
+                "completed_lower_line": "青春明月照孤舟",
+                "score": -7.606042058987274
+              },
+              {
+                "rank": 5,
+                "span": "千里",
+                "completed_lower_line": "千里明月照孤舟",
+                "score": -7.620404406816555
+              },
+              {
+                "rank": 6,
+                "span": "青山",
+                "completed_lower_line": "青山明月照孤舟",
+                "score": -7.645574686668944
+              },
+              {
+                "rank": 7,
+                "span": "今日",
+                "completed_lower_line": "今日明月照孤舟",
+                "score": -7.692683309242809
+              },
+              {
+                "rank": 8,
+                "span": "空山",
+                "completed_lower_line": "空山明月照孤舟",
+                "score": -7.707053703693493
+              },
+              {
+                "rank": 9,
+                "span": "南山",
+                "completed_lower_line": "南山明月照孤舟",
+                "score": -7.71760872720945
+              },
+              {
+                "rank": 10,
+                "span": "千年",
+                "completed_lower_line": "千年明月照孤舟",
+                "score": -7.7243589457547674
+              },
+              {
+                "rank": 11,
+                "span": "三山",
+                "completed_lower_line": "三山明月照孤舟",
+                "score": -7.7435972466059395
+              },
+              {
+                "rank": 12,
+                "span": "今朝",
+                "completed_lower_line": "今朝明月照孤舟",
+                "score": -7.745829860238741
+              },
+              {
+                "rank": 13,
+                "span": "春風",
+                "completed_lower_line": "春風明月照孤舟",
+                "score": -7.753182667356587
+              },
+              {
+                "rank": 14,
+                "span": "故人",
+                "completed_lower_line": "故人明月照孤舟",
+                "score": -7.763365570325648
+              },
+              {
+                "rank": 15,
+                "span": "青天",
+                "completed_lower_line": "青天明月照孤舟",
+                "score": -7.767323984956599
+              },
+              {
+                "rank": 16,
+                "span": "歲月",
+                "completed_lower_line": "歲月明月照孤舟",
+                "score": -7.770424307581845
+              }
+            ]
+          },
+          "matching": {
+            "label": "上下文矩阵匹配（实验模型）",
+            "candidate_count": 1504,
+            "candidate_vocabulary_hash": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e",
+            "checkpoint": {
+              "arm": "full_w3",
+              "seed": 0,
+              "step": 800,
+              "sha256": "7ddfbd26ccaeae03e6af5f0015ac05da5c8d4f92523aaf093a9063d4041f8b52",
+              "selection_scope": "dev_only_not_independent_confirmation"
+            },
+            "seed_policy": "default seed 0 fixed before evaluation; not a selected best seed or ensemble",
+            "suggestions": [
+              {
+                "rank": 1,
+                "span": "梅花",
+                "completed_lower_line": "梅花明月照孤舟",
+                "score": 7.2915996067275035
+              },
+              {
+                "rank": 2,
+                "span": "青絲",
+                "completed_lower_line": "青絲明月照孤舟",
+                "score": 7.247203734171178
+              },
+              {
+                "rank": 3,
+                "span": "千門",
+                "completed_lower_line": "千門明月照孤舟",
+                "score": 7.019094279485973
+              },
+              {
+                "rank": 4,
+                "span": "桃花",
+                "completed_lower_line": "桃花明月照孤舟",
+                "score": 6.736426140878063
+              },
+              {
+                "rank": 5,
+                "span": "長安",
+                "completed_lower_line": "長安明月照孤舟",
+                "score": 6.667640438597326
+              },
+              {
+                "rank": 6,
+                "span": "終期",
+                "completed_lower_line": "終期明月照孤舟",
+                "score": 6.457427973281479
+              },
+              {
+                "rank": 7,
+                "span": "幽林",
+                "completed_lower_line": "幽林明月照孤舟",
+                "score": 6.363333913817705
+              },
+              {
+                "rank": 8,
+                "span": "青山",
+                "completed_lower_line": "青山明月照孤舟",
+                "score": 6.234133581822143
+              },
+              {
+                "rank": 9,
+                "span": "荷花",
+                "completed_lower_line": "荷花明月照孤舟",
+                "score": 6.226828700178933
+              },
+              {
+                "rank": 10,
+                "span": "閑花",
+                "completed_lower_line": "閑花明月照孤舟",
+                "score": 6.214280463311484
+              },
+              {
+                "rank": 11,
+                "span": "千人",
+                "completed_lower_line": "千人明月照孤舟",
+                "score": 6.162098890493015
+              },
+              {
+                "rank": 12,
+                "span": "三軍",
+                "completed_lower_line": "三軍明月照孤舟",
+                "score": 6.140762895654335
+              },
+              {
+                "rank": 13,
+                "span": "遙遙",
+                "completed_lower_line": "遙遙明月照孤舟",
+                "score": 6.085311302870768
+              },
+              {
+                "rank": 14,
+                "span": "一杯",
+                "completed_lower_line": "一杯明月照孤舟",
+                "score": 6.08260372807254
+              },
+              {
+                "rank": 15,
+                "span": "青雲",
+                "completed_lower_line": "青雲明月照孤舟",
+                "score": 6.072741960901718
+              },
+              {
+                "rank": 16,
+                "span": "參差",
+                "completed_lower_line": "參差明月照孤舟",
+                "score": 6.010210428747969
+              }
+            ]
+          }
+        },
+        "unknown_visible_characters": []
+      },
+      "training_overlap": {
+        "upper_line_occurrences": 0,
+        "exact_visible_training_task_matches": 0,
+        "matching_training_task_ids": [],
+        "interpretation": "interface demonstration; source familiarity or absence here does not establish independent evaluation"
+      }
+    }
+  ]
+}

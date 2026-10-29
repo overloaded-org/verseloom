@@ -1,0 +1,242 @@
+[
+  {
+    "family_id": "family_da5c741b3ba303044527d7c3",
+    "length": 5,
+    "poem_id": "poem_59892634b2d84ffde4a57b08",
+    "query": {
+      "length": 5,
+      "lower_suffix": "豔陽晨",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "自然無限態"
+    },
+    "query_hash": "16fa5de0670dc1229e295acd40398bb84a1bc05b85de739fec1aebd531150c66",
+    "sampling_hash": "00436aef99f8b74dd9c4036f6e63f3bdd706b8d62f9315eac484e89ac0a2d403",
+    "task_id": "poem_59892634b2d84ffde4a57b08:couplet3"
+  },
+  {
+    "family_id": "family_0f591b9189ccdc929cea93f7",
+    "length": 5,
+    "poem_id": "poem_f618a86235eb7b61f160a39a",
+    "query": {
+      "length": 5,
+      "lower_suffix": "涼風前",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "相思無由見"
+    },
+    "query_hash": "90d0fa3e620854ef4a9cf6bf18c77605607576ca89fa111ad3b36ebbf61560e5",
+    "sampling_hash": "006a465199369f0852e35c44a4214df3b851354279f6d37c929215ead9f72c67",
+    "task_id": "poem_f618a86235eb7b61f160a39a:couplet3"
+  },
+  {
+    "family_id": "family_847218cf5b47d927619dff6c",
+    "length": 5,
+    "poem_id": "poem_a3cd491898e6f72fda0194c9",
+    "query": {
+      "length": 5,
+      "lower_suffix": "及新苗",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "直廬收舊草"
+    },
+    "query_hash": "485b3e9931f3a64b72b293dd512e479c8690ff2b6349c24939728369836b8353",
+    "sampling_hash": "0075aaff6a9a7e300a79f1191de2626c3ba64513e66fbfd9837ba73bfda3d9e1",
+    "task_id": "poem_a3cd491898e6f72fda0194c9:couplet1"
+  },
+  {
+    "family_id": "family_4ca6a0d33a3fcdd4cefb11d1",
+    "length": 5,
+    "poem_id": "poem_5ad6bdae374d68d0e119fb56",
+    "query": {
+      "length": 5,
+      "lower_suffix": "故人情",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "相思不可見"
+    },
+    "query_hash": "93c4d7ddf2145dc073199739c8b4562726683ff2ed75399cfa6748d7afb3a296",
+    "sampling_hash": "00bef83991947e98b038266fb3617fd4b43e15f27e55e7b49b0f2a61566cfafd",
+    "task_id": "poem_5ad6bdae374d68d0e119fb56:couplet3"
+  },
+  {
+    "family_id": "family_c6f258871fe8bf75feead4b6",
+    "length": 5,
+    "poem_id": "poem_40e25c969791e9408dab108f",
+    "query": {
+      "length": 5,
+      "lower_suffix": "願忘言",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "物情今已見"
+    },
+    "query_hash": "3705a7584d3e3cfcb0ef13116402bf0cbe19711c193a8904e1dbf4d1dd7d9934",
+    "sampling_hash": "00bf40a938a61eb6ea931eaa5f2df8213eacfed552db426f532bde7b3d679fd8",
+    "task_id": "poem_40e25c969791e9408dab108f:couplet3"
+  },
+  {
+    "family_id": "family_476c68157b75dc4778b19d99",
+    "length": 5,
+    "poem_id": "poem_e4e4de3506b25a6d52ae4d98",
+    "query": {
+      "length": 5,
+      "lower_suffix": "百餘里",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "前路入鄭郊"
+    },
+    "query_hash": "5232aa6e1bc6b001165f000f1fff88987a8557caafb38bd2d1e7ab1384d0984e",
+    "sampling_hash": "00f080f6eb11cc917e647fac68e6e6c59bcb534b6eadadf60803527eb9261179",
+    "task_id": "poem_e4e4de3506b25a6d52ae4d98:couplet0"
+  },
+  {
+    "family_id": "family_e60fa84bf8de3836b719e52b",
+    "length": 5,
+    "poem_id": "poem_7806d99d447384a8b8894524",
+    "query": {
+      "length": 5,
+      "lower_suffix": "含宵喚",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "千秋流夕景"
+    },
+    "query_hash": "17fcd224b520a2f964d78cc73c2bf4d5ec017aa4cba055e8984c32816178534f",
+    "sampling_hash": "0102bca68b6f09bee50ed2bcdc265c934513540043017c3da0267d19ccc1a38b",
+    "task_id": "poem_7806d99d447384a8b8894524:couplet2"
+  },
+  {
+    "family_id": "family_4078b04ff3b4369dec9d202c",
+    "length": 5,
+    "poem_id": "poem_a86492d1b699c92fb7ecf23b",
+    "query": {
+      "length": 5,
+      "lower_suffix": "有青苔",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "佳辰無白日"
+    },
+    "query_hash": "f2a0a3d299839adcc15b29ae93ec0ebfa0205780720bc9333b0d7aa85d29fe6b",
+    "sampling_hash": "01225441d1300148b5ada5b14445ef7ba0526c5c8cf3387c0aadf7bd92595057",
+    "task_id": "poem_a86492d1b699c92fb7ecf23b:couplet3"
+  },
+  {
+    "family_id": "family_aee79ef4a2ef32b34b23472e",
+    "length": 7,
+    "poem_id": "poem_651b5bdbb6005abdb1e66141",
+    "query": {
+      "length": 7,
+      "lower_suffix": "縈紆霧壑深",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "秦商重沓雲巖近"
+    },
+    "query_hash": "b17db635dbcfcf53ff95023b3913ef24e326665c12184cb7f28ea93a5c57a638",
+    "sampling_hash": "008a7a74cfe8906a8f854e12d94bcc7dd1868047c77d8d395da745fe3137fa9c",
+    "task_id": "poem_651b5bdbb6005abdb1e66141:couplet2"
+  },
+  {
+    "family_id": "family_b3a44cef401c9d8a71727db3",
+    "length": 7,
+    "poem_id": "poem_304572e2dbaec38f8e1f757d",
+    "query": {
+      "length": 7,
+      "lower_suffix": "梧桐覆井黃",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "雨滋苔蘚侵堦綠"
+    },
+    "query_hash": "af7e4563d68783f59f914c5a7a5c7f86a5705bd59ed41fa3fd16e36c67834923",
+    "sampling_hash": "01e2be9f9537eeec6ae33f56e39b08551e9133cf9970b2028decf07b953a9d1b",
+    "task_id": "poem_304572e2dbaec38f8e1f757d:couplet1"
+  },
+  {
+    "family_id": "family_41f488c3d3f862facfa73498",
+    "length": 7,
+    "poem_id": "poem_3457d46f63705369080eed08",
+    "query": {
+      "length": 7,
+      "lower_suffix": "蕭蕭畫不成",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "雲山一一看皆美"
+    },
+    "query_hash": "fb6eb69c94e52e867aa5d15bb135b1b8e911b5d0b4feb4359be6edf137f215a3",
+    "sampling_hash": "02600ab5d9340a5cf8aac3b837015a392366830d20e740d0fa3ea738b4998c0c",
+    "task_id": "poem_3457d46f63705369080eed08:couplet1"
+  },
+  {
+    "family_id": "family_cf8d5e9d3814ca9e85a358dd",
+    "length": 7,
+    "poem_id": "poem_62267840955eb5e4c5a78b94",
+    "query": {
+      "length": 7,
+      "lower_suffix": "迎氣肇初陽",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "玄籥飛灰出洞房"
+    },
+    "query_hash": "9539fcfb8db78603dc4b63288b3ebaec38e075d346a421364348458e33c03035",
+    "sampling_hash": "02cc5ed26437b7e2173e12e5ad2d8fbd662f9235bccf76fe9cd8042a852bab3b",
+    "task_id": "poem_62267840955eb5e4c5a78b94:couplet0"
+  },
+  {
+    "family_id": "family_cf8d5e9d3814ca9e85a358dd",
+    "length": 7,
+    "poem_id": "poem_62267840955eb5e4c5a78b94",
+    "query": {
+      "length": 7,
+      "lower_suffix": "聖藻狎年光",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "唯有裁花飾簪鬢"
+    },
+    "query_hash": "5eccba01c8daa82e6fab5ae03c06b30c1aeb57e41f558ce6a7a65c2aac6ae643",
+    "sampling_hash": "04c0daaaffa150be2496b1fc0e57ba43db63b57aad4db8407ece7cc79948be88",
+    "task_id": "poem_62267840955eb5e4c5a78b94:couplet3"
+  },
+  {
+    "family_id": "family_317eabfcc5d770359b8e5db0",
+    "length": 7,
+    "poem_id": "poem_66c52c3daaa5bfcd59a1fc45",
+    "query": {
+      "length": 7,
+      "lower_suffix": "沙村見酒旗",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "依微水戍聞鉦鼓"
+    },
+    "query_hash": "5ff13abfe376d9af51b8773cd43eb5d1bee38612e64b40b775c9d2a3a64fc748",
+    "sampling_hash": "057c4c76ba8e7da48e82b369d444eef0d14feef2addc8e6c7673a5878944c966",
+    "task_id": "poem_66c52c3daaa5bfcd59a1fc45:couplet2"
+  },
+  {
+    "family_id": "family_3e3c8e9d9a13a60ee573770f",
+    "length": 7,
+    "poem_id": "poem_a921b55df6725dbef08d38ab",
+    "query": {
+      "length": 7,
+      "lower_suffix": "玄灞錦爲川",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "花鏤黃山繡作苑"
+    },
+    "query_hash": "d6ca3d2ce765516e13fc371c608e1b6c6f3b4316cedb94eef60d0635b0d9098f",
+    "sampling_hash": "08273db2e185c1c09312252400866150082f2840779c0f5294a78e4a29008fda",
+    "task_id": "poem_a921b55df6725dbef08d38ab:couplet1"
+  },
+  {
+    "family_id": "family_26936d17840eb106fdd0d786",
+    "length": 7,
+    "poem_id": "poem_46e6250703507c4a885836f6",
+    "query": {
+      "length": 7,
+      "lower_suffix": "無心火自飛",
+      "mask_length": 2,
+      "start": 0,
+      "upper_line": "先師有訣神將助"
+    },
+    "query_hash": "3aaa27b05ff94e5e9fcf643fd4252b1a9be3a0506a318959ac7ee353d3027368",
+    "sampling_hash": "08c7a68d6fe872f0983cb34181853d68f35b4ea029b6ac80013adca4512569e4",
+    "task_id": "poem_46e6250703507c4a885836f6:couplet2"
+  }
+]

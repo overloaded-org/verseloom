@@ -1,0 +1,133 @@
+{
+  "schema": "versematrix.context-span-matching-config.v0.5",
+  "version": "0.5.0",
+  "status": "frozen",
+  "task": "observed_even_line_initial_two_character_restoration",
+  "scope": "development_only_not_independent_confirmation_or_literary_quality",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "primary_arm": "full_w3",
+  "deployment_seed": 0,
+  "arms": [
+    {
+      "id": "full_w3",
+      "kernel_width": 3,
+      "channels": 24,
+      "context_mode": "both"
+    },
+    {
+      "id": "full_w1",
+      "kernel_width": 1,
+      "channels": 27,
+      "context_mode": "both"
+    },
+    {
+      "id": "upper_w3",
+      "kernel_width": 3,
+      "channels": 24,
+      "context_mode": "upper"
+    },
+    {
+      "id": "suffix_w3",
+      "kernel_width": 3,
+      "channels": 24,
+      "context_mode": "suffix"
+    }
+  ],
+  "model": {
+    "embedding_dim": 12,
+    "representation_dim": 16,
+    "temperature": 0.1,
+    "norm_epsilon": 1e-06
+  },
+  "training": {
+    "optimizer_updates": 1200,
+    "batch_size": 32,
+    "gradient_accumulation": 1,
+    "checkpoint_updates": [
+      400,
+      800,
+      1200
+    ],
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "max_grad_norm": 5.0,
+    "optimizer": "Adam_decoupled_weight_decay",
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "normalizer": "full_softmax_over_fixed_length_specific_W",
+    "positive_task": "initial_two_characters_of_even_numbered_lines_only",
+    "training_oov_policy": "only_targets_in_W_are_eligible_for_gradient_updates",
+    "schedule_seed_salt": 2026102905,
+    "schedule": "largest_remainder_allocation_of_update_lengths_proportional_to_eligible_tasks; seed_shuffled_length_schedule; independent_seeded_per_length_shuffled_cycles_fill_every_batch_to_32; identical_schedule_for_all_four_arms_of_a_seed"
+  },
+  "data": {
+    "expected_train_poems": 2502,
+    "expected_dev_poems": 547,
+    "expected_train_tasks": 10008,
+    "expected_dev_tasks": 2188,
+    "expected_eligible_train_tasks": 5951,
+    "expected_candidates_by_length": {
+      "5": 10375,
+      "7": 1504
+    },
+    "candidate_definition": "all_training_line_internal_adjacent_two_character_spans_count_at_least_two_separate_by_poem_length",
+    "candidate_normalization": "none_exact_source_code_points",
+    "training_split": "train",
+    "evaluation_split": "dev",
+    "skip_old_test_before_json_decode": true,
+    "old_test_or_confirmation_evaluation": false
+  },
+  "evaluation": {
+    "batch_size": 64,
+    "k": 16,
+    "primary_metric": "seed_mean_then_equal_family_mean_recall_at_16",
+    "checkpoint_selection": "one_shared_checkpoint_per_arm_maximizes_exact_primary_metric_across_all_three_seeds; earliest_update_wins_exact_ties",
+    "all_dev_tasks_in_denominator": true,
+    "oov_target_rank": null,
+    "tie_rule": "descending_exact_floating_score_then_source_text_lexicographic_order",
+    "score_mixing": false,
+    "full_ranking_saved_as": "SHA256_of_little_endian_int32_complete_candidate_index_order; raw_top16_scores_and_target_rank_saved; full_order_recomputable_from_immutable_checkpoint_and_allowlisted_query",
+    "baselines": [
+      {
+        "id": "strong_statistical",
+        "alignment_weight": 0.25,
+        "boundary_weight": 0.25,
+        "pool": "wide"
+      },
+      {
+        "id": "all_position_frequency",
+        "count": "training_all_line_internal_adjacent_pair_count"
+      },
+      {
+        "id": "prefix_positive_frequency",
+        "count": "training_even_line_prefix_positive_count_including_zero_for_W_items"
+      }
+    ],
+    "target_buckets": [
+      "seen_prefix_positive",
+      "in_W_never_prefix_positive",
+      "outside_W"
+    ]
+  },
+  "diagnostics": {
+    "applied_arm": "full_w3",
+    "applied_checkpoint": "primary_arm_shared_selected_checkpoint",
+    "zero_context": "frozen_checkpoint_inference_mask_both; no_additional_training",
+    "mismatched_context": "within_each_length_sort_task_ids_by_fixed_salted_SHA256; first_positive_circular_offset_with_all_donor_families_and_VisibleQuery_hashes_different; replace_whole_visible_query_keep_original_target_and_W",
+    "permutation_salt": "versematrix-matching-v05-context-permutation-20261029",
+    "permutation_uses_targets": false,
+    "gold_equality_between_donor_and_original_is_not_a_filter": true
+  },
+  "resource_gate": {
+    "scope": "development_resource_allocation_gate_not_confirmatory_evidence",
+    "primary_mean_gain_over_strong_baseline_at_least": 0.02,
+    "each_of_three_seed_gains_strictly_positive": true,
+    "primary_mean_minus_mismatched_context_at_least": 0.01,
+    "formal_literary_quality_gate": "NOT_EVALUATED"
+  }
+}

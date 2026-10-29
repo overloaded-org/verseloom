@@ -1,0 +1,64 @@
+{
+  "version": "0.3.0",
+  "task": "observed_source_initial_two_character_restoration",
+  "literary_quality_gold": false,
+  "formal_H_C_completed": false,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "optimizer_updates": 400,
+  "batch_size": 32,
+  "gradient_accumulation": 1,
+  "training_candidates": 8,
+  "hard_negative_count": 3,
+  "proposal_pool_size": 16,
+  "learning_rate": 0.003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "optimizer": "Adam_decoupled_weight_decay",
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "epsilon": 1e-08,
+  "checkpoint_updates": [
+    100,
+    200,
+    300,
+    400
+  ],
+  "checkpoint_metric": "all_dev_tasks_equal_family_top1_uncovered_zero_earliest_tie",
+  "arms": {
+    "cnn_w3": {
+      "kernel_width": 3,
+      "channels": 12
+    },
+    "aligned_w1": {
+      "kernel_width": 1,
+      "channels": 20
+    }
+  },
+  "embedding_dim": 8,
+  "fixed_feature_dim": 4,
+  "ngram": {
+    "alpha": 0.1,
+    "weights": [
+      0.1,
+      0.3,
+      0.6
+    ],
+    "aligned_weight": 0.5,
+    "aligned_strength": 5.0
+  },
+  "candidate_origin": "train_only_spans_count_at_least_2",
+  "test_target_injection": false,
+  "test_tie_rule": "lexicographic_candidate",
+  "bootstrap_repeats": 5000,
+  "bootstrap_seed": 2026102903,
+  "dp_check": "first_24_test_task_hashes_per_length_for_each_selected_cnn_seed",
+  "go_rule_proxy_only": {
+    "min_absolute_family_accuracy_gain_over_each_comparator": 0.02,
+    "paired_ci_lower_gt": 0
+  },
+  "scope": "fixed_shards_shape_only_poems_ngram_proposed_pool_not_poetry_quality"
+}

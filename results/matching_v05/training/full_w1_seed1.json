@@ -1,0 +1,180 @@
+{
+  "accounting": {
+    "batch_size": 32,
+    "distinct_families_presented": 2247,
+    "distinct_poems_presented": 2375,
+    "distinct_tasks_presented": 5951,
+    "gradient_accumulation": 1,
+    "micro_steps": 1200,
+    "optimizer_updates": 1200,
+    "sample_presentations": 38400,
+    "sample_presentations_by_length": {
+      "5": 35456,
+      "7": 2944
+    },
+    "task_presentation_count_sha256": "7d97cecc9a1775a759d5939bd2eec5b27dcf85d5f870fb9403264ef3784884ee"
+  },
+  "arm": "full_w1",
+  "checkpoint_evaluation_seconds": 6.581296001000737,
+  "initial_parameters": {
+    "adam_state_scalars_allocated": 85534,
+    "by_tensor": {
+      "context_bias": {
+        "shape": [
+          27
+        ],
+        "stored": 27,
+        "trainable": 27
+      },
+      "context_kernel": {
+        "shape": [
+          1,
+          12,
+          27
+        ],
+        "stored": 324,
+        "trainable": 324
+      },
+      "embedding": {
+        "shape": [
+          3068,
+          12
+        ],
+        "stored": 36816,
+        "trainable": 36804
+      },
+      "query_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      },
+      "query_projection": {
+        "shape": [
+          324,
+          16
+        ],
+        "stored": 5184,
+        "trainable": 5184
+      },
+      "span_projection": {
+        "shape": [
+          24,
+          16
+        ],
+        "stored": 384,
+        "trainable": 384
+      },
+      "span_projection_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      }
+    },
+    "candidate_id_embeddings": false,
+    "context_mode": "both",
+    "dtype": "float64",
+    "frozen_inactive_query_projection_parameters": 0,
+    "frozen_parameters": 12,
+    "frozen_unk_parameters": 12,
+    "independent_candidate_bias": false,
+    "norm_epsilon": 1e-06,
+    "output_bias": "identically_zero",
+    "representation_dim": 16,
+    "step_count": 0,
+    "stored_parameters": 42767,
+    "temperature": 0.1,
+    "trainable_parameters": 42755
+  },
+  "loss_first_100_mean": 9.919985759490936,
+  "loss_last_100_mean": 5.966848024310146,
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "learning_rate": 0.003,
+    "max_grad_norm": 5.0,
+    "name": "Adam_with_decoupled_weight_decay",
+    "weight_decay": 0.0001
+  },
+  "parameters": {
+    "adam_state_scalars_allocated": 85534,
+    "by_tensor": {
+      "context_bias": {
+        "shape": [
+          27
+        ],
+        "stored": 27,
+        "trainable": 27
+      },
+      "context_kernel": {
+        "shape": [
+          1,
+          12,
+          27
+        ],
+        "stored": 324,
+        "trainable": 324
+      },
+      "embedding": {
+        "shape": [
+          3068,
+          12
+        ],
+        "stored": 36816,
+        "trainable": 36804
+      },
+      "query_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      },
+      "query_projection": {
+        "shape": [
+          324,
+          16
+        ],
+        "stored": 5184,
+        "trainable": 5184
+      },
+      "span_projection": {
+        "shape": [
+          24,
+          16
+        ],
+        "stored": 384,
+        "trainable": 384
+      },
+      "span_projection_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      }
+    },
+    "candidate_id_embeddings": false,
+    "context_mode": "both",
+    "dtype": "float64",
+    "frozen_inactive_query_projection_parameters": 0,
+    "frozen_parameters": 12,
+    "frozen_unk_parameters": 12,
+    "independent_candidate_bias": false,
+    "norm_epsilon": 1e-06,
+    "output_bias": "identically_zero",
+    "representation_dim": 16,
+    "step_count": 1200,
+    "stored_parameters": 42767,
+    "temperature": 0.1,
+    "trainable_parameters": 42755
+  },
+  "run_wall_seconds": 27.953132262999134,
+  "schedule_sha256": "4fa23a77c9ef5f7f2a1586dbb3065e5c4c304d915445dc4454315b59ef6c5501",
+  "seed": 1,
+  "training_seconds": 20.442517778035835
+}

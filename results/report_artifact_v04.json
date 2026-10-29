@@ -1,0 +1,19 @@
+{
+  "status": "all_pages_rendered_from_same_pdf_bytes",
+  "pages": 8,
+  "bytes": 130276,
+  "sha256": "3208d0fe933225603851dc20f67b3bf0a69331f094ee0a83b11fb6e5cccb711d",
+  "page_text_lengths": [
+    654,
+    658,
+    701,
+    606,
+    688,
+    620,
+    643,
+    1173
+  ],
+  "visual_review": "All 8 pages inspected in two contact sheets and final dense page individually; no layout defects.",
+  "source_script_sha256": "32fa3f425624495f26132318488e02a61168a0bc4a4cab2b5cd47aaccbfe5a7c",
+  "test_receipt_sha256": "543592c42bb560f3e0429e8323cf109b58c8457f350d876e1456642abf11c738"
+}

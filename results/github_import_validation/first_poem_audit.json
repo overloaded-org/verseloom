@@ -1,0 +1,30 @@
+{
+  "audited_utc": "2026-10-29T15:52:48.541143+00:00",
+  "auditor_sha256": "378a975771431de8251e27f44c7f432779c324bf925aaa85c03f249e6e9817ed",
+  "complete_template_paths_recomputed": 4,
+  "files": {
+    "candidate_pools.json": "8402a0be4786d245dfeeb9015c5ded9694cecc0e3f80dfba364516662c31bdbb",
+    "freeze.json": "aa02082f5fa33fdcb8b3726d52b8354ee404e9bc0cc0703aa05ba33cd44bbc71",
+    "resources.json": "4b29ac9c71b991159529c125feb7e8bb24883e58c5e267cdf8b15b28e439e5c9",
+    "result.json": "0a7469be1bcbfab8afc792d6cb26a7daa2c926b598ab6f226c27703674165aad",
+    "rhyme_selection.json": "6b80461741413cc14267ab2eccbba37b72e89f57a71cd5ab4755d4b41c97f18d",
+    "search.json": "918818980e3c67f9214058d6423cd6dc025b8292301ff50666e121c89826293a"
+  },
+  "formal_generation_executed_by_auditor": false,
+  "limits": [
+    "Does not independently replay every discarded beam state or certify global optimality.",
+    "Reference membership uniqueness does not certify contextual historical pronunciation.",
+    "No antithesis or literary-quality certification.",
+    "Recorded freeze chronology and first-run label cannot prove absence of unrecorded activity."
+  ],
+  "max_absolute_numeric_difference": 0.0,
+  "numerical_measures": 2589,
+  "real_output_altered": false,
+  "retained_candidate_scores_recomputed": 2392,
+  "scope": "all source spans and provenance, every retained line score, four template trace accounting, completed selected-path constraints/scores, and final outcome selection",
+  "selected_poem_sha256": "c2cbfed160ba31fdd8bca6c88eee532e32a6465820c39d13cb1fe781c47a0bac",
+  "source_span_occurrences": 8035,
+  "source_span_records": 2709,
+  "status": "PASS_INDEPENDENT_SOURCE_AND_SELECTED_PATH_AUDIT",
+  "used_five_training_poems": 2203
+}

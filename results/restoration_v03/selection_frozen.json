@@ -1,0 +1,54 @@
+{
+  "frozen_at_utc": "2026-10-29T02:02:49.377955+00:00",
+  "test_evaluated": false,
+  "models": [
+    {
+      "arm": "cnn_w3",
+      "seed": 0,
+      "selected_update": 400,
+      "selected_dev_family_top1": 0.0063976377952755905,
+      "selected_model_path": "models/cnn_w3_seed0/selected.npz",
+      "selected_model_sha256": "a7d7f73403d8d5d82b7ee6d9470259acbbb8015577d0736181a0763ab085331b"
+    },
+    {
+      "arm": "aligned_w1",
+      "seed": 0,
+      "selected_update": 400,
+      "selected_dev_family_top1": 0.005905511811023622,
+      "selected_model_path": "models/aligned_w1_seed0/selected.npz",
+      "selected_model_sha256": "e48c1e9ecf2eb12a814083ac9e17b07a394562dca17572d2e0b10e245f1b9f56"
+    },
+    {
+      "arm": "cnn_w3",
+      "seed": 1,
+      "selected_update": 200,
+      "selected_dev_family_top1": 0.005905511811023622,
+      "selected_model_path": "models/cnn_w3_seed1/selected.npz",
+      "selected_model_sha256": "e44b49983941ce772558516f61837a5349a153b961de2cf15b970dde1d85f40b"
+    },
+    {
+      "arm": "aligned_w1",
+      "seed": 1,
+      "selected_update": 200,
+      "selected_dev_family_top1": 0.005905511811023622,
+      "selected_model_path": "models/aligned_w1_seed1/selected.npz",
+      "selected_model_sha256": "be4b02abfb1a3bce4ec4aca64757aad465d12bdf9fbafaface54cbb0d2e7884a"
+    },
+    {
+      "arm": "cnn_w3",
+      "seed": 2,
+      "selected_update": 400,
+      "selected_dev_family_top1": 0.006151574803149607,
+      "selected_model_path": "models/cnn_w3_seed2/selected.npz",
+      "selected_model_sha256": "e635d9b8c72415ea173989963ae025188adaad4ee9fb2ca327564fa80eb25193"
+    },
+    {
+      "arm": "aligned_w1",
+      "seed": 2,
+      "selected_update": 300,
+      "selected_dev_family_top1": 0.006643700787401575,
+      "selected_model_path": "models/aligned_w1_seed2/selected.npz",
+      "selected_model_sha256": "1028d39ff70986357e9502fe02bafdb7d6749babd1279b8942babf9d8525bb32"
+    }
+  ]
+}

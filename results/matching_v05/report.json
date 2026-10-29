@@ -1,0 +1,5311 @@
+{
+  "arms": {
+    "full_w1": {
+      "by_seed": [
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 1200,
+            "optimizer_updates": 1200,
+            "sample_presentations": 38400,
+            "sample_presentations_by_length": {
+              "5": 35456,
+              "7": 2944
+            },
+            "task_presentation_count_sha256": "5fa47e200085df9ef870159affe00d29ebcd98896451f72373aa6e060cbf71fd"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.004887177568409616,
+                    "task_micro": 0.0047728489169852105,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.015661938534278958,
+                    "task_micro": 0.015384615384615385,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.001182033096926714,
+                    "task_micro": 0.001098901098901099,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0013064510459933677,
+                    "task_micro": 0.001402411992842243,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0014705882352941176,
+                    "task_micro": 0.002717391304347826,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.005680600348378824,
+                    "task_micro": 0.004835300825822259,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.013440860215053764,
+                    "task_micro": 0.012,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.011240722409942859,
+                    "task_micro": 0.012355251060005353,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.037010506208213945,
+                    "task_micro": 0.0401854714064915,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0023877745940783187,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.004288040256588001,
+                "task_micro": 0.004205974699396265,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.01328740157480315,
+                "task_micro": 0.013254113345521023,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.000984251968503937,
+                "task_micro": 0.0009140767824497258,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85534,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  27
+                ],
+                "stored": 27,
+                "trainable": 27
+              },
+              "context_kernel": {
+                "shape": [
+                  1,
+                  12,
+                  27
+                ],
+                "stored": 324,
+                "trainable": 324
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  324,
+                  16
+                ],
+                "stored": 5184,
+                "trainable": 5184
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "both",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 0,
+            "frozen_parameters": 12,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 1200,
+            "stored_parameters": 42767,
+            "temperature": 0.1,
+            "trainable_parameters": 42755
+          },
+          "seed": 0
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 1200,
+            "optimizer_updates": 1200,
+            "sample_presentations": 38400,
+            "sample_presentations_by_length": {
+              "5": 35456,
+              "7": 2944
+            },
+            "task_presentation_count_sha256": "7d97cecc9a1775a759d5939bd2eec5b27dcf85d5f870fb9403264ef3784884ee"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.004000845364983766,
+                    "task_micro": 0.0038592420217076107,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.011229314420803783,
+                    "task_micro": 0.010439560439560439,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.001182033096926714,
+                    "task_micro": 0.001098901098901099,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0044062948909395095,
+                    "task_micro": 0.004160891044736093,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.01764705882352941,
+                    "task_micro": 0.016304347826086956,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.006139639981646278,
+                    "task_micro": 0.005036029201746638,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.021505376344086023,
+                    "task_micro": 0.016,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.01109189700599993,
+                    "task_micro": 0.01127669410128914,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.034383954154727794,
+                    "task_micro": 0.03245749613601236,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.002148997134670487,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.004068686328972423,
+                "task_micro": 0.003909976409493023,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.012303149606299213,
+                "task_micro": 0.011425959780621572,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.000984251968503937,
+                "task_micro": 0.0009140767824497258,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85534,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  27
+                ],
+                "stored": 27,
+                "trainable": 27
+              },
+              "context_kernel": {
+                "shape": [
+                  1,
+                  12,
+                  27
+                ],
+                "stored": 324,
+                "trainable": 324
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  324,
+                  16
+                ],
+                "stored": 5184,
+                "trainable": 5184
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "both",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 0,
+            "frozen_parameters": 12,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 1200,
+            "stored_parameters": 42767,
+            "temperature": 0.1,
+            "trainable_parameters": 42755
+          },
+          "seed": 1
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 1200,
+            "optimizer_updates": 1200,
+            "sample_presentations": 38400,
+            "sample_presentations_by_length": {
+              "5": 35456,
+              "7": 2944
+            },
+            "task_presentation_count_sha256": "c68e6dc4611a0dc3069550a50a1554daf0ce9041c66c94d72259fefc1c526c06"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.004122327650342684,
+                    "task_micro": 0.004530552779618059,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.007978723404255319,
+                    "task_micro": 0.008241758241758242,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0017730496453900709,
+                    "task_micro": 0.002197802197802198,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.002468017295065596,
+                    "task_micro": 0.002362295240986204,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.011764705882352941,
+                    "task_micro": 0.010869565217391304,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.004821853218836544,
+                    "task_micro": 0.003975478768857962,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.026881720430107527,
+                    "task_micro": 0.02,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.009697327492961733,
+                    "task_micro": 0.012551871739371407,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.02005730659025788,
+                    "task_micro": 0.021638330757341576,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0031041069723018143,
+                    "task_micro": 0.0061823802163833074,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0038455237523140383,
+                "task_micro": 0.004165873266722025,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.00861220472440945,
+                "task_micro": 0.008683729433272395,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0014763779527559055,
+                "task_micro": 0.0018281535648994515,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85534,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  27
+                ],
+                "stored": 27,
+                "trainable": 27
+              },
+              "context_kernel": {
+                "shape": [
+                  1,
+                  12,
+                  27
+                ],
+                "stored": 324,
+                "trainable": 324
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  324,
+                  16
+                ],
+                "stored": 5184,
+                "trainable": 5184
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "both",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 0,
+            "frozen_parameters": 12,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 1200,
+            "stored_parameters": 42767,
+            "temperature": 0.1,
+            "trainable_parameters": 42755
+          },
+          "seed": 2
+        }
+      ],
+      "seed_average": {
+        "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+        "by_length": {
+          "5": {
+            "families": 423,
+            "metrics": {
+              "mrr": {
+                "families": 423,
+                "family_macro": 0.004336783527912022,
+                "task_micro": 0.0043875479061036265,
+                "tasks": 1820
+              },
+              "recall_at_16": {
+                "families": 423,
+                "family_macro": 0.011623325453112687,
+                "task_micro": 0.011355311355311355,
+                "tasks": 1820
+              },
+              "top1": {
+                "families": 423,
+                "family_macro": 0.001379038613081166,
+                "task_micro": 0.0014652014652014652,
+                "tasks": 1820
+              }
+            },
+            "tasks": 1820
+          },
+          "7": {
+            "families": 85,
+            "metrics": {
+              "mrr": {
+                "families": 85,
+                "family_macro": 0.002726921077332825,
+                "task_micro": 0.002641866092854847,
+                "tasks": 368
+              },
+              "recall_at_16": {
+                "families": 85,
+                "family_macro": 0.010294117647058823,
+                "task_micro": 0.009963768115942028,
+                "tasks": 368
+              },
+              "top1": {
+                "families": 85,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 368
+              }
+            },
+            "tasks": 368
+          }
+        },
+        "by_prefix_positive_bucket": {
+          "in_W_never_prefix_positive": {
+            "families": 186,
+            "metrics": {
+              "mrr": {
+                "families": 186,
+                "family_macro": 0.005547364516287215,
+                "task_micro": 0.004615602932142286,
+                "tasks": 250
+              },
+              "recall_at_16": {
+                "families": 186,
+                "family_macro": 0.020609318996415767,
+                "task_micro": 0.015999999999999997,
+                "tasks": 250
+              },
+              "top1": {
+                "families": 186,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 250
+              }
+            },
+            "tasks": 250
+          },
+          "outside_W": {
+            "families": 483,
+            "metrics": {
+              "mrr": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "recall_at_16": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "top1": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              }
+            },
+            "tasks": 1291
+          },
+          "seen_prefix_positive": {
+            "families": 349,
+            "metrics": {
+              "mrr": {
+                "families": 349,
+                "family_macro": 0.010676648969634842,
+                "task_micro": 0.012061272300221967,
+                "tasks": 647
+              },
+              "recall_at_16": {
+                "families": 349,
+                "family_macro": 0.0304839223177332,
+                "task_micro": 0.03142709943328181,
+                "tasks": 647
+              },
+              "top1": {
+                "families": 349,
+                "family_macro": 0.0025469595670168737,
+                "task_micro": 0.004121586810922205,
+                "tasks": 647
+              }
+            },
+            "tasks": 647
+          }
+        },
+        "families": 508,
+        "metrics": {
+          "mrr": {
+            "families": 508,
+            "family_macro": 0.004067416779291487,
+            "task_micro": 0.004093941458537104,
+            "tasks": 2188
+          },
+          "recall_at_16": {
+            "families": 508,
+            "family_macro": 0.011400918635170603,
+            "task_micro": 0.011121267519804997,
+            "tasks": 2188
+          },
+          "top1": {
+            "families": 508,
+            "family_macro": 0.001148293963254593,
+            "task_micro": 0.0012187690432663009,
+            "tasks": 2188
+          }
+        },
+        "seed_count": 3,
+        "tasks": 2188
+      },
+      "selected_step": 1200
+    },
+    "full_w3": {
+      "by_seed": [
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 800,
+            "optimizer_updates": 800,
+            "sample_presentations": 25600,
+            "sample_presentations_by_length": {
+              "5": 23456,
+              "7": 2144
+            },
+            "task_presentation_count_sha256": "ded64808967da22292dddc2264e3ee1802e60bd75b50352077a697044d06a001"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0040638617756329695,
+                    "task_micro": 0.0038674545232433703,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.013593380614657211,
+                    "task_micro": 0.012637362637362638,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.001182033096926714,
+                    "task_micro": 0.001098901098901099,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0025714382990853976,
+                    "task_micro": 0.002446729242033262,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0058823529411764705,
+                    "task_micro": 0.005434782608695652,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.004416084232401928,
+                    "task_micro": 0.0037228832053162724,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.010752688172043012,
+                    "task_micro": 0.008,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.012736583085917389,
+                    "task_micro": 0.010832214516293829,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.039637058261700095,
+                    "task_micro": 0.03554868624420402,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.004297994269340974,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0038141452490452854,
+                "task_micro": 0.003628502556385363,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.012303149606299213,
+                "task_micro": 0.011425959780621572,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.000984251968503937,
+                "task_micro": 0.0009140767824497258,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 4608
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "both",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 0,
+            "frozen_parameters": 12,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 800,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 42716
+          },
+          "seed": 0
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 800,
+            "optimizer_updates": 800,
+            "sample_presentations": 25600,
+            "sample_presentations_by_length": {
+              "5": 23520,
+              "7": 2080
+            },
+            "task_presentation_count_sha256": "4ac778140d0e14699f304a4006cb3f75714d253ec2bc78aa739c42f3222758a2"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.002910865482328718,
+                    "task_micro": 0.0029334973414645972,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.008569739952718676,
+                    "task_micro": 0.008791208791208791,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0013719518746607257,
+                    "task_micro": 0.00131275793114103,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0029411764705882353,
+                    "task_micro": 0.002717391304347826,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.002196927060007111,
+                    "task_micro": 0.002111985367004971,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.007206992838472022,
+                    "task_micro": 0.008182478730099264,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.022683858643744028,
+                    "task_micro": 0.02627511591962906,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.002653370095218916,
+                "task_micro": 0.0026609049726350393,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.007627952755905512,
+                "task_micro": 0.007769652650822669,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 4608
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "both",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 0,
+            "frozen_parameters": 12,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 800,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 42716
+          },
+          "seed": 1
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 800,
+            "optimizer_updates": 800,
+            "sample_presentations": 25600,
+            "sample_presentations_by_length": {
+              "5": 23520,
+              "7": 2080
+            },
+            "task_presentation_count_sha256": "b6ff6dbb599d1e810372747b907d7fb23ad8082230f400cc2bcb200845b4bac2"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.003712731758019702,
+                    "task_micro": 0.0036471416411946963,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.012411347517730497,
+                    "task_micro": 0.012087912087912088,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.000591016548463357,
+                    "task_micro": 0.0005494505494505495,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.004621560529011979,
+                    "task_micro": 0.004551175786672589,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.008823529411764706,
+                    "task_micro": 0.010869565217391304,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0029411764705882353,
+                    "task_micro": 0.002717391304347826,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0023834176679652,
+                    "task_micro": 0.002792348789654055,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.005376344086021506,
+                    "task_micro": 0.008,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.01338411682495001,
+                    "task_micro": 0.011769000431308107,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.041069723018147083,
+                    "task_micro": 0.03709428129829984,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.004297994269340974,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.00386479956418967,
+                "task_micro": 0.00379919125981255,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.011811023622047244,
+                "task_micro": 0.011882998171846435,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.000984251968503937,
+                "task_micro": 0.0009140767824497258,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 4608
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "both",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 0,
+            "frozen_parameters": 12,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 800,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 42716
+          },
+          "seed": 2
+        }
+      ],
+      "seed_average": {
+        "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+        "by_length": {
+          "5": {
+            "families": 423,
+            "metrics": {
+              "mrr": {
+                "families": 423,
+                "family_macro": 0.003562486338660463,
+                "task_micro": 0.003482697835300888,
+                "tasks": 1820
+              },
+              "recall_at_16": {
+                "families": 423,
+                "family_macro": 0.01152482269503546,
+                "task_micro": 0.011172161172161172,
+                "tasks": 1820
+              },
+              "top1": {
+                "families": 423,
+                "family_macro": 0.000591016548463357,
+                "task_micro": 0.0005494505494505495,
+                "tasks": 1820
+              }
+            },
+            "tasks": 1820
+          },
+          "7": {
+            "families": 85,
+            "metrics": {
+              "mrr": {
+                "families": 85,
+                "family_macro": 0.0028549835675860343,
+                "task_micro": 0.0027702209866156268,
+                "tasks": 368
+              },
+              "recall_at_16": {
+                "families": 85,
+                "family_macro": 0.00588235294117647,
+                "task_micro": 0.006340579710144927,
+                "tasks": 368
+              },
+              "top1": {
+                "families": 85,
+                "family_macro": 0.000980392156862745,
+                "task_micro": 0.0009057971014492753,
+                "tasks": 368
+              }
+            },
+            "tasks": 368
+          }
+        },
+        "by_prefix_positive_bucket": {
+          "in_W_never_prefix_positive": {
+            "families": 186,
+            "metrics": {
+              "mrr": {
+                "families": 186,
+                "family_macro": 0.002998809653458079,
+                "task_micro": 0.0028757391206584325,
+                "tasks": 250
+              },
+              "recall_at_16": {
+                "families": 186,
+                "family_macro": 0.005376344086021506,
+                "task_micro": 0.005333333333333333,
+                "tasks": 250
+              },
+              "top1": {
+                "families": 186,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 250
+              }
+            },
+            "tasks": 250
+          },
+          "outside_W": {
+            "families": 483,
+            "metrics": {
+              "mrr": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "recall_at_16": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "top1": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              }
+            },
+            "tasks": 1291
+          },
+          "seen_prefix_positive": {
+            "families": 349,
+            "metrics": {
+              "mrr": {
+                "families": 349,
+                "family_macro": 0.011109230916446475,
+                "task_micro": 0.0102612312259004,
+                "tasks": 647
+              },
+              "recall_at_16": {
+                "families": 349,
+                "family_macro": 0.034463546641197065,
+                "task_micro": 0.03297269448737764,
+                "tasks": 647
+              },
+              "top1": {
+                "families": 349,
+                "family_macro": 0.0028653295128939827,
+                "task_micro": 0.0020607934054611026,
+                "tasks": 647
+              }
+            },
+            "tasks": 647
+          }
+        },
+        "families": 508,
+        "metrics": {
+          "mrr": {
+            "families": 508,
+            "family_macro": 0.003444104969484623,
+            "task_micro": 0.0033628662629443177,
+            "tasks": 2188
+          },
+          "recall_at_16": {
+            "families": 508,
+            "family_macro": 0.010580708661417323,
+            "task_micro": 0.010359536867763558,
+            "tasks": 2188
+          },
+          "top1": {
+            "families": 508,
+            "family_macro": 0.0006561679790026247,
+            "task_micro": 0.0006093845216331504,
+            "tasks": 2188
+          }
+        },
+        "seed_count": 3,
+        "tasks": 2188
+      },
+      "selected_step": 800
+    },
+    "suffix_w3": {
+      "by_seed": [
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 400,
+            "optimizer_updates": 400,
+            "sample_presentations": 12800,
+            "sample_presentations_by_length": {
+              "5": 11872,
+              "7": 928
+            },
+            "task_presentation_count_sha256": "361e4254ef328d40d6af9b0b56b7284e76b60545b84b8d6cfee1d17d2937e534"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.004574036549342366,
+                    "task_micro": 0.004362650554114225,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.010342789598108746,
+                    "task_micro": 0.00989010989010989,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.001182033096926714,
+                    "task_micro": 0.001098901098901099,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0012991392327637644,
+                    "task_micro": 0.0014180861431353714,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0058823529411764705,
+                    "task_micro": 0.008152173913043478,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0017554898080419854,
+                    "task_micro": 0.0015746828874378229,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.005376344086021506,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.013312907957374281,
+                    "task_micro": 0.012470183906185857,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.03390639923591213,
+                    "task_micro": 0.030911901081916538,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0023877745940783187,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.004026071447158938,
+                "task_micro": 0.0038674038890135773,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.009596456692913386,
+                "task_micro": 0.009597806215722121,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.000984251968503937,
+                "task_micro": 0.0009140767824497258,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 1920
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "suffix",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 2688,
+            "frozen_parameters": 2700,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 400,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 40028
+          },
+          "seed": 0
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 400,
+            "optimizer_updates": 400,
+            "sample_presentations": 12800,
+            "sample_presentations_by_length": {
+              "5": 11808,
+              "7": 992
+            },
+            "task_presentation_count_sha256": "acb2dc43b688f094c226af5e4591a8d69a14dd120c2d1e4a166b6d6d81ef4e18"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0017681581949648276,
+                    "task_micro": 0.0017642170274075567,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.005319148936170213,
+                    "task_micro": 0.004945054945054945,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0015092158895687446,
+                    "task_micro": 0.001475492790538728,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.008823529411764706,
+                    "task_micro": 0.008152173913043478,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0020953712440031622,
+                    "task_micro": 0.002106904292748305,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.002688172043010753,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.005240944047115164,
+                    "task_micro": 0.004987836574363105,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.02148997134670487,
+                    "task_micro": 0.017001545595054096,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0017248312344162705,
+                "task_micro": 0.0017156564610603315,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.005905511811023622,
+                "task_micro": 0.005484460694698354,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 1920
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "suffix",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 2688,
+            "frozen_parameters": 2700,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 400,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 40028
+          },
+          "seed": 1
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 400,
+            "optimizer_updates": 400,
+            "sample_presentations": 12800,
+            "sample_presentations_by_length": {
+              "5": 11648,
+              "7": 1152
+            },
+            "task_presentation_count_sha256": "dab5a61d97ab7577a815f2d6e1f85d2477eb556b6e33db1592d85483c57ec4f0"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0027652449505646223,
+                    "task_micro": 0.002635161740548251,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.0070921985815602835,
+                    "task_micro": 0.006593406593406593,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.000591016548463357,
+                    "task_micro": 0.0005494505494505495,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.001362515684164846,
+                    "task_micro": 0.0015550005881428833,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0029411764705882353,
+                    "task_micro": 0.002717391304347826,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0024081475221821545,
+                    "task_micro": 0.00228337185211941,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.005376344086021506,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.00688440372959334,
+                    "task_micro": 0.007414824762294507,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.01862464183381089,
+                    "task_micro": 0.01854714064914992,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0009551098376313276,
+                    "task_micro": 0.0015455950540958269,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.002530536313470172,
+                "task_micro": 0.0024534892980961603,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.0063976377952755905,
+                "task_micro": 0.005941499085923218,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0004921259842519685,
+                "task_micro": 0.0004570383912248629,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 1920
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "suffix",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 2688,
+            "frozen_parameters": 2700,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 400,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 40028
+          },
+          "seed": 2
+        }
+      ],
+      "seed_average": {
+        "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+        "by_length": {
+          "5": {
+            "families": 423,
+            "metrics": {
+              "mrr": {
+                "families": 423,
+                "family_macro": 0.003035813231623939,
+                "task_micro": 0.0029206764406900106,
+                "tasks": 1820
+              },
+              "recall_at_16": {
+                "families": 423,
+                "family_macro": 0.007584712371946414,
+                "task_micro": 0.007142857142857143,
+                "tasks": 1820
+              },
+              "top1": {
+                "families": 423,
+                "family_macro": 0.000591016548463357,
+                "task_micro": 0.0005494505494505495,
+                "tasks": 1820
+              }
+            },
+            "tasks": 1820
+          },
+          "7": {
+            "families": 85,
+            "metrics": {
+              "mrr": {
+                "families": 85,
+                "family_macro": 0.0013902902688324515,
+                "task_micro": 0.0014828598406056608,
+                "tasks": 368
+              },
+              "recall_at_16": {
+                "families": 85,
+                "family_macro": 0.0058823529411764705,
+                "task_micro": 0.006340579710144928,
+                "tasks": 368
+              },
+              "top1": {
+                "families": 85,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 368
+              }
+            },
+            "tasks": 368
+          }
+        },
+        "by_prefix_positive_bucket": {
+          "in_W_never_prefix_positive": {
+            "families": 186,
+            "metrics": {
+              "mrr": {
+                "families": 186,
+                "family_macro": 0.0020863361914091006,
+                "task_micro": 0.001988319677435179,
+                "tasks": 250
+              },
+              "recall_at_16": {
+                "families": 186,
+                "family_macro": 0.004480286738351254,
+                "task_micro": 0.004,
+                "tasks": 250
+              },
+              "top1": {
+                "families": 186,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 250
+              }
+            },
+            "tasks": 250
+          },
+          "outside_W": {
+            "families": 483,
+            "metrics": {
+              "mrr": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "recall_at_16": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "top1": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              }
+            },
+            "tasks": 1291
+          },
+          "seen_prefix_positive": {
+            "families": 349,
+            "metrics": {
+              "mrr": {
+                "families": 349,
+                "family_macro": 0.008479418578027595,
+                "task_micro": 0.008290948414281156,
+                "tasks": 647
+              },
+              "recall_at_16": {
+                "families": 349,
+                "family_macro": 0.024673670805475962,
+                "task_micro": 0.02215352910870685,
+                "tasks": 647
+              },
+              "top1": {
+                "families": 349,
+                "family_macro": 0.0011142948105698823,
+                "task_micro": 0.0015455950540958269,
+                "tasks": 647
+              }
+            },
+            "tasks": 647
+          }
+        },
+        "families": 508,
+        "metrics": {
+          "mrr": {
+            "families": 508,
+            "family_macro": 0.0027604796650151273,
+            "task_micro": 0.0026788498827233563,
+            "tasks": 2188
+          },
+          "recall_at_16": {
+            "families": 508,
+            "family_macro": 0.007299868766404199,
+            "task_micro": 0.007007921998781231,
+            "tasks": 2188
+          },
+          "top1": {
+            "families": 508,
+            "family_macro": 0.0004921259842519685,
+            "task_micro": 0.0004570383912248629,
+            "tasks": 2188
+          }
+        },
+        "seed_count": 3,
+        "tasks": 2188
+      },
+      "selected_step": 400
+    },
+    "upper_w3": {
+      "by_seed": [
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 1200,
+            "optimizer_updates": 1200,
+            "sample_presentations": 38400,
+            "sample_presentations_by_length": {
+              "5": 35456,
+              "7": 2944
+            },
+            "task_presentation_count_sha256": "5fa47e200085df9ef870159affe00d29ebcd98896451f72373aa6e060cbf71fd"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.004934575995645066,
+                    "task_micro": 0.005337627206821063,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.01152482269503546,
+                    "task_micro": 0.013736263736263736,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0017730496453900709,
+                    "task_micro": 0.0016483516483516484,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.003717389007692877,
+                    "task_micro": 0.0039480146057926865,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.014705882352941176,
+                    "task_micro": 0.016304347826086956,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.010868151353749632,
+                    "task_micro": 0.010184880939526979,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.03494623655913978,
+                    "task_micro": 0.036,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.005376344086021506,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.012723443071297318,
+                    "task_micro": 0.01332477690334513,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.024314367580843224,
+                    "task_micro": 0.03400309119010819,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.004297994269340974,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0047309128185270815,
+                "task_micro": 0.005103908085624334,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.012057086614173228,
+                "task_micro": 0.01416819012797075,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0014763779527559055,
+                "task_micro": 0.0013711151736745886,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 2688
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "upper",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 1920,
+            "frozen_parameters": 1932,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 1200,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 40796
+          },
+          "seed": 0
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 1200,
+            "optimizer_updates": 1200,
+            "sample_presentations": 38400,
+            "sample_presentations_by_length": {
+              "5": 35456,
+              "7": 2944
+            },
+            "task_presentation_count_sha256": "7d97cecc9a1775a759d5939bd2eec5b27dcf85d5f870fb9403264ef3784884ee"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.005866720359082457,
+                    "task_micro": 0.006173096379889995,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.013297872340425532,
+                    "task_micro": 0.013186813186813187,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0017730496453900709,
+                    "task_micro": 0.002197802197802198,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.002807738054099529,
+                    "task_micro": 0.002781778278251969,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0058823529411764705,
+                    "task_micro": 0.005434782608695652,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.004972833283345033,
+                    "task_micro": 0.004312847596237921,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.010752688172043012,
+                    "task_micro": 0.008,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.014338492777884427,
+                    "task_micro": 0.01728055319742973,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.03447946513849092,
+                    "task_micro": 0.03709428129829984,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0026265520534861507,
+                    "task_micro": 0.0061823802163833074,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.005354882768681769,
+                "task_micro": 0.005602710154385976,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.012057086614173228,
+                "task_micro": 0.011882998171846435,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0014763779527559055,
+                "task_micro": 0.0018281535648994515,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 2688
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "upper",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 1920,
+            "frozen_parameters": 1932,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 1200,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 40796
+          },
+          "seed": 1
+        },
+        {
+          "accounting_at_selected_checkpoint": {
+            "batch_size": 32,
+            "distinct_families_presented": 2247,
+            "distinct_poems_presented": 2375,
+            "distinct_tasks_presented": 5951,
+            "gradient_accumulation": 1,
+            "micro_steps": 1200,
+            "optimizer_updates": 1200,
+            "sample_presentations": 38400,
+            "sample_presentations_by_length": {
+              "5": 35456,
+              "7": 2944
+            },
+            "task_presentation_count_sha256": "c68e6dc4611a0dc3069550a50a1554daf0ce9041c66c94d72259fefc1c526c06"
+          },
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.005596555720214619,
+                    "task_micro": 0.005296532571545871,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.013002364066193853,
+                    "task_micro": 0.012087912087912088,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0017730496453900709,
+                    "task_micro": 0.0016483516483516484,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.00533369760740011,
+                    "task_micro": 0.0051125099726277625,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.008823529411764706,
+                    "task_micro": 0.008152173913043478,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0029411764705882353,
+                    "task_micro": 0.002717391304347826,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.004104338447359122,
+                    "task_micro": 0.0037332542021715443,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.005376344086021506,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.01807204452127652,
+                    "task_micro": 0.016364419473875756,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.04226361031518624,
+                    "task_micro": 0.03709428129829984,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.007879656160458453,
+                    "task_micro": 0.0061823802163833074,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.005552573555668885,
+                "task_micro": 0.005265581787084325,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.012303149606299213,
+                "task_micro": 0.011425959780621572,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.001968503937007874,
+                "task_micro": 0.0018281535648994515,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "parameters": {
+            "adam_state_scalars_allocated": 85456,
+            "by_tensor": {
+              "context_bias": {
+                "shape": [
+                  24
+                ],
+                "stored": 24,
+                "trainable": 24
+              },
+              "context_kernel": {
+                "shape": [
+                  3,
+                  12,
+                  24
+                ],
+                "stored": 864,
+                "trainable": 864
+              },
+              "embedding": {
+                "shape": [
+                  3068,
+                  12
+                ],
+                "stored": 36816,
+                "trainable": 36804
+              },
+              "query_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              },
+              "query_projection": {
+                "shape": [
+                  288,
+                  16
+                ],
+                "stored": 4608,
+                "trainable": 2688
+              },
+              "span_projection": {
+                "shape": [
+                  24,
+                  16
+                ],
+                "stored": 384,
+                "trainable": 384
+              },
+              "span_projection_bias": {
+                "shape": [
+                  16
+                ],
+                "stored": 16,
+                "trainable": 16
+              }
+            },
+            "candidate_id_embeddings": false,
+            "context_mode": "upper",
+            "dtype": "float64",
+            "frozen_inactive_query_projection_parameters": 1920,
+            "frozen_parameters": 1932,
+            "frozen_unk_parameters": 12,
+            "independent_candidate_bias": false,
+            "norm_epsilon": 1e-06,
+            "output_bias": "identically_zero",
+            "representation_dim": 16,
+            "step_count": 1200,
+            "stored_parameters": 42728,
+            "temperature": 0.1,
+            "trainable_parameters": 40796
+          },
+          "seed": 2
+        }
+      ],
+      "seed_average": {
+        "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+        "by_length": {
+          "5": {
+            "families": 423,
+            "metrics": {
+              "mrr": {
+                "families": 423,
+                "family_macro": 0.005465950691647381,
+                "task_micro": 0.005602418719418976,
+                "tasks": 1820
+              },
+              "recall_at_16": {
+                "families": 423,
+                "family_macro": 0.012608353033884948,
+                "task_micro": 0.013003663003663003,
+                "tasks": 1820
+              },
+              "top1": {
+                "families": 423,
+                "family_macro": 0.0017730496453900707,
+                "task_micro": 0.0018315018315018313,
+                "tasks": 1820
+              }
+            },
+            "tasks": 1820
+          },
+          "7": {
+            "families": 85,
+            "metrics": {
+              "mrr": {
+                "families": 85,
+                "family_macro": 0.003952941556397506,
+                "task_micro": 0.003947434285557473,
+                "tasks": 368
+              },
+              "recall_at_16": {
+                "families": 85,
+                "family_macro": 0.00980392156862745,
+                "task_micro": 0.009963768115942028,
+                "tasks": 368
+              },
+              "top1": {
+                "families": 85,
+                "family_macro": 0.000980392156862745,
+                "task_micro": 0.0009057971014492753,
+                "tasks": 368
+              }
+            },
+            "tasks": 368
+          }
+        },
+        "by_prefix_positive_bucket": {
+          "in_W_never_prefix_positive": {
+            "families": 186,
+            "metrics": {
+              "mrr": {
+                "families": 186,
+                "family_macro": 0.006648441028151263,
+                "task_micro": 0.006076994245978814,
+                "tasks": 250
+              },
+              "recall_at_16": {
+                "families": 186,
+                "family_macro": 0.017025089605734765,
+                "task_micro": 0.016,
+                "tasks": 250
+              },
+              "top1": {
+                "families": 186,
+                "family_macro": 0.0017921146953405018,
+                "task_micro": 0.0013333333333333333,
+                "tasks": 250
+              }
+            },
+            "tasks": 250
+          },
+          "outside_W": {
+            "families": 483,
+            "metrics": {
+              "mrr": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "recall_at_16": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "top1": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              }
+            },
+            "tasks": 1291
+          },
+          "seen_prefix_positive": {
+            "families": 349,
+            "metrics": {
+              "mrr": {
+                "families": 349,
+                "family_macro": 0.015044660123486089,
+                "task_micro": 0.015656583191550208,
+                "tasks": 647
+              },
+              "recall_at_16": {
+                "families": 349,
+                "family_macro": 0.03368581434484013,
+                "task_micro": 0.03606388459556929,
+                "tasks": 647
+              },
+              "top1": {
+                "families": 349,
+                "family_macro": 0.004934734161095193,
+                "task_micro": 0.0051519835136527555,
+                "tasks": 647
+              }
+            },
+            "tasks": 647
+          }
+        },
+        "families": 508,
+        "metrics": {
+          "mrr": {
+            "families": 508,
+            "family_macro": 0.005212789714292579,
+            "task_micro": 0.0053240666756982115,
+            "tasks": 2188
+          },
+          "recall_at_16": {
+            "families": 508,
+            "family_macro": 0.012139107611548555,
+            "task_micro": 0.012492382693479584,
+            "tasks": 2188
+          },
+          "top1": {
+            "families": 508,
+            "family_macro": 0.0016404199475065614,
+            "task_micro": 0.0016758074344911638,
+            "tasks": 2188
+          }
+        },
+        "seed_count": 3,
+        "tasks": 2188
+      },
+      "selected_step": 1200
+    }
+  },
+  "baselines": {
+    "all_position_frequency": {
+      "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+      "by_length": {
+        "5": {
+          "families": 423,
+          "metrics": {
+            "mrr": {
+              "families": 423,
+              "family_macro": 0.005088286609289244,
+              "task_micro": 0.0049665409546594845,
+              "tasks": 1820
+            },
+            "recall_at_16": {
+              "families": 423,
+              "family_macro": 0.016252955082742316,
+              "task_micro": 0.015934065934065933,
+              "tasks": 1820
+            },
+            "top1": {
+              "families": 423,
+              "family_macro": 0.001182033096926714,
+              "task_micro": 0.001098901098901099,
+              "tasks": 1820
+            }
+          },
+          "tasks": 1820
+        },
+        "7": {
+          "families": 85,
+          "metrics": {
+            "mrr": {
+              "families": 85,
+              "family_macro": 0.004015881057000204,
+              "task_micro": 0.003814678099492158,
+              "tasks": 368
+            },
+            "recall_at_16": {
+              "families": 85,
+              "family_macro": 0.014705882352941176,
+              "task_micro": 0.01358695652173913,
+              "tasks": 368
+            },
+            "top1": {
+              "families": 85,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 368
+            }
+          },
+          "tasks": 368
+        }
+      },
+      "by_prefix_positive_bucket": {
+        "in_W_never_prefix_positive": {
+          "families": 186,
+          "metrics": {
+            "mrr": {
+              "families": 186,
+              "family_macro": 0.001194486697233087,
+              "task_micro": 0.001381808071373463,
+              "tasks": 250
+            },
+            "recall_at_16": {
+              "families": 186,
+              "family_macro": 0.0017921146953405018,
+              "task_micro": 0.004,
+              "tasks": 250
+            },
+            "top1": {
+              "families": 186,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 250
+            }
+          },
+          "tasks": 250
+        },
+        "outside_W": {
+          "families": 483,
+          "metrics": {
+            "mrr": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            },
+            "recall_at_16": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            },
+            "top1": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            }
+          },
+          "tasks": 1291
+        },
+        "seen_prefix_positive": {
+          "families": 349,
+          "metrics": {
+            "mrr": {
+              "families": 349,
+              "family_macro": 0.015419023043838862,
+              "task_micro": 0.015606575054482241,
+              "tasks": 647
+            },
+            "recall_at_16": {
+              "families": 349,
+              "family_macro": 0.05300859598853868,
+              "task_micro": 0.05100463678516229,
+              "tasks": 647
+            },
+            "top1": {
+              "families": 349,
+              "family_macro": 0.0019102196752626551,
+              "task_micro": 0.0030911901081916537,
+              "tasks": 647
+            }
+          },
+          "tasks": 647
+        }
+      },
+      "families": 508,
+      "metrics": {
+        "mrr": {
+          "families": 508,
+          "family_macro": 0.004908848672390487,
+          "task_micro": 0.004772808993644139,
+          "tasks": 2188
+        },
+        "recall_at_16": {
+          "families": 508,
+          "family_macro": 0.015994094488188976,
+          "task_micro": 0.015539305301645339,
+          "tasks": 2188
+        },
+        "top1": {
+          "families": 508,
+          "family_macro": 0.000984251968503937,
+          "task_micro": 0.0009140767824497258,
+          "tasks": 2188
+        }
+      },
+      "seed_count": 1,
+      "tasks": 2188
+    },
+    "prefix_positive_frequency": {
+      "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+      "by_length": {
+        "5": {
+          "families": 423,
+          "metrics": {
+            "mrr": {
+              "families": 423,
+              "family_macro": 0.007231700450576757,
+              "task_micro": 0.007215042652523059,
+              "tasks": 1820
+            },
+            "recall_at_16": {
+              "families": 423,
+              "family_macro": 0.022458628841607566,
+              "task_micro": 0.023626373626373626,
+              "tasks": 1820
+            },
+            "top1": {
+              "families": 423,
+              "family_macro": 0.002364066193853428,
+              "task_micro": 0.002197802197802198,
+              "tasks": 1820
+            }
+          },
+          "tasks": 1820
+        },
+        "7": {
+          "families": 85,
+          "metrics": {
+            "mrr": {
+              "families": 85,
+              "family_macro": 0.003286670761155558,
+              "task_micro": 0.003090628517715272,
+              "tasks": 368
+            },
+            "recall_at_16": {
+              "families": 85,
+              "family_macro": 0.011764705882352941,
+              "task_micro": 0.010869565217391304,
+              "tasks": 368
+            },
+            "top1": {
+              "families": 85,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 368
+            }
+          },
+          "tasks": 368
+        }
+      },
+      "by_prefix_positive_bucket": {
+        "in_W_never_prefix_positive": {
+          "families": 186,
+          "metrics": {
+            "mrr": {
+              "families": 186,
+              "family_macro": 0.00036710856556872786,
+              "task_micro": 0.0003606690992833842,
+              "tasks": 250
+            },
+            "recall_at_16": {
+              "families": 186,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 250
+            },
+            "top1": {
+              "families": 186,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 250
+            }
+          },
+          "tasks": 250
+        },
+        "outside_W": {
+          "families": 483,
+          "metrics": {
+            "mrr": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            },
+            "recall_at_16": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            },
+            "top1": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            }
+          },
+          "tasks": 1291
+        },
+        "seen_prefix_positive": {
+          "families": 349,
+          "metrics": {
+            "mrr": {
+              "families": 349,
+              "family_macro": 0.02205174547095666,
+              "task_micro": 0.02191431475624473,
+              "tasks": 647
+            },
+            "recall_at_16": {
+              "families": 349,
+              "family_macro": 0.07101923864101514,
+              "task_micro": 0.07264296754250386,
+              "tasks": 647
+            },
+            "top1": {
+              "families": 349,
+              "family_macro": 0.006208213944603629,
+              "task_micro": 0.0061823802163833074,
+              "tasks": 647
+            }
+          },
+          "tasks": 647
+        }
+      },
+      "families": 508,
+      "metrics": {
+        "mrr": {
+          "families": 508,
+          "family_macro": 0.006571606900181476,
+          "task_micro": 0.006521356911385369,
+          "tasks": 2188
+        },
+        "recall_at_16": {
+          "families": 508,
+          "family_macro": 0.02066929133858268,
+          "task_micro": 0.021480804387568556,
+          "tasks": 2188
+        },
+        "top1": {
+          "families": 508,
+          "family_macro": 0.001968503937007874,
+          "task_micro": 0.0018281535648994515,
+          "tasks": 2188
+        }
+      },
+      "seed_count": 1,
+      "tasks": 2188
+    },
+    "strong_statistical": {
+      "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+      "by_length": {
+        "5": {
+          "families": 423,
+          "metrics": {
+            "mrr": {
+              "families": 423,
+              "family_macro": 0.02136009085993515,
+              "task_micro": 0.022087355372859503,
+              "tasks": 1820
+            },
+            "recall_at_16": {
+              "families": 423,
+              "family_macro": 0.04930063041765169,
+              "task_micro": 0.0510989010989011,
+              "tasks": 1820
+            },
+            "top1": {
+              "families": 423,
+              "family_macro": 0.01152482269503546,
+              "task_micro": 0.012087912087912088,
+              "tasks": 1820
+            }
+          },
+          "tasks": 1820
+        },
+        "7": {
+          "families": 85,
+          "metrics": {
+            "mrr": {
+              "families": 85,
+              "family_macro": 0.00534924213898593,
+              "task_micro": 0.006382780895429418,
+              "tasks": 368
+            },
+            "recall_at_16": {
+              "families": 85,
+              "family_macro": 0.01911764705882353,
+              "task_micro": 0.019021739130434784,
+              "tasks": 368
+            },
+            "top1": {
+              "families": 85,
+              "family_macro": 0.0014705882352941176,
+              "task_micro": 0.002717391304347826,
+              "tasks": 368
+            }
+          },
+          "tasks": 368
+        }
+      },
+      "by_prefix_positive_bucket": {
+        "in_W_never_prefix_positive": {
+          "families": 186,
+          "metrics": {
+            "mrr": {
+              "families": 186,
+              "family_macro": 0.02637589022671055,
+              "task_micro": 0.023126217332855768,
+              "tasks": 250
+            },
+            "recall_at_16": {
+              "families": 186,
+              "family_macro": 0.07661290322580645,
+              "task_micro": 0.068,
+              "tasks": 250
+            },
+            "top1": {
+              "families": 186,
+              "family_macro": 0.013440860215053764,
+              "task_micro": 0.012,
+              "tasks": 250
+            }
+          },
+          "tasks": 250
+        },
+        "outside_W": {
+          "families": 483,
+          "metrics": {
+            "mrr": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            },
+            "recall_at_16": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            },
+            "top1": {
+              "families": 483,
+              "family_macro": 0.0,
+              "task_micro": 0.0,
+              "tasks": 1291
+            }
+          },
+          "tasks": 1291
+        },
+        "seen_prefix_positive": {
+          "families": 349,
+          "metrics": {
+            "mrr": {
+              "families": 349,
+              "family_macro": 0.056700024343743015,
+              "task_micro": 0.056825804968946486,
+              "tasks": 647
+            },
+            "recall_at_16": {
+              "families": 349,
+              "family_macro": 0.13031109291854276,
+              "task_micro": 0.12828438948995363,
+              "tasks": 647
+            },
+            "top1": {
+              "families": 349,
+              "family_macro": 0.030181470869149952,
+              "task_micro": 0.030911901081916538,
+              "tasks": 647
+            }
+          },
+          "tasks": 647
+        }
+      },
+      "families": 508,
+      "metrics": {
+        "mrr": {
+          "families": 508,
+          "family_macro": 0.01868111026686294,
+          "task_micro": 0.01944600098177437,
+          "tasks": 2188
+        },
+        "recall_at_16": {
+          "families": 508,
+          "family_macro": 0.044250328083989494,
+          "task_micro": 0.04570383912248629,
+          "tasks": 2188
+        },
+        "top1": {
+          "families": 508,
+          "family_macro": 0.00984251968503937,
+          "task_micro": 0.010511882998171846,
+          "tasks": 2188
+        }
+      },
+      "seed_count": 1,
+      "tasks": 2188
+    }
+  },
+  "completed_at_utc": "2026-10-29T08:40:57.164455+00:00",
+  "config_sha256": "16c4ba6a3cdc50ab62f98f93916c8ff6295076139e6853c18bc5a53af5062fb2",
+  "coverage": {
+    "candidate_counts": {
+      "5": 10375,
+      "7": 1504
+    },
+    "candidate_set_sha256": {
+      "5": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+      "7": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e"
+    },
+    "old_test_or_confirmation_content_decoded": false,
+    "old_test_rows_skipped_before_json_decode": 530,
+    "splits": {
+      "dev": {
+        "by_length": {
+          "5": {
+            "covered": 824,
+            "tasks": 1820
+          },
+          "7": {
+            "covered": 73,
+            "tasks": 368
+          }
+        },
+        "covered_tasks": 897,
+        "families": 508,
+        "poems": 547,
+        "prefix_positive_buckets": {
+          "in_W_never_prefix_positive": 250,
+          "outside_W": 1291,
+          "seen_prefix_positive": 647
+        },
+        "tasks": 2188,
+        "unknown_visible_character_tasks": 245,
+        "vocabulary_coverage": {
+          "families": 508,
+          "family_macro": 0.40194389763779526,
+          "task_micro": 0.409963436928702,
+          "tasks": 2188
+        }
+      },
+      "train": {
+        "by_length": {
+          "5": {
+            "covered": 5494,
+            "tasks": 8812
+          },
+          "7": {
+            "covered": 457,
+            "tasks": 1196
+          }
+        },
+        "covered_tasks": 5951,
+        "families": 2373,
+        "poems": 2502,
+        "prefix_positive_buckets": {
+          "in_W_never_prefix_positive": 0,
+          "outside_W": 4057,
+          "seen_prefix_positive": 5951
+        },
+        "tasks": 10008,
+        "unknown_visible_character_tasks": 632,
+        "vocabulary_coverage": {
+          "families": 2373,
+          "family_macro": 0.577960387694901,
+          "task_micro": 0.5946243005595524,
+          "tasks": 10008
+        }
+      }
+    },
+    "vocabulary_size_with_UNK": 3068
+  },
+  "diagnostics": {
+    "mismatched_context": {
+      "by_seed": [
+        {
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0011068640577466058,
+                    "task_micro": 0.0010924189545389897,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.0017730496453900709,
+                    "task_micro": 0.0016483516483516484,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0006815928134744891,
+                    "task_micro": 0.0007028876234369858,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0012094388043168965,
+                    "task_micro": 0.0011705828230511367,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.003856001415345707,
+                    "task_micro": 0.0030204318963261015,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.006685768863419293,
+                    "task_micro": 0.00463678516228748,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0010357064676617045,
+                "task_micro": 0.0010269036301123271,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.0014763779527559055,
+                "task_micro": 0.0013711151736745886,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "seed": 0
+        },
+        {
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0011340692929996871,
+                    "task_micro": 0.0010995830760552568,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.001182033096926714,
+                    "task_micro": 0.001098901098901099,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.000591016548463357,
+                    "task_micro": 0.0005494505494505495,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.001327736159574506,
+                    "task_micro": 0.0013914389531560314,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.004411764705882353,
+                    "task_micro": 0.005434782608695652,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0016171204183009823,
+                    "task_micro": 0.0016941867287926116,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.002688172043010753,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.003478669626328877,
+                    "task_micro": 0.003229898069526792,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.0071633237822349575,
+                    "task_micro": 0.00463678516228748,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0014326647564469914,
+                    "task_micro": 0.0015455950540958269,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0011664741820919305,
+                "task_micro": 0.0011486703533738515,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.0017224409448818897,
+                "task_micro": 0.0018281535648994515,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0004921259842519685,
+                "task_micro": 0.0004570383912248629,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "seed": 1
+        },
+        {
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0011864031171886225,
+                    "task_micro": 0.0011597312702344765,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.001182033096926714,
+                    "task_micro": 0.001098901098901099,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.000591016548463357,
+                    "task_micro": 0.0005494505494505495,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0004713162190195035,
+                    "task_micro": 0.000478832160256106,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0010880672897828148,
+                    "task_micro": 0.001079075472941834,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.0029968535009814853,
+                    "task_micro": 0.00311770058510902,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.0023877745940783187,
+                    "task_micro": 0.0030911901081916537,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0014326647564469914,
+                    "task_micro": 0.0015455950540958269,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0010667527503689862,
+                "task_micro": 0.0010452107617920448,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.000984251968503937,
+                "task_micro": 0.0009140767824497258,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0004921259842519685,
+                "task_micro": 0.0004570383912248629,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "seed": 2
+        }
+      ],
+      "kind": "frozen_selected_checkpoint_inference_diagnostic_no_training",
+      "seed_average": {
+        "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+        "by_length": {
+          "5": {
+            "families": 423,
+            "metrics": {
+              "mrr": {
+                "families": 423,
+                "family_macro": 0.0011424454893116385,
+                "task_micro": 0.0011172444336095743,
+                "tasks": 1820
+              },
+              "recall_at_16": {
+                "families": 423,
+                "family_macro": 0.001379038613081166,
+                "task_micro": 0.0012820512820512818,
+                "tasks": 1820
+              },
+              "top1": {
+                "families": 423,
+                "family_macro": 0.0003940110323089046,
+                "task_micro": 0.0003663003663003663,
+                "tasks": 1820
+              }
+            },
+            "tasks": 1820
+          },
+          "7": {
+            "families": 85,
+            "metrics": {
+              "mrr": {
+                "families": 85,
+                "family_macro": 0.0008268817306894995,
+                "task_micro": 0.0008577195789497076,
+                "tasks": 368
+              },
+              "recall_at_16": {
+                "families": 85,
+                "family_macro": 0.0014705882352941176,
+                "task_micro": 0.0018115942028985505,
+                "tasks": 368
+              },
+              "top1": {
+                "families": 85,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 368
+              }
+            },
+            "tasks": 368
+          }
+        },
+        "by_prefix_positive_bucket": {
+          "in_W_never_prefix_positive": {
+            "families": 186,
+            "metrics": {
+              "mrr": {
+                "families": 186,
+                "family_macro": 0.0013048755041335646,
+                "task_micro": 0.001314615008261861,
+                "tasks": 250
+              },
+              "recall_at_16": {
+                "families": 186,
+                "family_macro": 0.0008960573476702509,
+                "task_micro": 0.0013333333333333333,
+                "tasks": 250
+              },
+              "top1": {
+                "families": 186,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 250
+              }
+            },
+            "tasks": 250
+          },
+          "outside_W": {
+            "families": 483,
+            "metrics": {
+              "mrr": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "recall_at_16": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "top1": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              }
+            },
+            "tasks": 1291
+          },
+          "seen_prefix_positive": {
+            "families": 349,
+            "metrics": {
+              "mrr": {
+                "families": 349,
+                "family_macro": 0.0034438415142186898,
+                "task_micro": 0.0031226768503206377,
+                "tasks": 647
+              },
+              "recall_at_16": {
+                "families": 349,
+                "family_macro": 0.0054122890799108555,
+                "task_micro": 0.004121586810922205,
+                "tasks": 647
+              },
+              "top1": {
+                "families": 349,
+                "family_macro": 0.0009551098376313276,
+                "task_micro": 0.0010303967027305513,
+                "tasks": 647
+              }
+            },
+            "tasks": 647
+          }
+        },
+        "families": 508,
+        "metrics": {
+          "mrr": {
+            "families": 508,
+            "family_macro": 0.0010896444667075403,
+            "task_micro": 0.0010735949150927411,
+            "tasks": 2188
+          },
+          "recall_at_16": {
+            "families": 508,
+            "family_macro": 0.0013943569553805772,
+            "task_micro": 0.0013711151736745884,
+            "tasks": 2188
+          },
+          "top1": {
+            "families": 508,
+            "family_macro": 0.00032808398950131233,
+            "task_micro": 0.0003046922608165752,
+            "tasks": 2188
+          }
+        },
+        "seed_count": 3,
+        "tasks": 2188
+      }
+    },
+    "zero_context": {
+      "by_seed": [
+        {
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0015106798708724336,
+                    "task_micro": 0.0014517448545374235,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.005319148936170213,
+                    "task_micro": 0.004945054945054945,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0008561790661388389,
+                    "task_micro": 0.0009038470492859188,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0016651662981616536,
+                    "task_micro": 0.0018235928370862382,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.002688172043010753,
+                    "task_micro": 0.004,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.0037690020125320293,
+                    "task_micro": 0.003893188779171205,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.010267430754536771,
+                    "task_micro": 0.012364760432766615,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0014011669409465367,
+                "task_micro": 0.0013595938525572803,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.0044291338582677165,
+                "task_micro": 0.004113345521023766,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "seed": 0
+        },
+        {
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.0018847409867589321,
+                    "task_micro": 0.0019811674461148,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.0056146572104018916,
+                    "task_micro": 0.006043956043956044,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.0009291288540308661,
+                    "task_micro": 0.0009979872512578748,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0012154163724665545,
+                    "task_micro": 0.0012740861038367428,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.005559972450977419,
+                    "task_micro": 0.0056483192185976,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.017765042979942695,
+                    "task_micro": 0.017001545595054096,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0017248452558890788,
+                "task_micro": 0.0018158062433235068,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.004675196850393701,
+                "task_micro": 0.005027422303473492,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "seed": 1
+        },
+        {
+          "metrics": {
+            "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+            "by_length": {
+              "5": {
+                "families": 423,
+                "metrics": {
+                  "mrr": {
+                    "families": 423,
+                    "family_macro": 0.002669202540857751,
+                    "task_micro": 0.002629839714388379,
+                    "tasks": 1820
+                  },
+                  "recall_at_16": {
+                    "families": 423,
+                    "family_macro": 0.0067966903073286055,
+                    "task_micro": 0.007142857142857143,
+                    "tasks": 1820
+                  },
+                  "top1": {
+                    "families": 423,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1820
+                  }
+                },
+                "tasks": 1820
+              },
+              "7": {
+                "families": 85,
+                "metrics": {
+                  "mrr": {
+                    "families": 85,
+                    "family_macro": 0.000938078152897609,
+                    "task_micro": 0.0009205049580520813,
+                    "tasks": 368
+                  },
+                  "recall_at_16": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  },
+                  "top1": {
+                    "families": 85,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 368
+                  }
+                },
+                "tasks": 368
+              }
+            },
+            "by_prefix_positive_bucket": {
+              "in_W_never_prefix_positive": {
+                "families": 186,
+                "metrics": {
+                  "mrr": {
+                    "families": 186,
+                    "family_macro": 0.0013240685076561485,
+                    "task_micro": 0.0012064666504223815,
+                    "tasks": 250
+                  },
+                  "recall_at_16": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  },
+                  "top1": {
+                    "families": 186,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 250
+                  }
+                },
+                "tasks": 250
+              },
+              "outside_W": {
+                "families": 483,
+                "metrics": {
+                  "mrr": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "recall_at_16": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  },
+                  "top1": {
+                    "families": 483,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 1291
+                  }
+                },
+                "tasks": 1291
+              },
+              "seen_prefix_positive": {
+                "families": 349,
+                "metrics": {
+                  "mrr": {
+                    "families": 349,
+                    "family_macro": 0.007015866902322643,
+                    "task_micro": 0.007455081054319042,
+                    "tasks": 647
+                  },
+                  "recall_at_16": {
+                    "families": 349,
+                    "family_macro": 0.016714422158548233,
+                    "task_micro": 0.02009273570324575,
+                    "tasks": 647
+                  },
+                  "top1": {
+                    "families": 349,
+                    "family_macro": 0.0,
+                    "task_micro": 0.0,
+                    "tasks": 647
+                  }
+                },
+                "tasks": 647
+              }
+            },
+            "families": 508,
+            "metrics": {
+              "mrr": {
+                "families": 508,
+                "family_macro": 0.0023795459011400105,
+                "task_micro": 0.0023423464829753268,
+                "tasks": 2188
+              },
+              "recall_at_16": {
+                "families": 508,
+                "family_macro": 0.005659448818897638,
+                "task_micro": 0.005941499085923218,
+                "tasks": 2188
+              },
+              "top1": {
+                "families": 508,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 2188
+              }
+            },
+            "seed_count": 1,
+            "tasks": 2188
+          },
+          "seed": 2
+        }
+      ],
+      "kind": "frozen_selected_checkpoint_inference_diagnostic_no_training",
+      "seed_average": {
+        "aggregation": "arithmetic_mean_across_seeds_per_task_then_mean_within_family_then_equal_family_mean",
+        "by_length": {
+          "5": {
+            "families": 423,
+            "metrics": {
+              "mrr": {
+                "families": 423,
+                "family_macro": 0.0020215411328297055,
+                "task_micro": 0.0020209173383468676,
+                "tasks": 1820
+              },
+              "recall_at_16": {
+                "families": 423,
+                "family_macro": 0.00591016548463357,
+                "task_micro": 0.006043956043956044,
+                "tasks": 1820
+              },
+              "top1": {
+                "families": 423,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1820
+              }
+            },
+            "tasks": 1820
+          },
+          "7": {
+            "families": 85,
+            "metrics": {
+              "mrr": {
+                "families": 85,
+                "family_macro": 0.0009077953576891047,
+                "task_micro": 0.0009407797528652917,
+                "tasks": 368
+              },
+              "recall_at_16": {
+                "families": 85,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 368
+              },
+              "top1": {
+                "families": 85,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 368
+              }
+            },
+            "tasks": 368
+          }
+        },
+        "by_prefix_positive_bucket": {
+          "in_W_never_prefix_positive": {
+            "families": 186,
+            "metrics": {
+              "mrr": {
+                "families": 186,
+                "family_macro": 0.0014015503927614524,
+                "task_micro": 0.001434715197115121,
+                "tasks": 250
+              },
+              "recall_at_16": {
+                "families": 186,
+                "family_macro": 0.0008960573476702509,
+                "task_micro": 0.0013333333333333333,
+                "tasks": 250
+              },
+              "top1": {
+                "families": 186,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 250
+              }
+            },
+            "tasks": 250
+          },
+          "outside_W": {
+            "families": 483,
+            "metrics": {
+              "mrr": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "recall_at_16": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              },
+              "top1": {
+                "families": 483,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 1291
+              }
+            },
+            "tasks": 1291
+          },
+          "seen_prefix_positive": {
+            "families": 349,
+            "metrics": {
+              "mrr": {
+                "families": 349,
+                "family_macro": 0.005448280455277363,
+                "task_micro": 0.005665529684029283,
+                "tasks": 647
+              },
+              "recall_at_16": {
+                "families": 349,
+                "family_macro": 0.014915631964342565,
+                "task_micro": 0.01648634724368882,
+                "tasks": 647
+              },
+              "top1": {
+                "families": 349,
+                "family_macro": 0.0,
+                "task_micro": 0.0,
+                "tasks": 647
+              }
+            },
+            "tasks": 647
+          }
+        },
+        "families": 508,
+        "metrics": {
+          "mrr": {
+            "families": 508,
+            "family_macro": 0.001835186032658542,
+            "task_micro": 0.001839248859618705,
+            "tasks": 2188
+          },
+          "recall_at_16": {
+            "families": 508,
+            "family_macro": 0.004921259842519685,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188
+          },
+          "top1": {
+            "families": 508,
+            "family_macro": 0.0,
+            "task_micro": 0.0,
+            "tasks": 2188
+          }
+        },
+        "seed_count": 3,
+        "tasks": 2188
+      }
+    }
+  },
+  "limits": [
+    "Only repeatedly used development data were evaluated; no independent confirmation is claimed.",
+    "Checkpoint selection is based on development labels and its observed gains are adaptive.",
+    "The primary arm was fixed before training; control-arm performance cannot replace its outcome.",
+    "The fixed W and all development tasks, including OOV targets, remain in the declared denominators.",
+    "Candidate phrases are exact adjacent source spans; linguistic word segmentation is not assumed.",
+    "Shape-only source poems are not certified strict lushi; restoration agreement is not literary quality.",
+    "Upper-only and suffix-only are independently trained controls; zero/mismatched contexts are frozen-model inference diagnostics.",
+    "Immutable checkpoints and source hashes support replay of complete rankings; no selected checkpoint was copied over another file."
+  ],
+  "resource_gate": {
+    "checks": {
+      "all_three_seed_gains_positive": false,
+      "context_mismatch_drop_threshold": false,
+      "mean_gain_threshold": false
+    },
+    "decision": "DO_NOT_ALLOCATE_CONFIRMATION_FROM_THIS_DEV_RUN",
+    "formal_literary_quality_gate": "NOT_EVALUATED",
+    "independent_confirmation": "NOT_PERFORMED",
+    "passed": false,
+    "primary_mean_gain_over_strong_baseline": -0.033669619422572176,
+    "primary_mean_minus_mismatched_context": 0.009186351706036745,
+    "scope": "development_resource_allocation_gate_not_confirmatory_evidence",
+    "seed_gains_over_strong_baseline": [
+      -0.03194717847769029,
+      -0.03662237532808399,
+      -0.03243930446194226
+    ]
+  },
+  "schema": "versematrix.context-span-matching-results.v0.5",
+  "selection_sha256": "88f9a3120a62888b3e66ef00b79d5bc3bcd736e64de010766a332536b624c2dc",
+  "status": "completed_dev_only",
+  "training_accounting": {
+    "formal_runs": 12,
+    "optimizer_updates": 14400,
+    "sample_presentations": 460800,
+    "train_only_preflight_cost": "reported separately; not an independent experiment or included in these formal counts",
+    "training_seconds": 231.19346271523682,
+    "wall_seconds_including_baselines_and_evaluation": 378.60931156100196
+  }
+}

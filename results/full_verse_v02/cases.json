@@ -1,0 +1,1142 @@
+[
+  {
+    "length": 5,
+    "synthetic": true,
+    "templates": [
+      {
+        "template_id": "L5-P-R0",
+        "length": 5,
+        "start_second_tone": "P",
+        "first_rhymed": false,
+        "core": [
+          "PPPZZ",
+          "ZZZPP",
+          "ZZPPZ",
+          "PPZZP",
+          "PPPZZ",
+          "ZZZPP",
+          "ZZPPZ",
+          "PPZZP"
+        ],
+        "rhyme_rows": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf"
+      },
+      {
+        "template_id": "L5-P-R1",
+        "length": 5,
+        "start_second_tone": "P",
+        "first_rhymed": true,
+        "core": [
+          "PPZZP",
+          "ZZZPP",
+          "ZZPPZ",
+          "PPZZP",
+          "PPPZZ",
+          "ZZZPP",
+          "ZZPPZ",
+          "PPZZP"
+        ],
+        "rhyme_rows": [
+          0,
+          1,
+          3,
+          5,
+          7
+        ],
+        "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf"
+      }
+    ],
+    "rhyme_groups": [
+      "R1",
+      "R2"
+    ],
+    "candidates": [
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:0:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:0:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:0:2:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:0:2:B",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:0:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:0:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:0:4:B",
+            "verified": true
+          },
+          {
+            "token": "C",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:5:0:4:C",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:1:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:1:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:1:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:1:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:1:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:5:1:4:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:2:0:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:2:0:B",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:2:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:2:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:2:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:2:4:A",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:3:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:3:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:3:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:3:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:3:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:5:3:4:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:4:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:4:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:4:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:4:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:4:4:A",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:5:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:5:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:5:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:5:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:5:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:5:5:4:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:6:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:6:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:6:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:6:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:6:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:6:4:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:7:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:7:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:7:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:5:7:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:5:7:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:5:7:4:B",
+            "verified": true
+          }
+        ]
+      ]
+    ]
+  },
+  {
+    "length": 7,
+    "synthetic": true,
+    "templates": [
+      {
+        "template_id": "L7-Z-R0",
+        "length": 7,
+        "start_second_tone": "Z",
+        "first_rhymed": false,
+        "core": [
+          "ZZPPPZZ",
+          "PPZZZPP",
+          "PPZZPPZ",
+          "ZZPPZZP",
+          "ZZPPPZZ",
+          "PPZZZPP",
+          "PPZZPPZ",
+          "ZZPPZZP"
+        ],
+        "rhyme_rows": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf"
+      },
+      {
+        "template_id": "L7-Z-R1",
+        "length": 7,
+        "start_second_tone": "Z",
+        "first_rhymed": true,
+        "core": [
+          "ZZPPZZP",
+          "PPZZZPP",
+          "PPZZPPZ",
+          "ZZPPZZP",
+          "ZZPPPZZ",
+          "PPZZZPP",
+          "PPZZPPZ",
+          "ZZPPZZP"
+        ],
+        "rhyme_rows": [
+          0,
+          1,
+          3,
+          5,
+          7
+        ],
+        "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf"
+      }
+    ],
+    "rhyme_groups": [
+      "R1",
+      "R2"
+    ],
+    "candidates": [
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:0:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:0:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:0:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:0:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:0:4:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:0:4:B",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:0:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:0:6:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:0:6:B",
+            "verified": true
+          },
+          {
+            "token": "C",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:7:0:6:C",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:1:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:1:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:1:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:1:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:1:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:1:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:1:6:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:7:1:6:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:2:0:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:2:0:B",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:2:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:2:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:2:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:2:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:2:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:2:6:A",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:3:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:3:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:3:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:3:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:3:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:3:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:3:6:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:7:3:6:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:4:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:4:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:4:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:4:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:4:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:4:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:4:6:A",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:5:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:5:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:5:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:5:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:5:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:5:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:5:6:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:7:5:6:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:6:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:6:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:6:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:6:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:6:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:6:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:6:6:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:6:6:B",
+            "verified": true
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:7:0:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:7:1:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:7:2:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:7:3:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:7:4:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "Z",
+            "rhyme": "Z0",
+            "reading_id": "synthetic:7:7:5:A",
+            "verified": true
+          }
+        ],
+        [
+          {
+            "token": "A",
+            "tone": "P",
+            "rhyme": "R1",
+            "reading_id": "synthetic:7:7:6:A",
+            "verified": true
+          },
+          {
+            "token": "B",
+            "tone": "P",
+            "rhyme": "R2",
+            "reading_id": "synthetic:7:7:6:B",
+            "verified": true
+          }
+        ]
+      ]
+    ]
+  }
+]

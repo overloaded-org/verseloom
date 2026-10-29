@@ -1,0 +1,669 @@
+{
+  "version": "0.3.0",
+  "status": "executed_real_source_restoration_pilot",
+  "human_evaluated": false,
+  "certified_lushi": false,
+  "test_tasks": 2120,
+  "test_poems": 530,
+  "test_families": 501,
+  "vocabulary_coverage": {
+    "family_macro": 0.20134730538922155,
+    "task_micro": 0.19716981132075473,
+    "tasks": 2120,
+    "families": 501
+  },
+  "proposal_pool_recall": {
+    "family_macro": 0.03567864271457086,
+    "task_micro": 0.03490566037735849,
+    "tasks": 2120,
+    "families": 501
+  },
+  "test_vocab_covered_tasks": 418,
+  "test_pool_covered_tasks": 74,
+  "metrics": {
+    "ngram": {
+      "family_macro": 0.0074850299401197605,
+      "task_micro": 0.007075471698113208,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.20270270270270271,
+      "by_length": {
+        "5": {
+          "family_macro": 0.00616591928251121,
+          "task_micro": 0.005851063829787234,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.01818181818181818,
+          "task_micro": 0.016666666666666666,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "cnn_w3_seed0": {
+      "family_macro": 0.003992015968063872,
+      "task_micro": 0.0037735849056603774,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.10810810810810811,
+      "by_length": {
+        "5": {
+          "family_macro": 0.004484304932735426,
+          "task_micro": 0.00425531914893617,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "aligned_w1_seed0": {
+      "family_macro": 0.003992015968063872,
+      "task_micro": 0.0037735849056603774,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.10810810810810811,
+      "by_length": {
+        "5": {
+          "family_macro": 0.004484304932735426,
+          "task_micro": 0.00425531914893617,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "cnn_w3_seed1": {
+      "family_macro": 0.003992015968063872,
+      "task_micro": 0.0037735849056603774,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.10810810810810811,
+      "by_length": {
+        "5": {
+          "family_macro": 0.004484304932735426,
+          "task_micro": 0.00425531914893617,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "aligned_w1_seed1": {
+      "family_macro": 0.004491017964071856,
+      "task_micro": 0.0042452830188679245,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.12162162162162163,
+      "by_length": {
+        "5": {
+          "family_macro": 0.005044843049327354,
+          "task_micro": 0.0047872340425531915,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "cnn_w3_seed2": {
+      "family_macro": 0.003992015968063872,
+      "task_micro": 0.0037735849056603774,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.10810810810810811,
+      "by_length": {
+        "5": {
+          "family_macro": 0.004484304932735426,
+          "task_micro": 0.00425531914893617,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "aligned_w1_seed2": {
+      "family_macro": 0.004491017964071856,
+      "task_micro": 0.0042452830188679245,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.12162162162162163,
+      "by_length": {
+        "5": {
+          "family_macro": 0.005044843049327354,
+          "task_micro": 0.0047872340425531915,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "cnn_w3_seed_mean": {
+      "family_macro": 0.003992015968063872,
+      "task_micro": 0.0037735849056603774,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.10810810810810811,
+      "by_length": {
+        "5": {
+          "family_macro": 0.004484304932735426,
+          "task_micro": 0.00425531914893617,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    },
+    "aligned_w1_seed_mean": {
+      "family_macro": 0.004324683965402528,
+      "task_micro": 0.004088050314465409,
+      "tasks": 2120,
+      "families": 501,
+      "covered_task_top1": 0.11711711711711711,
+      "by_length": {
+        "5": {
+          "family_macro": 0.004857997010463378,
+          "task_micro": 0.004609929078014184,
+          "tasks": 1880,
+          "families": 446
+        },
+        "7": {
+          "family_macro": 0.0,
+          "task_micro": 0.0,
+          "tasks": 240,
+          "families": 55
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "aligned_w1_seed_mean": {
+      "status": "computed",
+      "families": 501,
+      "mean_difference": -0.0003326679973386561,
+      "confidence": 0.95,
+      "interval": [
+        -0.0008316699933466401,
+        0.0
+      ],
+      "repeats": 5000,
+      "seed": 2026102903,
+      "estimand": "equal_family_mean_of_seed_averaged_paired_source_restoration_accuracy",
+      "limitation": "conditional on the three fixed seeds and proposal mechanism; not literary preference"
+    },
+    "ngram": {
+      "status": "computed",
+      "families": 501,
+      "mean_difference": -0.0034930139720558886,
+      "confidence": 0.95,
+      "interval": [
+        -0.007651363938789089,
+        0.0004990019960079838
+      ],
+      "repeats": 5000,
+      "seed": 2026102903,
+      "estimand": "equal_family_mean_of_seed_averaged_paired_source_restoration_accuracy",
+      "limitation": "conditional on the three fixed seeds and proposal mechanism; not literary preference"
+    }
+  },
+  "proxy_promotion_decision": "DO_NOT_PROMOTE_CNN_FROM_THIS_PILOT",
+  "formal_literary_quality_gate": "NOT_EVALUATED",
+  "training_runs": [
+    {
+      "arm": "cnn_w3",
+      "seed": 0,
+      "geometry": {
+        "kernel_width": 3,
+        "channels": 12
+      },
+      "core_parameters": 744,
+      "trainable_parameters": 25280,
+      "optimizer_updates": 400,
+      "batch_size": 32,
+      "task_presentations": 12800,
+      "unique_tasks_exposed": 3719,
+      "eligible_train_tasks": 3887,
+      "unique_families_exposed": 1822,
+      "selected_update": 400,
+      "selected_dev_family_top1": 0.0063976377952755905,
+      "history": [
+        {
+          "update": 100,
+          "mean_last_100_train_loss": 2.0402732923999993,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.31657971200002066
+        },
+        {
+          "update": 200,
+          "mean_last_100_train_loss": 1.9679651334314507,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.6611659449999934
+        },
+        {
+          "update": 300,
+          "mean_last_100_train_loss": 1.947886381926707,
+          "dev": {
+            "family_macro": 0.005905511811023622,
+            "task_micro": 0.005484460694698354,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.972488374999557
+        },
+        {
+          "update": 400,
+          "mean_last_100_train_loss": 1.9413386854126597,
+          "dev": {
+            "family_macro": 0.0063976377952755905,
+            "task_micro": 0.005941499085923218,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.3843867569994472
+        }
+      ],
+      "seconds_including_dev_evaluation_and_saves": 1.4350855049997335,
+      "selected_model_path": "models/cnn_w3_seed0/selected.npz",
+      "selected_model_sha256": "a7d7f73403d8d5d82b7ee6d9470259acbbb8015577d0736181a0763ab085331b",
+      "last_model_sha256": "a7d7f73403d8d5d82b7ee6d9470259acbbb8015577d0736181a0763ab085331b"
+    },
+    {
+      "arm": "aligned_w1",
+      "seed": 0,
+      "geometry": {
+        "kernel_width": 1,
+        "channels": 20
+      },
+      "core_parameters": 760,
+      "trainable_parameters": 25296,
+      "optimizer_updates": 400,
+      "batch_size": 32,
+      "task_presentations": 12800,
+      "unique_tasks_exposed": 3719,
+      "eligible_train_tasks": 3887,
+      "unique_families_exposed": 1822,
+      "selected_update": 400,
+      "selected_dev_family_top1": 0.005905511811023622,
+      "history": [
+        {
+          "update": 100,
+          "mean_last_100_train_loss": 2.053091560536961,
+          "dev": {
+            "family_macro": 0.004921259842519685,
+            "task_micro": 0.004570383912248629,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.3097756480001408
+        },
+        {
+          "update": 200,
+          "mean_last_100_train_loss": 1.9691323558337168,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.6607121390006796
+        },
+        {
+          "update": 300,
+          "mean_last_100_train_loss": 1.950222840101321,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.0835660290003943
+        },
+        {
+          "update": 400,
+          "mean_last_100_train_loss": 1.9438671903819136,
+          "dev": {
+            "family_macro": 0.005905511811023622,
+            "task_micro": 0.005484460694698354,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.4368687100004536
+        }
+      ],
+      "seconds_including_dev_evaluation_and_saves": 1.4811575900002936,
+      "selected_model_path": "models/aligned_w1_seed0/selected.npz",
+      "selected_model_sha256": "e48c1e9ecf2eb12a814083ac9e17b07a394562dca17572d2e0b10e245f1b9f56",
+      "last_model_sha256": "e48c1e9ecf2eb12a814083ac9e17b07a394562dca17572d2e0b10e245f1b9f56"
+    },
+    {
+      "arm": "cnn_w3",
+      "seed": 1,
+      "geometry": {
+        "kernel_width": 3,
+        "channels": 12
+      },
+      "core_parameters": 744,
+      "trainable_parameters": 25280,
+      "optimizer_updates": 400,
+      "batch_size": 32,
+      "task_presentations": 12800,
+      "unique_tasks_exposed": 3729,
+      "eligible_train_tasks": 3887,
+      "unique_families_exposed": 1831,
+      "selected_update": 200,
+      "selected_dev_family_top1": 0.005905511811023622,
+      "history": [
+        {
+          "update": 100,
+          "mean_last_100_train_loss": 2.0391097454985343,
+          "dev": {
+            "family_macro": 0.0034448818897637795,
+            "task_micro": 0.0031992687385740404,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.30996363800022664
+        },
+        {
+          "update": 200,
+          "mean_last_100_train_loss": 1.9823908472505345,
+          "dev": {
+            "family_macro": 0.005905511811023622,
+            "task_micro": 0.005484460694698354,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.6351603210005123
+        },
+        {
+          "update": 300,
+          "mean_last_100_train_loss": 1.958486670438314,
+          "dev": {
+            "family_macro": 0.004921259842519685,
+            "task_micro": 0.004570383912248629,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.9693278710001323
+        },
+        {
+          "update": 400,
+          "mean_last_100_train_loss": 1.951896066625764,
+          "dev": {
+            "family_macro": 0.004921259842519685,
+            "task_micro": 0.004570383912248629,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.2865611440001885
+        }
+      ],
+      "seconds_including_dev_evaluation_and_saves": 1.3148304010001084,
+      "selected_model_path": "models/cnn_w3_seed1/selected.npz",
+      "selected_model_sha256": "e44b49983941ce772558516f61837a5349a153b961de2cf15b970dde1d85f40b",
+      "last_model_sha256": "981e5a6b2a50098f68078cc0c04cf7e0594cc183a3b7df24409184dee64df9ad"
+    },
+    {
+      "arm": "aligned_w1",
+      "seed": 1,
+      "geometry": {
+        "kernel_width": 1,
+        "channels": 20
+      },
+      "core_parameters": 760,
+      "trainable_parameters": 25296,
+      "optimizer_updates": 400,
+      "batch_size": 32,
+      "task_presentations": 12800,
+      "unique_tasks_exposed": 3729,
+      "eligible_train_tasks": 3887,
+      "unique_families_exposed": 1831,
+      "selected_update": 200,
+      "selected_dev_family_top1": 0.005905511811023622,
+      "history": [
+        {
+          "update": 100,
+          "mean_last_100_train_loss": 2.0410910118848378,
+          "dev": {
+            "family_macro": 0.003937007874015748,
+            "task_micro": 0.003656307129798903,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.30243474599956244
+        },
+        {
+          "update": 200,
+          "mean_last_100_train_loss": 1.984610412467776,
+          "dev": {
+            "family_macro": 0.005905511811023622,
+            "task_micro": 0.005484460694698354,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.686910218999401
+        },
+        {
+          "update": 300,
+          "mean_last_100_train_loss": 1.958967660304269,
+          "dev": {
+            "family_macro": 0.004921259842519685,
+            "task_micro": 0.004570383912248629,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.0681253469992953
+        },
+        {
+          "update": 400,
+          "mean_last_100_train_loss": 1.9578992631240288,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.3994014539994168
+        }
+      ],
+      "seconds_including_dev_evaluation_and_saves": 1.4318628009996246,
+      "selected_model_path": "models/aligned_w1_seed1/selected.npz",
+      "selected_model_sha256": "be4b02abfb1a3bce4ec4aca64757aad465d12bdf9fbafaface54cbb0d2e7884a",
+      "last_model_sha256": "54c0141588082318c7816ae14f72338bfdcfce796fcecd84723b17864d981c8e"
+    },
+    {
+      "arm": "cnn_w3",
+      "seed": 2,
+      "geometry": {
+        "kernel_width": 3,
+        "channels": 12
+      },
+      "core_parameters": 744,
+      "trainable_parameters": 25280,
+      "optimizer_updates": 400,
+      "batch_size": 32,
+      "task_presentations": 12800,
+      "unique_tasks_exposed": 3743,
+      "eligible_train_tasks": 3887,
+      "unique_families_exposed": 1827,
+      "selected_update": 400,
+      "selected_dev_family_top1": 0.006151574803149607,
+      "history": [
+        {
+          "update": 100,
+          "mean_last_100_train_loss": 2.05114628743786,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.3718467270000474
+        },
+        {
+          "update": 200,
+          "mean_last_100_train_loss": 1.9743075835132071,
+          "dev": {
+            "family_macro": 0.004921259842519685,
+            "task_micro": 0.004570383912248629,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.7462666020001052
+        },
+        {
+          "update": 300,
+          "mean_last_100_train_loss": 1.9410981867677615,
+          "dev": {
+            "family_macro": 0.005905511811023622,
+            "task_micro": 0.005484460694698354,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.0886686260000715
+        },
+        {
+          "update": 400,
+          "mean_last_100_train_loss": 1.9349249259207246,
+          "dev": {
+            "family_macro": 0.006151574803149607,
+            "task_micro": 0.005941499085923218,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.455320531000325
+        }
+      ],
+      "seconds_including_dev_evaluation_and_saves": 1.5009481059996688,
+      "selected_model_path": "models/cnn_w3_seed2/selected.npz",
+      "selected_model_sha256": "e635d9b8c72415ea173989963ae025188adaad4ee9fb2ca327564fa80eb25193",
+      "last_model_sha256": "e635d9b8c72415ea173989963ae025188adaad4ee9fb2ca327564fa80eb25193"
+    },
+    {
+      "arm": "aligned_w1",
+      "seed": 2,
+      "geometry": {
+        "kernel_width": 1,
+        "channels": 20
+      },
+      "core_parameters": 760,
+      "trainable_parameters": 25296,
+      "optimizer_updates": 400,
+      "batch_size": 32,
+      "task_presentations": 12800,
+      "unique_tasks_exposed": 3743,
+      "eligible_train_tasks": 3887,
+      "unique_families_exposed": 1827,
+      "selected_update": 300,
+      "selected_dev_family_top1": 0.006643700787401575,
+      "history": [
+        {
+          "update": 100,
+          "mean_last_100_train_loss": 2.045655151395808,
+          "dev": {
+            "family_macro": 0.0063976377952755905,
+            "task_micro": 0.005941499085923218,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.28341560299941193
+        },
+        {
+          "update": 200,
+          "mean_last_100_train_loss": 1.975653980960968,
+          "dev": {
+            "family_macro": 0.0054133858267716535,
+            "task_micro": 0.005027422303473492,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.5930986929997744
+        },
+        {
+          "update": 300,
+          "mean_last_100_train_loss": 1.9395928440752377,
+          "dev": {
+            "family_macro": 0.006643700787401575,
+            "task_micro": 0.006398537477148081,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 0.8934735120001278
+        },
+        {
+          "update": 400,
+          "mean_last_100_train_loss": 1.9330252139930213,
+          "dev": {
+            "family_macro": 0.006643700787401575,
+            "task_micro": 0.006398537477148081,
+            "tasks": 2188,
+            "families": 508
+          },
+          "elapsed_seconds": 1.2398968269999386
+        }
+      ],
+      "seconds_including_dev_evaluation_and_saves": 1.275889860999996,
+      "selected_model_path": "models/aligned_w1_seed2/selected.npz",
+      "selected_model_sha256": "1028d39ff70986357e9502fe02bafdb7d6749babd1279b8942babf9d8525bb32",
+      "last_model_sha256": "42e4df5b7663654e4365c6a1879f056cd56a2ce479f56fc28b83ed5e3997233c"
+    }
+  ],
+  "dp_audit_cases": 144,
+  "dp_max_abs_error": 8.881784197001252e-16,
+  "elapsed_seconds": 364.09982718899937,
+  "config_sha256": "109ac929fd5813d7040f0c895923a68bcd336e2b8699c5a5a977963d045f5372",
+  "limitations": [
+    "Observed source exact-match is not a literary-quality gold label.",
+    "Eight-line source shape is not certified regulated verse or contextual prosody.",
+    "All systems rerank the same ngram-proposed pool; this does not test all-vocabulary architecture superiority.",
+    "Training pools inject train targets legitimately; evaluation pools never inject dev/test targets.",
+    "First fixed corpus shards and surface families do not imply author-held-out or all-poetry generalization.",
+    "Three fixed seeds are averaged before family bootstrap; intervals do not estimate unrestricted seed uncertainty.",
+    "Width-one is a horizontal-locality ablation; formal same-receptive-field attention and human review remain unrun."
+  ]
+}

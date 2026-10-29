@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "cases": 16,
+  "method": "first_8_sha256_task_ids_per_length_in_dev_full_narrow_score_and_ranking_exact_equality",
+  "checks": [
+    {
+      "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_2750a3f3637b254c479d432b:couplet1",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_c5fcc78886338c43776f5b5b:couplet1",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_80a7f3bfeb7ce330a2fe717a:couplet1",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_ba3a8f4c36af331ad450c27a:couplet0",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_1ad598d14bcce78822725523:couplet2",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_ec886c79b70f892a16c939e0:couplet3",
+      "length": 5,
+      "candidates": 1317,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_c28b59e9333249c60d62670d:couplet0",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_783720d8a7d81d377cad2470:couplet2",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_63aa29883b9991f7a86ca39e:couplet1",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_aad44de1aa7b135ab4a79f41:couplet2",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_4380b4e457c63d01f9515860:couplet1",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "task_id": "poem_05616fe11018285276042757:couplet0",
+      "length": 7,
+      "candidates": 97,
+      "scores_exact": true,
+      "full_ranking_exact": true,
+      "top16_exact": true,
+      "max_absolute_error": 0.0
+    }
+  ]
+}

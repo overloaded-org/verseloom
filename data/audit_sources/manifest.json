@@ -1,0 +1,72 @@
+[
+  {
+    "repository": "chinese-poetry/chinese-poetry",
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "source_path": "全唐诗/poet.tang.0.json",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.0.json",
+    "local_path": "data/audit_sources/tang_0.json",
+    "bytes": 408405,
+    "sha256": "4f88f429938082523cdc72a1612bd7a7c3e3f7a33f8192c61ae51340efc3c92d",
+    "status": "audit_only_not_benchmark"
+  },
+  {
+    "repository": "chinese-poetry/chinese-poetry",
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "source_path": "全唐诗/README.md",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/README.md",
+    "local_path": "data/audit_sources/tang_readme.md",
+    "bytes": 2434,
+    "sha256": "336a785b4e9796d090f93e65beeeeaa260a2599e881066cc257c163267dabfd1",
+    "status": "audit_only_not_benchmark"
+  },
+  {
+    "repository": "chinese-poetry/chinese-poetry",
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "source_path": "LICENSE",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/LICENSE",
+    "local_path": "data/audit_sources/poetry_LICENSE",
+    "bytes": 1076,
+    "sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "status": "audit_only_not_benchmark"
+  },
+  {
+    "repository": "charlesix59/chinese_word_rhyme",
+    "commit": "ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18",
+    "source_path": "data/Pingshui_Rhyme.json",
+    "download_url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/data/Pingshui_Rhyme.json",
+    "local_path": "data/audit_sources/pingshui.json",
+    "bytes": 206515,
+    "sha256": "fd11164ca1b848eb6b777688d5d6628ce772d72d0a25a0efd12d6b58459c6e2e",
+    "status": "audit_only_not_benchmark"
+  },
+  {
+    "repository": "charlesix59/chinese_word_rhyme",
+    "commit": "ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18",
+    "source_path": "LICENSE",
+    "download_url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/LICENSE",
+    "local_path": "data/audit_sources/rhyme_LICENSE",
+    "bytes": 1068,
+    "sha256": "e1464036d0f0ca738de9ebcb697b8faaf6dc2eafd193dc98555f23b409e87599",
+    "status": "audit_only_not_benchmark"
+  },
+  {
+    "repository": "charlesix59/chinese_word_rhyme",
+    "commit": "ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18",
+    "source_path": "README.md",
+    "download_url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/README.md",
+    "local_path": "data/audit_sources/rhyme_readme.md",
+    "bytes": 3921,
+    "sha256": "3e1c0861b7085f576c911d29d443e7ef1a1c7dc275b20fb010a842f6316372c3",
+    "status": "audit_only_not_benchmark"
+  },
+  {
+    "repository": "charlesix59/chinese_word_rhyme",
+    "commit": "ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18",
+    "source_path": "script/generateWordTune.js",
+    "download_url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/script/generateWordTune.js",
+    "local_path": "data/audit_sources/generateWordTune.js",
+    "bytes": 1478,
+    "sha256": "fdd82410f8a025a2910c947ed25fe41600971ec101c2ec2a942e78c497106fc0",
+    "status": "audit_only_not_benchmark"
+  }
+]

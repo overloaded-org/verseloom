@@ -1,0 +1,21 @@
+{
+  "pages": 9,
+  "bytes": 138656,
+  "sha256": "5c3c6ed7b27c15b3a4d17930f1ff078d6da9d8eb12dbdcb44f73682b603b120d",
+  "page_text_lengths": [
+    542,
+    596,
+    619,
+    645,
+    600,
+    602,
+    583,
+    744,
+    1036
+  ],
+  "source": "build_restoration_report.py",
+  "status": "all_pages_rendered_from_validated_pdf_bytes",
+  "report_source_sha256": "0a55a338d8c373e73d2898782905cb00566266a1be8d9f026d2384ae74e6eb5c",
+  "final_test_receipt_sha256": "ab3b1beeee8a5df38fef4d4036cf78984c5550998b4496f088d84b654a8685b1",
+  "visual_review": "All 9 pages rendered; all 3 contact sheets inspected; final result and diagnostic pages inspected individually; no layout blocking issues."
+}

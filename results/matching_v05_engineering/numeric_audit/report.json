@@ -1,0 +1,27 @@
+{
+  "audit_stage": "separate_post_selection_engineering_only",
+  "failed_cases": [],
+  "formal_training_or_selection_changed": false,
+  "full_vocabulary_scores_per_batch_case": {
+    "5": 10375,
+    "7": 1504
+  },
+  "limits": [
+    "This checks public factorization, artifact state and batching/deployment consistency, not learned quality.",
+    "The core author implements this engineering audit; the separate reviewer supplies the independent mathematical oracle.",
+    "Queries are old-dev visible contexts selected by a fixed hash, not performance-selected examples.",
+    "No new checkpoint or candidate choice is promoted by this audit."
+  ],
+  "maximum_batch_single_absolute_score_error": 7.549516567451064e-15,
+  "model_query_cases": 192,
+  "models": 12,
+  "plan_sha256": "7c4866b7d73b4591429fd71f12e8af73491d526d249adabee79383368d9adb12",
+  "sample_sha256": "ac6996eafcc2b8b2fd8de0276aa920a123e819f5532a33c32509a8b8c572f3ac",
+  "sampled_dev_queries": 16,
+  "schema": "versematrix.matching-artifact-audit.v0.5",
+  "selection_sha256": "88f9a3120a62888b3e66ef00b79d5bc3bcd736e64de010766a332536b624c2dc",
+  "status": "passed",
+  "targets_used": false,
+  "test_or_confirmation_files_opened": false,
+  "training_updates_performed": 0
+}

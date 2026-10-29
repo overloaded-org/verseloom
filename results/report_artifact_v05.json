@@ -1,0 +1,14 @@
+{
+  "schema": "versematrix.report-artifact.v0.5",
+  "report": "docs/VerseMatrix_Progress.pdf",
+  "bytes": 138785,
+  "sha256": "f7966b80c4c14c82ea8ccafa9f41c9aee187f62b0d7362219c5f0a29da582c23",
+  "pages": 8,
+  "render_scale": 1.5,
+  "all_pages_rendered_and_visually_inspected": true,
+  "dense_page_8_inspected_individually": true,
+  "draft_text_absent": true,
+  "missing_transpose_glyph_corrected_to_ascii_notation": true,
+  "review_status": "PASS_INDEPENDENT_DEVELOPMENT_RESULTS",
+  "checked_at_utc": "2026-10-29T08:51:51.567384+00:00"
+}

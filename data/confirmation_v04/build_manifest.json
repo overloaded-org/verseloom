@@ -1,0 +1,44 @@
+{
+  "freeze_sha256": "b07088df664caf387be211f18a145be354411ccfe058352b7c1fd579fa166a68",
+  "literary_quality_evaluated": false,
+  "model_scores_accessed": false,
+  "outputs": {
+    "audit.json": {
+      "bytes": 2194,
+      "sha256": "6e49aee4dc518deb50cd2dbe844fe0b9849c2206215dfd666d6be38359619c35"
+    },
+    "components.jsonl": {
+      "bytes": 2333938,
+      "sha256": "875230deb4e5c9a52de933475d1cd839cf411c724f44e02e0bde380e5dc6ba09"
+    },
+    "joint_family_edges.jsonl": {
+      "bytes": 130311,
+      "sha256": "ed84991e6a004c2e426cbda6627ba031e482f97c2be2274326321017a1e8b4b9"
+    },
+    "new_exact_duplicate_groups.jsonl": {
+      "bytes": 890,
+      "sha256": "4da75488924b7670f19b79910579f27b72d01d86e1b3c14153b1c994c80a26ab"
+    },
+    "new_unique_poems.jsonl": {
+      "bytes": 2234502,
+      "sha256": "a62b6603c0c601fc21638edc7d56b13449947f70796f02c5c16d9ccb775f853f"
+    },
+    "poems.jsonl": {
+      "bytes": 308299,
+      "sha256": "a2bc0961002a93a48234af4dad9def100c6bdf85c81ae35d25853d2885787782"
+    },
+    "selection_records.jsonl": {
+      "bytes": 1576218,
+      "sha256": "ca502cb3b02b135382fd7b7d3bad3eea7ee189d01967c006e4fbe33f587bc72c"
+    },
+    "tasks.jsonl": {
+      "bytes": 1361796,
+      "sha256": "c84b5addf7b1e033fc126e4e7517cacf874a64bfc1d0672c729cd85aa4dcaa69"
+    }
+  },
+  "restoration_hits_evaluated": false,
+  "schema": "versematrix.confirmation-build.v0.4",
+  "scorer_trained_here": false,
+  "source_manifest_sha256": "e6e4dde0da559e22d9ce118f95794ec836c6296f11fa39ac21ee9b82a6d8b22a",
+  "status": "completed"
+}

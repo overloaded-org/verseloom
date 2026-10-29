@@ -1,0 +1,12 @@
+{
+  "resumed_at_utc": "2026-10-29T02:05:50.192314+00:00",
+  "completion_source_sha256": "47067c19df5cd20513552704397f5472ace8d1e8da6131a1d34c60ab0f61ad16",
+  "original_manifest_sha256": "11f735ebacc325970eba09d5383b0a77d88e90c989fac642a05e109492c75cad",
+  "selection_frozen_sha256": "0e4443f9470a802bfc19c916eca3f3f21b9a37510afe133beb9b085031d6885e",
+  "recovery_receipt_sha256": "3d7c0945c3f7bd4af1cd5591a30374611f226048dea18cf99de32faa2052e286",
+  "model_selection_changed": false,
+  "config_changed": false,
+  "pool_changed": false,
+  "prior_attempt": "checkpoint SHA guard interrupted before complete test report; three model predictions had been computed in memory",
+  "evaluation_body": "verbatim original run_restoration_v03.py post-selection body"
+}

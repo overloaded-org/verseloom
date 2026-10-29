@@ -1,0 +1,101 @@
+{
+  "category_note": "Categories overlap. Single membership or single tone does not establish a contextual reading.",
+  "counts_by_length": {
+    "5": {
+      "at_least_one_cross_tone_character": 325,
+      "at_least_one_editorial_issue": 5,
+      "at_least_one_multiple_membership": 491,
+      "at_least_one_unknown_character": 67,
+      "both_characters_found": 1250,
+      "both_single_membership": 772,
+      "both_single_tone_candidate": 935,
+      "distinct_characters": 860,
+      "editorial_issue_character_occurrences": {
+        "先": 3,
+        "啼": 2
+      },
+      "spans": 1317,
+      "unknown_character_occurrences": {
+        "他": 2,
+        "倏": 1,
+        "劒": 1,
+        "却": 1,
+        "啼": 2,
+        "寞": 1,
+        "往": 3,
+        "忻": 1,
+        "慙": 1,
+        "抃": 1,
+        "暖": 1,
+        "棲": 1,
+        "棹": 2,
+        "樽": 1,
+        "氳": 1,
+        "濕": 1,
+        "爲": 12,
+        "牀": 3,
+        "猨": 2,
+        "猿": 2,
+        "琵": 1,
+        "疎": 1,
+        "竝": 1,
+        "羣": 2,
+        "荆": 3,
+        "蘂": 1,
+        "衆": 1,
+        "袜": 1,
+        "迴": 2,
+        "遊": 9,
+        "遨": 1,
+        "針": 1,
+        "閨": 2,
+        "雁": 1,
+        "髣": 1,
+        "髴": 1
+      }
+    },
+    "7": {
+      "at_least_one_cross_tone_character": 20,
+      "at_least_one_editorial_issue": 0,
+      "at_least_one_multiple_membership": 34,
+      "at_least_one_unknown_character": 5,
+      "both_characters_found": 92,
+      "both_single_membership": 58,
+      "both_single_tone_candidate": 72,
+      "distinct_characters": 143,
+      "editorial_issue_character_occurrences": {},
+      "spans": 97,
+      "unknown_character_occurrences": {
+        "懸": 1,
+        "爲": 2,
+        "羣": 1,
+        "覩": 1
+      }
+    }
+  },
+  "limits": [
+    "No contextual readings selected and no verified records created.",
+    "Unknown means absent from this transcription, not impossible in historical usage.",
+    "A source issue on an absent character is preserved via the existing editorial issue index.",
+    "This audit supplies no metrical gold and does not change the source-restoration experiment."
+  ],
+  "normalization": "none; exact original Unicode glyphs",
+  "requires_context_review": true,
+  "schema": "versematrix.training-candidate-reading-audit.v0.3",
+  "source_reference": {
+    "mediawiki_content_sha1": "9bd6b11f51375912f8751120936c9184ad87cb7d",
+    "printed_edition": null,
+    "printed_edition_note": "The source Header.from field is empty; no print exemplar is identified.",
+    "revision_id": 8264804,
+    "revision_timestamp_utc": "2026-08-12T08:23:22Z",
+    "source_url": "https://zh.wikisource.org/w/index.php?title=平水韻&oldid=8264804",
+    "title": "平水韻",
+    "wikitext_file": "pingshui_8264804.wikitext",
+    "wikitext_sha256": "c0003fa238f6cb2c767f7747fae33eecde8c06da3eb661ab9d48bbff655857d9"
+  },
+  "source_split": "train",
+  "status": "source_candidates_joined_without_context_disambiguation",
+  "used_for_model_candidate_filtering": false,
+  "used_for_model_features": false,
+  "validation": "Every output membership compared with original index; separate direct-source aggregate counts agree."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "versematrix.prepackage-integrity.v0.5",
+  "status": "passed",
+  "previous_version_manifest_files": 267,
+  "previous_files_unchanged": 259,
+  "intentionally_updated_paths": [
+    "README.md",
+    "docs/STATUS.md",
+    "docs/VerseMatrix_Progress.pdf",
+    "pyproject.toml",
+    "results/project_status.json",
+    "results/test_receipt.json",
+    "results/tests.log",
+    "src/wordconv_lab/__init__.py"
+  ],
+  "historical_backups": "results/history_preservation_v05.json",
+  "all_v05_frozen_source_and_input_hashes_match": true,
+  "final_test_receipt_matches_all_current_python_sources": true,
+  "engineering_tests_passed": 165,
+  "final_report_sha256": "f7966b80c4c14c82ea8ccafa9f41c9aee187f62b0d7362219c5f0a29da582c23",
+  "archive_publication_policy": "close_verify_crc_and_every_manifest_hash_then_atomic_create; re-open final archive before upload",
+  "saved_copy_verification_required": true,
+  "reason_for_saved_copy_verification": "v0.3 historical saved ZIP had incomplete bytes; exact delivery integrity is a concrete requirement",
+  "checked_at_utc": "2026-10-29T08:51:51.693449+00:00"
+}

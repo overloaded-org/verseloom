@@ -1,0 +1,15 @@
+{
+  "project": "VerseMatrix Lab",
+  "status": "engineering_only",
+  "seed": 1729,
+  "synthetic": true,
+  "trained": false,
+  "candidate_policy": "fixed_identical_set_for_every_arm",
+  "unknown_reading_policy": "needs_review",
+  "ambiguous_reading_policy": "explicit_reading_id_required",
+  "empty_candidate_policy": "abstain",
+  "antithesis_policy": "separate_evaluation_required",
+  "human_rating_policy": "never_generate_or_fill_ratings",
+  "convolution": {"kernel_width": 3, "channels": 4, "line_boundary": "separate_zero_padding"},
+  "note": "Descriptive engineering configuration. The demo CLI currently accepts only its seed and fixture as runtime options; this file is not a training configuration."
+}

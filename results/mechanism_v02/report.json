@@ -1,0 +1,694 @@
+{
+  "project": "VerseMatrix Lab",
+  "version": "0.2.0",
+  "status": "executed_synthetic_mechanism_experiment",
+  "synthetic": true,
+  "trained": false,
+  "human_evaluated": false,
+  "n_dev_problems": 60,
+  "n_test_problems": 240,
+  "total_runs": 2400,
+  "connected_cases": 300,
+  "replayed_runs": 2400,
+  "config_sha256": "67211a21663dea5230106810ed656f7d3eb77388f42c50e24909d85a12398f41",
+  "cases_sha256": "cf6e920801cc377f7f9262680b1640e501ca7f2ad04c6a613260bbdaeca7c22e",
+  "elapsed_seconds_including_audit_replay_and_summary": 9.23609543800012,
+  "primary_budget": 32,
+  "primary_test_result": {
+    "status": "computed",
+    "n_paired_problems": 240,
+    "omitted_constant_tasks": [],
+    "fifo_mean_regret": 0.13374551274475185,
+    "priority_mean_regret": 0.11843033492030734,
+    "absolute_improvement_fifo_minus_priority": 0.015315177824444512,
+    "paired_improvement_ci": [
+      0.0020687753168092036,
+      0.028002044125008035
+    ],
+    "relative_mean_regret_reduction": 0.11450984418200959,
+    "relative_reduction_ci": [
+      0.016596697496929224,
+      0.19513368171163434
+    ],
+    "confidence": 0.95,
+    "bootstrap_repeats": 10000,
+    "bootstrap_seed": 44249,
+    "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+    "family_results": {
+      "separable": {
+        "n_problems": 60,
+        "fifo_mean_regret": 0.08431255942362077,
+        "priority_mean_regret": 0.014284266702542982,
+        "absolute_improvement": 0.07002829272107779,
+        "harm_exceeds_predefined_margin": false
+      },
+      "local_interaction": {
+        "n_problems": 60,
+        "fifo_mean_regret": 0.08408042835128501,
+        "priority_mean_regret": 0.05045672208356001,
+        "absolute_improvement": 0.033623706267725005,
+        "harm_exceeds_predefined_margin": false
+      },
+      "coupled_constraint": {
+        "n_problems": 60,
+        "fifo_mean_regret": 0.11978819717212204,
+        "priority_mean_regret": 0.11048994755537839,
+        "absolute_improvement": 0.00929824961674365,
+        "harm_exceeds_predefined_margin": false
+      },
+      "local_trap": {
+        "n_problems": 60,
+        "fifo_mean_regret": 0.24680086603197962,
+        "priority_mean_regret": 0.29849040333974813,
+        "absolute_improvement": -0.05168953730776851,
+        "harm_exceeds_predefined_margin": true
+      }
+    },
+    "harmed_families": [
+      "local_trap"
+    ],
+    "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+    "go_rule": {
+      "relative_reduction_min": 0.2,
+      "paired_ci_lower_gt": 0,
+      "no_family_absolute_regret_increase_gt": 0.05
+    },
+    "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+    "fifo_diagnostics": {
+      "mean_proposals": 32.0,
+      "mean_score_calls": 18.908333333333335,
+      "mean_unique_legal_states": 18.908333333333335,
+      "optimal_found_rate": 0.4041666666666667,
+      "mean_wall_seconds": 0.0007630856625022868
+    },
+    "priority_diagnostics": {
+      "mean_proposals": 32.0,
+      "mean_score_calls": 18.833333333333332,
+      "mean_unique_legal_states": 18.833333333333332,
+      "optimal_found_rate": 0.5,
+      "mean_wall_seconds": 0.0007355797166553657
+    }
+  },
+  "all_results": {
+    "dev": {
+      "8": {
+        "status": "computed",
+        "n_paired_problems": 60,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.249283516135377,
+        "priority_mean_regret": 0.249283516135377,
+        "absolute_improvement_fifo_minus_priority": 0.0,
+        "paired_improvement_ci": [
+          0.0,
+          0.0
+        ],
+        "relative_mean_regret_reduction": 0.0,
+        "relative_reduction_ci": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44225,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.21658780032675795,
+            "priority_mean_regret": 0.21658780032675795,
+            "absolute_improvement": -0.0,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.218829005788952,
+            "priority_mean_regret": 0.218829005788952,
+            "absolute_improvement": -0.0,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.2173062125259676,
+            "priority_mean_regret": 0.2173062125259676,
+            "absolute_improvement": -0.0,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.34441104589983057,
+            "priority_mean_regret": 0.34441104589983057,
+            "absolute_improvement": -0.0,
+            "harm_exceeds_predefined_margin": false
+          }
+        },
+        "harmed_families": [],
+        "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 8.0,
+          "mean_score_calls": 7.416666666666667,
+          "mean_unique_legal_states": 7.416666666666667,
+          "optimal_found_rate": 0.21666666666666667,
+          "mean_wall_seconds": 0.0002922335333399436
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 8.0,
+          "mean_score_calls": 7.75,
+          "mean_unique_legal_states": 7.75,
+          "optimal_found_rate": 0.21666666666666667,
+          "mean_wall_seconds": 0.0002487894666349651
+        }
+      },
+      "16": {
+        "status": "computed",
+        "n_paired_problems": 60,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.19447341537121826,
+        "priority_mean_regret": 0.1787475197909583,
+        "absolute_improvement_fifo_minus_priority": 0.01572589558025997,
+        "paired_improvement_ci": [
+          -0.0077411847680429495,
+          0.03809835965529861
+        ],
+        "relative_mean_regret_reduction": 0.08086398621755976,
+        "relative_reduction_ci": [
+          -0.04480832315360478,
+          0.17977399849994272
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44233,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.14935900728804427,
+            "priority_mean_regret": 0.06172669713054402,
+            "absolute_improvement": 0.08763231015750025,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.17421703257211346,
+            "priority_mean_regret": 0.15302779821669485,
+            "absolute_improvement": 0.021189234355418612,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.15582453791676365,
+            "priority_mean_regret": 0.15582453791676365,
+            "absolute_improvement": -0.0,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.2984930837079514,
+            "priority_mean_regret": 0.34441104589983057,
+            "absolute_improvement": -0.04591796219187916,
+            "harm_exceeds_predefined_margin": false
+          }
+        },
+        "harmed_families": [],
+        "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 16.0,
+          "mean_score_calls": 11.75,
+          "mean_unique_legal_states": 11.75,
+          "optimal_found_rate": 0.2833333333333333,
+          "mean_wall_seconds": 0.00037840515000577094
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 16.0,
+          "mean_score_calls": 12.066666666666666,
+          "mean_unique_legal_states": 12.066666666666666,
+          "optimal_found_rate": 0.35,
+          "mean_wall_seconds": 0.00037016064995896156
+        }
+      },
+      "32": {
+        "status": "computed",
+        "n_paired_problems": 60,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.12451975094353666,
+        "priority_mean_regret": 0.11244859563674334,
+        "absolute_improvement_fifo_minus_priority": 0.012071155306793327,
+        "paired_improvement_ci": [
+          -0.017370215771679656,
+          0.03984490225892596
+        ],
+        "relative_mean_regret_reduction": 0.09694169170212184,
+        "relative_reduction_ci": [
+          -0.1683062646869286,
+          0.27514892596446805
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44249,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.07215498972060456,
+            "priority_mean_regret": 0.0036214822508900736,
+            "absolute_improvement": 0.0685335074697145,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.11700361920081713,
+            "priority_mean_regret": 0.05745687488528355,
+            "absolute_improvement": 0.05954674431553358,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.05629525635784364,
+            "priority_mean_regret": 0.06735933762392093,
+            "absolute_improvement": -0.011064081266077296,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.25262513849488133,
+            "priority_mean_regret": 0.32135668778687876,
+            "absolute_improvement": -0.06873154929199743,
+            "harm_exceeds_predefined_margin": true
+          }
+        },
+        "harmed_families": [
+          "local_trap"
+        ],
+        "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 32.0,
+          "mean_score_calls": 19.0,
+          "mean_unique_legal_states": 19.0,
+          "optimal_found_rate": 0.4666666666666667,
+          "mean_wall_seconds": 0.0006685750500082577
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 32.0,
+          "mean_score_calls": 18.983333333333334,
+          "mean_unique_legal_states": 18.983333333333334,
+          "optimal_found_rate": 0.5666666666666667,
+          "mean_wall_seconds": 0.0006378923999894444
+        }
+      },
+      "64": {
+        "status": "computed",
+        "n_paired_problems": 60,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.09576212098627429,
+        "priority_mean_regret": 0.05860101265196687,
+        "absolute_improvement_fifo_minus_priority": 0.03716110833430742,
+        "paired_improvement_ci": [
+          0.006584620854798726,
+          0.06977873225314808
+        ],
+        "relative_mean_regret_reduction": 0.38805644603082434,
+        "relative_reduction_ci": [
+          0.08643815937386182,
+          0.6154307397150809
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44281,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.054922881072937746,
+            "priority_mean_regret": 0.0,
+            "absolute_improvement": 0.054922881072937746,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.08336583938975357,
+            "priority_mean_regret": 0.007763444363929229,
+            "absolute_improvement": 0.07560239502582435,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.0381996656828553,
+            "priority_mean_regret": 0.01989796476603239,
+            "absolute_improvement": 0.01830170091682291,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 15,
+            "fifo_mean_regret": 0.2065600977995506,
+            "priority_mean_regret": 0.20674264147790591,
+            "absolute_improvement": -0.0001825436783553236,
+            "harm_exceeds_predefined_margin": false
+          }
+        },
+        "harmed_families": [],
+        "decision": "GO_SYNTHETIC_MECHANISM_ONLY",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 62.6,
+          "mean_score_calls": 27.416666666666668,
+          "mean_unique_legal_states": 27.416666666666668,
+          "optimal_found_rate": 0.6,
+          "mean_wall_seconds": 0.0010906477499550724
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 62.6,
+          "mean_score_calls": 28.2,
+          "mean_unique_legal_states": 28.2,
+          "optimal_found_rate": 0.7833333333333333,
+          "mean_wall_seconds": 0.0010938276166446788
+        }
+      }
+    },
+    "test": {
+      "8": {
+        "status": "computed",
+        "n_paired_problems": 240,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.22669203991193645,
+        "priority_mean_regret": 0.22870503743496923,
+        "absolute_improvement_fifo_minus_priority": -0.0020129975230327724,
+        "paired_improvement_ci": [
+          -0.009522097572278893,
+          0.004857964020736151
+        ],
+        "relative_mean_regret_reduction": -0.008879877404670961,
+        "relative_reduction_ci": [
+          -0.0432956718242985,
+          0.020910423008174424
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44225,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.1713510802589628,
+            "priority_mean_regret": 0.16133029037820182,
+            "absolute_improvement": 0.010020789880760994,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.18269927227361846,
+            "priority_mean_regret": 0.1720566213834371,
+            "absolute_improvement": 0.010642650890181349,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.23703518643876598,
+            "priority_mean_regret": 0.23703518643876598,
+            "absolute_improvement": -0.0,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.31568262067639874,
+            "priority_mean_regret": 0.3443980515394721,
+            "absolute_improvement": -0.028715430863073377,
+            "harm_exceeds_predefined_margin": false
+          }
+        },
+        "harmed_families": [],
+        "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 8.0,
+          "mean_score_calls": 7.425,
+          "mean_unique_legal_states": 7.425,
+          "optimal_found_rate": 0.1875,
+          "mean_wall_seconds": 0.00036587069998290646
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 8.0,
+          "mean_score_calls": 7.608333333333333,
+          "mean_unique_legal_states": 7.608333333333333,
+          "optimal_found_rate": 0.19583333333333333,
+          "mean_wall_seconds": 0.0002793842749989987
+        }
+      },
+      "16": {
+        "status": "computed",
+        "n_paired_problems": 240,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.1873759475509905,
+        "priority_mean_regret": 0.17597739208817098,
+        "absolute_improvement_fifo_minus_priority": 0.01139855546281951,
+        "paired_improvement_ci": [
+          0.0007780548756618361,
+          0.022113682081865326
+        ],
+        "relative_mean_regret_reduction": 0.06083254340697932,
+        "relative_reduction_ci": [
+          0.004259286863204422,
+          0.11414996061878097
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44233,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.1220671925009682,
+            "priority_mean_regret": 0.07085298163830167,
+            "absolute_improvement": 0.05121421086266653,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.13368048158392087,
+            "priority_mean_regret": 0.10941704693408051,
+            "absolute_improvement": 0.024263434649840362,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.19526571277932492,
+            "priority_mean_regret": 0.1792414882408297,
+            "absolute_improvement": 0.016024224538495224,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.29849040333974813,
+            "priority_mean_regret": 0.3443980515394721,
+            "absolute_improvement": -0.04590764819972398,
+            "harm_exceeds_predefined_margin": false
+          }
+        },
+        "harmed_families": [],
+        "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 16.0,
+          "mean_score_calls": 11.5,
+          "mean_unique_legal_states": 11.5,
+          "optimal_found_rate": 0.25833333333333336,
+          "mean_wall_seconds": 0.0004177596166660654
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 16.0,
+          "mean_score_calls": 12.166666666666666,
+          "mean_unique_legal_states": 12.166666666666666,
+          "optimal_found_rate": 0.32083333333333336,
+          "mean_wall_seconds": 0.0004337109458371439
+        }
+      },
+      "32": {
+        "status": "computed",
+        "n_paired_problems": 240,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.13374551274475185,
+        "priority_mean_regret": 0.11843033492030734,
+        "absolute_improvement_fifo_minus_priority": 0.015315177824444512,
+        "paired_improvement_ci": [
+          0.0020687753168092036,
+          0.028002044125008035
+        ],
+        "relative_mean_regret_reduction": 0.11450984418200959,
+        "relative_reduction_ci": [
+          0.016596697496929224,
+          0.19513368171163434
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44249,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.08431255942362077,
+            "priority_mean_regret": 0.014284266702542982,
+            "absolute_improvement": 0.07002829272107779,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.08408042835128501,
+            "priority_mean_regret": 0.05045672208356001,
+            "absolute_improvement": 0.033623706267725005,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.11978819717212204,
+            "priority_mean_regret": 0.11048994755537839,
+            "absolute_improvement": 0.00929824961674365,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.24680086603197962,
+            "priority_mean_regret": 0.29849040333974813,
+            "absolute_improvement": -0.05168953730776851,
+            "harm_exceeds_predefined_margin": true
+          }
+        },
+        "harmed_families": [
+          "local_trap"
+        ],
+        "decision": "DO_NOT_PROMOTE_PRIORITY_AS_DEFAULT",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 32.0,
+          "mean_score_calls": 18.908333333333335,
+          "mean_unique_legal_states": 18.908333333333335,
+          "optimal_found_rate": 0.4041666666666667,
+          "mean_wall_seconds": 0.0007630856625022868
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 32.0,
+          "mean_score_calls": 18.833333333333332,
+          "mean_unique_legal_states": 18.833333333333332,
+          "optimal_found_rate": 0.5,
+          "mean_wall_seconds": 0.0007355797166553657
+        }
+      },
+      "64": {
+        "status": "computed",
+        "n_paired_problems": 240,
+        "omitted_constant_tasks": [],
+        "fifo_mean_regret": 0.09762226906383042,
+        "priority_mean_regret": 0.06944233230347106,
+        "absolute_improvement_fifo_minus_priority": 0.02817993676035936,
+        "paired_improvement_ci": [
+          0.016287990126865902,
+          0.04028237706746442
+        ],
+        "relative_mean_regret_reduction": 0.28866299698416026,
+        "relative_reduction_ci": [
+          0.17742323270483223,
+          0.3927757348798088
+        ],
+        "confidence": 0.95,
+        "bootstrap_repeats": 10000,
+        "bootstrap_seed": 44281,
+        "bootstrap_unit": "whole_problem_paired_policies_stratified_by_family",
+        "family_results": {
+          "separable": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.0511453054155714,
+            "priority_mean_regret": 0.0,
+            "absolute_improvement": 0.0511453054155714,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_interaction": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.05876712037853083,
+            "priority_mean_regret": 0.017329060649555188,
+            "absolute_improvement": 0.04143805972897564,
+            "harm_exceeds_predefined_margin": false
+          },
+          "coupled_constraint": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.06247654105764568,
+            "priority_mean_regret": 0.036542840091333635,
+            "absolute_improvement": 0.025933700966312048,
+            "harm_exceeds_predefined_margin": false
+          },
+          "local_trap": {
+            "n_problems": 60,
+            "fifo_mean_regret": 0.21810010940357366,
+            "priority_mean_regret": 0.22389742847299549,
+            "absolute_improvement": -0.005797319069421825,
+            "harm_exceeds_predefined_margin": false
+          }
+        },
+        "harmed_families": [],
+        "decision": "GO_SYNTHETIC_MECHANISM_ONLY",
+        "go_rule": {
+          "relative_reduction_min": 0.2,
+          "paired_ci_lower_gt": 0,
+          "no_family_absolute_regret_increase_gt": 0.05
+        },
+        "interpretation": "Performance on this fixed synthetic generator only; no real-poetry quality evidence",
+        "fifo_diagnostics": {
+          "mean_proposals": 61.2,
+          "mean_score_calls": 28.408333333333335,
+          "mean_unique_legal_states": 28.408333333333335,
+          "optimal_found_rate": 0.5208333333333334,
+          "mean_wall_seconds": 0.0011818848999932167
+        },
+        "priority_diagnostics": {
+          "mean_proposals": 61.2,
+          "mean_score_calls": 28.7875,
+          "mean_unique_legal_states": 28.7875,
+          "optimal_found_rate": 0.7375,
+          "mean_wall_seconds": 0.0012723540916548851
+        }
+      }
+    }
+  },
+  "interpretation": [
+    "The test split was not used to change the generator, scoring rules or policy before reporting.",
+    "After this run the 240 test tasks are exposed and cannot certify later algorithm tuning.",
+    "All task scores are synthetic objectives; these are not poetry quality labels.",
+    "The test asks whether one frontier schedule helps on this fixed mixture, not whether matrix notation is inherently superior.",
+    "Bootstrap uncertainty is conditional on this generator and fixed family mixture, not a guarantee across all constraint problems.",
+    "Runs are replayed outside the measured search budget; the replay is verification, not a search aid."
+  ]
+}

@@ -1,0 +1,1895 @@
+{
+  "antithesis_verified": false,
+  "candidate_tone_matrix_check": {
+    "conditional_on_unverified_reference_memberships": true,
+    "literary_quality": "not_evaluated",
+    "matches": [
+      "L5-Z-R0"
+    ],
+    "nearest": {
+      "closest_supported_lines": [
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP"
+      ],
+      "differing_positions": [],
+      "template_id": "L5-Z-R0",
+      "tone_edit_distance": 0
+    },
+    "profile": "strict_core",
+    "source": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf",
+    "status": "matches_supported_profile",
+    "warning": "Outside this incomplete profile does NOT mean the poem is invalid; rhyme/meaning/antithesis are not certified."
+  },
+  "contextual_reading_verified": false,
+  "frozen_files_unchanged": true,
+  "generation_scope": "first deterministic run; all forty characters selected by code",
+  "global_optimality_claim": false,
+  "inputs_filled_by_human": [],
+  "language_model": {
+    "aligned_strength": 5.0,
+    "aligned_unique_pairs": 34877,
+    "aligned_weight": 0.5,
+    "alpha": 0.1,
+    "direction_unique_counts": [
+      {
+        "bigram": 52088,
+        "context1": 3731,
+        "context2": 49882,
+        "trigram": 76845,
+        "unigram": 3731
+      },
+      {
+        "bigram": 52088,
+        "context1": 3731,
+        "context2": 49991,
+        "trigram": 76954,
+        "unigram": 3731
+      }
+    ],
+    "fit_poem_ids_sha256": "8260fc4949cf695ad465aef17c7c05a5d9d73e0add9a4e20dfe66b4d11a0299d",
+    "fit_poems": 2203,
+    "target_kind": "observed_source_restoration",
+    "vocabulary_size_with_unk": 3731,
+    "weights": [
+      0.1,
+      0.3,
+      0.6
+    ]
+  },
+  "line_details": [
+    {
+      "lm_score": -4.140601463339935,
+      "prefix": "日暮",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:entering:04",
+              "label": "入聲四質",
+              "source_lines": [
+                569
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:departing:07",
+              "label": "去聲七遇",
+              "source_lines": [
+                400
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 31,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_02d886e37d8d24ccad602981",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_036d76dc11c36fa150a0e364",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_11a26e3981c0c7e2339befd2",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_191022a9a940ac6893dbc31b",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_1bea4c9d1f9b4aa0e6db6742",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_25a880473e7f435b822e5a80",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_2d53b6f013ae9c3c0e48adb0",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_3065c3f57385bb58b5531011",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_411be746a1c8aab7edda7656",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_49ad722f2084325773be704e",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4a1f75327cfd042699fdd6f2",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4c0087b010596b89b92ba33d",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4f5123a3db325b4e99fabddf",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_604a404ef3cd138324b05c1e",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_60f18c3355944925d94181c8",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_68e2e5bc777b66e3039d808f",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_6ba4feac68071ba5b186ff89",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_7351e21edd1af4445ce79861",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_7405529ff2d2ed3d5f2d495f",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_831304ae1dd569c12b5ac31e",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8436efeed3ef7dd6dfcf6190",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8ab095770a5d26de644ba7a8",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a230005f633416c4bf35bbde",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_bde3ad60312decfa2dc67523",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_cec662c952872de7aafe9f74",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_ec44dfd8de53b70edf0ca6f2",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_edd53debd02f5b2a6f02c658",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f0d6a2419332b5ff975be064",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f2652e7cc0fad3dde3b5c59d",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f3223976c2f7ceeb5da24690",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_fb1c9584405b6247c7b77e40",
+            "row": 2,
+            "start": 0
+          }
+        ],
+        "text": "日暮",
+        "tones": "ZZ"
+      },
+      "rhyme_group": null,
+      "row": 0,
+      "score_terms": {
+        "coherence_raw": 0.0,
+        "coherence_weighted": 0.0,
+        "increment": -4.140601463339935,
+        "lm": -4.140601463339935,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "春風起",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:upper_level:11",
+              "label": "上平聲十一真",
+              "source_lines": [
+                65
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:upper_level:01",
+              "label": "上平聲一東",
+              "source_lines": [
+                5
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:04",
+              "label": "上聲四紙",
+              "source_lines": [
+                204
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 4,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_4faf035143e6b001ec4d53e3",
+            "row": 0,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_b575079bbee347c767bc17cf",
+            "row": 6,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_c2fd64a51ce174e0891ca08f",
+            "row": 0,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_d31800e866c61a975dbd4d02",
+            "row": 6,
+            "start": 2
+          }
+        ],
+        "text": "春風起",
+        "tones": "PPZ"
+      },
+      "text": "日暮春風起",
+      "tones": "ZZPPZ"
+    },
+    {
+      "lm_score": -4.8427729273123905,
+      "prefix": "青山",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:lower_level:09",
+              "label": "下平聲九青",
+              "source_lines": [
+                144
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:upper_level:15",
+              "label": "上平聲十五刪",
+              "source_lines": [
+                89
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 27,
+        "rhyme_group": "pingshui:upper_level:15",
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_0ceee90ed215668c1327a9e8",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_0d94233f780170ad6852ac56",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_10b80fe3fef0e3102155f37d",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_17ea032aeb5a3a146f8fd12b",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_2d6618e5107e162989a77d21",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_317a86fd97e9bd5b74d820e1",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_390a4e1a2e975a37dcc886d3",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_3fd89c9f2b1fab5f593b5945",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_457d2a606420f25cbcec9d83",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4a3812efea60b29d31925f78",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_559096be7a1a95d760aa05ae",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_680461b367e0cb8c22fa1e12",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_6ad2448d300435abf420caca",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_74f1004ce01a317773bba16f",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8e9cfbdb03cd5c8e3773b1f5",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_93c2b82dd8821c76a604c82e",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_b37d893f66495b97a1a900b4",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_c9724fdf489932eee485881f",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_d1435886bd9dde6f88c3eef8",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_d3b0a78db5f8738d9ee3f139",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_da485a95202b9d472db21c20",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_e217c4e8fe8c265559087cd6",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_e250e81d80972e43b92492b5",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_e96477857c9255570b3c1221",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f0a2077b201c39afd35d0641",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f9c99cae1c5b809e6dca795b",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_fd9a3a446d50aa9180d8d893",
+            "row": 5,
+            "start": 0
+          }
+        ],
+        "text": "青山",
+        "tones": "PP"
+      },
+      "rhyme_group": "pingshui:lower_level:01",
+      "row": 1,
+      "score_terms": {
+        "coherence_raw": 0.6415981290943615,
+        "coherence_weighted": 0.32079906454718077,
+        "increment": -4.5219738627652095,
+        "lm": -4.8427729273123905,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "美少年",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:rising:04",
+              "label": "上聲四紙",
+              "source_lines": [
+                204
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:17",
+              "label": "上聲十七篠",
+              "source_lines": [
+                282
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            },
+            {
+              "group_id": "pingshui:departing:18",
+              "label": "去聲十八嘯",
+              "source_lines": [
+                466
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:01",
+              "label": "下平聲一先",
+              "source_lines": [
+                96
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 2,
+        "rhyme_group": "pingshui:lower_level:01",
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_82de0f9f24a4493885e1c78b",
+            "row": 0,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_d3ca731b593145ce243c0a89",
+            "row": 0,
+            "start": 2
+          }
+        ],
+        "text": "美少年",
+        "tones": "ZZP"
+      },
+      "text": "青山美少年",
+      "tones": "PPZZP"
+    },
+    {
+      "lm_score": -4.302996437689158,
+      "prefix": "誰知",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:upper_level:04",
+              "label": "上平聲四支",
+              "source_lines": [
+                23
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:upper_level:04",
+              "label": "上平聲四支",
+              "source_lines": [
+                23
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 14,
+        "rhyme_group": "pingshui:upper_level:04",
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_028b1bd0b2b6c7e1e5801c20",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_3ccfbd67c9a340724a4bee45",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_47f022fc9455fb1b0ce9220c",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_485d3d3bcf6fd073f1f2617d",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4e36f815b1e694071d58a3cf",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_856db764a821304638b721ba",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a053e8e93f5bc833b9fa6f01",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a8139956ad044e14fc3f232b",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_c213769a1dd61bcee636a606",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_c718b4fd7cb5e15c805b3381",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_c9399fcf5774f3953351dcca",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_d83ec5ba90e4d02fb511ae67",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f2300ebe0d8c35202444cd04",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f271ea60fcb98e6487f1d448",
+            "row": 6,
+            "start": 0
+          }
+        ],
+        "text": "誰知",
+        "tones": "PP"
+      },
+      "rhyme_group": null,
+      "row": 2,
+      "score_terms": {
+        "coherence_raw": 0.6917866826045076,
+        "coherence_weighted": 0.3458933413022538,
+        "increment": -3.9571030963869043,
+        "lm": -4.302996437689158,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "何處去",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:lower_level:05",
+              "label": "下平聲五歌",
+              "source_lines": [
+                120
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:06",
+              "label": "上聲六語",
+              "source_lines": [
+                216
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            },
+            {
+              "group_id": "pingshui:departing:06",
+              "label": "去聲六御",
+              "source_lines": [
+                394
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:06",
+              "label": "上聲六語",
+              "source_lines": [
+                216
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            },
+            {
+              "group_id": "pingshui:departing:06",
+              "label": "去聲六御",
+              "source_lines": [
+                394
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 2,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_296e243a1b049cd652822b78",
+            "row": 0,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_6f89a23c0890ec127deb64f5",
+            "row": 6,
+            "start": 2
+          }
+        ],
+        "text": "何處去",
+        "tones": "PZZ"
+      },
+      "text": "誰知何處去",
+      "tones": "PPPZZ"
+    },
+    {
+      "lm_score": -4.581898120808042,
+      "prefix": "獨有",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:entering:01",
+              "label": "入聲一屋",
+              "source_lines": [
+                549
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:25",
+              "label": "上聲二十五有",
+              "source_lines": [
+                330
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 14,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_0768e6ecdb8dc53c01d6ef4f",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_1b1a35aa28ad4a26ed046c0c",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_1de2c766de77ded12b6e66c8",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_295deae46b880e712f4b8c25",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_363b6b2f7b4be3f89d9e16cc",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_53bcff4e497a254623ec15dd",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_5e60911ba6738b65deb44162",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_5fac7a29b57dbc11834ebaf3",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_6199def56761e5eeef8315d6",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_9d5eea1d141585d44fafa4e2",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a6e888e156ac6fc7578798a5",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_c6e1e72c20b175b1086d90c8",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f35d436f0f30692fb7564353",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_fa68ccd9f1bb77c4661b7cf5",
+            "row": 6,
+            "start": 0
+          }
+        ],
+        "text": "獨有",
+        "tones": "ZZ"
+      },
+      "rhyme_group": "pingshui:lower_level:01",
+      "row": 3,
+      "score_terms": {
+        "coherence_raw": 0.7136583458422486,
+        "coherence_weighted": 0.3568291729211243,
+        "increment": -4.225068947886918,
+        "lm": -4.581898120808042,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "白雲天",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:entering:11",
+              "label": "入聲十一陌",
+              "source_lines": [
+                613
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:upper_level:12",
+              "label": "上平聲十二文",
+              "source_lines": [
+                71
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:01",
+              "label": "下平聲一先",
+              "source_lines": [
+                96
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 2,
+        "rhyme_group": "pingshui:lower_level:01",
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_cb982c0138bde9770145a95c",
+            "row": 7,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_f143599caa92433ee3587326",
+            "row": 7,
+            "start": 2
+          }
+        ],
+        "text": "白雲天",
+        "tones": "ZPP"
+      },
+      "text": "獨有白雲天",
+      "tones": "ZZZPP"
+    },
+    {
+      "lm_score": -4.454825569091918,
+      "prefix": "萬里",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:departing:14",
+              "label": "去聲十四願",
+              "source_lines": [
+                442
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:04",
+              "label": "上聲四紙",
+              "source_lines": [
+                204
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 34,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_08f9d06adbd7b058a402f242",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_09d0d2ab150ca4d6d920877a",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_0f0046a4c15854a242ded2a9",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_11245d7da11bbb59748b9054",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_27f8315d310cb6a67167118d",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_2c6f1ed69bc4769a830ca051",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_388cbccd5c45ee3b2001a122",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4c84d2a204a8808a760b0ae7",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_51af493c5dc38e9e9ae0bb4a",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_556db1bc2cf70fc6ac40f6f0",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_5c215742093a520a51e3e729",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_609750de3a0ba41eab73e4f3",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_60e8996cef90837cba6b0374",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_789c48de286ac318cc94d40c",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_806ce71aa431c93558b5773c",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8146fa507bfe80e9adb00be4",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8227ec85cf9c4fe702f5ef58",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8aaa49f2367b31f4b1ab47d1",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_95aa35ac1ddbe0422bebefee",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_9b2538376e1ddb603bc0913e",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a424d0878a6283ead60f34ab",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a44e3d419f6289d6116ac685",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a812f42db6c48f11ba5ad270",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_ba7489f9a1956399cef4f719",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_ba82d903e40a5af1cd18386f",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_bc79a9c0093f0ff276061bbd",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_c66e27ca2c638794e3a21cfc",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_da1a565ac277dd2bbfd3b036",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_dc660eec19f7e100fbff4120",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_df28af7fa09fa5229fb491d7",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_e4613fc19ef2eeb34c2b2103",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_e8cefab9a69627a9cd7e8594",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_f291992a58ada27b1d53a97d",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_ffe4bd654df59d83f4f70c09",
+            "row": 0,
+            "start": 0
+          }
+        ],
+        "text": "萬里",
+        "tones": "ZZ"
+      },
+      "rhyme_group": null,
+      "row": 4,
+      "score_terms": {
+        "coherence_raw": 0.7065073705787354,
+        "coherence_weighted": 0.3532536852893677,
+        "increment": -4.10157188380255,
+        "lm": -4.454825569091918,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "無人到",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:upper_level:07",
+              "label": "上平聲七虞",
+              "source_lines": [
+                41
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:upper_level:11",
+              "label": "上平聲十一真",
+              "source_lines": [
+                65
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:departing:20",
+              "label": "去聲二十號",
+              "source_lines": [
+                478
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 3,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_020ae3e2cadc46b5cf46da7f",
+            "row": 0,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_1130f8025bb98d78db2ce999",
+            "row": 2,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_d917ea3cc4eddf27662432a4",
+            "row": 2,
+            "start": 2
+          }
+        ],
+        "text": "無人到",
+        "tones": "PPZ"
+      },
+      "text": "萬里無人到",
+      "tones": "ZZPPZ"
+    },
+    {
+      "lm_score": -4.905981889662135,
+      "prefix": "還家",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:upper_level:15",
+              "label": "上平聲十五刪",
+              "source_lines": [
+                89
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            },
+            {
+              "group_id": "pingshui:lower_level:01",
+              "label": "下平聲一先",
+              "source_lines": [
+                96
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:06",
+              "label": "下平聲六麻",
+              "source_lines": [
+                126
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 8,
+        "rhyme_group": "pingshui:lower_level:06",
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_15d6de5f8f57905c21a04b4f",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_1ac75ed34ebbebc0841eede3",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_4d7d044b9f143a02c9e7fff8",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_58120635f2d68a77381ccdab",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_5da70ca033c025b1ac2c9393",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_7eaefc2fe2f3ce94c40fd1f0",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_a44e3d419f6289d6116ac685",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_d2edbbaee0034ab4a2f931cc",
+            "row": 1,
+            "start": 0
+          }
+        ],
+        "text": "還家",
+        "tones": "PP"
+      },
+      "rhyme_group": "pingshui:lower_level:01",
+      "row": 5,
+      "score_terms": {
+        "coherence_raw": 0.6991900459884655,
+        "coherence_weighted": 0.34959502299423273,
+        "increment": -4.556386866667902,
+        "lm": -4.905981889662135,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "越水邊",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:entering:06",
+              "label": "入聲六月",
+              "source_lines": [
+                581
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            },
+            {
+              "group_id": "pingshui:entering:07",
+              "label": "入聲七曷",
+              "source_lines": [
+                587
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:04",
+              "label": "上聲四紙",
+              "source_lines": [
+                204
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:01",
+              "label": "下平聲一先",
+              "source_lines": [
+                96
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 2,
+        "rhyme_group": "pingshui:lower_level:01",
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_2f8b02fe45cfb718c32e9eef",
+            "row": 0,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_d24a06d2718b88f3b8c745dd",
+            "row": 0,
+            "start": 2
+          }
+        ],
+        "text": "越水邊",
+        "tones": "ZZP"
+      },
+      "text": "還家越水邊",
+      "tones": "PPZZP"
+    },
+    {
+      "lm_score": -4.3892981530435335,
+      "prefix": "江南",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:upper_level:03",
+              "label": "上平聲三江",
+              "source_lines": [
+                17
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:13",
+              "label": "下平聲十三覃",
+              "source_lines": [
+                168
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 10,
+        "rhyme_group": "pingshui:lower_level:13",
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_38594257d49c7d9e3927c21b",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_398bceacbd624299cb64c89c",
+            "row": 2,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_3ade4b878e3b13a48dfe6a85",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_41a833cdcff9bf78845804c2",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_430587e5d8d792e481feecf6",
+            "row": 6,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_9022644708ddf73f04754a8d",
+            "row": 1,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_907ebd70ff093bdb519c5ef4",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_bda30883dbe72b900fb42fb5",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_bfe2ad8ac6efd32ac591cb18",
+            "row": 0,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_edefb5b8443cc9fd7a3ca640",
+            "row": 3,
+            "start": 0
+          }
+        ],
+        "text": "江南",
+        "tones": "PP"
+      },
+      "rhyme_group": null,
+      "row": 6,
+      "score_terms": {
+        "coherence_raw": 0.7396075103759281,
+        "coherence_weighted": 0.36980375518796404,
+        "increment": -4.01949439785557,
+        "lm": -4.3892981530435335,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "歸路遠",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:upper_level:05",
+              "label": "上平聲五微",
+              "source_lines": [
+                29
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:departing:07",
+              "label": "去聲七遇",
+              "source_lines": [
+                400
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:rising:13",
+              "label": "上聲十三阮",
+              "source_lines": [
+                258
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            },
+            {
+              "group_id": "pingshui:departing:14",
+              "label": "去聲十四願",
+              "source_lines": [
+                442
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 3,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_5745773b43c52d3fcfe6a3f2",
+            "row": 6,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_62658f3413cb7f2f036b9124",
+            "row": 4,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_b715f95d5219d642b9096aa3",
+            "row": 6,
+            "start": 2
+          }
+        ],
+        "text": "歸路遠",
+        "tones": "PZZ"
+      },
+      "text": "江南歸路遠",
+      "tones": "PPPZZ"
+    },
+    {
+      "lm_score": -4.952541767503239,
+      "prefix": "草木",
+      "prefix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:rising:19",
+              "label": "上聲十九皓",
+              "source_lines": [
+                294
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:entering:01",
+              "label": "入聲一屋",
+              "source_lines": [
+                549
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 6,
+        "rhyme_group": null,
+        "sources": [
+          {
+            "end": 2,
+            "poem_id": "poem_45fbf050f15bdc28060fc970",
+            "row": 3,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_494057798a6104f4ee7e1d08",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_52107e7c1e6cd48a13569f8f",
+            "row": 4,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_8109c97d618b86ac9394cff2",
+            "row": 5,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_aa91a0988e64d924ace3f728",
+            "row": 7,
+            "start": 0
+          },
+          {
+            "end": 2,
+            "poem_id": "poem_b99a861e7852519eba7116c1",
+            "row": 4,
+            "start": 0
+          }
+        ],
+        "text": "草木",
+        "tones": "ZZ"
+      },
+      "rhyme_group": "pingshui:lower_level:01",
+      "row": 7,
+      "score_terms": {
+        "coherence_raw": 0.7044497966038318,
+        "coherence_weighted": 0.3522248983019159,
+        "increment": -4.600316869201323,
+        "lm": -4.952541767503239,
+        "previous_character_occurrences": 0,
+        "repetition_penalty": 0.0
+      },
+      "suffix": "落花前",
+      "suffix_provenance": {
+        "character_memberships": [
+          [
+            {
+              "group_id": "pingshui:entering:10",
+              "label": "入聲十藥",
+              "source_lines": [
+                605
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "Z"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:06",
+              "label": "下平聲六麻",
+              "source_lines": [
+                126
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ],
+          [
+            {
+              "group_id": "pingshui:lower_level:01",
+              "label": "下平聲一先",
+              "source_lines": [
+                96
+              ],
+              "status": "source_candidate_needs_context",
+              "tone": "P"
+            }
+          ]
+        ],
+        "contextual_reading_verified": false,
+        "count": 2,
+        "rhyme_group": "pingshui:lower_level:01",
+        "sources": [
+          {
+            "end": 5,
+            "poem_id": "poem_2f8b02fe45cfb718c32e9eef",
+            "row": 7,
+            "start": 2
+          },
+          {
+            "end": 5,
+            "poem_id": "poem_d24a06d2718b88f3b8c745dd",
+            "row": 7,
+            "start": 2
+          }
+        ],
+        "text": "落花前",
+        "tones": "ZPP"
+      },
+      "text": "草木落花前",
+      "tones": "ZZZPP"
+    }
+  ],
+  "lines": [
+    "日暮春風起",
+    "青山美少年",
+    "誰知何處去",
+    "獨有白雲天",
+    "萬里無人到",
+    "還家越水邊",
+    "江南歸路遠",
+    "草木落花前"
+  ],
+  "literary_quality_evaluated": false,
+  "loading": {
+    "source_dev": 547,
+    "source_test": 530,
+    "source_train": 2502,
+    "train_other_length_skipped": 299,
+    "used_five_training_poems": 2203
+  },
+  "method": "new statistical 2+3 span recombination; not v0.5 neural generation",
+  "no_manual_output_editing": true,
+  "pool_counts": {
+    "cartesian_prefix_suffix_pairs": 1318428,
+    "complete_training_line": 234,
+    "lm_scored_candidates": 322600,
+    "per_ending_or_nonrhyme_shortlist_pruned": 320208,
+    "retained_pool_candidates": 2392,
+    "rhyme_endpoint_not_unique_level_group": 3318,
+    "rhymed_pool_cap_pruned": 0,
+    "tone_pattern_mismatch": 977175,
+    "within_line_repeated_character": 15101
+  },
+  "rhyme_group": "pingshui:lower_level:01",
+  "schema": "versematrix.free-generation.statistical-trial.v0.6",
+  "score": -34.12251738790631,
+  "seconds": 23.009925603866577,
+  "status": "completed",
+  "template_id": "L5-Z-R0",
+  "whole_line_novelty_scope": "not an exact complete line in the used five-character training corpus"
+}

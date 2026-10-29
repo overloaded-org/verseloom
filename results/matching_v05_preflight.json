@@ -1,0 +1,401 @@
+{
+  "accounting_separation": "Exactly 20 engineering optimizer updates / 640 task presentations; exclude from every formal seed/arm run and every model-selection result.",
+  "candidate_build_seconds": 1.2311966859997483,
+  "candidate_counts": {
+    "5": 10375,
+    "7": 1504
+  },
+  "checkpoint": {
+    "bytes": 900871,
+    "path": "/workspace/scratch/c6b13db58303/tmp/matching-v05-preflight-2fr13wvv/engineering_update20.npz",
+    "sha256": "83b7ff6bc5a972b39a79cee31dfa233c3a3261d590fc5ad0210c9723a5ae4dfa",
+    "step_count": 20,
+    "write_policy": "atomic_create_only"
+  },
+  "checks": {
+    "all_20_updates_finite": "passed",
+    "both_lengths_qe_matrix_reconstruction": "exact",
+    "checkpoint_roundtrip_both_lengths": "exact",
+    "full_softmax": "passed",
+    "no_dev_test_confirm_decoded": true
+  },
+  "eligible_train_tasks_by_length": {
+    "5": 5494,
+    "7": 457
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "formal_experiment": false,
+  "initialization_seconds": 0.01381141599995317,
+  "limitations": [
+    "Timing only; no development or confirmation metric was computed.",
+    "This separate seed172905 checkpoint must never be selected as a formal experimental checkpoint.",
+    "Reported losses are engineering numerical diagnostics, not quality evidence."
+  ],
+  "optimizer_updates": 20,
+  "parameter_summary": {
+    "adam_state_scalars_allocated": 85456,
+    "by_tensor": {
+      "context_bias": {
+        "shape": [
+          24
+        ],
+        "stored": 24,
+        "trainable": 24
+      },
+      "context_kernel": {
+        "shape": [
+          3,
+          12,
+          24
+        ],
+        "stored": 864,
+        "trainable": 864
+      },
+      "embedding": {
+        "shape": [
+          3068,
+          12
+        ],
+        "stored": 36816,
+        "trainable": 36804
+      },
+      "query_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      },
+      "query_projection": {
+        "shape": [
+          288,
+          16
+        ],
+        "stored": 4608,
+        "trainable": 4608
+      },
+      "span_projection": {
+        "shape": [
+          24,
+          16
+        ],
+        "stored": 384,
+        "trainable": 384
+      },
+      "span_projection_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      }
+    },
+    "candidate_id_embeddings": false,
+    "context_mode": "both",
+    "dtype": "float64",
+    "frozen_inactive_query_projection_parameters": 0,
+    "frozen_parameters": 12,
+    "frozen_unk_parameters": 12,
+    "independent_candidate_bias": false,
+    "norm_epsilon": 1e-06,
+    "output_bias": "identically_zero",
+    "representation_dim": 16,
+    "step_count": 20,
+    "stored_parameters": 42728,
+    "temperature": 0.1,
+    "trainable_parameters": 42716
+  },
+  "per_length": {
+    "5": {
+      "mean_seconds": 0.02211192490067333,
+      "median_seconds": 0.01780279100057669,
+      "updates": 10
+    },
+    "7": {
+      "mean_seconds": 0.0065390342002501715,
+      "median_seconds": 0.007229413500681403,
+      "updates": 10
+    }
+  },
+  "preflight_freeze": {
+    "config": {
+      "architecture": {
+        "channels": 24,
+        "context_mode": "both",
+        "embedding_dim": 12,
+        "kernel_width": 3,
+        "norm_epsilon": 1e-06,
+        "representation_dim": 16,
+        "seed": 172905,
+        "temperature": 0.1
+      },
+      "batch_size": 32,
+      "candidate_vocabulary": "fixed train all-adjacent min-count-2, full softmax",
+      "dev_test_confirm_decoded": false,
+      "gradient_accumulation": 1,
+      "model_selection_performed": false,
+      "optimizer": {
+        "learning_rate": 0.003,
+        "max_grad_norm": 5.0,
+        "weight_decay": 0.0001
+      },
+      "optimizer_updates": 20,
+      "purpose": "engineering throughput only; not a formal training run or model selection",
+      "schedule_lengths": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "seed": 172905,
+      "split": "train"
+    },
+    "driver_sha256": "17b4c0aa65268f3b7b249b84f64af765916ae9508e82eee93d50861167bbced2",
+    "frozen_at_utc": "2026-10-29T08:33:08.723977+00:00",
+    "input_sha256": {
+      "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+      "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc"
+    },
+    "source_sha256": {
+      "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+      "src/wordconv_lab/matching.py": "9c0bd4ba7c6dc18a8ce12e41a371e4037df858eb6da1b950d46348cbcd853d23",
+      "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+      "src/wordconv_lab/retrieval.py": "e791fb648996ef431aeafa6cbe86933c905df509c5a4e2ae8d04c5751d7fb856"
+    }
+  },
+  "purpose": "engineering throughput only; not a formal training run or model selection",
+  "sampling_receipt_sha256": "37ff3cda85bf939d492e468dc4c1d99904acfee99d8a9882df3ed2da89aab4f0",
+  "seed": 172905,
+  "source_receipt_sha256": "a265eec654e9b15f67110c595e2e853ca536455045f21276646f6e0bde3e5029",
+  "status": "passed",
+  "train_poems": 2502,
+  "training_task_presentations": 640,
+  "training_wall_seconds": 0.2904255820030812,
+  "unique_training_tasks": 535,
+  "updates": [
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4722024177154332,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 10.588679372271208,
+      "length": 5,
+      "loss": 12.314397407904881,
+      "seconds": 0.03640818100029719,
+      "step": 1
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.39225406620742415,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 12.746840455583698,
+      "length": 5,
+      "loss": 12.415154932225574,
+      "seconds": 0.01668512499963981,
+      "step": 2
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4435233819362863,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 11.273362811609935,
+      "length": 5,
+      "loss": 12.212801625655654,
+      "seconds": 0.015155363998928806,
+      "step": 3
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.44661063117717076,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 11.195434346963623,
+      "length": 5,
+      "loss": 11.013512196284239,
+      "seconds": 0.018398985001113033,
+      "step": 4
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.48183293034161423,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 10.377040847862048,
+      "length": 5,
+      "loss": 11.775777751908478,
+      "seconds": 0.016412351000326453,
+      "step": 5
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4722029997161883,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 10.58866632148713,
+      "length": 5,
+      "loss": 12.36150769416733,
+      "seconds": 0.016726178000681102,
+      "step": 6
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4536270093264516,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 11.022271375384003,
+      "length": 5,
+      "loss": 11.014905019925617,
+      "seconds": 0.017206597000040347,
+      "step": 7
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.44620744412967317,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 11.205550390922973,
+      "length": 5,
+      "loss": 11.633198528243522,
+      "seconds": 0.024657771002239315,
+      "step": 8
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4544886453375917,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 11.00137495467247,
+      "length": 5,
+      "loss": 11.532569860470234,
+      "seconds": 0.027176021001650952,
+      "step": 9
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4834753636988628,
+      "full_softmax_candidates": 10375,
+      "gradient_norm": 10.34178859031646,
+      "length": 5,
+      "loss": 10.728921277130281,
+      "seconds": 0.03229267600181629,
+      "step": 10
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.3984188401672285,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 12.549607337598161,
+      "length": 7,
+      "loss": 9.24129348732556,
+      "seconds": 0.00805893699725857,
+      "step": 11
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4358137882951243,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 11.47278983429983,
+      "length": 7,
+      "loss": 9.382837385215623,
+      "seconds": 0.0071184799999173265,
+      "step": 12
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.4630715458428041,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 10.797467572532124,
+      "length": 7,
+      "loss": 9.129720053952632,
+      "seconds": 0.0028853080002591014,
+      "step": 13
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.44256787900393596,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 11.297701973431137,
+      "length": 7,
+      "loss": 9.163088895026558,
+      "seconds": 0.00734034700144548,
+      "step": 14
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.48438143535743194,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 10.322443502217274,
+      "length": 7,
+      "loss": 9.452889325730732,
+      "seconds": 0.006129670000518672,
+      "step": 15
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.5157716192916214,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 9.694213122597116,
+      "length": 7,
+      "loss": 8.64622355772569,
+      "seconds": 0.004620629999408266,
+      "step": 16
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.3835073500635034,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 13.037559773423041,
+      "length": 7,
+      "loss": 9.255857454786547,
+      "seconds": 0.009065934998943703,
+      "step": 17
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.47201551680499726,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 10.592872102689029,
+      "length": 7,
+      "loss": 8.162715205131168,
+      "seconds": 0.004693681999924593,
+      "step": 18
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.5315427863312674,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 9.406580483407984,
+      "length": 7,
+      "loss": 8.087535818029135,
+      "seconds": 0.007884123002440901,
+      "step": 19
+    },
+    {
+      "batch_size": 32,
+      "clip_scale": 0.5319387144458428,
+      "full_softmax_candidates": 1504,
+      "gradient_norm": 9.399579057164216,
+      "length": 7,
+      "loss": 8.336049115152779,
+      "seconds": 0.0075932300023850985,
+      "step": 20
+    }
+  ]
+}

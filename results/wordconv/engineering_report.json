@@ -1,0 +1,19 @@
+{
+  "status": "engineering_only",
+  "synthetic": true,
+  "fixture_sha256": "56ad6e18c73120912a5ef5c7087e3a3e5960cdfbfb1a57be193618ad55f7e0d5",
+  "candidate_set_hash": "5f3577e87edfab55306116d863291e7c40d96332357071e4df412e9a125c664c",
+  "shared_candidate_set_verified": true,
+  "seed": 1729,
+  "trained": false,
+  "candidate_count": 5,
+  "verified_legal_candidates": 2,
+  "review_rows_created": 0,
+  "quality_evidence": "not_evaluated",
+  "statistical_evidence": {
+    "status": "no_evaluation_data",
+    "n_clusters": 0,
+    "n_rows": 0
+  },
+  "next_gate": "audited real corpus, frozen model protocol, and independent blind evaluation"
+}

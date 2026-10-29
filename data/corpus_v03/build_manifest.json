@@ -1,0 +1,42 @@
+{
+  "freeze_sha256": "61ea9ba71822df429488eee4022860630a4b43a7ef34db1a4ddc9d12cf296cfe",
+  "literary_quality_evaluated": false,
+  "model_scores_accessed": false,
+  "outputs": {
+    "audit.json": {
+      "bytes": 2489,
+      "sha256": "c6a7dc22f565e3cb46bcf18f96b00b7fe1a48810c89da47dae8523f57da7c6c5"
+    },
+    "candidate_spans.json": {
+      "bytes": 310133,
+      "sha256": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6"
+    },
+    "exact_duplicate_groups.jsonl": {
+      "bytes": 15861,
+      "sha256": "bcf846395f43233bce992753178f467391c726f59668ce8e548d3d18471c88ad"
+    },
+    "family_edges.jsonl": {
+      "bytes": 50139,
+      "sha256": "f20ce27cb706c3c97aa4718737dfba4caee770d017a080dad9dee1645138ab69"
+    },
+    "poems.jsonl": {
+      "bytes": 2038259,
+      "sha256": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c"
+    },
+    "source_manifest.json": {
+      "bytes": 6758,
+      "sha256": "9e99dd0f9ab57b422bf16da62231bfa4939a517edde7fb41491b30a579b65253"
+    },
+    "tasks.jsonl": {
+      "bytes": 9101028,
+      "sha256": "372c71e4081ac68601d5ddc97c92d26a3b03d6eecb165e0e3afcd2f5c684c396"
+    },
+    "vocabulary.json": {
+      "bytes": 175805,
+      "sha256": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc"
+    }
+  },
+  "schema": "versematrix.corpus-build.v0.3",
+  "scorer_trained_here": false,
+  "status": "completed"
+}

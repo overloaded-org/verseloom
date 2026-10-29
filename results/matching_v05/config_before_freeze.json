@@ -1,0 +1,133 @@
+{
+  "arms": [
+    {
+      "channels": 24,
+      "context_mode": "both",
+      "id": "full_w3",
+      "kernel_width": 3
+    },
+    {
+      "channels": 27,
+      "context_mode": "both",
+      "id": "full_w1",
+      "kernel_width": 1
+    },
+    {
+      "channels": 24,
+      "context_mode": "upper",
+      "id": "upper_w3",
+      "kernel_width": 3
+    },
+    {
+      "channels": 24,
+      "context_mode": "suffix",
+      "id": "suffix_w3",
+      "kernel_width": 3
+    }
+  ],
+  "data": {
+    "candidate_definition": "all_training_line_internal_adjacent_two_character_spans_count_at_least_two_separate_by_poem_length",
+    "candidate_normalization": "none_exact_source_code_points",
+    "evaluation_split": "dev",
+    "expected_candidates_by_length": {
+      "5": 10375,
+      "7": 1504
+    },
+    "expected_dev_poems": 547,
+    "expected_dev_tasks": 2188,
+    "expected_eligible_train_tasks": 5951,
+    "expected_train_poems": 2502,
+    "expected_train_tasks": 10008,
+    "old_test_or_confirmation_evaluation": false,
+    "skip_old_test_before_json_decode": true,
+    "training_split": "train"
+  },
+  "deployment_seed": 0,
+  "diagnostics": {
+    "applied_arm": "full_w3",
+    "applied_checkpoint": "primary_arm_shared_selected_checkpoint",
+    "gold_equality_between_donor_and_original_is_not_a_filter": true,
+    "mismatched_context": "within_each_length_sort_task_ids_by_fixed_salted_SHA256; first_positive_circular_offset_with_all_donor_families_and_VisibleQuery_hashes_different; replace_whole_visible_query_keep_original_target_and_W",
+    "permutation_salt": "versematrix-matching-v05-context-permutation-20261029",
+    "permutation_uses_targets": false,
+    "zero_context": "frozen_checkpoint_inference_mask_both; no_additional_training"
+  },
+  "evaluation": {
+    "all_dev_tasks_in_denominator": true,
+    "baselines": [
+      {
+        "alignment_weight": 0.25,
+        "boundary_weight": 0.25,
+        "id": "strong_statistical",
+        "pool": "wide"
+      },
+      {
+        "count": "training_all_line_internal_adjacent_pair_count",
+        "id": "all_position_frequency"
+      },
+      {
+        "count": "training_even_line_prefix_positive_count_including_zero_for_W_items",
+        "id": "prefix_positive_frequency"
+      }
+    ],
+    "batch_size": 64,
+    "checkpoint_selection": "one_shared_checkpoint_per_arm_maximizes_exact_primary_metric_across_all_three_seeds; earliest_update_wins_exact_ties",
+    "full_ranking_saved_as": "SHA256_of_little_endian_int32_complete_candidate_index_order; raw_top16_scores_and_target_rank_saved; full_order_recomputable_from_immutable_checkpoint_and_allowlisted_query",
+    "k": 16,
+    "oov_target_rank": null,
+    "primary_metric": "seed_mean_then_equal_family_mean_recall_at_16",
+    "score_mixing": false,
+    "target_buckets": [
+      "seen_prefix_positive",
+      "in_W_never_prefix_positive",
+      "outside_W"
+    ],
+    "tie_rule": "descending_exact_floating_score_then_source_text_lexicographic_order"
+  },
+  "model": {
+    "embedding_dim": 12,
+    "norm_epsilon": 1e-06,
+    "representation_dim": 16,
+    "temperature": 0.1
+  },
+  "primary_arm": "full_w3",
+  "resource_gate": {
+    "each_of_three_seed_gains_strictly_positive": true,
+    "formal_literary_quality_gate": "NOT_EVALUATED",
+    "primary_mean_gain_over_strong_baseline_at_least": 0.02,
+    "primary_mean_minus_mismatched_context_at_least": 0.01,
+    "scope": "development_resource_allocation_gate_not_confirmatory_evidence"
+  },
+  "schema": "versematrix.context-span-matching-config.v0.5",
+  "scope": "development_only_not_independent_confirmation_or_literary_quality",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "status": "draft",
+  "task": "observed_even_line_initial_two_character_restoration",
+  "training": {
+    "batch_size": 32,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "checkpoint_updates": [
+      400,
+      800,
+      1200
+    ],
+    "epsilon": 1e-08,
+    "gradient_accumulation": 1,
+    "learning_rate": 0.003,
+    "max_grad_norm": 5.0,
+    "normalizer": "full_softmax_over_fixed_length_specific_W",
+    "optimizer": "Adam_decoupled_weight_decay",
+    "optimizer_updates": 1200,
+    "positive_task": "initial_two_characters_of_even_numbered_lines_only",
+    "schedule": "largest_remainder_allocation_of_update_lengths_proportional_to_eligible_tasks; seed_shuffled_length_schedule; independent_seeded_per_length_shuffled_cycles_fill_every_batch_to_32; identical_schedule_for_all_four_arms_of_a_seed",
+    "schedule_seed_salt": 2026102905,
+    "training_oov_policy": "only_targets_in_W_are_eligible_for_gradient_updates",
+    "weight_decay": 0.0001
+  },
+  "version": "0.5.0"
+}

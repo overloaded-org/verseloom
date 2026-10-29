@@ -1,0 +1,14 @@
+{
+  "scope": "formal_v03_training_plus_integrity_recovery_excludes_engineering_unit_tests",
+  "formal_runs": 6,
+  "updates_per_formal_run": 400,
+  "batch_size": 32,
+  "formal_optimizer_updates": 2400,
+  "formal_task_presentations": 76800,
+  "recovery_optimizer_updates": 200,
+  "recovery_task_presentations": 6400,
+  "training_and_recovery_optimizer_updates": 2600,
+  "training_and_recovery_task_presentations": 83200,
+  "independent_experiments_added_by_recovery": 0,
+  "model_selection_changed": false
+}

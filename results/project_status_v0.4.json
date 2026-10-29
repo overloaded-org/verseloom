@@ -1,0 +1,85 @@
+{
+  "project": "VerseMatrix Lab",
+  "version": "0.4.0",
+  "date": "2026-10-29",
+  "matrix_organization": {
+    "implemented": true,
+    "exact_local_and_full_verse_scoped": true,
+    "trained_span_solver": true,
+    "trained_span_dp_checks": 144,
+    "priority_promoted": false
+  },
+  "word_convolution": {
+    "trained": true,
+    "training_runs": 6,
+    "optimizer_updates_per_run": 400,
+    "task": "observed_source_restoration",
+    "test_tasks": 2120,
+    "test_families": 501,
+    "statistical_baseline_implemented": true,
+    "same_receptive_field_attention_run": false,
+    "cnn_family_top1": 0.003992015968063872,
+    "ngram_family_top1": 0.0074850299401197605,
+    "promotion_decision": "DO_NOT_PROMOTE_CNN_FROM_THIS_PILOT",
+    "human_evaluated": false
+  },
+  "data": {
+    "source_poems": 3579,
+    "source_families": 3382,
+    "shape_only_not_certified_lushi": true,
+    "contextual_reading_gold": false,
+    "candidate_reading_join_completed": true,
+    "new_confirmation_shape_only_poems": 524,
+    "new_confirmation_surface_family_isolation": true
+  },
+  "integrity": {
+    "checkpoint_mismatch_detected": true,
+    "expected_bytes_recovered_by_frozen_schedule": true,
+    "config_or_selection_changed": false,
+    "cause_determined": false
+  },
+  "interaction": {
+    "scientific_interaction": "NOT_ESTIMATED"
+  },
+  "next_gate": "fixed_vocabulary_and_K_context_to_span_matching_learning_on_train_dev_before_new_independent_confirmation",
+  "retrieval": {
+    "train_poems": 2502,
+    "dev_tasks": 2188,
+    "new_confirmation_tasks": 2096,
+    "new_confirmation_families": 512,
+    "new_confirmation_poems": 524,
+    "wide_candidate_counts": {
+      "5": 10375,
+      "7": 1504
+    },
+    "narrow_candidate_counts": {
+      "5": 1317,
+      "7": 97
+    },
+    "selected_weights": {
+      "id": "wide_a1_b1",
+      "pool": "wide",
+      "alignment_weight": 0.25,
+      "boundary_weight": 0.25
+    },
+    "selection_best_grid_ties": 9,
+    "confirmation_family_recall_at_16": {
+      "narrow_ngram": 0.030029296875,
+      "wide_ngram": 0.033447265625,
+      "selected": 0.033447265625
+    },
+    "promotion_decision": "DO_NOT_PROMOTE_RETRIEVER",
+    "new_neural_training_updates": 0,
+    "source_text_restoration_not_literary_quality": true,
+    "old_test_reused_for_this_evaluation": false
+  },
+  "dev_quota_diagnostic": {
+    "status": "completed_exploratory_dev_only",
+    "best_old_quota": 12,
+    "best_new_quota": 4,
+    "best_family_recall_at_16": 0.04343011811023622,
+    "formal_selected_dev_family_recall_at_16": 0.044250328083989494,
+    "confirmation_evaluated": false,
+    "priority_decision": "do_not_prioritize_quota_confirmation_from_current_dev_result"
+  }
+}

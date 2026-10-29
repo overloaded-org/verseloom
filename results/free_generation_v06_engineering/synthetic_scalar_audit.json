@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -1.1424317555913306,
+      "text": "ABCDE",
+      "vectorized": -1.1424317555913306
+    },
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -1.3361616654315844,
+      "text": "ABCDQ",
+      "vectorized": -1.3361616654315844
+    },
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -3.2485414177854928,
+      "text": "ACFIK",
+      "vectorized": -3.2485414177854928
+    },
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -3.384488334755272,
+      "text": "ZZZZZ",
+      "vectorized": -3.384488334755272
+    },
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -3.681004483054481,
+      "text": "?????",
+      "vectorized": -3.681004483054481
+    },
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -3.1163789692350474,
+      "text": "A?C?E",
+      "vectorized": -3.1163789692350474
+    },
+    {
+      "absolute_error": 0.0,
+      "independent_scalar": -3.6519924452739416,
+      "text": "GFEDC",
+      "vectorized": -3.6519924452739416
+    }
+  ],
+  "created_utc": "2026-10-29T14:27:00.449046+00:00",
+  "max_absolute_error": 0.0,
+  "real_corpus_read": false,
+  "real_poem_generated": false,
+  "sources": {
+    "scripts/audit_free_generation_scalar_v06.py": "7d228a8631269946777a2eaabb0a9f5c6b8c909337b0d341c63c3327ba497c65",
+    "scripts/audit_free_poem_v06.py": "378a975771431de8251e27f44c7f432779c324bf925aaa85c03f249e6e9817ed",
+    "src/wordconv_lab/free_generation.py": "c9d77db060f654fbeab0b6f7382c940725058515383d1a1fcab26c29faf9dd67",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+    "src/wordconv_lab/retrieval.py": "e791fb648996ef431aeafa6cbe86933c905df509c5a4e2ae8d04c5751d7fb856"
+  },
+  "stage": "post_generation_receipt_replay_of_same_seven_pre_generation_synthetic_checks",
+  "status": "PASS_INDEPENDENT_SYNTHETIC_SCALAR_LM",
+  "synthetic_source_poems": [
+    {
+      "lines": [
+        "ABCDE",
+        "FGHIJ",
+        "KLMNO",
+        "PQRST",
+        "UVWXY",
+        "ZABCD",
+        "EFGHI",
+        "JKLMN"
+      ],
+      "poem_id": "a",
+      "split": "train"
+    },
+    {
+      "lines": [
+        "ABCDQ",
+        "FGHIS",
+        "KLMNT",
+        "PQRSA",
+        "UVWXY",
+        "ZACDE",
+        "EFGIJ",
+        "JKLMO"
+      ],
+      "poem_id": "b",
+      "split": "train"
+    }
+  ],
+  "vocabulary_size": 27
+}

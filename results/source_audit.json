@@ -1,0 +1,34 @@
+{
+  "status": "audit_only_not_benchmark",
+  "manifest_files_verified": 7,
+  "poetry": {
+    "records": 1000,
+    "shape_only_8x5": 217,
+    "shape_only_8x7": 47,
+    "exact_normalized_unique": 981,
+    "duplicate_groups": 19
+  },
+  "rhyme": {
+    "group_counts": {
+      "上平声部": 15,
+      "下平声部": 15,
+      "上声部": 28,
+      "去声部": 30,
+      "入声部": 17
+    },
+    "group_count_total": 105,
+    "has_shang_sanjiang": false,
+    "distinct_characters": 8232,
+    "characters_with_multiple_memberships": 1823
+  },
+  "direct_lookup_diagnostic": {
+    "shape_only_tokens": 11312,
+    "directly_found_tokens": 7329
+  },
+  "limitations": [
+    "This shard is not a random sample of all poetry.",
+    "8x5/8x7 shape is not proof of regulated verse.",
+    "No contextual reading disambiguation or traditional/simplified conversion performed.",
+    "Source licence is not a text-critical edition or phonology quality certificate."
+  ]
+}

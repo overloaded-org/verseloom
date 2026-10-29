@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "command": "python scripts/run_dev_quota_v04.py --check",
+  "process_exit_code": 0,
+  "recorded_at_utc": "2026-10-29T03:28:06.351851+00:00",
+  "freeze_sha256": "c7e5f4879528ea80991fb04ee70a9735768242cf9fdd1e4c65f9d0161f49ff82",
+  "script_sha256": "789b29dd3745716eb223a90bc1cc4b1fca17d32e7b127b8b1bedf3e7b0474418",
+  "checked_outputs": {
+    "README.md": {
+      "bytes": 2497,
+      "sha256": "e69fcbb38245a3fb94339b085ae4c363d037abe8a05daeb98595d0540fadb267"
+    },
+    "dev_quota_rows.jsonl": {
+      "bytes": 19273945,
+      "sha256": "676cb4263eef22d5b2190feea4e964cd81e26227d45a061766dddf5434407994"
+    },
+    "report.json": {
+      "bytes": 20827,
+      "sha256": "8ffd856ada0169555f5e6ea30d1f6f0ad9a321c8e9f99fec6cb6d055ae80dddd"
+    }
+  },
+  "interpretation": "All deterministic outputs were rebuilt from the same frozen train/dev input and compared byte for byte; no confirmation evaluation."
+}

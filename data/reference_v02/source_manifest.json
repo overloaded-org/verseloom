@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.2",
+  "primary_source": {
+    "title": "平水韻",
+    "source_url": "https://zh.wikisource.org/w/index.php?title=平水韻&oldid=8264804",
+    "revision_id": 8264804,
+    "revision_timestamp_utc": "2026-08-12T08:23:22Z",
+    "mediawiki_content_sha1": "9bd6b11f51375912f8751120936c9184ad87cb7d",
+    "wikitext_sha256": "c0003fa238f6cb2c767f7747fae33eecde8c06da3eb661ab9d48bbff655857d9",
+    "wikitext_file": "pingshui_8264804.wikitext",
+    "printed_edition": null,
+    "printed_edition_note": "The source Header.from field is empty; no print exemplar is identified."
+  },
+  "source_snapshots": [
+    {
+      "filename": "wikisource_revision_8264804_api.json",
+      "url": "https://zh.wikisource.org/w/api.php?action=parse&oldid=8264804&prop=wikitext%7Crevid%7Cdisplaytitle&format=json&formatversion=2",
+      "purpose": "primary Pingshui transcription, frozen revision",
+      "bytes": 37255,
+      "sha256": "b6216e4dbc5cbd82894e3c958b688072ab0ff81eac677b720807ceb43a6cdb2c",
+      "retrieval_date_utc": "2026-10-29"
+    },
+    {
+      "filename": "wikisource_revision_8264804_metadata.json",
+      "url": "https://zh.wikisource.org/w/api.php?action=query&prop=revisions&revids=8264804&rvprop=ids%7Ctimestamp%7Csha1&format=json&formatversion=2",
+      "purpose": "revision timestamp and MediaWiki content SHA-1",
+      "bytes": 222,
+      "sha256": "422f2192208002f2197f28868cac70e3c3043a9171a9b12c0940463b693e3a80",
+      "retrieval_date_utc": "2026-10-29"
+    },
+    {
+      "filename": "wikisource_rightsinfo.json",
+      "url": "https://zh.wikisource.org/w/api.php?action=query&meta=siteinfo&siprop=rightsinfo&format=json&formatversion=2",
+      "purpose": "site copyright/licensing notice at retrieval",
+      "bytes": 164,
+      "sha256": "e113e25ced1ad609affcd45e846e0fe125dc28f2c5c5592d54b9bfb5a1e97ca0",
+      "retrieval_date_utc": "2026-10-29"
+    },
+    {
+      "filename": "guangyun_revision_770095_api.json",
+      "url": "https://zh.wikisource.org/w/api.php?action=parse&oldid=770095&prop=wikitext%7Crevid%7Cdisplaytitle&format=json&formatversion=2",
+      "purpose": "primary Guangyun transcription used only as an issue witness",
+      "bytes": 218056,
+      "sha256": "22cb4bb05e00d543bdb53538c40c46f1c9940e7f8af428de779ae7082a3b4431",
+      "retrieval_date_utc": "2026-10-29"
+    },
+    {
+      "filename": "guangyun_revision_770099_api.json",
+      "url": "https://zh.wikisource.org/w/api.php?action=parse&oldid=770099&prop=wikitext%7Crevid%7Cdisplaytitle&format=json&formatversion=2",
+      "purpose": "primary Guangyun transcription used only as an issue witness",
+      "bytes": 204773,
+      "sha256": "271bde13eb004e61f27d96f0b074ff0093699916a04a35af809fa8b0d627d952",
+      "retrieval_date_utc": "2026-10-29"
+    }
+  ],
+  "derived_files": [
+    {
+      "filename": "LICENSE_NOTICE.md",
+      "bytes": 1982,
+      "sha256": "0938cb576d3cf6e613903d9e62a716cdf580f879bb142de4efa911a436b97526"
+    },
+    {
+      "filename": "README.md",
+      "bytes": 4700,
+      "sha256": "4b16e02437755db32b5f0b4a9cce9eb3029c4d784828fd9a9d5dc7e658a9404e"
+    },
+    {
+      "filename": "editorial_issues.json",
+      "bytes": 4184,
+      "sha256": "9599a3d03986cbf1602f6521a7c3fd990f2a8faa56f0d9c5fba18c7dac1b6155"
+    },
+    {
+      "filename": "pingshui_106_memberships.json",
+      "bytes": 2128359,
+      "sha256": "6481c560885544fed72bc426c7461f2cea01dde8c299eab1e041d23a18364537"
+    },
+    {
+      "filename": "pingshui_106_source.json",
+      "bytes": 247638,
+      "sha256": "970228a61457c2126cfad1647ad2f9d59443550578b1cd3ba873cf6936fbcde4"
+    },
+    {
+      "filename": "pingshui_8264804.wikitext",
+      "bytes": 36416,
+      "sha256": "c0003fa238f6cb2c767f7747fae33eecde8c06da3eb661ab9d48bbff655857d9"
+    },
+    {
+      "filename": "source_audit.json",
+      "bytes": 159110,
+      "sha256": "50ce206fa58f76bfcfce762622952ef0d80eb9b1b0432b6c3c69132345356dd8"
+    },
+    {
+      "filename": "supplemental_lists.json",
+      "bytes": 70272,
+      "sha256": "d1c877b36c04fe6cbec37984a856296add7ebf83a86ba53e40e2b4881755f48a"
+    }
+  ],
+  "build_script": {
+    "path_relative_to_project": "scripts/build_rhyme_reference.py",
+    "sha256": "5da73b7fac4ccb9425741352d316dfb7b4eac54d5d17fe17ac5deeb4722fbb8b",
+    "runtime": "Python 3.9+ standard library",
+    "network_required_to_rebuild": false
+  },
+  "licensing": {
+    "source_work_public_domain_mark": "{{PD-old}} in the frozen Pingshui wikitext",
+    "site_rightsinfo": {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.zh",
+      "text": "Creative Commons Attribution-Share Alike 4.0"
+    },
+    "notice": "LICENSE_NOTICE.md",
+    "scope": "source transcription and derivative reference data only; not a license declaration for unrelated project files"
+  },
+  "normalization_or_character_conversion": null,
+  "editorial_corrections_applied": []
+}

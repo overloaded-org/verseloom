@@ -1,0 +1,176 @@
+{
+  "status": "engineering_only",
+  "trained": false,
+  "model": "local_conv",
+  "seed": 1729,
+  "candidate_set_hash": "5f3577e87edfab55306116d863291e7c40d96332357071e4df412e9a125c664c",
+  "constraint_lexicon_hash": "857878a34f77b6c33bd92b0acd3c2edfaae9541a39fb48db7aedf428107652c1",
+  "candidate_count": 5,
+  "valid_count": 2,
+  "decision": "selected",
+  "selected_candidate_id": "c02",
+  "abstain_reason": null,
+  "ranking": [
+    "c02",
+    "c01"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "c01",
+      "constraint": {
+        "status": "valid",
+        "violations": [],
+        "review_reasons": [],
+        "resolved_readings": [
+          [
+            "U1-1",
+            "U2-1",
+            "U3-1",
+            "U4-1",
+            "U5-1"
+          ],
+          [
+            "A-1",
+            "B-1",
+            "C-1",
+            "D-1",
+            "RA-1"
+          ]
+        ],
+        "antithesis_status": "not_evaluated_requires_separate_review"
+      },
+      "score": 0.17862597414617515,
+      "score_parts": {
+        "horizontal": -0.004408211335684438,
+        "aligned_pair": 0.1830341854818596,
+        "total": 0.17862597414617515
+      }
+    },
+    {
+      "candidate_id": "c02",
+      "constraint": {
+        "status": "valid",
+        "violations": [],
+        "review_reasons": [],
+        "resolved_readings": [
+          [
+            "U1-1",
+            "U2-1",
+            "U3-1",
+            "U4-1",
+            "U5-1"
+          ],
+          [
+            "B-1",
+            "A-1",
+            "D-1",
+            "C-1",
+            "RB-1"
+          ]
+        ],
+        "antithesis_status": "not_evaluated_requires_separate_review"
+      },
+      "score": 0.2123757419060736,
+      "score_parts": {
+        "horizontal": 0.02394906461894771,
+        "aligned_pair": 0.1884266772871259,
+        "total": 0.2123757419060736
+      }
+    },
+    {
+      "candidate_id": "c03_wrong_rhyme",
+      "constraint": {
+        "status": "invalid",
+        "violations": [
+          "rhyme_mismatch:1:4:WRONG"
+        ],
+        "review_reasons": [],
+        "resolved_readings": [
+          [
+            "U1-1",
+            "U2-1",
+            "U3-1",
+            "U4-1",
+            "U5-1"
+          ],
+          [
+            "A-1",
+            "B-1",
+            "C-1",
+            "D-1",
+            "WRONG-1"
+          ]
+        ],
+        "antithesis_status": "not_evaluated_requires_separate_review"
+      },
+      "score": null,
+      "score_parts": null
+    },
+    {
+      "candidate_id": "c04_cross_reading_trap",
+      "constraint": {
+        "status": "invalid",
+        "violations": [
+          "rhyme_mismatch:1:4:POLY"
+        ],
+        "review_reasons": [],
+        "resolved_readings": [
+          [
+            "U1-1",
+            "U2-1",
+            "U3-1",
+            "U4-1",
+            "U5-1"
+          ],
+          [
+            "A-1",
+            "B-1",
+            "C-1",
+            "D-1",
+            "poly-p"
+          ]
+        ],
+        "antithesis_status": "not_evaluated_requires_separate_review"
+      },
+      "score": null,
+      "score_parts": null
+    },
+    {
+      "candidate_id": "c05_unknown",
+      "constraint": {
+        "status": "needs_review",
+        "violations": [],
+        "review_reasons": [
+          "unknown_reading:1:4:UNKNOWN"
+        ],
+        "resolved_readings": [
+          [
+            "U1-1",
+            "U2-1",
+            "U3-1",
+            "U4-1",
+            "U5-1"
+          ],
+          [
+            "A-1",
+            "B-1",
+            "C-1",
+            "D-1",
+            null
+          ]
+        ],
+        "antithesis_status": "not_evaluated_requires_separate_review"
+      },
+      "score": null,
+      "score_parts": null
+    }
+  ],
+  "parameter_count": 408,
+  "feature_semantics": "synthetic token identity, selected tone/rhyme, position and line role",
+  "limitations": [
+    "random untrained weights; scores and rankings imply no poetry-quality advantage",
+    "no learned semantic representation or word-span representation",
+    "pointwise arm is an engineering reference, not the preregistered strong baseline",
+    "antithesis and semantic quality are not decided by the legality filter"
+  ]
+}

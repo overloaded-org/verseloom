@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "date": "2026-10-29",
+  "selected_core": "basic_prosody_grammar_plus_exact_local_factor_dp",
+  "preferred_organization_when_factorable": "exact_dp",
+  "generic_search_comparison": "fifo_explicit",
+  "priority_promoted": false,
+  "legacy_matrix_api_default": "priority_kept_unchanged_for_frozen_experiment_reproducibility",
+  "legacy_api_usage": "Always pass strategy explicitly; this config does not change the old function signature.",
+  "lexical_feature_requirement": "fixed_by_token_position_and_fixed_task_context",
+  "pair_kernel_width": 3,
+  "whole_verse_requirement": "enumerated_finite_global_variables_and_sum_of_four_independent_couplet_objectives",
+  "rhyme_reference": "data/reference_v02/pingshui_106_memberships.json",
+  "rhyme_reference_status": "source_candidate_needs_context_not_gold",
+  "scorer_trained": false,
+  "literary_quality_evaluated": false
+}

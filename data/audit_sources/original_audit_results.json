@@ -1,0 +1,130 @@
+{
+  "audited_at": "2026-10-29",
+  "status": "audit_only_not_benchmark",
+  "poetry": {
+    "records": 1000,
+    "shape_only_8x5": 217,
+    "shape_only_8x7": 47,
+    "exact_normalized_unique": 981,
+    "duplicate_groups": 19,
+    "required_fields": [
+      "author",
+      "paragraphs",
+      "title",
+      "id"
+    ],
+    "optional_tags_count": 67,
+    "split_regex": "[，。！？；]",
+    "note": "Simple shape diagnostic, not a verified regulated-verse classifier; preserves raw text; no normalization used besides punctuation splitting."
+  },
+  "rhyme": {
+    "group_counts": {
+      "上平声部": 15,
+      "下平声部": 15,
+      "上声部": 28,
+      "去声部": 30,
+      "入声部": 17
+    },
+    "group_count_total": 105,
+    "missing_expected_group": "上声三讲",
+    "distinct_characters": 8232,
+    "characters_with_multiple_memberships": 1992,
+    "examples": {
+      "行": [
+        {
+          "tone_section": "下平声部",
+          "rhyme_group": "七阳"
+        },
+        {
+          "tone_section": "下平声部",
+          "rhyme_group": "八庚"
+        },
+        {
+          "tone_section": "去声部",
+          "rhyme_group": "二十三漾"
+        },
+        {
+          "tone_section": "去声部",
+          "rhyme_group": "二十四敬"
+        }
+      ],
+      "重": [
+        {
+          "tone_section": "上平声部",
+          "rhyme_group": "二冬"
+        },
+        {
+          "tone_section": "上声部",
+          "rhyme_group": "二肿"
+        },
+        {
+          "tone_section": "去声部",
+          "rhyme_group": "二宋"
+        }
+      ],
+      "中": [
+        {
+          "tone_section": "上平声部",
+          "rhyme_group": "一东"
+        },
+        {
+          "tone_section": "去声部",
+          "rhyme_group": "一送"
+        }
+      ],
+      "月": [
+        {
+          "tone_section": "入声部",
+          "rhyme_group": "入声六月"
+        }
+      ],
+      "石": [
+        {
+          "tone_section": "入声部",
+          "rhyme_group": "入声十一陌"
+        }
+      ],
+      "长": [
+        {
+          "tone_section": "下平声部",
+          "rhyme_group": "七阳"
+        },
+        {
+          "tone_section": "上声部",
+          "rhyme_group": "二十二养"
+        },
+        {
+          "tone_section": "去声部",
+          "rhyme_group": "二十三漾"
+        }
+      ],
+      "長": null,
+      "东": [
+        {
+          "tone_section": "上平声部",
+          "rhyme_group": "一东"
+        }
+      ],
+      "東": null,
+      "间": [
+        {
+          "tone_section": "上平声部",
+          "rhyme_group": "十五删"
+        },
+        {
+          "tone_section": "去声部",
+          "rhyme_group": "十六谏"
+        }
+      ],
+      "間": null
+    }
+  },
+  "direct_lookup_diagnostic": {
+    "shape_only_tokens": 11312,
+    "directly_found_tokens": 7329,
+    "distinct_chars": 2107,
+    "directly_found_distinct_chars": 1324,
+    "note": "No traditional-to-simplified conversion; mismatch is expected and is not a quality metric."
+  },
+  "reference_pingshui_revision": "https://zh.wikisource.org/w/index.php?oldid=8264804&title=%E5%B9%B3%E6%B0%B4%E9%9F%BB"
+}

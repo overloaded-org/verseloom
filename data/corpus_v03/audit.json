@@ -1,0 +1,83 @@
+{
+  "accepted_source_records": 3617,
+  "bigram_jaccard_pairs": 87,
+  "candidate_vocabulary_size": {
+    "5": 1317,
+    "7": 97
+  },
+  "character_vocabulary_size": 3067,
+  "checks": {
+    "masked_task_identity": "passed",
+    "split_integrity": "passed",
+    "train_only_resources": "passed"
+  },
+  "exact_duplicate_excess_records": 38,
+  "exact_duplicate_groups": 38,
+  "families": 3382,
+  "family_size_histogram": {
+    "1": 3200,
+    "2": 168,
+    "3": 13,
+    "4": 1
+  },
+  "interpretation": "Not verified lushi, contextual reading gold, literary-quality gold or author-held-out generalization.",
+  "largest_family_poems": 4,
+  "limits": [
+    "Exact source code points only; simplified/traditional or variant glyph duplicates may remain.",
+    "Poem families use specified surface relations, not exhaustive philological edition families.",
+    "Corpus is the first ten fixed repository shards, not a random sample of all poetry.",
+    "OOV tasks are retained; candidate vocabulary coverage is not retrieval recall or model accuracy.",
+    "Source restoration measures agreement with an observed text, not superiority over alternative wording."
+  ],
+  "raw_records": 10008,
+  "rejected": {
+    "non_cjk_body": 14,
+    "not_8_by_5_or_7": 6377
+  },
+  "relation_pairs": 213,
+  "schema": "versematrix.corpus-audit.v0.3",
+  "shared_line_pairs": 213,
+  "split": {
+    "dev": {
+      "authors": 152,
+      "candidate_vocabulary_coverage": 0.19469835466179158,
+      "families": 508,
+      "poems": 547,
+      "poems_by_length": {
+        "5": 455,
+        "7": 92
+      },
+      "target_absent_from_train_candidate_vocabulary": 1762,
+      "target_in_train_candidate_vocabulary": 426,
+      "tasks": 2188
+    },
+    "test": {
+      "authors": 135,
+      "candidate_vocabulary_coverage": 0.19716981132075473,
+      "families": 501,
+      "poems": 530,
+      "poems_by_length": {
+        "5": 470,
+        "7": 60
+      },
+      "target_absent_from_train_candidate_vocabulary": 1702,
+      "target_in_train_candidate_vocabulary": 418,
+      "tasks": 2120
+    },
+    "train": {
+      "authors": 316,
+      "candidate_vocabulary_coverage": 0.3883892885691447,
+      "families": 2373,
+      "poems": 2502,
+      "poems_by_length": {
+        "5": 2203,
+        "7": 299
+      },
+      "target_absent_from_train_candidate_vocabulary": 6121,
+      "target_in_train_candidate_vocabulary": 3887,
+      "tasks": 10008
+    }
+  },
+  "status": "source_restoration_data_built",
+  "unique_text_poems": 3579
+}

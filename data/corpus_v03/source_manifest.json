@@ -1,0 +1,122 @@
+[
+  {
+    "bytes": 408405,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.0.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/audit_sources/tang_0.json",
+    "records": 1000,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "4f88f429938082523cdc72a1612bd7a7c3e3f7a33f8192c61ae51340efc3c92d",
+    "source_path": "全唐诗/poet.tang.0.json"
+  },
+  {
+    "bytes": 477519,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.1000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.1000.json",
+    "records": 1000,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "6e703b8d8dcedbd6110f6d48d043665ca2131db2035a5bfcef5e59a19aeb6d75",
+    "source_path": "全唐诗/poet.tang.1000.json"
+  },
+  {
+    "bytes": 417948,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.2000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.2000.json",
+    "records": 1002,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "ec28efa7e2ae9cdbbba09f0ed186e32ccae47a325ad1e5816b7ad56071c1665a",
+    "source_path": "全唐诗/poet.tang.2000.json"
+  },
+  {
+    "bytes": 453811,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.3000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.3000.json",
+    "records": 1001,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "9e4ba2323752b6b9fbdba875cdbc6a26636fe0cabc85fd066370d4915952001f",
+    "source_path": "全唐诗/poet.tang.3000.json"
+  },
+  {
+    "bytes": 488655,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.4000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.4000.json",
+    "records": 1000,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "b8a7946c879b9658a6c667a4c55f776fae7e5e00a17789ab06b274c1429afc66",
+    "source_path": "全唐诗/poet.tang.4000.json"
+  },
+  {
+    "bytes": 467225,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.5000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.5000.json",
+    "records": 1000,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "a0306e6962cff01639ad9a00b042a201b8dec1f30fa5d768a7b112589887861e",
+    "source_path": "全唐诗/poet.tang.5000.json"
+  },
+  {
+    "bytes": 470031,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.6000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.6000.json",
+    "records": 1001,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "982a21d2b15922b406911f1c825785054314c686da86b2155d7aebb362d22771",
+    "source_path": "全唐诗/poet.tang.6000.json"
+  },
+  {
+    "bytes": 474558,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.7000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.7000.json",
+    "records": 1003,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "a6fb69d7b4343c904dc56ae5aae34facc2478d196b51c37ceba9d1e2f171b342",
+    "source_path": "全唐诗/poet.tang.7000.json"
+  },
+  {
+    "bytes": 574248,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.8000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.8000.json",
+    "records": 1001,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "ac3848e95b02736168003863795de4474838c2d6a71a24ca2a4a280ea5177773",
+    "source_path": "全唐诗/poet.tang.8000.json"
+  },
+  {
+    "bytes": 476882,
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.9000.json",
+    "license_path": "data/audit_sources/poetry_LICENSE",
+    "license_sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "local_path": "data/corpus_v03/raw/poet.tang.9000.json",
+    "records": 1000,
+    "repository": "chinese-poetry/chinese-poetry",
+    "sha256": "b99d6596e3a1fe1a661652383083f92d196b8baf4e461d087081d5e1e1b7a51f",
+    "source_path": "全唐诗/poet.tang.9000.json"
+  }
+]

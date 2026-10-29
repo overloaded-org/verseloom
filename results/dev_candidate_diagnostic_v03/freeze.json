@@ -1,0 +1,70 @@
+{
+  "config": {
+    "candidate_source_split": "train",
+    "cross_line_spans": false,
+    "evaluation_split": "dev",
+    "expected_dev_tasks": 2188,
+    "family_weighting": "mean task coverage within each family, then mean families",
+    "length_pools": [
+      5,
+      7
+    ],
+    "models_or_predictions_opened": false,
+    "normalization": "none; source code points retained",
+    "policies": [
+      {
+        "id": "even_prefix_min2",
+        "min_count": 2,
+        "rows": "even",
+        "spans": "prefix"
+      },
+      {
+        "id": "even_prefix_min1",
+        "min_count": 1,
+        "rows": "even",
+        "spans": "prefix"
+      },
+      {
+        "id": "even_adjacent_min2",
+        "min_count": 2,
+        "rows": "even",
+        "spans": "all_adjacent"
+      },
+      {
+        "id": "all_adjacent_min2",
+        "min_count": 2,
+        "rows": "all",
+        "spans": "all_adjacent"
+      }
+    ],
+    "schema": "versematrix.dev-candidate-source-diagnostic.v0.3",
+    "scope": "Vocabulary coverage only; not top-16 retrieval recall, model accuracy, literary quality or test improvement.",
+    "stage": "post_pilot_development_only",
+    "target": "prefix two characters of each even-numbered line; four tasks per dev poem",
+    "task_files_opened": false,
+    "test_tasks_parsed": false
+  },
+  "frozen_at_utc": "2026-10-29T02:08:29.071867+00:00",
+  "script": {
+    "path": "scripts/run_dev_candidate_diagnostic_v03.py",
+    "sha256": "82e536bfa6f551532233e33c39a31dedd2c8bc147d1b12a598b76a5387e0dc05"
+  },
+  "sources": [
+    {
+      "bytes": 2038259,
+      "path": "data/corpus_v03/poems.jsonl",
+      "sha256": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c"
+    },
+    {
+      "bytes": 310133,
+      "path": "data/corpus_v03/candidate_spans.json",
+      "sha256": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6"
+    },
+    {
+      "bytes": 1397,
+      "path": "data/corpus_v03/build_manifest.json",
+      "sha256": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301"
+    }
+  ],
+  "status": "frozen_before_candidate_counts_or_dev_coverage"
+}

@@ -1,0 +1,43 @@
+{
+  "project": "VerseMatrix Lab",
+  "version": "0.3.0",
+  "date": "2026-10-29",
+  "matrix_organization": {
+    "implemented": true,
+    "exact_local_and_full_verse_scoped": true,
+    "trained_span_solver": true,
+    "trained_span_dp_checks": 144,
+    "priority_promoted": false
+  },
+  "word_convolution": {
+    "trained": true,
+    "training_runs": 6,
+    "optimizer_updates_per_run": 400,
+    "task": "observed_source_restoration",
+    "test_tasks": 2120,
+    "test_families": 501,
+    "statistical_baseline_implemented": true,
+    "same_receptive_field_attention_run": false,
+    "cnn_family_top1": 0.003992015968063872,
+    "ngram_family_top1": 0.0074850299401197605,
+    "promotion_decision": "DO_NOT_PROMOTE_CNN_FROM_THIS_PILOT",
+    "human_evaluated": false
+  },
+  "data": {
+    "source_poems": 3579,
+    "source_families": 3382,
+    "shape_only_not_certified_lushi": true,
+    "contextual_reading_gold": false,
+    "candidate_reading_join_completed": true
+  },
+  "integrity": {
+    "checkpoint_mismatch_detected": true,
+    "expected_bytes_recovered_by_frozen_schedule": true,
+    "config_or_selection_changed": false,
+    "cause_determined": false
+  },
+  "interaction": {
+    "scientific_interaction": "NOT_ESTIMATED"
+  },
+  "next_gate": "dev_candidate_supply_diagnostic_then_new_independent_confirmation_and_contextual_readings"
+}

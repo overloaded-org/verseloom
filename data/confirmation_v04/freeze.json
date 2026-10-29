@@ -1,0 +1,140 @@
+{
+  "code_sha256": {
+    "scripts/build_confirmation_v04.py": "b35220c32fa7c1f07d00aaeb54a6077c1039e51cf3bebd71ebc304d7e86f30cd",
+    "src/wordconv_lab/confirmation.py": "cc86255d6114f4b06c0d550dffe197832055a396eada4041e7876354b7c6f5e8",
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+    "tests/test_confirmation.py": "de897b116ec3dde2bea0bc3c6039339f38b810c21c0d18d0eadcc4a26e64d44b"
+  },
+  "config": {
+    "characters": "CJK unified/compatibility ideographs only",
+    "exclusion": "Build connected components jointly over ALL old train/dev/test poems and all new unique poems; exclude every new poem in any component containing an old poem, including indirect new-poem bridges.",
+    "families": [
+      "exact text deduplication",
+      "shared complete line",
+      "within-line bigram-set Jaccard >= 4/5"
+    ],
+    "insufficient_families": "retain all eligible families; do not change sources or supplement",
+    "max_families": 512,
+    "no_candidate_or_model_processing": true,
+    "normalization": "none; exact original Unicode code points",
+    "schema": "versematrix.confirmation-policy.v0.4",
+    "scope": "Source-text restoration confirmation; not certified lushi, contextual reading gold, literary-quality gold or author-held-out evaluation.",
+    "selected_split": "confirm",
+    "selection": "Eligible joint component family_id = family_ + first 24 hex digits of digest(sorted unique poem IDs)); sort by SHA256(salt + ':' + family_id), then family_id; retain all poems from the first max_families eligible components.",
+    "selection_salt": "versematrix-confirmation-v04-20261029",
+    "shape": [
+      [
+        8,
+        5
+      ],
+      [
+        8,
+        7
+      ]
+    ],
+    "shard_offsets": [
+      10000,
+      11000,
+      12000,
+      13000,
+      14000,
+      15000,
+      16000,
+      17000,
+      18000,
+      19000
+    ],
+    "source_commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "task": "four even-line initial-two-character masks per unique selected poem",
+    "unselected_new_data": "retained as selection evidence only; not used for train/dev"
+  },
+  "frozen_at_utc": "2026-10-29T03:09:15.548664+00:00",
+  "prior_input_sha256": {
+    "data/audit_sources/poetry_LICENSE": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "data/corpus_v03/build_manifest.json": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301",
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c"
+  },
+  "source_plan": [
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.10000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.10000.json",
+      "offset": 10000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.10000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.11000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.11000.json",
+      "offset": 11000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.11000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.12000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.12000.json",
+      "offset": 12000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.12000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.13000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.13000.json",
+      "offset": 13000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.13000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.14000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.14000.json",
+      "offset": 14000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.14000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.15000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.15000.json",
+      "offset": 15000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.15000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.16000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.16000.json",
+      "offset": 16000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.16000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.17000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.17000.json",
+      "offset": 17000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.17000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.18000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.18000.json",
+      "offset": 18000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.18000.json"
+    },
+    {
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "download_url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.19000.json",
+      "local_path": "data/confirmation_v04/raw/poet.tang.19000.json",
+      "offset": 19000,
+      "repository": "chinese-poetry/chinese-poetry",
+      "source_path": "全唐诗/poet.tang.19000.json"
+    }
+  ],
+  "status": "frozen_before_new_source_download_and_processing"
+}

@@ -1,0 +1,75 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-10-29T03:19:08.953717+00:00",
+  "source_sha256": {
+    "scripts/run_retrieval_v04.py": "8de6606cfd9ca3a1764acd65a6163355b4f8c1bb9077774dbf752083318ad69f",
+    "src/wordconv_lab/retrieval.py": "e791fb648996ef431aeafa6cbe86933c905df509c5a4e2ae8d04c5751d7fb856",
+    "src/wordconv_lab/restoration.py": "24e2acb05a93303418e8dc33af3e108d25198876091b0a42f7d908c3b151cb14",
+    "src/wordconv_lab/corpus.py": "539af6c6f440e6ae450d24e6d77fb47928cbb63f767e0c8ef2fc1fe57091de9a",
+    "src/wordconv_lab/confirmation.py": "cc86255d6114f4b06c0d550dffe197832055a396eada4041e7876354b7c6f5e8",
+    "scripts/build_confirmation_v04.py": "b35220c32fa7c1f07d00aaeb54a6077c1039e51cf3bebd71ebc304d7e86f30cd",
+    "configs/retrieval_v0.4.json": "6727c3386cf4ea6cd4d5efbd8329152ece5f658285f57971e9e29293950f2eb3"
+  },
+  "input_sha256": {
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/corpus_v03/vocabulary.json": "d39dda44257007b17f62fde6251124bf9541ff8e8dbcd824fbf109e72424a2bc",
+    "data/corpus_v03/candidate_spans.json": "846f0a0d529516fd065259612d9692d3a7523aa42cc4bc24122be8e79e1f49d6",
+    "data/corpus_v03/build_manifest.json": "fb395fa9b1b3cd75e59f9ef8a4651d4ea8cde95aadb3bc8542c26a567e0c0301",
+    "results/dev_candidate_diagnostic_v03/candidate_counts.json": "f0715baa8faae31bb2303886d151dc95c1133bd398bac7876e07a96051bb9d89",
+    "data/confirmation_v04/poems.jsonl": "a2bc0961002a93a48234af4dad9def100c6bdf85c81ae35d25853d2885787782",
+    "data/confirmation_v04/tasks.jsonl": "c84b5addf7b1e033fc126e4e7517cacf874a64bfc1d0672c729cd85aa4dcaa69",
+    "data/confirmation_v04/freeze.json": "b07088df664caf387be211f18a145be354411ccfe058352b7c1fd579fa166a68",
+    "data/confirmation_v04/build_manifest.json": "68cf3093cbacb3d8f845c88e2adf361022c4e9edec64545c0b0489d454dbe43a",
+    "data/confirmation_v04/source_manifest.json": "e6e4dde0da559e22d9ce118f95794ec836c6296f11fa39ac21ee9b82a6d8b22a"
+  },
+  "outputs": {
+    "association_resources.json": {
+      "bytes": 3058551,
+      "sha256": "e597f15443343213d8840fbafa4d3a97d9f24906e64b867f4592bbabdaba1994"
+    },
+    "baseline_equivalence_audit.json": {
+      "bytes": 3952,
+      "sha256": "31dc92f697f4ad24f7e025842ba2c277d0c54aa23e866d96a21a16122d49124d"
+    },
+    "candidate_identity_audit.json": {
+      "bytes": 313,
+      "sha256": "1ac6d8ff0a8db46cae59da179f96639094cd846c3f849763921184e7fe52592a"
+    },
+    "candidate_resources.json": {
+      "bytes": 3510422,
+      "sha256": "9dddec7077e807536a97712aed31560a062f13fac29976ae78e79a36ddbcbb4c"
+    },
+    "confirmation_predictions.jsonl": {
+      "bytes": 13067401,
+      "sha256": "9d307ccececfad77735ed3f68ca2e13cbecefc602dda30a2596715717f8f55b7"
+    },
+    "confirmation_started.json": {
+      "bytes": 2118,
+      "sha256": "f4ff62fb08bb84fbc4eeaae04d44526856cf4e241d06fe5fcfca2b2c551d683f"
+    },
+    "dev_predictions.jsonl": {
+      "bytes": 23881819,
+      "sha256": "d080a25cf1c6ce1a83378c29b2b0df81679bcef13e8ab298990515d0da140bc4"
+    },
+    "dev_report.json": {
+      "bytes": 84711,
+      "sha256": "5247e005873603c92a9b11e8596912b62431df3c9abf6efca21bd7894f6bbe5e"
+    },
+    "freeze.json": {
+      "bytes": 5343,
+      "sha256": "208535a904822f7dd7fd8dd6cc5e6ec6374d3919ca06fefab8c4d5a81ed20ca4"
+    },
+    "report.json": {
+      "bytes": 17917,
+      "sha256": "02d9b6ebc96ffbc7a2963d9d5a35799812d9a39044324ec4170a094def07ba3e"
+    },
+    "selection_frozen.json": {
+      "bytes": 1024,
+      "sha256": "b3315d8ecda9998214d94e423c0ab5beb8dbe603d0ac35006c7435e1061dc7c4"
+    },
+    "training_statistics_summary.json": {
+      "bytes": 2466,
+      "sha256": "ed67d605edef983e87cf04b71a21aa57191ecf86fb870c285381d6f3c124e7a3"
+    }
+  }
+}

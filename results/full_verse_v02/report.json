@@ -1,0 +1,222 @@
+{
+  "schema": "versematrix.full-verse-exact.synthetic.v0.2",
+  "status": "all_full_verse_oracle_checks_passed",
+  "scorer_trained": false,
+  "synthetic": true,
+  "human_evaluated": false,
+  "profile": "strict_basic_templates_only",
+  "configurations_per_case": 4,
+  "config_sha256": "0d081ecbc79d1c120db7ea6c364c90d42adcd01fc67f01a3a8ee1e96b98b44c2",
+  "cases_sha256": "ddc57d1bdaab42547a9a36efb4fe3a7466756da03b548808a7f9a053fbaff28a",
+  "absolute_tolerance": 1e-12,
+  "cases": [
+    {
+      "length": 5,
+      "rows": 8,
+      "status": "verified_exact_in_declared_scope",
+      "full_combinations": 384,
+      "feasible_combinations": 16,
+      "outer_configurations": 4,
+      "profile": "strict_basic_templates_only",
+      "oracle_score": 0.45395490357238755,
+      "solver_score": 0.4539549035723876,
+      "selected_original_score": 0.45395490357238755,
+      "optimality_abs_error": 0.0,
+      "factorization_abs_error": 5.551115123125783e-17,
+      "selected_template": "L5-P-R0",
+      "selected_rhyme": "R2",
+      "selected_lines": [
+        "AAAAA",
+        "AAAAB",
+        "AAAAA",
+        "AAAAB",
+        "AAAAA",
+        "AAAAB",
+        "AAAAA",
+        "AAAAB"
+      ],
+      "selected_tones": [
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "PPPZZ",
+        "ZZZPP",
+        "ZZPPZ",
+        "PPZZP"
+      ],
+      "selected_rhyme_endings": [
+        {
+          "row": 1,
+          "token": "B",
+          "rhyme": "R2"
+        },
+        {
+          "row": 3,
+          "token": "B",
+          "rhyme": "R2"
+        },
+        {
+          "row": 5,
+          "token": "B",
+          "rhyme": "R2"
+        },
+        {
+          "row": 7,
+          "token": "B",
+          "rhyme": "R2"
+        }
+      ],
+      "oracle_original_model_calls": 1536,
+      "selected_solution_check_model_calls": 4,
+      "dp_local_factor_calls": 96,
+      "call_units_warning": "local factor calls and full-couplet model calls are different units; no throughput ratio is claimed",
+      "configuration_checks": [
+        {
+          "template_id": "L5-P-R0",
+          "rhyme_group": "R1",
+          "feasible_combinations": 4,
+          "oracle_score": 0.23693436173845803,
+          "solver_score": 0.236934361738458,
+          "optimality_abs_error": 2.7755575615628914e-17
+        },
+        {
+          "template_id": "L5-P-R0",
+          "rhyme_group": "R2",
+          "feasible_combinations": 4,
+          "oracle_score": 0.45395490357238755,
+          "solver_score": 0.4539549035723876,
+          "optimality_abs_error": 5.551115123125783e-17
+        },
+        {
+          "template_id": "L5-P-R1",
+          "rhyme_group": "R1",
+          "feasible_combinations": 4,
+          "oracle_score": 0.12244918840104355,
+          "solver_score": 0.12244918840104353,
+          "optimality_abs_error": 1.3877787807814457e-17
+        },
+        {
+          "template_id": "L5-P-R1",
+          "rhyme_group": "R2",
+          "feasible_combinations": 4,
+          "oracle_score": 0.38658910665564106,
+          "solver_score": 0.3865891066556411,
+          "optimality_abs_error": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "length": 7,
+      "rows": 8,
+      "status": "verified_exact_in_declared_scope",
+      "full_combinations": 384,
+      "feasible_combinations": 16,
+      "outer_configurations": 4,
+      "profile": "strict_basic_templates_only",
+      "oracle_score": -1.8530851974189892,
+      "solver_score": -1.8530851974189895,
+      "selected_original_score": -1.8530851974189892,
+      "optimality_abs_error": 0.0,
+      "factorization_abs_error": 2.220446049250313e-16,
+      "selected_template": "L7-Z-R1",
+      "selected_rhyme": "R2",
+      "selected_lines": [
+        "AAAABAC",
+        "AAAAAAB",
+        "BAAAAAA",
+        "AAAAAAB",
+        "AAAAAAA",
+        "AAAAAAB",
+        "AAAAAAB",
+        "AAAAAAB"
+      ],
+      "selected_tones": [
+        "ZZPPZZP",
+        "PPZZZPP",
+        "PPZZPPZ",
+        "ZZPPZZP",
+        "ZZPPPZZ",
+        "PPZZZPP",
+        "PPZZPPZ",
+        "ZZPPZZP"
+      ],
+      "selected_rhyme_endings": [
+        {
+          "row": 0,
+          "token": "C",
+          "rhyme": "R2"
+        },
+        {
+          "row": 1,
+          "token": "B",
+          "rhyme": "R2"
+        },
+        {
+          "row": 3,
+          "token": "B",
+          "rhyme": "R2"
+        },
+        {
+          "row": 5,
+          "token": "B",
+          "rhyme": "R2"
+        },
+        {
+          "row": 7,
+          "token": "B",
+          "rhyme": "R2"
+        }
+      ],
+      "oracle_original_model_calls": 1536,
+      "selected_solution_check_model_calls": 4,
+      "dp_local_factor_calls": 128,
+      "call_units_warning": "local factor calls and full-couplet model calls are different units; no throughput ratio is claimed",
+      "configuration_checks": [
+        {
+          "template_id": "L7-Z-R0",
+          "rhyme_group": "R1",
+          "feasible_combinations": 4,
+          "oracle_score": -2.107120898724614,
+          "solver_score": -2.1071208987246144,
+          "optimality_abs_error": 4.440892098500626e-16
+        },
+        {
+          "template_id": "L7-Z-R0",
+          "rhyme_group": "R2",
+          "feasible_combinations": 4,
+          "oracle_score": -1.8834877460247665,
+          "solver_score": -1.8834877460247668,
+          "optimality_abs_error": 2.220446049250313e-16
+        },
+        {
+          "template_id": "L7-Z-R1",
+          "rhyme_group": "R1",
+          "feasible_combinations": 4,
+          "oracle_score": -2.0233718596025128,
+          "solver_score": -2.0233718596025128,
+          "optimality_abs_error": 0.0
+        },
+        {
+          "template_id": "L7-Z-R1",
+          "rhyme_group": "R2",
+          "feasible_combinations": 4,
+          "oracle_score": -1.8530851974189892,
+          "solver_score": -1.8530851974189895,
+          "optimality_abs_error": 2.220446049250313e-16
+        }
+      ]
+    }
+  ],
+  "total_raw_full_matrices_checked": 768,
+  "total_feasible_full_matrices": 32,
+  "total_original_couplet_oracle_calls": 3072,
+  "limits": [
+    "Exactly the complete supplied 8x5 and 8x7 finite candidate spaces and four declared outer configurations per case are checked.",
+    "The outer rhyme groups are a caller-supplied finite set, not a search of all historical rhyme systems.",
+    "Only strict canonical basic templates are optimized; this is not the common_prefix audit profile or a complete account of aojiu.",
+    "The objective is the sum of four independent fixed-feature local couplet scores; arbitrary whole-poem semantics or repetition constraints invalidate this decomposition.",
+    "Synthetic A/B/C symbols with asserted synthetic readings and untrained random weights do not demonstrate Chinese reading accuracy or literary quality.",
+    "Floating-point equivalence is checked at an absolute tolerance of 1e-12; factor-call and whole-model-call counts are not throughput comparisons."
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "schema": "versematrix.matching-independent-review.v0.5",
+  "status": "PASS_INDEPENDENT_DEVELOPMENT_RESULTS",
+  "reviewed_at_utc": "2026-10-29T08:49:23.444682+00:00",
+  "formal_result": "DO_NOT_ALLOCATE_CONFIRMATION_FROM_THIS_DEV_RUN",
+  "new_training_performed_in_review": false,
+  "test_or_confirmation_content_opened": false,
+  "protocol_tests": {
+    "file": "tests/test_matching_protocol.py",
+    "sha256": "602b1c5af27300d759d9a24346fa41aeb1f7e45d2e20f6e3fd5e23348befaaae",
+    "tests": 10,
+    "status": "passed"
+  },
+  "independent_mathematical_oracle": {
+    "script": "scripts/audit_matching_math_v05.py",
+    "script_sha256": "64f860e574ee4f2e6f80bda9cac062af37ce288062dd053ba302b9bbbd2e4409",
+    "receipt": "results/matching_v05/independent_math_review.json",
+    "receipt_sha256": "8dbf24f10847e12e7a2b3333cfbe3f71e1dad77e5a5eec42a94317338369539f",
+    "replay": "passed",
+    "gradient_coordinates": 108,
+    "maximum_scaled_gradient_error": 1.8722678922319643e-08,
+    "maximum_synthetic_forward_score_error": 3.552713678800501e-15,
+    "oracle_uses_core_forward": false
+  },
+  "full_result_review": {
+    "status": "PASS_RAW_ROWS_SELECTION_METRICS_AND_BUDGET",
+    "old_test_rows_skipped_before_json_decode": 530,
+    "confirmation_files_opened": false,
+    "recorded_chronology": [
+      "2026-10-29T08:34:30.940733+00:00",
+      "2026-10-29T08:34:32.664388+00:00",
+      "2026-10-29T08:34:38.555246+00:00",
+      "2026-10-29T08:40:44.282230+00:00",
+      "2026-10-29T08:40:57.164455+00:00"
+    ],
+    "frozen_source_and_input_identities_unchanged": true,
+    "prediction_rows_checked": 98460,
+    "metric_measures_checked": 1134,
+    "maximum_metric_error": 2.6645352591003757e-15,
+    "formal_training_runs": 12,
+    "checkpoints": 36,
+    "optimizer_updates": 14400,
+    "sample_presentations": 460800,
+    "full_vocabulary_softmax_every_update": true,
+    "distinct_eligible_training_tasks_per_seed": 5951,
+    "development_tasks": 2188,
+    "development_families": 508,
+    "dev_target_buckets": {
+      "outside_W": 1291,
+      "in_W_never_prefix_positive": 250,
+      "seen_prefix_positive": 647
+    },
+    "mismatch_permutation_offsets": {
+      "5": 107,
+      "7": 14
+    },
+    "strong_baseline_original_v04_dev_replay": "all 2188 target ranks/top16/scores exact; 100 hits",
+    "strong_baseline_family_recall": 0.0442503280839895,
+    "primary_full3_family_recall": 0.010580708661417323,
+    "mismatched_primary_family_recall": 0.0013943569553805774,
+    "selected_steps": {
+      "full_w1": 1200,
+      "full_w3": 800,
+      "suffix_w3": 400,
+      "upper_w3": 1200
+    },
+    "gate": {
+      "checks": {
+        "all_three_seed_gains_positive": false,
+        "context_mismatch_drop_threshold": false,
+        "mean_gain_threshold": false
+      },
+      "decision": "DO_NOT_ALLOCATE_CONFIRMATION_FROM_THIS_DEV_RUN",
+      "formal_literary_quality_gate": "NOT_EVALUATED",
+      "independent_confirmation": "NOT_PERFORMED",
+      "passed": false,
+      "primary_mean_gain_over_strong_baseline": -0.033669619422572176,
+      "primary_mean_minus_mismatched_context": 0.009186351706036745,
+      "scope": "development_resource_allocation_gate_not_confirmatory_evidence",
+      "seed_gains_over_strong_baseline": [
+        -0.03194717847769029,
+        -0.03662237532808399,
+        -0.03243930446194226
+      ]
+    },
+    "aggregation": "Mean of the three seeded models per task, then within family, then equal-family mean; not an ensemble retriever.",
+    "reviewed_prediction_sha256": {
+      "baselines/strong_statistical.jsonl": "506748e9f8368aa8521aa855e0398a467f2e3e36e2d0fd850477c943397dc3e1",
+      "baselines/all_position_frequency.jsonl": "537c131b34e63ab980480ec8e141b0c4ff6e82ee9f121fbcf92c6911f10688dc",
+      "baselines/prefix_positive_frequency.jsonl": "a8acdbd060c068b2a8f4386e755a11aa40f10ab945733c1281833c8a8934c45f",
+      "predictions/full_w3_seed0/update_0400.jsonl": "ea7c038d0239cdac8a8dee10c5e2368c09e7bad0f39e787fc83c43bb97a45b99",
+      "predictions/full_w3_seed0/update_0800.jsonl": "0e8e044538720bfcae38c233f43d349b0f03cc9e483afe602f3455a2f14b65ad",
+      "predictions/full_w3_seed0/update_1200.jsonl": "c962bf333514986d7f36d311f99e5d092a7f09cb967ac5edbd464dc8e91d8d88",
+      "predictions/full_w1_seed0/update_0400.jsonl": "c3b7d4811d2f673ce69fb16e4eda1b8308c34b5f4814fa731878ad2b4b6f90f4",
+      "predictions/full_w1_seed0/update_0800.jsonl": "00b80eb782c24ee1cdbb0fa8272150eebc33efb70730865aca443c7665a83d9a",
+      "predictions/full_w1_seed0/update_1200.jsonl": "a644c316d79f1c4f67d367ae217ca14887917098bd383d7728495fe9e4daff69",
+      "predictions/upper_w3_seed0/update_0400.jsonl": "a24b39d578a390ef1fb617e070ed677cfd5603cd46cd8fa02433b12d1704c030",
+      "predictions/upper_w3_seed0/update_0800.jsonl": "4a2b0d7be7df1caec0d53a4d3f5ffcad4787216a290102325cc746fed80b1e05",
+      "predictions/upper_w3_seed0/update_1200.jsonl": "d9592cf40a4c49853261890e9390924c58432142bf26db11baa0a9453a3b61d6",
+      "predictions/suffix_w3_seed0/update_0400.jsonl": "54add330654252424e7f4ea27819fa66c93142299d12b425aca5110e8655baa1",
+      "predictions/suffix_w3_seed0/update_0800.jsonl": "82929f41d40c5985790b2e6803bb34a251d4341b9d08fa50e99361cb86f04923",
+      "predictions/suffix_w3_seed0/update_1200.jsonl": "3dcd230007bbdaba26a48ba326a8e1cff814de58b2211493a63ac85d583f21dc",
+      "predictions/full_w3_seed1/update_0400.jsonl": "b00b9839cb652891e8e332afa6903c82cc9b436f89658009b5c880e08b875f53",
+      "predictions/full_w3_seed1/update_0800.jsonl": "13c8433522ce522981ca2c883941cf73894cc166df27f3551c4f2e13f9a21a8c",
+      "predictions/full_w3_seed1/update_1200.jsonl": "50eed74d7c8a44318d00793125ecb4db3581284210f586bdaf23ab6b67212305",
+      "predictions/full_w1_seed1/update_0400.jsonl": "5634cf35ef2cdc87583c4ee3cc2c29bf3097b00569d2f4fa8f27b71bb3b9470e",
+      "predictions/full_w1_seed1/update_0800.jsonl": "d25616bfbdc958f9ba66a522f7de36bd501d8cbc8b9b2788ff79c023a2237fd7",
+      "predictions/full_w1_seed1/update_1200.jsonl": "62cf704b5896fa8a706cd794b31b0526d546c05d64af2aafde78a4847c873e75",
+      "predictions/upper_w3_seed1/update_0400.jsonl": "68685e37d17cd7818428c18dad2e1dbc992e62951108c1f7f8199aa091e26159",
+      "predictions/upper_w3_seed1/update_0800.jsonl": "c87695c1aeb8b589e20a00b8adf739f35e31ed3706b5506cda96e0e993006302",
+      "predictions/upper_w3_seed1/update_1200.jsonl": "d96178dda4c2324c04131eefceaef2e371f2adad6cae198b46d3c72ad050f175",
+      "predictions/suffix_w3_seed1/update_0400.jsonl": "23a419b7976544c00f8eb28306f62a0317c1666c3802229ee4d4594a696a604a",
+      "predictions/suffix_w3_seed1/update_0800.jsonl": "6117f57370449ba5f8aeeb80e186e2e40406059f371bfa0283ef3a9070f0dce8",
+      "predictions/suffix_w3_seed1/update_1200.jsonl": "b9f0caa7c97feb331a9706252fed1c55b977fdae34ee60b27fb0a6238433a75d",
+      "predictions/full_w3_seed2/update_0400.jsonl": "d6bc13851f729f97c1fde50d3582bd7d1ac291423a7d6d260f81290d803419d6",
+      "predictions/full_w3_seed2/update_0800.jsonl": "fc38e7b77d6224d29d81b15eda3438556a050c216c49e837c51f0978ff3e61f9",
+      "predictions/full_w3_seed2/update_1200.jsonl": "d6dfa6aff131cb39ed31be5643996489b79ff6851722d01f75891c5506f1c119",
+      "predictions/full_w1_seed2/update_0400.jsonl": "8bb8a372173dd046e4a8d468b6d06b0dd5d808fd72d6875df78e81cd2b1cca17",
+      "predictions/full_w1_seed2/update_0800.jsonl": "792659c5dfb8064c43e91ccd08c8fd1c75906add8f00bae3833e2e3014c580be",
+      "predictions/full_w1_seed2/update_1200.jsonl": "d54bef1325514381bcc3d0d1b5e2c301787cf73073f4b40ac9039ea8bbec4a7e",
+      "predictions/upper_w3_seed2/update_0400.jsonl": "a98d83615f4406e4cd0eab7d43b314fd99e74302ed9efb3f2d1ecdfebff35e07",
+      "predictions/upper_w3_seed2/update_0800.jsonl": "e40ccfb851ed18c52f4a0f3b939f07b084c4dccea6334ea22a138932b4b7ce30",
+      "predictions/upper_w3_seed2/update_1200.jsonl": "7706f060337bf402221324fc471d478fa48899922046f6e3dadfc0277515df48",
+      "predictions/suffix_w3_seed2/update_0400.jsonl": "e892d780f2ba59cc6e00939e92e7de906cde72d311ed352bafe8b6238ae83884",
+      "predictions/suffix_w3_seed2/update_0800.jsonl": "e3ade4f4bed8c8dce12cfc2132a576bd5bf7ea5036d6fbe510ad482cfac4ab37",
+      "predictions/suffix_w3_seed2/update_1200.jsonl": "450238f46d1a092d5d80dfc709116fa2f50d40d169c8b2329f01539554ade7f4",
+      "diagnostics/zero_context_seed0.jsonl": "d554a8c58a60e34c61f7574b92cf5d721aca78327b7d92005e8578e698fab2bf",
+      "diagnostics/zero_context_seed1.jsonl": "023f8c2bfec52e7869d8ed7391e79592bfae582f0440fc88924f46557d3d9839",
+      "diagnostics/zero_context_seed2.jsonl": "06140405929534564c6ebffbd3c2cd1b127707d7d19e4d6e84f271215076b74b",
+      "diagnostics/mismatched_context_seed0.jsonl": "6925286c7fbeeaea56b82344097b6b53b22fa50f0a0dde3b80cd0b785a5bcbb0",
+      "diagnostics/mismatched_context_seed1.jsonl": "84bf7080adbb8de270b972c0af581725d5c25d52a4f0a3a68359ba346c6c582f",
+      "diagnostics/mismatched_context_seed2.jsonl": "935e636537f0359969d796ff12c5f346c64694746160763fd3a0074434bbd28f"
+    },
+    "report_sha256": "dfa2bbc4287c640dc01bc0e6367bcc63333bef63ef875c301ac584ba99f475ed",
+    "selection_sha256": "88f9a3120a62888b3e66ef00b79d5bc3bcd736e64de010766a332536b624c2dc",
+    "prepared_sha256": "fe989f07f18200b0b0f8d7b9078c6a828ae7194eb68fc21546eee6db00f2592b",
+    "data_schedule_review_sha256": "8f0dd096a92d3132d724e4108fccd7fb5f62bf12495a1b5182316dfdd05978ec"
+  },
+  "selected_parameter_scalar_review": {
+    "models": 12,
+    "queries": 48,
+    "candidate_scores_reconstructed": 285096,
+    "sampling": "Per model, the first two dev task IDs by SHA256(task_id) within each length; same fixed queries for every arm and seed.",
+    "maximum_full_score_error": 6.661338147750939e-15,
+    "complete_saved_ranking_hashes_match": true,
+    "seconds": 10.510137410001335,
+    "checks": [
+      {
+        "model": "full_w1_seed0",
+        "path": "models/full_w1_seed0/update_1200.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 6.217248937900877e-15,
+        "complete_ranking_sha256": "a3e040587f6eb51a1f75086293a9de2052a10205b03bf1dc1f3c1241d3c3083c",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed0",
+        "path": "models/full_w1_seed0/update_1200.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 6.217248937900877e-15,
+        "complete_ranking_sha256": "dd52dd0e8ee541f157f50c24d1e03b7817ce46d307ed5b6bed1e3c25a0d3be9f",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed0",
+        "path": "models/full_w1_seed0/update_1200.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.329070518200751e-15,
+        "complete_ranking_sha256": "08b49f553ed62f7e24dd34ce3019422a32d237146b4a9c113006c04d94ce353a",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed0",
+        "path": "models/full_w1_seed0/update_1200.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.329070518200751e-15,
+        "complete_ranking_sha256": "1b49f4f78a5174a48c844e1360ce10269161c9fe7d41f02a3edcbe7e0e6044c1",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed1",
+        "path": "models/full_w1_seed1/update_1200.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "e9bcb946ec01f86a5fb43f013fcc465aac2a4022f2d39c666001f398d115b95b",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed1",
+        "path": "models/full_w1_seed1/update_1200.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "8113bb412e5bcc07997b340cfd8d9b683041db291b2e4b4edc584e82a853a2ed",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed1",
+        "path": "models/full_w1_seed1/update_1200.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.10702591327572e-15,
+        "complete_ranking_sha256": "542ea6dce03d5fb79d25e31e482c7ab5772846f8e4071170b506a9b7aa49e158",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed1",
+        "path": "models/full_w1_seed1/update_1200.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.10702591327572e-15,
+        "complete_ranking_sha256": "15b03286b0493bdb2c5e5e1799c357ed6f9693fcd80c5bc6e4a7929c01b04014",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed2",
+        "path": "models/full_w1_seed2/update_1200.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 6.661338147750939e-15,
+        "complete_ranking_sha256": "4f1c601b0dc458921e8ab0c90022bc873f877962fd87726ec19327ce8be31fa0",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed2",
+        "path": "models/full_w1_seed2/update_1200.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 6.661338147750939e-15,
+        "complete_ranking_sha256": "2274dd136959a8a5a1ecf1b8ed6cc122f493e125897bd0da1d007f0af4297c42",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed2",
+        "path": "models/full_w1_seed2/update_1200.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.773159728050814e-15,
+        "complete_ranking_sha256": "ab197d75143e54c037a692f40495dc56add40ab1faf438608cba3e514de96963",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w1_seed2",
+        "path": "models/full_w1_seed2/update_1200.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.773159728050814e-15,
+        "complete_ranking_sha256": "f981f1a47c17c752e5b53be5eccd76c4eda7225dbe6f9620bb2ef946121c8cb8",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed0",
+        "path": "models/full_w3_seed0/update_0800.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 5.329070518200751e-15,
+        "complete_ranking_sha256": "179f6a143988874dfa31f9b0616bbf6b551c4f7315e07f4a03818c6ec7ff5e98",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed0",
+        "path": "models/full_w3_seed0/update_0800.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 5.329070518200751e-15,
+        "complete_ranking_sha256": "6f39c1ac4642c24f41d993c7ed9e4146aee11ff14510518142c707990e9f9fd1",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed0",
+        "path": "models/full_w3_seed0/update_0800.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "dd99b0281531ed7472aaf64cf479cc732b2d728a1ce20c01b7a3eac58a6ad4a0",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed0",
+        "path": "models/full_w3_seed0/update_0800.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "77218cfc998c7ead0128f3e0c2e29c7a69a8d9379866a18814b8a74209f308a1",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed1",
+        "path": "models/full_w3_seed1/update_0800.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "92972c44042cdec3b612ff763be7807382db24a39f895df06b79d5f3f9dd940f",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed1",
+        "path": "models/full_w3_seed1/update_0800.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "a85e1cdb20486f974b1bced2340857cf62260041ead560754002e047f7611b0e",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed1",
+        "path": "models/full_w3_seed1/update_0800.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.218847493575595e-15,
+        "complete_ranking_sha256": "95383a3c64c30e802d76458c4acdb5093d2fd31b311770a8666a74c88ea665fb",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed1",
+        "path": "models/full_w3_seed1/update_0800.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.218847493575595e-15,
+        "complete_ranking_sha256": "3128c6e12c0892a03e334c44f691f98280a13cfcdeffd9ddd611fac7052b5f8c",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed2",
+        "path": "models/full_w3_seed2/update_0800.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 5.773159728050814e-15,
+        "complete_ranking_sha256": "5e8fd7a284e4520ea12a3dc03c2ef4cad7c1b03f94a13ae3f702ba3e09ea86c4",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed2",
+        "path": "models/full_w3_seed2/update_0800.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 5.773159728050814e-15,
+        "complete_ranking_sha256": "125fdc51d97d8954772195beed202978ccfce87a0ebcd399ca6a07cdd99f09f1",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed2",
+        "path": "models/full_w3_seed2/update_0800.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.884981308350689e-15,
+        "complete_ranking_sha256": "3fe1962ad1e48fc2de9ebfa3d22ca6efe298b67f5591f29e8c070502067bc1a1",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "full_w3_seed2",
+        "path": "models/full_w3_seed2/update_0800.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.884981308350689e-15,
+        "complete_ranking_sha256": "3f38733c01bbfdb1077e9434743167bf1ea68fa82d6e6a238703eacad64eabae",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed0",
+        "path": "models/suffix_w3_seed0/update_0400.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 3.9968028886505635e-15,
+        "complete_ranking_sha256": "6d542de5aa97c74df30f5d65040f6dcd641811458af7bdee612eba61571ae079",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed0",
+        "path": "models/suffix_w3_seed0/update_0400.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 3.9968028886505635e-15,
+        "complete_ranking_sha256": "f0885c7ae882ce0632141c44b8dc13a47e72eb8353f40df81cb7f69ca90fc65f",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed0",
+        "path": "models/suffix_w3_seed0/update_0400.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "1cd81b050b094670228f9082672313a1b14129c96af7a1b2f71dee7de9067f29",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed0",
+        "path": "models/suffix_w3_seed0/update_0400.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "f08bef0624076c3db3682177b21f921159b3b318a23651dabebace85fbfaa3e0",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed1",
+        "path": "models/suffix_w3_seed1/update_0400.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 3.552713678800501e-15,
+        "complete_ranking_sha256": "4061c2ae7d187d12ddfd19897981ede2287c000f2c8a752f560b07670449ec06",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed1",
+        "path": "models/suffix_w3_seed1/update_0400.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 3.552713678800501e-15,
+        "complete_ranking_sha256": "1456edc944ddd1ce4c4438934cb8439e94e23d04efe8edaf0fda1154b784670c",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed1",
+        "path": "models/suffix_w3_seed1/update_0400.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 3.6637359812630166e-15,
+        "complete_ranking_sha256": "17ee576a44795e70f22943168087dcba7ec115dc0aec25ad1fa61d90e802bb6b",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed1",
+        "path": "models/suffix_w3_seed1/update_0400.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 3.6637359812630166e-15,
+        "complete_ranking_sha256": "7744022a6e6c0a7fdb16ea36ed63647f7d9bf10bed4b811c4290883b8678c3e7",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed2",
+        "path": "models/suffix_w3_seed2/update_0400.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 3.552713678800501e-15,
+        "complete_ranking_sha256": "a5ff51c0e068abb9ecef9c48c677d2e158be03aa6e60180aee270d2e815ae07c",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed2",
+        "path": "models/suffix_w3_seed2/update_0400.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 3.552713678800501e-15,
+        "complete_ranking_sha256": "5adfbb1f2c9470fc2a96e1a9052f7ed334d9e03efa70df09286bd824e8920541",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed2",
+        "path": "models/suffix_w3_seed2/update_0400.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 3.9968028886505635e-15,
+        "complete_ranking_sha256": "39d3ba2b7f5f4ff93c513071643b7794168e6cc8df03865908e9bb92b7db959e",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "suffix_w3_seed2",
+        "path": "models/suffix_w3_seed2/update_0400.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 3.9968028886505635e-15,
+        "complete_ranking_sha256": "e9ee1a45eb13bddc2d75833cd85494e3fea428a851ee1ae038d3f6717dc52ec3",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed0",
+        "path": "models/upper_w3_seed0/update_1200.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "8622d4d48a48d61b0fd5ade73c109fc82cd890d1ee6f139f53ab8ba40a6b33b3",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed0",
+        "path": "models/upper_w3_seed0/update_1200.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "1367dfbed8297492e72b779440f1d2fce5d38b2886ee0536b6f52f28f007c817",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed0",
+        "path": "models/upper_w3_seed0/update_1200.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.329070518200751e-15,
+        "complete_ranking_sha256": "8f0b1f7e76ce40d3c7c451d794f7d2ee42006462c8044b10e025706dee323648",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed0",
+        "path": "models/upper_w3_seed0/update_1200.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 5.329070518200751e-15,
+        "complete_ranking_sha256": "afe940db32ef84741f7ec0b44647933bab8391c4538ebf60c08c9bef91aedfcc",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed1",
+        "path": "models/upper_w3_seed1/update_1200.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "7aba14c05678d27d9c12862f553c89d0ac256ae9d55aacf629cf46f2ac0e5897",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed1",
+        "path": "models/upper_w3_seed1/update_1200.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "fd8da4327577aeac32474298434f184c10bdff9d3d897380542a7333abc0180b",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed1",
+        "path": "models/upper_w3_seed1/update_1200.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 3.552713678800501e-15,
+        "complete_ranking_sha256": "71c17d083022e462cd16e0301a048ae391ead50a6d62160979266169ab8d98e1",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed1",
+        "path": "models/upper_w3_seed1/update_1200.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 3.552713678800501e-15,
+        "complete_ranking_sha256": "d73f65247184af1028928b311140f970461d2cde01a5cbf6175b3efa986b49cc",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed2",
+        "path": "models/upper_w3_seed2/update_1200.npz",
+        "task_id": "poem_d61fc73347cb0cca24d8613b:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "a094c2d4881432afb2e53e1ed8a5d67cddee66caf9506f7effdc04acd197208a",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed2",
+        "path": "models/upper_w3_seed2/update_1200.npz",
+        "task_id": "poem_3384897faf7f441f0596b843:couplet3",
+        "length": 5,
+        "candidate_count": 10375,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "fb1cf6a3d0fc8c3f7522dcb655fd6e9bc61c6e711a4dae10fe3d0a7b42ab9486",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed2",
+        "path": "models/upper_w3_seed2/update_1200.npz",
+        "task_id": "poem_161c777c11bb4da61703057d:couplet1",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "fc777ffd55d72f9e92abd1ca2eaeedf96048cefdecc48cf2bb51424e71814c3c",
+        "complete_ranking_top16_and_target_rank_match": true
+      },
+      {
+        "model": "upper_w3_seed2",
+        "path": "models/upper_w3_seed2/update_1200.npz",
+        "task_id": "poem_b93efff0c3e3b84f52424525:couplet0",
+        "length": 7,
+        "candidate_count": 1504,
+        "maximum_full_score_error_in_batch": 4.440892098500626e-15,
+        "complete_ranking_sha256": "e8c66503dde096f9a2d51df417e243ecb7c1faf4e4c665b4d7a716bab96b9d4c",
+        "complete_ranking_top16_and_target_rank_match": true
+      }
+    ]
+  },
+  "interpretation": [
+    "All formal raw result rows, shared-checkpoint selection, resource gate, target buckets and training receipts were independently recomputed; the failed development resource gate is correct.",
+    "The three seeded-model mean is not an ensemble. The usable completion example defaults to the predeclared seed zero.",
+    "Independent scalar scores for the fixed 48-query sample agree numerically and all complete ranking hashes match. The entire 98460-row corpus was not independently rescored from scalar formulas.",
+    "Development data were repeatedly used. This review does not establish independent generalization, author-held-out performance, formal prosody validity or literary quality.",
+    "Frozen identities and recorded ordering support the retained run history; this is not external preregistration or a claim about unrecorded activity."
+  ]
+}

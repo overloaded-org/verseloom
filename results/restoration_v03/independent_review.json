@@ -1,0 +1,173 @@
+{
+  "schema": "versematrix.restoration-independent-review.v0.3",
+  "reviewer": "/root/protocol_review_v03",
+  "review_date": "2026-10-29",
+  "status": "PASS_CURRENT_REPORT_WITH_RECOVERY_DISCLOSURE",
+  "review_mode": "read-only recomputation completed before this receipt; no model retraining or tuning",
+  "evidence_paths": [
+    "data/corpus_v03/tasks.jsonl",
+    "data/corpus_v03/poems.jsonl",
+    "data/corpus_v03/candidate_spans.json",
+    "results/restoration_v03/pools/train.jsonl",
+    "results/restoration_v03/pools/dev.jsonl",
+    "results/restoration_v03/pools/test.jsonl",
+    "results/restoration_v03/test_predictions.jsonl",
+    "results/restoration_v03/report.json",
+    "results/restoration_v03/selection_frozen.json",
+    "results/restoration_v03/manifest.json",
+    "results/restoration_v03/manifest_before_completion.json",
+    "results/restoration_v03/completion_frozen.json",
+    "results/restoration_v03_recovery/recovery_receipt.json"
+  ],
+  "data_and_pool_checks": {
+    "test_tasks": 2120,
+    "test_families": 501,
+    "targets_verified_against_corresponding_source_poem_positions": 2120,
+    "all_train_dev_test_pools_checked_for_train_only_span_origin": 8195,
+    "candidate_vocabulary_reconstructed_from_train_source_poems": true,
+    "all_pools_have_16_unique_lexically_ordered_candidates": true,
+    "test_proposal_pools_recomputed_from_visible_query_without_target": 2120,
+    "test_recomputed_candidate_hash_and_ngram_scores_exactly_match": true,
+    "all_system_prediction_rows_share_frozen_query_and_candidate_identity": true,
+    "predictions_recomputed_from_saved_scores_and_common_tie_rule": true,
+    "test_target_injection_detected": false,
+    "target_in_training_candidate_vocabulary_tasks": 418,
+    "target_in_top16_pool_tasks": 74
+  },
+  "metric_checks": {
+    "system_or_seed_aggregate_entries_recomputed": 9,
+    "fields_recomputed": [
+      "family_macro",
+      "task_micro",
+      "covered_task_top1"
+    ],
+    "five_and_seven_character_slices_recomputed": true,
+    "maximum_absolute_difference_from_report": 1.3877787807814457e-17,
+    "primary_results": {
+      "ngram": {
+        "family_macro": 0.0074850299401197605,
+        "task_micro": 0.007075471698113208,
+        "covered_task_top1": 0.20270270270270271
+      },
+      "cnn_w3_seed_mean": {
+        "family_macro": 0.003992015968063872,
+        "task_micro": 0.0037735849056603774,
+        "covered_task_top1": 0.1081081081081081
+      },
+      "aligned_w1_seed_mean": {
+        "family_macro": 0.004324683965402528,
+        "task_micro": 0.004088050314465409,
+        "covered_task_top1": 0.11711711711711711
+      }
+    }
+  },
+  "bootstrap_checks": {
+    "recomputed_from_saved_predictions_and_original_targets": true,
+    "seed_average_before_family_aggregation": true,
+    "resampling_unit": "whole_family_equal_weight_paired_difference",
+    "repeats": 5000,
+    "seed": 2026102903,
+    "confidence": 0.95,
+    "all_reported_means_and_intervals_match_within": 1e-15,
+    "cnn_minus_aligned_w1": {
+      "mean_difference": -0.0003326679973386561,
+      "interval": [
+        -0.0008316699933466401,
+        0.0
+      ]
+    },
+    "cnn_minus_ngram": {
+      "mean_difference": -0.0034930139720558886,
+      "interval": [
+        -0.007651363938789089,
+        0.0004990019960079838
+      ]
+    }
+  },
+  "frozen_identity_checks": {
+    "source_and_input_sha256_match_original_manifest": true,
+    "configuration_hash_matches_manifest_and_report": true,
+    "completion_source_hash_matches_completion_receipt": true,
+    "original_manifest_and_selection_hash_chain_match": true,
+    "selected_checkpoint_sha_step_and_training_receipt_match_original_selection": true,
+    "each_selected_update_is_earliest_maximum_of_dev_family_macro_history": true,
+    "each_original_run_records_400_updates_and_12800_actual_task_presentations": true,
+    "models": [
+      {
+        "arm": "cnn_w3",
+        "seed": 0,
+        "selected_update": 400,
+        "sha256": "a7d7f73403d8d5d82b7ee6d9470259acbbb8015577d0736181a0763ab085331b"
+      },
+      {
+        "arm": "aligned_w1",
+        "seed": 0,
+        "selected_update": 400,
+        "sha256": "e48c1e9ecf2eb12a814083ac9e17b07a394562dca17572d2e0b10e245f1b9f56"
+      },
+      {
+        "arm": "cnn_w3",
+        "seed": 1,
+        "selected_update": 200,
+        "sha256": "e44b49983941ce772558516f61837a5349a153b961de2cf15b970dde1d85f40b"
+      },
+      {
+        "arm": "aligned_w1",
+        "seed": 1,
+        "selected_update": 200,
+        "sha256": "be4b02abfb1a3bce4ec4aca64757aad465d12bdf9fbafaface54cbb0d2e7884a"
+      },
+      {
+        "arm": "cnn_w3",
+        "seed": 2,
+        "selected_update": 400,
+        "sha256": "e635d9b8c72415ea173989963ae025188adaad4ee9fb2ca327564fa80eb25193"
+      },
+      {
+        "arm": "aligned_w1",
+        "seed": 2,
+        "selected_update": 300,
+        "sha256": "1028d39ff70986357e9502fe02bafdb7d6749babd1279b8942babf9d8525bb32"
+      }
+    ]
+  },
+  "completion_body_check": {
+    "source": "scripts/run_restoration_v03.py",
+    "resumed_source": "scripts/complete_restoration_v03.py",
+    "range": "test_arrays assignment through return summary, inclusive",
+    "verbatim_identical": true,
+    "characters": 7031,
+    "sha256": "3b6802ba5345ebab9794d9fe5f1a989a2480eb63d38f2801af12fb88184ad398"
+  },
+  "recovery_checks": {
+    "affected_arm": "aligned_w1",
+    "seed": 1,
+    "preserved_observed_checkpoint_update": 100,
+    "preserved_observed_checkpoint_sha256": "4870c6956f32e6d682bd240bc1842f4dcbd8e0ea2fb2cb053fdd37e7e74126d4",
+    "restored_update": 200,
+    "restored_sha256": "be4b02abfb1a3bce4ec4aca64757aad465d12bdf9fbafaface54cbb0d2e7884a",
+    "both_preserved_artifact_hashes_and_metadata_match_recovery_receipt": true,
+    "restored_bytes_match_original_frozen_expected_sha256": true,
+    "anomaly_cause": "not_determined",
+    "original_planned_optimizer_updates": 2400,
+    "original_planned_task_presentations": 76800,
+    "additional_recovery_optimizer_updates": 200,
+    "additional_recovery_task_presentations": 6400,
+    "model_selection_changed": false,
+    "prior_in_memory_neural_prediction_runs_repeated": 3,
+    "repeated_predictions_are_independent_evaluations": false
+  },
+  "conclusion": {
+    "current_report_values_may_be_reported": true,
+    "proxy_promotion_decision": "DO_NOT_PROMOTE_CNN_FROM_THIS_PILOT",
+    "literary_quality_gate": "NOT_EVALUATED",
+    "limitations": [
+      "Disclose the checkpoint integrity interruption and exact-identity recovery; do not call this an uninterrupted first evaluation.",
+      "Recovery replay compute is additional to the six planned training runs and is not a new independent run or model-selection opportunity.",
+      "CNN failed the prespecified improvement gate; its comparison interval with ngram crosses zero, so these results do not establish a statistically significant inferiority claim.",
+      "Exact source restoration is not literary-quality gold, and eight-line shape does not certify regulated verse.",
+      "Only 74 of 2120 test targets occur in the frozen top16 pool; all-system conclusions remain conditional on this proposal mechanism.",
+      "Bootstrap uncertainty is conditional on three fixed training seeds; the now-exposed test set cannot provide a fresh independent confirmation after further tuning."
+    ]
+  }
+}

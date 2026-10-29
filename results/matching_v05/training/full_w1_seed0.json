@@ -1,0 +1,180 @@
+{
+  "accounting": {
+    "batch_size": 32,
+    "distinct_families_presented": 2247,
+    "distinct_poems_presented": 2375,
+    "distinct_tasks_presented": 5951,
+    "gradient_accumulation": 1,
+    "micro_steps": 1200,
+    "optimizer_updates": 1200,
+    "sample_presentations": 38400,
+    "sample_presentations_by_length": {
+      "5": 35456,
+      "7": 2944
+    },
+    "task_presentation_count_sha256": "5fa47e200085df9ef870159affe00d29ebcd98896451f72373aa6e060cbf71fd"
+  },
+  "arm": "full_w1",
+  "checkpoint_evaluation_seconds": 6.22996324199994,
+  "initial_parameters": {
+    "adam_state_scalars_allocated": 85534,
+    "by_tensor": {
+      "context_bias": {
+        "shape": [
+          27
+        ],
+        "stored": 27,
+        "trainable": 27
+      },
+      "context_kernel": {
+        "shape": [
+          1,
+          12,
+          27
+        ],
+        "stored": 324,
+        "trainable": 324
+      },
+      "embedding": {
+        "shape": [
+          3068,
+          12
+        ],
+        "stored": 36816,
+        "trainable": 36804
+      },
+      "query_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      },
+      "query_projection": {
+        "shape": [
+          324,
+          16
+        ],
+        "stored": 5184,
+        "trainable": 5184
+      },
+      "span_projection": {
+        "shape": [
+          24,
+          16
+        ],
+        "stored": 384,
+        "trainable": 384
+      },
+      "span_projection_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      }
+    },
+    "candidate_id_embeddings": false,
+    "context_mode": "both",
+    "dtype": "float64",
+    "frozen_inactive_query_projection_parameters": 0,
+    "frozen_parameters": 12,
+    "frozen_unk_parameters": 12,
+    "independent_candidate_bias": false,
+    "norm_epsilon": 1e-06,
+    "output_bias": "identically_zero",
+    "representation_dim": 16,
+    "step_count": 0,
+    "stored_parameters": 42767,
+    "temperature": 0.1,
+    "trainable_parameters": 42755
+  },
+  "loss_first_100_mean": 9.855377260768837,
+  "loss_last_100_mean": 5.875763814855361,
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "learning_rate": 0.003,
+    "max_grad_norm": 5.0,
+    "name": "Adam_with_decoupled_weight_decay",
+    "weight_decay": 0.0001
+  },
+  "parameters": {
+    "adam_state_scalars_allocated": 85534,
+    "by_tensor": {
+      "context_bias": {
+        "shape": [
+          27
+        ],
+        "stored": 27,
+        "trainable": 27
+      },
+      "context_kernel": {
+        "shape": [
+          1,
+          12,
+          27
+        ],
+        "stored": 324,
+        "trainable": 324
+      },
+      "embedding": {
+        "shape": [
+          3068,
+          12
+        ],
+        "stored": 36816,
+        "trainable": 36804
+      },
+      "query_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      },
+      "query_projection": {
+        "shape": [
+          324,
+          16
+        ],
+        "stored": 5184,
+        "trainable": 5184
+      },
+      "span_projection": {
+        "shape": [
+          24,
+          16
+        ],
+        "stored": 384,
+        "trainable": 384
+      },
+      "span_projection_bias": {
+        "shape": [
+          16
+        ],
+        "stored": 16,
+        "trainable": 16
+      }
+    },
+    "candidate_id_embeddings": false,
+    "context_mode": "both",
+    "dtype": "float64",
+    "frozen_inactive_query_projection_parameters": 0,
+    "frozen_parameters": 12,
+    "frozen_unk_parameters": 12,
+    "independent_candidate_bias": false,
+    "norm_epsilon": 1e-06,
+    "output_bias": "identically_zero",
+    "representation_dim": 16,
+    "step_count": 1200,
+    "stored_parameters": 42767,
+    "temperature": 0.1,
+    "trainable_parameters": 42755
+  },
+  "run_wall_seconds": 26.75698978500077,
+  "schedule_sha256": "daa3c35ec9e6d2a9d9b1ec08c871660813fba9ff8e5dce4c25679d4dcc3685c8",
+  "seed": 0,
+  "training_seconds": 19.63751893112567
+}

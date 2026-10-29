@@ -1,0 +1,27 @@
+{
+  "arm": "full_w3",
+  "candidate_counts": {
+    "5": 10375,
+    "7": 1504
+  },
+  "candidate_set_sha256": {
+    "5": "32240ed40dcacf40ca87dd9b37fc9a14ef06c290b9ee206315ac511c0129437b",
+    "7": "02f945705f8b56920cc442792da347411e825a7324781d8feff62b439248105e"
+  },
+  "comparison_baseline": {
+    "alignment_weight": 0.25,
+    "boundary_weight": 0.25,
+    "id": "strong_statistical"
+  },
+  "independent_confirmation": "NOT_PERFORMED",
+  "model_path": "models/full_w3_seed0/update_0800.npz",
+  "model_sha256": "7ddfbd26ccaeae03e6af5f0015ac05da5c8d4f92523aaf093a9063d4041f8b52",
+  "schema": "versematrix.experimental-completion-candidate.v0.5",
+  "scope": "source_restoration_not_prosody_certification_or_validated_literary_quality",
+  "seed": 0,
+  "seed_selection": "fixed_seed_zero_before_training_not_best_seed",
+  "selection_path": "selection_frozen.json",
+  "selection_sha256": "88f9a3120a62888b3e66ef00b79d5bc3bcd736e64de010766a332536b624c2dc",
+  "status": "experimental",
+  "step": 800
+}

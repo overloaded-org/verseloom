@@ -1,0 +1,190 @@
+{
+  "status": "research_worked_examples_not_independent_test",
+  "retrieved_date": "2026-10-29",
+  "poems": [
+    {
+      "poem_id": "wangwei-shanjuqiuming",
+      "author": "王維",
+      "title": "山居秋暝",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=山居秋暝&oldid=2276100",
+      "source_container": "全唐詩卷126；維基文庫固定修訂",
+      "lines": [
+        "空山新雨後",
+        "天氣晚來秋",
+        "明月松間照",
+        "清泉石上流",
+        "竹喧歸浣女",
+        "蓮動下漁舟",
+        "隨意春芳歇",
+        "王孫自可留"
+      ],
+      "published_tones": null,
+      "annotation_status": "text_verified_no_contextual_tone_gold",
+      "review_notes": [
+        "間、空、下等字不得僅依字典多值集合自動選成合律讀音。",
+        "月、石、竹、歇是傳統入聲檢查點，普通話不能直接代替。",
+        "韻腳秋、流、舟、留可用作同韻核驗候選，需引用固定韻表。"
+      ]
+    },
+    {
+      "poem_id": "dufu-chunwang",
+      "author": "杜甫",
+      "title": "春望",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=春望&oldid=2640428",
+      "source_container": "全唐詩卷224；維基文庫固定修訂",
+      "lines": [
+        "國破山河在",
+        "城春草木深",
+        "感時花濺淚",
+        "恨別鳥驚心",
+        "烽火連三月",
+        "家書抵萬金",
+        "白頭搔更短",
+        "渾欲不勝簪"
+      ],
+      "published_tones": null,
+      "annotation_status": "text_verified_no_contextual_tone_gold",
+      "review_notes": [
+        "固定選城春，不把版本註「一作荒」混入詩句。",
+        "更、勝、簪等讀音需語境與歷史依據；不能只靠模板挑選。",
+        "國、別、月、白、欲、不等入聲字應保留傳統聲調。"
+      ]
+    },
+    {
+      "poem_id": "menghaoran-guogurenzhuang",
+      "author": "孟浩然",
+      "title": "過故人莊",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=過故人莊&oldid=2691920",
+      "source_container": "全唐詩卷160；維基文庫固定修訂",
+      "lines": [
+        "故人具雞黍",
+        "邀我至田家",
+        "綠樹村邊合",
+        "青山郭外斜",
+        "開筵面場圃",
+        "把酒話桑麻",
+        "待到重陽日",
+        "還來就菊花"
+      ],
+      "published_tones": null,
+      "annotation_status": "text_verified_no_contextual_tone_gold",
+      "review_notes": [
+        "故人具雞黍、開筵面場圃超出僅首字放寬的基本模板；不匹配不能推出非律詩。",
+        "重陽的重、還來的還、場圃的場以及斜的歷史韻屬需語境處理。",
+        "綠、合、郭、日、菊等入聲字是檢查點。"
+      ]
+    },
+    {
+      "poem_id": "wangwan-cibeigushanxia",
+      "author": "王灣",
+      "title": "次北固山下",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=次北固山下&oldid=1982016",
+      "source_container": "全唐詩卷115；附河嶽英靈集異文，採頁面主文",
+      "lines": [
+        "客路青山外",
+        "行舟綠水前",
+        "潮平兩岸闊",
+        "風正一帆懸",
+        "海日生殘夜",
+        "江春入舊年",
+        "鄉書何處達",
+        "歸雁洛陽邊"
+      ],
+      "published_tones": null,
+      "annotation_status": "text_verified_no_contextual_tone_gold",
+      "review_notes": [
+        "主文與江南意版本須分別保留，不能混合行句。",
+        "潮平兩岸闊在通常讀法下為PPZZZ，窄模板可能不覆蓋。",
+        "行舟的行與何處的處需語境消歧；客、綠、闊、一、日、入、達、洛是入聲檢查點。"
+      ]
+    },
+    {
+      "poem_id": "dushenyan-hejinlinglucheng",
+      "author": "杜審言",
+      "title": "和晉陵陸丞早春遊望",
+      "source_url": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf",
+      "source_container": "曾永義課程講義物理第6頁（零起P5），逐字四聲標註",
+      "lines": [
+        "獨有宦遊人",
+        "偏驚物候新",
+        "雲霞出海曙",
+        "梅柳渡江春",
+        "淑氣催黄鳥",
+        "晴光轉綠蘋",
+        "忽聞歌古調",
+        "歸思欲霑巾"
+      ],
+      "published_four_tones": [
+        "入上去平平",
+        "平平入去平",
+        "平平入上去",
+        "平上去平平",
+        "入去平平上",
+        "平平上入平",
+        "入平平上去",
+        "平去入平平"
+      ],
+      "published_tones": [
+        "ZZZPP",
+        "PPZZP",
+        "PPZZZ",
+        "PZZPP",
+        "ZZPPZ",
+        "PPZZP",
+        "ZPPZZ",
+        "PZZPP"
+      ],
+      "annotation_status": "source_specific_published_four_tone_annotation_not_independent_benchmark",
+      "review_notes": [
+        "雲霞出海曙=PPZZZ，源講義明列；common-prefix不覆蓋時應報範圍外，不可改讀音。",
+        "歸思的思標去，古調的調標去。",
+        "保留蘋、霑等原字；不自動改成蘋果語義或現代讀音。",
+        "古詩正文屬公有領域；現代標註需歸屬曾永義及該課程，保留來源與授權範圍。"
+      ]
+    },
+    {
+      "poem_id": "dufu-qujiang-first",
+      "author": "杜甫",
+      "title": "曲江（一片花飛減卻春）",
+      "source_url": "https://ocw.aca.ntu.edu.tw/uploads/course_item_file/file/684/104S110_CT02L01.pdf",
+      "source_container": "曾永義課程講義物理第7頁（零起P6），逐字四聲標註",
+      "lines": [
+        "一片花飛減卻春",
+        "風飄萬點正愁人",
+        "且看欲盡花經眼",
+        "莫厭傷多酒入脣",
+        "江上小堂巢翡翠",
+        "苑邊高冢臥麒麟",
+        "細推物理須行樂",
+        "何用浮名絆此身"
+      ],
+      "published_four_tones": [
+        "入去平平上入平",
+        "平平去上去平平",
+        "上平入上平平上",
+        "入去平平上入平",
+        "平去上平平去去",
+        "上平平上去平平",
+        "去平入上平平入",
+        "平去平平去上平"
+      ],
+      "published_tones": [
+        "ZZPPZZP",
+        "PPZZZPP",
+        "ZPZZPPZ",
+        "ZZPPZZP",
+        "PZZPPZZ",
+        "ZPPZZPP",
+        "ZPZZPPZ",
+        "PZPPZZP"
+      ],
+      "annotation_status": "source_specific_published_four_tone_annotation_not_independent_benchmark",
+      "review_notes": [
+        "且看的看標平、行樂的樂標入、巢標平，是講義此例的明確標註。",
+        "按此講義讀音，8句應可由仄起首入模板加common-prefix規則覆蓋。",
+        "保留脣字。",
+        "古詩正文屬公有領域；現代標註需歸屬曾永義及該課程。"
+      ]
+    }
+  ]
+}

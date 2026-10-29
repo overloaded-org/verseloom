@@ -1,0 +1,255 @@
+{
+  "schema": "versematrix.independent-review.v0.4",
+  "status": "PASS_FROZEN_RETRIEVAL_RESULTS",
+  "reviewed_at_utc": "2026-10-29T03:21:38.876014+00:00",
+  "scope": "Read-only independent reconstruction of training resources, metrics, selection, bootstrap and fixed scalar-ranking sample; no new model/selection experiment.",
+  "code_paths_used_for_scoring": [
+    "src/wordconv_lab/restoration.py:BidirNGram original scalar implementation"
+  ],
+  "new_retrieval_core_score_called": false,
+  "new_neural_training_updates": 0,
+  "old_test_rows_skipped_before_decode": 530,
+  "sha_checks": 35,
+  "completion_manifest_sha256": "fd2391367ccc534410706516dde66a5302e4c2075ab7eefcf8ecbc1ca82fcfc6",
+  "selection_sha256": "b3315d8ecda9998214d94e423c0ab5beb8dbe603d0ac35006c7435e1061dc7c4",
+  "recorded_chronology": [
+    "2026-10-29T03:15:38.225362+00:00",
+    "2026-10-29T03:18:04.047501+00:00",
+    "2026-10-29T03:18:26.098810+00:00",
+    "2026-10-29T03:19:08.764539+00:00",
+    "2026-10-29T03:19:08.953717+00:00"
+  ],
+  "frozen_source_input_and_output_identities_unchanged": true,
+  "training_resource_checks": {
+    "training_poems": 2502,
+    "wide_counts": {
+      "5": 10375,
+      "7": 1504
+    },
+    "narrow_counts": {
+      "5": 1317,
+      "7": 97
+    },
+    "candidate_counts_origins_and_historical_narrow_pool": "exact match",
+    "independent_alignment_joint_entries": {
+      "5": 15301,
+      "7": 1749
+    },
+    "independent_boundary_joint_entries": {
+      "5": 14338,
+      "7": 2221
+    },
+    "association_resource_counter_comparison": "exact match"
+  },
+  "development": {
+    "tasks": 2188,
+    "methods": 17,
+    "selected_method": {
+      "id": "wide_a1_b1",
+      "pool": "wide",
+      "alignment_weight": 0.25,
+      "boundary_weight": 0.25
+    },
+    "exact_family_recall": {
+      "numerator": 1079,
+      "denominator": 24384
+    },
+    "best_grid_ties": [
+      "wide_a1_b1",
+      "wide_a1_b2",
+      "wide_a1_b3",
+      "wide_a2_b1",
+      "wide_a2_b2",
+      "wide_a2_b3",
+      "wide_a3_b1",
+      "wide_a3_b2",
+      "wide_a3_b3"
+    ],
+    "selection_and_all_reported_grid_rationals": "exact match"
+  },
+  "confirmation": {
+    "tasks": 2096,
+    "poems": 524,
+    "families": 512,
+    "all_task_and_query_identities": "match source poems",
+    "all_top64_lists": "source membership, uniqueness, order, target-rank consistency and hashes passed",
+    "all_denominators_include_oov": true
+  },
+  "metrics": {
+    "method_metric_slices_checked": 420,
+    "includes_dev_and_confirm_and_5_7_slices": true,
+    "maximum_absolute_error": 2.7755575615628914e-17,
+    "cost_accounting": "matched actual shared component work and per-method ranked-item totals"
+  },
+  "bootstrap_checks": [
+    {
+      "comparison": "selected_minus_narrow",
+      "difference": 0.00341796875,
+      "interval": [
+        -0.00244140625,
+        0.009289550781249822
+      ],
+      "repeats": 5000
+    },
+    {
+      "comparison": "wide_minus_narrow",
+      "difference": 0.00341796875,
+      "interval": [
+        -0.001953125,
+        0.00927734375
+      ],
+      "repeats": 5000
+    },
+    {
+      "comparison": "selected_minus_wide",
+      "difference": 0.0,
+      "interval": [
+        -0.00244140625,
+        0.00244140625
+      ],
+      "repeats": 5000
+    }
+  ],
+  "promotion_decision": "DO_NOT_PROMOTE_RETRIEVER",
+  "independent_scalar_ranking": {
+    "tasks": 16,
+    "candidate_scores": 95032,
+    "method_rankings": 48,
+    "checks": [
+      {
+        "task_id": "poem_be532e3c292638864e212284:couplet1",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_ac2f551193aa6212a5cd3cd7:couplet2",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_a2651e8f335cd8acb9553f6a:couplet1",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_eae5f9e65821b638ce6be30c:couplet2",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_485bc667f77fa0c018b04b8a:couplet1",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_67b2748f7e8fc83c79a5bb65:couplet3",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_b13548194061078884ddf9c1:couplet0",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_40349f656610a1f2bed349bd:couplet0",
+        "length": 5,
+        "wide_candidates": 10375,
+        "narrow_candidates": 1317,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_7ea9807355be39a682de5a57:couplet0",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_c1452aef94eb78d142b9a061:couplet2",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_5a65551c54a3a15686ec5fdc:couplet2",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_bdbd9d8cdba3bda81ecab3bd:couplet2",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_dc650fc6d74d285491e09326:couplet1",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_612229ef3c17e4a52e261237:couplet1",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_326623f9620734a62003dd10:couplet0",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      },
+      {
+        "task_id": "poem_b4db516e2c00be597ef5a7ad:couplet3",
+        "length": 7,
+        "wide_candidates": 1504,
+        "narrow_candidates": 97,
+        "methods": 3,
+        "original_scalar_ngram_and_independent_counter_bonuses": "exact_rank_and_top64_and_scores_match"
+      }
+    ]
+  },
+  "seconds": 4.259332581999843,
+  "limits": [
+    "The chronology and no-post-change finding concern the retained frozen artifacts; this is not external preregistration or proof of unrecorded activity.",
+    "Scalar full-lexicon ranking was independently reconstructed for the fixed 16-task sample; all 2096 stored result rows were checked for identities, membership and reported metrics, not fully rescored.",
+    "All conclusions concern source-prefix retrieval at fixed output K, not equal retrieval compute or literary quality."
+  ]
+}

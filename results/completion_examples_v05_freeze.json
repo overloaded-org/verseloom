@@ -1,0 +1,8 @@
+{
+  "schema": "versematrix.fixed-example-inputs.v0.5",
+  "created_at_utc": "2026-10-29T08:28:27.286456+00:00",
+  "config_path": "configs/completion_examples_v0.5.json",
+  "config_sha256": "90ff8254ac1dbfa39c93e3a364d7f91028e0010e57bde9c55ce361ee7e70159d",
+  "purpose": "fixed_user_facing_demonstrations_not_an_evaluation_set",
+  "selection_used_model_scores": false
+}
