@@ -69,6 +69,9 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
     assert.equal(result.checks.length, 8);
     assert(result.checks.every(check => check.passed === true), "Failed mechanical constraint");
     assert.equal(result.provenance.neuralModelUsed, false);
+    assert.equal(result.provenance.preselectedLines, false);
+    assert.equal(result.opening, null);
+    assert.equal(result.selection.stage, "after-eight-lines");
   }
   const first = await context.VerseLoomEngine.generate(data);
   check(first);
@@ -80,15 +83,17 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
   check(second);
   assert.equal(second.rhymeGroup, alternate.id);
   assert.notEqual(JSON.stringify(first.lines), JSON.stringify(second.lines), "Changing rhyme did not change the poem");
-  assert.equal(context.VerseLoomEngine.version, "verseloom.seeded-openings.v2");
+  assert.equal(context.VerseLoomEngine.version, "verseloom.joint-lines.v3");
+  assert(!homepage.includes("日暮春風起"), "The live page must not prefill an archived poem");
   for (const id of ["seed-input", "auto-seed", "avoid-recent", "replay-button"])
     assert(homepage.includes('id="' + id + '"'), "Missing seed/history UI: " + id);
-  let history = [first.lines[0]], last;
+  let history = [], last;
   const seededOpenings = [];
   for (let seed = 42; seed < 48; seed++) {
     last = await context.VerseLoomEngine.generate(data, {seed, variation: 0.8,
       templateId: "L5-Z-R0", rhymeGroup: first.rhymeGroup, openingHistory: history});
     check(last);
+    assert(last.templateSummaries[0].rows.every(row => row.distinctOpenings > 1), "Search prematurely locked a single opening");
     assert(!history.includes(last.lines[0]), "Recent first line repeated");
     assert(!history.slice(-4).some(line => line.slice(0, 2) === last.lines[0].slice(0, 2)), "Recent opening prefix repeated");
     seededOpenings.push(last.lines[0]);
@@ -101,6 +106,7 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
     assetCount: assets.size, homepageMatched: true, defaultPoem: Array.from(first.lines),
     changedRhyme: second.rhymeLabel, changedPoem: Array.from(second.lines),
     engineVersion: context.VerseLoomEngine.version, seededOpenings, seedAndHistoryReplay: true,
+    preselectedLines: false, selectionStage: "after-eight-lines", homepagePrefilled: false,
     recentFirstLineCollisions: 0, recentPrefixCollisions: 0,
     browserUIExercised: false, checkedAt: new Date().toISOString()};
 }

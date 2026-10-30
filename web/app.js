@@ -31,8 +31,7 @@
     let showTones = false;
     let toastTimer;
     // Only this tab's displayed successes; nothing is uploaded or persisted.
-    // Avoid the visible archived opening on the first exploratory click too.
-    let recentOpenings = data?.baseline?.lines?.length ? [data.baseline.lines[0]] : [];
+    let recentOpenings = [];
 
     function announce(message) {
       ui.live.textContent = message;
@@ -84,7 +83,7 @@
 
     function restoreBadge() {
       ui.badge.classList.toggle("is-generated", Boolean(result));
-      ui.badge.textContent = result ? "本机生成 · 第 " + completedRuns + " 次" : "示例 · 尚未运行";
+      ui.badge.textContent = result ? "本机生成 · 第 " + completedRuns + " 次" : "尚未生成";
     }
 
     function progressFor(job, progress) {
@@ -181,10 +180,9 @@
       });
       ui.lines.replaceChildren(rows);
       ui.lines.classList.toggle("show-tones", showTones);
-      ui.openingDisplay.textContent = generated ? value.opening?.policy === "prefix-balanced-softmax-v1" ?
-        "词块分组抽样" + (value.options.openingHistory.length ? " · 近期去重" : "") : "原版择优" : "尚未运行";
-      ui.kind.textContent = generated ? "本次生成" : "首轮存档";
-      ui.heading.textContent = generated ? "五律 · 新稿" : "五律 · 初试";
+      ui.openingDisplay.textContent = generated ? "八句共同搜索 · 无预定句" : "尚未运行";
+      ui.kind.textContent = generated ? "本次生成" : "空白诗稿";
+      ui.heading.textContent = generated ? "五律 · 新稿" : "五律 · 待成篇";
       ui.rhymeDisplay.textContent = value.rhymeLabel || labelForRhyme(value.rhymeGroup);
       ui.templateDisplay.textContent = value.templateLabel || labelForTemplate(value.templateId);
       ui.time.textContent = generated && Number.isFinite(value.elapsedMs) ? value.elapsedMs < 1000 ? Math.round(value.elapsedMs) + " ms" : (value.elapsedMs / 1000).toFixed(2) + " s" : "尚未运行";
@@ -222,7 +220,7 @@
       if (!value || value.status !== "complete") {
         finishJob(job);
         restoreBadge();
-        displayError("当前设置没有找到完整诗稿", "当前首句与格律约束下未找到完整路径。请换韵部／起式、增加搜索宽度，或取消近期首句去重。没有偷偷放宽约束，下方仍保留上一份诗稿。");
+        displayError("当前设置没有找到完整诗稿", "当前候选与格律约束下未找到完整路径。请换韵部／起式、增加搜索宽度，或取消近期首句去重。没有偷偷放宽约束，下方仍保留上一份诗稿。");
         return;
       }
       if (!Array.isArray(value.lines) || value.lines.length !== 8 || value.lines.some((line) => typeof line !== "string" || Array.from(line).length !== 5)) {
@@ -364,18 +362,19 @@
       ui.beamSummary.textContent = "宽度 " + ui.beam.value;
       ui.errorRegion.hidden = true;
       ui.seed.value = "0";
-      ui.variation.value = "0";
-      ui.autoSeed.checked = false;
+      ui.variation.value = "0.8";
+      ui.autoSeed.checked = true;
+      ui.avoidRecent.checked = true;
       recentOpenings = [];
       setBusy(false);
-      notify("已恢复原始配置并关闭随机，点击生成可复现首作");
+      notify("已恢复自由探索设置；八句均由程序搜索，不预设诗句");
     }
 
     function nextRhyme() {
       if (activeRun) return;
       const feasible = data.rhymes.filter((entry) => entry.feasible);
       if (!feasible.length) { displayError("暂时没有可用韵部", "请重新加载完整的网页数据。"); return; }
-      const current = ui.rhyme.value !== "auto" ? ui.rhyme.value : result?.rhymeGroup || data.baseline.rhymeGroup;
+      const current = ui.rhyme.value !== "auto" ? ui.rhyme.value : result?.rhymeGroup || feasible[0].id;
       const currentIndex = feasible.findIndex((entry) => entry.id === current);
       ui.rhyme.value = feasible[(currentIndex + 1) % feasible.length].id;
       beginGeneration();
@@ -434,9 +433,9 @@
       notify("已下载本次结果与参数");
     }
 
-    if (!data || !engine || typeof engine.generate !== "function" || !Array.isArray(data.templates) || !Array.isArray(data.rhymes) || !data.baseline) {
+    if (!data || !engine || typeof engine.generate !== "function" || !Array.isArray(data.templates) || !Array.isArray(data.rhymes)) {
       [ui.generate, ui.nextRhyme, ui.reset, ui.rhyme, ui.template, ui.beam, ui.copy, ui.tone, ui.seed, ui.autoSeed, ui.variation, ui.replay, ui.avoidRecent].forEach((element) => { element.disabled = true; });
-      displayError("生成资源尚未加载", "请刷新重试。离线使用时，请使用完整网页包或单文件版本；当前诗稿仍是首轮存档示例。");
+      displayError("生成资源尚未加载", "请刷新重试。离线使用时，请使用完整网页包或单文件版本；当前尚未生成诗稿。");
       return;
     }
 
@@ -459,7 +458,8 @@
     }
     ui.beam.value = String(data.defaults?.beamWidth ?? data.defaults?.beam_width ?? 32);
     ui.beamSummary.textContent = "宽度 " + ui.beam.value;
-    renderPoem(data.baseline, false);
+    // Historical fixtures remain test data, never prefill the live poem.
+    renderPoem({lines: [], core: [], rhymeRows: []}, false);
     setBusy(false);
     ui.tone.disabled = false;
     ui.form.addEventListener("submit", (event) => { event.preventDefault(); beginGeneration(); });

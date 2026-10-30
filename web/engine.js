@@ -2,7 +2,7 @@
 (function (global) {
   "use strict";
 
-  const ENGINE_VERSION = "verseloom.seeded-openings.v2";
+  const ENGINE_VERSION = "verseloom.joint-lines.v3";
   const prepared = new WeakMap();
   const allowedOptions = new Set(["rhymeGroup", "templateId", "beamWidth", "coherenceWeight", "repetitionWeight", "seed", "variation", "openingHistory"]);
   const now = () => global.performance ? global.performance.now() : Date.now();
@@ -12,10 +12,7 @@
     if (!condition) throw new Error(message);
   }
 
-  // Stateless, keyed 32-bit mixer. No ambient RNG, clock, candidate IDs or
-  // iteration order participates. The same choice gets the same bounded bias
-  // in every beam prefix. This is exploratory ranking, not a probability model
-  // or a cryptographic random-number generator.
+  // Keyed, deterministic exploration; never chooses or pins a line in advance.
   function choiceNoise(seed, templateId, row, text) {
     let hash = (2166136261 ^ seed) >>> 0;
     for (const char of templateId + "/" + row + "/" + text) {
@@ -101,7 +98,6 @@
     requireValue(Array.isArray(result.openingHistory) && result.openingHistory.length <= 8 &&
       Array.from(result.openingHistory).every(line => typeof line === "string" && Array.from(line).length === 5),
       "首句历史须为最多 8 个五字句的数组。");
-    // Snapshot caller-owned history: later UI changes must not change an active run.
     result.openingHistory = result.openingHistory.slice();
     requireValue(Number.isInteger(result.seed) && result.seed >= 0 && result.seed <= 4294967295,
       "种子须为 0 至 4294967295 的整数。");
@@ -117,52 +113,77 @@
     return result;
   }
 
-  // Sample an opening before completing the poem. A frequent prefix gets ONE
-  // group weight, not one lottery ticket per suffix. Shortlist by original LM
-  // score (a statistical proxy, not certified literary quality), then draw a
-  // prefix and one of its top three lines. Seed keys are independent of traversal.
-  function selectOpening(pool, templateId, options, failedAnchors = []) {
-    const blocked = new Set(options.openingHistory);
-    const prefixes = new Set(options.openingHistory.slice(-4).map(line => Array.from(line).slice(0, 2).join("")));
-    const eligible = pool.filter(line => !blocked.has(line.text) && !prefixes.has(line.prefix) && !failedAnchors.includes(line.text))
-      .slice().sort((a, b) => b.lmScore - a.lmScore || compareText(a.text, b.text));
-    const receipt = {policy: options.variation > 0 ? "prefix-balanced-softmax-v1" : "score-only",
-      originalCandidates: pool.length, eligibleCandidates: eligible.length,
-      blockedLines: [...blocked], blockedPrefixes: [...prefixes], failedAnchors: failedAnchors.slice(),
-      selected: null, groupCount: 0, candidateCount: 0};
-    if (!eligible.length || options.variation === 0) return {pool: eligible, receipt};
-    const best = eligible[0].lmScore;
+  const compareStates = (a, b) => b.selectionScore - a.selectionScore || compareLines(a.lines, b.lines);
+  const firstPrefix = state => state.selected[0].prefix;
+
+  // Keep competing beginnings alive. No group is sampled or made an anchor:
+  // every retained path continues through all eight rows within the SAME budget.
+  function retainBeam(extensions, options) {
+    extensions.sort(compareStates);
+    if (options.variation === 0) return extensions.slice(0, options.beamWidth);
     const groups = new Map();
-    // Cap the statistical-score sacrifice relative to the best eligible opening.
-    // Do not silently recycle history if it leaves no continuation: fail visibly.
-    for (const line of eligible) {
-      if (best - line.lmScore > 0.8) continue;
-      if (!groups.has(line.prefix)) {
-        if (groups.size >= 16) continue;
-        groups.set(line.prefix, []);
-      }
-      if (groups.get(line.prefix).length < 3) groups.get(line.prefix).push(line);
+    for (const state of extensions) {
+      const key = firstPrefix(state);
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(state);
     }
-    const temperature = Math.max(0.2, options.variation);
-    function draw(items, scores, key) {
-      const top = Math.max(...scores);
-      const weights = scores.map(score => Math.exp((score - top) / temperature));
-      const total = preciseSum(weights);
-      let ticket = (choiceNoise(options.seed, templateId + "/" + key, 0, "opening") + 1) / 2 * total;
-      for (let index = 0; index < items.length; index++) {
-        ticket -= weights[index];
-        if (ticket < 0) return items[index];
+    const buckets = [...groups.values()]; // ranked by their best complete prefix
+    const kept = [];
+    for (let depth = 0; kept.length < options.beamWidth; depth++) {
+      let found = false;
+      for (const bucket of buckets) {
+        if (depth >= bucket.length) continue;
+        found = true;
+        kept.push(bucket[depth]);
+        if (kept.length === options.beamWidth) break;
       }
-      return items[items.length - 1];
+      if (!found) break;
     }
-    const entries = [...groups].sort((a, b) => compareText(a[0], b[0]));
-    const chosenGroup = draw(entries, entries.map(([, lines]) => lines[0].lmScore), "prefix");
-    const lines = chosenGroup[1].slice().sort((a, b) => compareText(a.text, b.text));
-    const chosen = draw(lines, lines.map(line => line.lmScore), "line/" + chosenGroup[0]);
-    Object.assign(receipt, {selected: chosen.text, groupCount: groups.size,
-      candidateCount: entries.reduce((sum, [, items]) => sum + items.length, 0),
-      scoreGap: best - chosen.lmScore, temperature});
-    return {pool: [chosen], receipt};
+    return kept.sort(compareStates);
+  }
+
+  // Sampling is applied ONLY to completed eight-line paths. Scores use a mean
+  // per line to set a documented temperature scale; these are not probabilities
+  // over all possible poems. Prefix balancing prevents multiplicity alone from
+  // giving a common beginning more lottery tickets.
+  function chooseComplete(outcomes, options) {
+    const complete = outcomes.filter(row => row.status === "complete");
+    if (!complete.length) return {selected: null, receipt: {stage: "after-eight-lines", candidates: 0, prefixes: 0}};
+    const candidates = complete.flatMap(outcome => outcome.finalists.map(state => ({outcome, state})))
+      .sort((a, b) => compareText(a.outcome.templateId, b.outcome.templateId) || compareLines(a.state.lines, b.state.lines));
+    const groups = new Map();
+    for (const candidate of candidates) {
+      const key = firstPrefix(candidate.state);
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(candidate);
+    }
+    let chosen;
+    if (options.variation === 0) {
+      chosen = candidates.slice().sort((a, b) => compareStates(a.state, b.state) || compareText(a.outcome.templateId, b.outcome.templateId))[0];
+      // Preserve the original template-first tie-break at zero exploration.
+      const original = complete.slice().sort((a, b) => b.best.score - a.best.score ||
+        compareText(a.templateId, b.templateId) || compareLines(a.best.lines, b.best.lines))[0];
+      chosen = {outcome: original, state: original.best};
+    } else {
+      function draw(items, scores, key) {
+        const top = Math.max(...scores);
+        const weights = scores.map(score => Math.exp((score - top) / options.variation));
+        let ticket = (choiceNoise(options.seed, "complete-poem", 8, key) + 1) / 2 * preciseSum(weights);
+        for (let i = 0; i < items.length; i++) {
+          ticket -= weights[i];
+          if (ticket < 0) return items[i];
+        }
+        return items[items.length - 1];
+      }
+      const entries = [...groups.entries()].sort((a, b) => compareText(a[0], b[0]));
+      const group = draw(entries, entries.map(([, rows]) => Math.max(...rows.map(row => row.state.selectionScore / 8))), "group");
+      chosen = draw(group[1], group[1].map(row => row.state.selectionScore / 8), "path/" + group[0]);
+    }
+    return {selected: {...chosen.outcome, best: chosen.state}, receipt: {
+      stage: "after-eight-lines", policy: options.variation > 0 ? "completed-path-prefix-balanced-softmax" : "score-only",
+      candidates: candidates.length, prefixes: groups.size, preselectedLines: false,
+      temperature: options.variation, scoreScale: "mean-per-line",
+    }};
   }
 
   function checkResult(selected, rhymeGroup) {
@@ -207,93 +228,85 @@
       pairCache.set(key, value);
       return value;
     };
+    const blocked = new Set(options.openingHistory);
+    const blockedPrefixes = new Set(options.openingHistory.slice(-4).map(line => Array.from(line).slice(0, 2).join("")));
     const outcomes = [];
-    let candidatesConsidered = 0, progressPercent = 0;
+    let candidatesConsidered = 0;
     for (let templateIndex = 0; templateIndex < templates.length; templateIndex++) {
-      const template = templates[templateIndex], openingAttempts = [], failedAnchors = [];
-      let openingReceipt = null, rowReceipts = [], states = [];
-      const maxAttempts = options.variation > 0 ? 8 : 1;
-      for (let attempt = 0; attempt < maxAttempts; attempt++) {
-        rowReceipts = [];
-        states = [{lines: [], selected: [], score: 0, selectionScore: 0, terms: []}];
-        for (let row = 0; row < 8; row++) {
-          const rhymeRow = template.rhymeRows.includes(row);
-          let pool = runtime.pools[template.core[row] + "/" + (rhymeRow ? rhyme.id : "nonrhyming")] || [];
-          if (row === 0 && (options.variation > 0 || options.openingHistory.length)) {
-            const opening = selectOpening(pool, template.id, options, failedAnchors);
-            pool = opening.pool;
-            openingReceipt = opening.receipt;
-          }
-          // Precompute by logical choice, not by traversal, for stable replay.
-          const biases = new Map(pool.map(candidate => [candidate.text, options.variation === 0 ? 0 :
-            options.variation * choiceNoise(options.seed, template.id, row, candidate.text)]));
-          const counts = {attempted_extensions: 0}, extensions = [];
-          const reject = reason => { counts[reason] = (counts[reason] || 0) + 1; };
-          for (const state of states) {
-            const used = new Map();
-            for (const line of state.selected) for (const char of line.chars) used.set(char, (used.get(char) || 0) + 1);
-            for (const candidate of pool) {
-              counts.attempted_extensions++; candidatesConsidered++;
-              if (state.lines.includes(candidate.text)) { reject("repeated_line"); continue; }
-              if (candidate.chars.some(char => (used.get(char) || 0) >= 2)) { reject("character_use_limit"); continue; }
-              if (rhymeRow && template.rhymeRows.some(previous => previous < row && state.selected[previous].chars[4] === candidate.chars[4])) {
-                reject("repeated_rhyme_character"); continue;
-              }
-              if ((row === 3 || row === 5) && candidate.chars.some((char, col) => char === state.selected[row - 1].chars[col])) {
-                reject("middle_couplet_same_position_character"); continue;
-              }
-              const coherenceRaw = state.selected.length ? preciseSum(state.selected.map(old => pair(old, candidate))) / state.selected.length : 0;
-              const repeated = candidate.chars.reduce((sum, char) => sum + (used.get(char) || 0), 0);
-              const coherenceWeighted = options.coherenceWeight * coherenceRaw;
-              const repetitionPenalty = options.repetitionWeight * repeated;
-              const increment = candidate.lmScore + coherenceWeighted - repetitionPenalty;
-              const samplingBias = biases.get(candidate.text);
-              extensions.push({lines: state.lines.concat(candidate.text), selected: state.selected.concat(candidate),
-                score: state.score + increment, selectionScore: state.selectionScore + increment + samplingBias,
-                terms: state.terms.concat({coherenceRaw, coherenceWeighted, repetitionPenalty,
-                  previousCharacterOccurrences: repeated, increment, samplingBias})});
+      const template = templates[templateIndex], rowReceipts = [];
+      let states = [{lines: [], selected: [], score: 0, selectionScore: 0, terms: []}];
+      for (let row = 0; row < 8; row++) {
+        const rhymeRow = template.rhymeRows.includes(row);
+        const originalPool = runtime.pools[template.core[row] + "/" + (rhymeRow ? rhyme.id : "nonrhyming")] || [];
+        const pool = row === 0 ? originalPool.filter(line => !blocked.has(line.text) && !blockedPrefixes.has(line.prefix)) : originalPool;
+        const biases = new Map(pool.map(candidate => [candidate.text, options.variation === 0 ? 0 :
+          options.variation * choiceNoise(options.seed, template.id, row, candidate.text)]));
+        const counts = {attempted_extensions: 0}, extensions = [];
+        const reject = reason => { counts[reason] = (counts[reason] || 0) + 1; };
+        for (const state of states) {
+          const used = new Map();
+          for (const line of state.selected) for (const char of line.chars) used.set(char, (used.get(char) || 0) + 1);
+          for (const candidate of pool) {
+            counts.attempted_extensions++; candidatesConsidered++;
+            if (state.lines.includes(candidate.text)) { reject("repeated_line"); continue; }
+            if (candidate.chars.some(char => (used.get(char) || 0) >= 2)) { reject("character_use_limit"); continue; }
+            if (rhymeRow && template.rhymeRows.some(previous => previous < row && state.selected[previous].chars[4] === candidate.chars[4])) {
+              reject("repeated_rhyme_character"); continue;
             }
+            if ((row === 3 || row === 5) && candidate.chars.some((char, col) => char === state.selected[row - 1].chars[col])) {
+              reject("middle_couplet_same_position_character"); continue;
+            }
+            const coherenceRaw = state.selected.length ? preciseSum(state.selected.map(old => pair(old, candidate))) / state.selected.length : 0;
+            const repeated = candidate.chars.reduce((sum, char) => sum + (used.get(char) || 0), 0);
+            const coherenceWeighted = options.coherenceWeight * coherenceRaw;
+            const repetitionPenalty = options.repetitionWeight * repeated;
+            const increment = candidate.lmScore + coherenceWeighted - repetitionPenalty;
+            const samplingBias = biases.get(candidate.text);
+            const score = state.score + increment;
+            const selectionScore = state.selectionScore + increment + samplingBias;
+            requireValue(Number.isFinite(score) && Number.isFinite(selectionScore), "累计分数溢出。");
+            extensions.push({lines: state.lines.concat(candidate.text), selected: state.selected.concat(candidate),
+              score, selectionScore, terms: state.terms.concat({coherenceRaw, coherenceWeighted, repetitionPenalty,
+                previousCharacterOccurrences: repeated, increment, samplingBias})});
           }
-          extensions.sort((a, b) => b.selectionScore - a.selectionScore || compareLines(a.lines, b.lines));
-          counts.legal_extensions = extensions.length;
-          counts.beam_pruned = Math.max(0, extensions.length - options.beamWidth);
-          states = extensions.slice(0, options.beamWidth);
-          counts.retained_states = states.length;
-          rowReceipts.push({row, candidatePoolSize: pool.length, counts});
-          progressPercent = Math.max(progressPercent, Math.round((templateIndex * 8 + row + 1) / (templates.length * 8) * 100));
-          onProgress({templateId: template.id, templateIndex, templateCount: templates.length, row, rowCount: 8,
-            percent: progressPercent, openingAttempt: attempt + 1,
-            message: template.label + (attempt ? " · 更换首句第 " + (attempt + 1) + " 次" : "") + " · 正在组织第 " + (row + 1) + " 句"});
-          await yieldTurn();
-          if (!states.length) break;
         }
-        const completed = Boolean(states.length && states[0].lines.length === 8);
-        if (openingReceipt) openingAttempts.push({opening: openingReceipt, status: completed ? "complete" : "infeasible", rows: rowReceipts});
-        if (completed || !openingReceipt?.selected) break;
-        failedAnchors.push(openingReceipt.selected);
+        // All eligible lines compete; never replace a row's pool with one draw.
+        counts.legal_extensions = extensions.length;
+        counts.beam_pruned = Math.max(0, extensions.length - options.beamWidth);
+        states = retainBeam(extensions, options);
+        counts.retained_states = states.length;
+        rowReceipts.push({row, originalCandidatePoolSize: originalPool.length, candidatePoolSize: pool.length, counts,
+          distinctOpenings: new Set(states.map(state => state.lines[0])).size,
+          distinctOpeningPrefixes: new Set(states.map(firstPrefix)).size});
+        onProgress({templateId: template.id, templateIndex, templateCount: templates.length, row, rowCount: 8,
+          percent: Math.round((templateIndex * 8 + row + 1) / (templates.length * 8) * 100),
+          message: template.label + " · 正在组织第 " + (row + 1) + " 句"});
+        await yieldTurn();
+        if (!states.length) break;
       }
       outcomes.push({templateId: template.id, label: template.label, core: template.core, rhymeRows: template.rhymeRows,
         status: states.length && states[0].lines.length === 8 ? "complete" : "infeasible",
-        best: states.length && states[0].lines.length === 8 ? states[0] : null, rows: rowReceipts, opening: openingReceipt, openingAttempts});
+        best: states.length && states[0].lines.length === 8 ? states[0] : null,
+        finalists: states.length && states[0].lines.length === 8 ? states : [], rows: rowReceipts});
     }
-    const complete = outcomes.filter(row => row.status === "complete").sort((a, b) => b.best.selectionScore - a.best.selectionScore ||
-      compareText(a.templateId, b.templateId) || compareLines(a.best.lines, b.best.lines));
-    const selected = complete[0];
+    const {selected, receipt: selection} = chooseComplete(outcomes, options);
     const result = {schema: "verseloom.web.result.v1", engineVersion: ENGINE_VERSION, status: selected ? "complete" : "infeasible",
       lines: selected ? selected.best.lines : [], templateId: selected ? selected.templateId : null,
       templateLabel: selected ? selected.label : null, rhymeGroup: rhyme.id, rhymeLabel: rhyme.label,
       core: selected ? selected.core : [], rhymeRows: selected ? selected.rhymeRows : [],
-      score: selected ? selected.best.score : null, selectionScore: selected ? selected.best.selectionScore : null, elapsedMs: now() - started, candidatesConsidered,
-      opening: selected ? selected.opening : null,
+      score: selected ? selected.best.score : null, selectionScore: selected ? selected.best.selectionScore : null,
+      selection, opening: null, elapsedMs: now() - started, candidatesConsidered,
       options, checks: selected ? checkResult(selected, rhyme.id) : [],
       lineDetails: selected ? selected.best.selected.map((line, row) => ({text: line.text, prefix: line.prefix, suffix: line.suffix,
         tones: line.tones, rhymeGroup: line.rhymeGroup, lmScore: line.lmScore, prefixCount: line.prefixCount,
         suffixCount: line.suffixCount, ...selected.best.terms[row]})) : [],
       templateSummaries: outcomes.map(row => ({templateId: row.templateId, label: row.label, status: row.status,
-        score: row.best ? row.best.score : null, selectionScore: row.best ? row.best.selectionScore : null, lines: row.best ? row.best.lines : [], rows: row.rows, opening: row.opening, openingAttempts: row.openingAttempts})),
-      provenance: {method: data.meta.method, randomization: {
-        algorithm: "prefix-balanced-softmax-and-keyed-bias-v2", enabled: options.variation > 0, seed: options.seed,
-        variation: options.variation, openingHistory: options.openingHistory, changesHardConstraints: false, uniqueOutputGuaranteed: false,
+        score: row.best ? row.best.score : null, selectionScore: row.best ? row.best.selectionScore : null,
+        lines: row.best ? row.best.lines : [], rows: row.rows, completedPaths: row.finalists.length})),
+      provenance: {method: data.meta.method, preselectedLines: false, randomization: {
+        algorithm: "joint-diverse-beam-completed-path-v3", enabled: options.variation > 0,
+        seed: options.seed, variation: options.variation, openingHistory: options.openingHistory,
+        changesHardConstraints: false, uniqueOutputGuaranteed: false,
       }, candidateScoresPrecomputed: true, neuralModelUsed: false,
         sources: data.meta.sources, contextualPronunciationVerified: false, antithesisCertified: false,
         literaryQualityCertified: false, globalOptimumClaim: false},

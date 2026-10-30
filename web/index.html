@@ -85,7 +85,7 @@
             <button id="replay-button" class="button button-secondary" type="button" disabled>复现这首（原参数）</button>
             <button id="cancel-button" class="button button-cancel" type="button" hidden>停止这次计算</button>
             <p class="run-hint">不需要提示词，也不需要 API 密钥</p>
-            <button id="reset-button" class="text-button reset-button" type="button" disabled>恢复原版配置</button>
+            <button id="reset-button" class="text-button reset-button" type="button" disabled>恢复自由探索</button>
           </form>
           <div class="control-footnote"><span class="footnote-mark" aria-hidden="true">※</span><p>默认换种子，并避开本页最近 8 个首句和最近 4 个起首二字。<br>复现使用当次种子、参数和历史；刷新页面会清空近期历史。</p></div>
         </aside>
@@ -93,8 +93,8 @@
         <div class="result-column">
           <article class="poem-sheet" aria-labelledby="poem-heading" aria-busy="false" id="poem-sheet">
             <div class="sheet-heading">
-              <div><p class="sheet-kicker" id="result-kind">首轮存档</p><h3 id="poem-heading">五律 · 初试</h3></div>
-              <span id="result-badge" class="result-badge">示例 · 尚未运行</span>
+              <div><p class="sheet-kicker" id="result-kind">空白诗稿</p><h3 id="poem-heading">五律 · 待成篇</h3></div>
+              <span id="result-badge" class="result-badge">尚未生成</span>
             </div>
             <div id="progress-region" class="progress-region" hidden>
               <div class="progress-caption"><span id="progress-message">正在准备搜索…</span><span id="progress-percent">0%</span></div>
@@ -104,7 +104,7 @@
             <div class="poem-body">
               <div class="poem-area">
                 <div id="poem-lines" class="poem-lines" aria-label="诗稿">
-                  <p>日暮春風起，</p><p>青山美少年。</p><p>誰知何處去，</p><p>獨有白雲天。</p><p>萬里無人到，</p><p>還家越水邊。</p><p>江南歸路遠，</p><p>草木落花前。</p>
+                  <!-- Intentionally blank: no prewritten poem or fixed line. -->
                 </div>
                 <div id="tone-legend" class="tone-legend" hidden><span><i class="legend-ping"></i>平</span><span><i class="legend-ze"></i>仄</span><span class="legend-rhyme">圈字为韵脚</span></div>
                 <p id="line-hint" class="line-hint">生成后，点一句查看词块来源</p>
@@ -112,12 +112,12 @@
               <aside class="poem-annotation" aria-label="本次结果信息">
                 <span class="annotation-mark" aria-hidden="true">聲<br>律</span>
                 <dl>
-                  <div><dt>韵部</dt><dd id="rhyme-display">下平聲一先</dd></div>
-                  <div><dt>起式</dt><dd id="template-display">仄起 · 首句不入韵</dd></div>
+                  <div><dt>韵部</dt><dd id="rhyme-display">—</dd></div>
+                  <div><dt>起式</dt><dd id="template-display">—</dd></div>
                   <div><dt>计算耗时</dt><dd id="time-display">尚未运行</dd></div>
                   <div><dt>统计搜索分</dt><dd id="score-display">—</dd></div>
                   <div><dt>本次种子</dt><dd id="seed-display">尚未运行</dd></div>
-                  <div><dt>首句选择</dt><dd id="opening-display">尚未运行</dd></div>
+                  <div><dt>选句方式</dt><dd id="opening-display">尚未运行</dd></div>
                 </dl>
               </aside>
             </div>
@@ -151,7 +151,7 @@
       <ol class="method-steps">
         <li><span class="step-number">一</span><h3>取词块</h3><p>从训练诗中抽取前二字与后三字，保留真实出现的片段和来源。</p></li>
         <li><span class="step-number">二</span><h3>定声律</h3><p>选择韵部与五律模板，用一张八行五列的矩阵约束平仄。</p></li>
-        <li><span class="step-number">三</span><h3>搜成篇</h3><p>先按起首词块分组抽样，再在预评分候选中搜索成篇；种子控制探索，平仄与重字约束保持不变。</p></li>
+        <li><span class="step-number">三</span><h3>搜成篇</h3><p>不预定任何一句；保留多个开头并行探索，八句完成后再选择整首。种子参与各句探索，格律约束不变。</p></li>
         <li><span class="step-number">四</span><h3>看来处</h3><p>查看词块次数、平仄和分数，下载本次结果与参数，继续复核。</p></li>
       </ol>
       <div class="method-note"><span class="note-label">关于这个演示</span><p>网页在预先评分的 2,392 个候选句上，实时执行统计约束搜索。计算发生在你的浏览器中，无需调用模型 API；这里没有重新训练卷积模型，也不保证全局最优。<a href="https://github.com/overloaded-org/verseloom/blob/main/results/free_generation_v06_run001/result.json" target="_blank" rel="noopener noreferrer">查看原始首轮记录 ↗</a></p></div>
@@ -164,6 +164,6 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <p id="live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
-  <noscript><div class="noscript-note">请启用 JavaScript，以便在浏览器中运行生成算法。上方诗稿为首轮存档示例。</div></noscript>
+  <noscript><div class="noscript-note">请启用 JavaScript，以便在浏览器中运行生成算法。诗稿将在实际运行后显示，不预填任何诗句。</div></noscript>
 </body>
 </html>
