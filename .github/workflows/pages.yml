@@ -134,6 +134,7 @@ jobs:
         with:
           node-version: "24"
       - name: Verify live HTTP assets and generation engine
+        shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
           MANIFEST_SHA: ${{ needs.build.outputs.manifest_sha }}
