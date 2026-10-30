@@ -1,0 +1,44 @@
+{
+  "schema": "verseloom.source-registry.v1",
+  "checked_at": "2026-10-30",
+  "sources": [
+    {
+      "id": "tang-expansion",
+      "repository": "chinese-poetry/chinese-poetry",
+      "revision": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "scope": "All available poet.tang.*.json shards with offset >= 20000 under 全唐诗 at this revision",
+      "license": "MIT",
+      "license_blob": "cd6a57cd38bd26ccde0a6708b43ffe1935fff03d",
+      "admission": "raw_and_shape_candidates_only",
+      "quality_gold": false
+    },
+    {
+      "id": "guangyun",
+      "repository": "nk2028/tshet-uinh-data",
+      "revision": "21585e22c8a730ca2fd175112f4d18e16d5ce578",
+      "path": "韻書/廣韻.csv",
+      "git_blob": "1b3c5c7f36504a5f187f00f8c2f8e8ee2e3b515e",
+      "license": "CC0-1.0",
+      "license_blob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+      "admission": "historical_source_candidates_only",
+      "contextual_reading_gold": false,
+      "pingshui_mapping_confirmed": false
+    },
+    {
+      "id": "tokenized-poems-2022",
+      "paper": "https://aclanthology.org/2022.nlp4dh-1.17/",
+      "reported_poems": 32399,
+      "admission": "blocked_pending_authoritative_download_and_data_license",
+      "note": "Paper and author publication page were located, but no data-file URL plus data-specific reuse terms were established. Paper access is not data permission. No data imported."
+    },
+    {
+      "id": "parallel-couplets-2024",
+      "paper": "https://aclanthology.org/2024.nlp4dh-1.19/",
+      "reported_couplets": 6125,
+      "scope": "Six Dynasties pentasyllabic couplets, not seven-character strict-lushi gold",
+      "admission": "blocked_pending_authoritative_download_and_data_license",
+      "related_repository": "https://github.com/mcjkurz/parallelism-benchmark",
+      "note": "Related later repository README describes model-generated silver-standard data. It was NOT treated as the 6,125 manually annotated couplets and no data or model was imported."
+    }
+  ]
+}

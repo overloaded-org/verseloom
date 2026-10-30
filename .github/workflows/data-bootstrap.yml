@@ -1,0 +1,53 @@
+name: Quality data bootstrap
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/bootstrap_quality_data.py'
+      - 'tests_data/**'
+      - 'configs/data_source_registry_v1.json'
+      - '.github/workflows/data-bootstrap.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: quality-data-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Test data and annotation boundaries
+        run: python -m unittest discover -s tests_data -v
+      - name: Fetch pinned public sources and build unlabelled data
+        run: python scripts/bootstrap_quality_data.py --download --cache output/data_bootstrap/cache --output output/data_bootstrap/run
+      - name: Offline deterministic rebuild
+        shell: bash
+        run: |
+          python scripts/bootstrap_quality_data.py --cache output/data_bootstrap/cache --output output/data_bootstrap_replay
+          cmp output/data_bootstrap/run/manifest.json output/data_bootstrap_replay/manifest.json
+          cmp output/data_bootstrap/run/report.json output/data_bootstrap_replay/report.json
+          git diff --exit-code
+      - name: Explain annotation status
+        shell: bash
+        run: |
+          cp docs/DATA_BOOTSTRAP_V1.md output/data_bootstrap/README.md
+          cp configs/data_source_registry_v1.json output/data_bootstrap/source_registry.json
+          echo '### Quality data bootstrap: candidates, not gold' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No model training or production generation change. Both reconstructions matched byte-for-byte.' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          python -m json.tool output/data_bootstrap/run/report.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: quality-data-bootstrap
+          path: output/data_bootstrap/
+          if-no-files-found: error
+          retention-days: 7
