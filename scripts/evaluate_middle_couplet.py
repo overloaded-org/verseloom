@@ -45,7 +45,7 @@ def evaluate(model_path, corpus_path, out):
     general_r1, _ = rank_scores(general_scores)
     middle_r1, _ = rank_scores(middle_scores)
     fixed_r1, _ = rank_scores(fixed_scores)
-    report = {
+    # Diagnose whether a middle-specific learner genuinely uses a different\n    # feature weighting, rather than only renaming the general model.\n    coefficient_delta = [float(x-y) for x,y in zip(middle,general)]\n    report = {
         'schema': 'verseloom.sp02.middle-couplet-retrieval.v1',
         'sourceIdentity': data['sourceIdentity'],
         'modelSha256': sha(model_bytes),
@@ -62,7 +62,7 @@ def evaluate(model_path, corpus_path, out):
         'coupletLearned': summarize(middle_scores, middle_dev_records)[0],
         'coupletMinusGeneral': bootstrap_difference(middle_r1, general_r1, middle_dev_records),
         'generalMinusFixed': bootstrap_difference(general_r1, fixed_r1, middle_dev_records),
-        'coefficients': {'general': [float(x) for x in general],
+        'coefficientDifference': coefficient_delta,\n        'coefficientL2Difference': float(np.linalg.norm(middle-general)),\n        'coefficients': {'general': [float(x) for x in general],
                          'middle': [float(x) for x in middle]},
         'independentLiteraryRatings': 0,
         'strictAntithesisCertified': False,
