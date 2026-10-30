@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/bootstrap_quality_data.py'
+      - 'scripts/check_annotation_pilot.py'
+      - 'data/quality_bootstrap_v1/**'
       - 'tests_data/**'
       - 'configs/data_source_registry_v1.json'
       - '.github/workflows/data-bootstrap.yml'
@@ -35,13 +37,18 @@ jobs:
           cmp output/data_bootstrap/run/manifest.json output/data_bootstrap_replay/manifest.json
           cmp output/data_bootstrap/run/report.json output/data_bootstrap_replay/report.json
           git diff --exit-code
+      - name: Check draft provenance, not interpretive correctness
+        run: python scripts/check_annotation_pilot.py --run output/data_bootstrap/run
       - name: Explain annotation status
         shell: bash
         run: |
           cp docs/DATA_BOOTSTRAP_V1.md output/data_bootstrap/README.md
+          cp docs/DATA_BOOTSTRAP_V1_RESULT.md output/data_bootstrap/RESULT.md
           cp configs/data_source_registry_v1.json output/data_bootstrap/source_registry.json
+          cp data/quality_bootstrap_v1/pilot_drafts.json output/data_bootstrap/pilot_drafts.json
           echo '### Quality data bootstrap: candidates, not gold' >> "$GITHUB_STEP_SUMMARY"
           echo 'No model training or production generation change. Both reconstructions matched byte-for-byte.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Four assistant draft couplets are separately recorded; none is independent gold.' >> "$GITHUB_STEP_SUMMARY"
           echo '```json' >> "$GITHUB_STEP_SUMMARY"
           python -m json.tool output/data_bootstrap/run/report.json >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
