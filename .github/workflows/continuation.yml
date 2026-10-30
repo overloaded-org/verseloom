@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/*continuation*'
+      - 'scripts/diagnose_couplet_closure.py'
       - 'scripts/build_induced_model.py'
       - 'tests_continuation/**'
       - 'web/continuation-*.js'
@@ -60,6 +61,7 @@ jobs:
           node scripts/evaluate_continuation.cjs output/continuation-five 5
           node scripts/evaluate_continuation.cjs output/continuation-seven 7
           python scripts/audit_continuation_generation.py --ranker output/continuation-v1/ranker.json --input output/continuation-five/outputs.jsonl output/continuation-seven/outputs.jsonl --output output/continuation-v1/generation-audit.json
+          python scripts/diagnose_couplet_closure.py --input output/continuation-five/outputs.jsonl output/continuation-seven/outputs.jsonl --output output/continuation-v1/sp02-couplet-closure.json
           git diff --exit-code
       - name: Preserve all evidence, including incomplete runs
         if: always()
