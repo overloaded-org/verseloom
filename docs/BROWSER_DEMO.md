@@ -42,7 +42,7 @@ python3 scripts/build_web_demo.py --output _site
 
 ## GitHub Pages
 
-工作流 `.github/workflows/pages.yml` 在相关文件提交、PR 与手动触发时检查数据、测试引擎并打包 `_site/`。主分支且仓库已启用 Pages 时才部署；PR 不部署。Pages 未启用时，构建依然完成，工作流摘要说明设置缺口，`deploy` 作业跳过。
+工作流 `.github/workflows/pages.yml` 在相关文件提交、PR 与手动触发时检查数据、测试引擎并打包 `_site/`。主分支且仓库已启用 Pages 时才部署；PR 不部署。Pages 未启用时，构建与测试依然完成，工作流摘要说明设置缺口；不上传站点构件，`deploy` 作业跳过。只有主分支发布且 Pages 已启用时才上传构件，保留一天。构件上传失败会保留失败状态，不会继续部署。
 
 首次启用：
 
@@ -53,3 +53,7 @@ python3 scripts/build_web_demo.py --output _site
 不需要另建 GitHub 建议的模板。最终站点 URL 以 `deploy-pages` 成功返回的 `page_url` 为准。工作流不会更改仓库可见性、创建个人令牌或自动升级付费计划；私有组织仓库的 Pages 支持取决于组织计划与策略。
 
 官方说明：[配置发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)、[自定义 Pages 工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
+
+## 首次远端执行记录
+
+2026-10-30 的首次网页工作流中，数据导出、9 项引擎测试及网页打包均通过，但 GitHub 返回 `Artifact storage quota has been hit`，站点构件未上传成功。原始失败记录保留在 [首次运行](https://github.com/overloaded-org/verseloom/actions/runs/40986351565)。后续调整为 Pages 未启用时不做无效上传；这不代表存储额度问题已解决。实际通过 Actions 发布前，仍需具备可用构件存储额度。单文件网页的本地运行不依赖该额度。
