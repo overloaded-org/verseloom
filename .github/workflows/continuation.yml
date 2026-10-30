@@ -51,6 +51,7 @@ jobs:
           python scripts/build_induced_model.py --bootstrap output/continuation-source
       - name: Fit only training pairs and measure development retrieval
         run: |
+          python -m py_compile scripts/evaluate_middle_couplet.py scripts/train_continuation_ranker.py scripts/diagnose_couplet_closure.py
           python scripts/train_continuation_ranker.py --corpus output/continuation-source/run/candidate_poems.jsonl --output output/continuation-v1
           python scripts/check_continuation_context.py --corpus output/continuation-source/run/candidate_poems.jsonl --experiment output/continuation-v1 --output output/continuation-v1/context-control.json
           python scripts/evaluate_middle_couplet.py --corpus output/continuation-source/run/candidate_poems.jsonl --output output/continuation-v1/sp02-middle-retrieval.json
