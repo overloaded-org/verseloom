@@ -45,7 +45,8 @@ def evaluate(model_path, corpus_path, out):
     general_r1, _ = rank_scores(general_scores)
     middle_r1, _ = rank_scores(middle_scores)
     fixed_r1, _ = rank_scores(fixed_scores)
-    # Diagnose whether a middle-specific learner genuinely uses a different\n    # feature weighting, rather than only renaming the general model.\n    coefficient_delta = [float(x-y) for x,y in zip(middle,general)]\n    report = {
+    # Diagnose whether a middle-specific learner genuinely uses a different    # feature weighting, rather than only renaming the general model.
+    coefficient_delta = [float(x-y) for x,y in zip(middle,general)]\n    report = {
         'schema': 'verseloom.sp02.middle-couplet-retrieval.v1',
         'sourceIdentity': data['sourceIdentity'],
         'modelSha256': sha(model_bytes),
