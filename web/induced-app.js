@@ -27,7 +27,7 @@
       };
       $('i-poem').appendChild(button);
     }
-    $('i-summary').textContent = value.templateId + ' / ' + value.rhymeGroup + ' / 种子 ' + value.options.seed + ' / ' + value.engineVersion;
+    $('i-summary').textContent = value.templateId + ' / ' + value.rhymeGroup + ' / 种子 ' + value.options.seed + ' / ' + ({local:'句内对照',relations:'固定关系评分',learned:'学得接续评分'}[value.options.mode]||value.options.mode) + ' / ' + value.engineVersion;
     status('生成完成。未人工改字；点击任一句查看统计依据。'); busy(false);
     if (globalThis.matchMedia?.('(max-width: 760px)')?.matches)
       $('i-sheet').scrollIntoView?.({block: 'start', behavior: 'auto'});
@@ -82,6 +82,7 @@
   $('i-form').onsubmit = event => { event.preventDefault(); start(false); };
   $('i-replay').onclick = () => start(true);
   $('i-auto').onchange = () => busy(Boolean(active));
+  $('i-mode').onchange = () => { if (!active) status(result ? '模式设置已改变；当前诗稿仍是上一次结果，点击生成才运行新模式。' : '模式设置已改变；点击生成后才会出现算法输出。'); };
   $('i-cancel').onclick = () => { stop(); status('已停止；没有填入备用结果。'); };
   $('i-reset-history').onclick = () => {
     if (active) return;

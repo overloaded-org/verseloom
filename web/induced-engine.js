@@ -1,7 +1,7 @@
 /* Corpus-derived segment lattice and relation search. No authored content words. */
 (function(global){
 'use strict';
-const VERSION='verseloom.corpus-lattice.v1.1', prepared=new WeakMap();
+const VERSION='verseloom.corpus-lattice.v1.2', prepared=new WeakMap();
 const check=(v,m)=>{if(!v)throw new Error(m);};
 const pause=()=>new Promise(r=>setTimeout(r,0));
 const order=(a,b)=>a<b?-1:a>b?1:0, lastChar=s=>Array.from(s).at(-1);
@@ -17,7 +17,7 @@ function options(input){
  check(Number.isInteger(o.seed)&&o.seed>=0&&o.seed<=4294967295,'种子必须为uint32整数');
  check(typeof o.variation==='number'&&Number.isFinite(o.variation)&&o.variation>=0&&o.variation<=2,'探索强度须为0至2');
  check(Number.isInteger(o.beamWidth)&&o.beamWidth>=8&&o.beamWidth<=64,'搜索宽度须为8至64');
- check(['local','relations'].includes(o.mode),'未知对照模式');
+ check(['local','relations','learned'].includes(o.mode),'未知对照模式');
  check(Array.isArray(o.recentPoems)&&o.recentPoems.length<=8&&Array.from(o.recentPoems).every(p=>Array.isArray(p)&&p.length===8&&Array.from(p).every(s=>typeof s==='string'&&Array.from(s).length===o.length)),'近期诗稿格式无效');
  o.recentPoems=o.recentPoems.map(p=>p.slice());return o;
 }
@@ -130,6 +130,11 @@ function relational(previous,line,r,middle){
 
 async function generate(data,input={},onProgress=()=>{}){
  check(typeof onProgress==='function','进度回调无效');const o=options(input),r=prepare(data),start=performance.now();
+ let learned=null;
+ if(o.mode==='learned'){
+  check(global.VerseLoomContinuation&&global.VerseLoomContinuationData,'接续学习资源缺失；未回退到其他模式');
+  learned=global.VerseLoomContinuation.create(data,global.VerseLoomContinuationData,r);
+ }
  const {pools,attempts,copied}=await linePools(data,r,o,onProgress);
  const rhymes=[...new Set([...pools.keys()].filter(k=>!k.endsWith('/nonrhyming')).map(k=>k.slice(k.indexOf('/')+1)))];
  const coverage=g=>[...pools].filter(([k])=>k.endsWith('/'+g)).reduce((a,[,v])=>a+new Set(v.map(l=>lastChar(l.text))).size,0);
@@ -151,10 +156,10 @@ async function generate(data,input={},onProgress=()=>{}){
      if(template.rhymeRows.includes(row)&&ends.has(lastChar(line.text)))continue;
      if(line.tokens.some(i=>r.lex[i].size>1&&words.has(i)))continue;
      if(row===0&&o.recentPoems.some(p=>p[0]===line.text))continue;
-     const rel=o.mode==='relations'?relational(s.lines,line,r,row===3||row===5):{value:0,association:0,following:0,alignment:0,witnesses:[]};
+     const rel=learned?learned(s.lines,line):o.mode==='relations'?relational(s.lines,line,r,row===3||row===5):{value:0,association:0,following:0,alignment:0,witnesses:[]};
      const repeated=[...line.text].reduce((a,c)=>a+(chars.get(c)||0),0);
      const historyPenalty=penaltyFor(line);
-     const score=s.score+line.score/o.length-0.3*repeated+(o.mode==='relations'?rel.value:0)-historyPenalty;
+     const score=s.score+line.score/o.length-0.3*repeated+(o.mode!=='local'?rel.value:0)-historyPenalty;
      const text=s.text+'/'+line.text;
      const rank=score+o.variation*1.2*gumbel('poem/'+template.id+'/'+text,o.seed);
      extensions.push({text,lines:s.lines.concat(line),score,rank,relation:s.relation.concat(rel),historyPenalties:s.historyPenalties.concat(historyPenalty)});
@@ -169,7 +174,7 @@ async function generate(data,input={},onProgress=()=>{}){
  finalists.sort((a,b)=>b.rank-a.rank||order(a.text,b.text));
  const chosen=finalists[0],provenance={authoredContentLexemes:0,authoredSemanticCategories:0,authoredSentenceFrames:0,preselectedLines:false,
   storedOutputLines:0,selectionStage:'after-eight-lines',sourceIdentity:data.sourceIdentity,
-  historyPolicy:'all-line-2-3gram-soft-penalty-v1',graphMeaning:'statistical_association_not_event_causality',contextualPronunciationCertified:false,strictAntithesisCertified:false,literaryQualityCertified:false};
+  historyPolicy:'all-line-2-3gram-soft-penalty-v1',continuationRanker:learned?{schema:global.VerseLoomContinuationData.schema,training:global.VerseLoomContinuationData.training}:null,graphMeaning:'statistical_association_not_event_causality',contextualPronunciationCertified:false,strictAntithesisCertified:false,literaryQualityCertified:false};
  const base={schema:'verseloom.induced-result.v1',engineVersion:VERSION,options:o,length:o.length,provenance,attempts,copiedTrainingLinesRejected:copied,considered,diagnostics,
   completeCandidates:finalists.length,poolFingerprint:hash([...pools].map(([k,rs])=>k+':'+rs.map(l=>l.text).join(',')).join('|')),elapsedMs:performance.now()-start};
  if(!chosen)return {...base,status:'infeasible',lines:[]};
