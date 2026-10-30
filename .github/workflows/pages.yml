@@ -8,6 +8,8 @@ on:
       - 'tests_web/**'
       - 'tests_quality_v2/**'
       - 'tests_composition/**'
+      - 'tests_induction/**'
+      - 'scripts/*induced*'
       - 'scripts/build_web_*.py'
       - 'scripts/build_quality_*.py'
       - 'scripts/*composition*'
@@ -33,6 +35,8 @@ on:
       - 'tests_web/**'
       - 'tests_quality_v2/**'
       - 'tests_composition/**'
+      - 'tests_induction/**'
+      - 'scripts/*induced*'
       - 'scripts/build_web_*.py'
       - 'scripts/build_quality_*.py'
       - 'scripts/*composition*'
@@ -127,6 +131,17 @@ jobs:
         run: |
           python scripts/audit_composition_v2.py --input output/phrase-results/outputs.jsonl --output output/phrase-results/independent_audit.json
           git diff --exit-code
+      - name: Build and test corpus-induced content without authored vocabulary
+        env:
+          INDUCTION_REPORT: output/induction-pilot/report.json
+        run: |
+          python -m unittest discover -s tests_induction -v
+          python scripts/build_induced_model.py --bootstrap output/phrase-input
+          python scripts/build_induced_model.py --bootstrap output/phrase-input --check
+          node scripts/evaluate_induced.cjs output/induction-pilot
+          node --test tests_induction/engine.test.cjs
+          python scripts/audit_induced.py --bootstrap output/phrase-input --input output/induction-pilot/outputs.jsonl --output output/induction-pilot/audit.json
+          git diff --exit-code
       - name: Save quality evidence without claiming literary certification
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
@@ -135,6 +150,8 @@ jobs:
             output/quality-v2/
             output/quality-v2-tests/
             output/phrase-results/
+            output/induction-pilot/
+            output/induction-build.json
             docs/COMPOSITION_V2_BUILD.json
           if-no-files-found: error
           retention-days: 7
@@ -193,7 +210,7 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
           node-version: '24'
-      - name: Verify published baseline, quality and phrase generators
+      - name: Verify all published generators including induction
         shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
@@ -203,7 +220,8 @@ jobs:
           node scripts/check_live_seven.cjs | tee "$RUNNER_TEMP/live-seven-check.json"
           node scripts/check_live_quality.cjs | tee "$RUNNER_TEMP/live-quality-check.json"
           node scripts/check_live_composition.cjs | tee "$RUNNER_TEMP/live-composition-check.json"
+          node scripts/check_live_induced.cjs | tee "$RUNNER_TEMP/live-induced-check.json"
           echo '### Same-build published assets and Node execution (not browser UI)' >> "$GITHUB_STEP_SUMMARY"
           echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          cat "$RUNNER_TEMP/live-composition-check.json" >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/live-induced-check.json" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"

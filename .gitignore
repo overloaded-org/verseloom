@@ -37,3 +37,7 @@ web/composition-data.js
 web/composition-offline.html
 web/licenses/tshet-uinh-CC0.txt
 docs/COMPOSITION_V2_BUILD.json
+
+# Training-derived induction model and its small loading metadata.
+web/induced-data.js
+web/induced-meta.js
