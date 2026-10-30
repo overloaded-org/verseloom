@@ -16,3 +16,11 @@ results/*replay*/
 results/ci_*/
 output/
 tmp/
+
+# Reproducible browser demo build and local preview metadata.
+_site/
+.openai/
+
+# Rebuilt from pinned source records by scripts/build_web_data.py.
+web/data.js
+node_modules/

@@ -6,6 +6,31 @@
 
 当前可直接运行的最新入口是 **v0.6 自由生成试验**：不接收主题、上句、下句后缀或人工候选，从训练语料自动抽取短片段，按声律约束和固定统计分数组成八句五言。此前的矩阵求解、卷积与二字补句实验也保留在仓库中。
 
+## 浏览器示例
+
+[web/](web/) 提供可直接运行的中文网页：一键生成、12 个可用韵部、四种基本起式、平仄显示、词块来源次数、约束检查、复制和 JSON 下载。算法在浏览器内计算，无需模型 API 或密钥。相同配置得到相同结果；“换个韵部”通过切换真实韵部重新搜索，不是随机挑选已写好的诗。
+
+网页使用首轮冻结的 2,392 个已评分候选句和训练字符共现统计，实时运行约束搜索。默认四模板结果、评分和逐行搜索计数均与 Python 冻结记录对齐；网页不重新训练卷积模型，也不重新评分全部原始组合。
+
+先从仓库冻结记录构建网页数据，再打开 `web/index.html`，或启动静态服务：
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 scripts/build_web_data.py
+python3 -m http.server 8000 --directory web
+```
+
+访问 `http://localhost:8000/`。完成上述数据导出后，打包单文件离线版只需 Python 标准库：
+
+```bash
+python3 scripts/build_web_demo.py
+# 在浏览器打开 _site/standalone.html；算法、数据、界面和许可说明均在文件内。
+```
+
+[Browser demo and GitHub Pages](https://github.com/overloaded-org/verseloom/actions/workflows/pages.yml) 自动检查网页数据、运行浏览器引擎测试并生成站点。首次发布需在 [Settings → Pages](https://github.com/overloaded-org/verseloom/settings/pages) 将 Source 设为 **GitHub Actions**，再运行一次该工作流。未启用 Pages 时只完成构建并明确跳过部署；成功发布的网址以部署结果为准。组织私有仓库还需具备支持 Pages 的计划与组织策略。
+
+实现、复现、测试和部署说明见 [浏览器示例文档](docs/BROWSER_DEMO.md)，网页数据来源见 [NOTICE](web/NOTICE.md)。
+
 ## 第一首程序原始输出
 
 以下四十字直接取自 [首轮原始结果](results/free_generation_v06_run001/result.json)，没有人工改字：

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>数据来源与许可 · 律织 VerseLoom</title>
+  <style>
+    :root{color-scheme:light}body{margin:0;background:#f5f1e8;color:#1d302b;font:16px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:780px;margin:0 auto;padding:48px 24px 80px}a{color:#8d442f;text-underline-offset:4px}h1,h2{font-family:"Songti SC","Noto Serif CJK SC",serif;line-height:1.5}h1{font-size:34px;margin-top:32px}h2{font-size:22px;margin-top:36px}pre{white-space:pre-wrap;background:#eae5da;padding:20px;border-radius:4px;font:13px/1.65 ui-monospace,monospace}code{overflow-wrap:anywhere}small{color:#596a5d}.tag{letter-spacing:.16em;color:#8d442f;font-size:12px}
+  </style>
+</head>
+<body>
+<main>
+  <a href="./index.html">← 返回律织生成台</a>
+  <p class="tag">VERSELOOM / SOURCES</p>
+  <h1>数据来源与许可</h1>
+  <p>网页在浏览器内执行格律约束与有限 beam 搜索，使用 v0.6 首轮实验中预先评分的 2,392 个候选句、训练诗字符共现值、四个基本五律模板和参考韵部。访问网页不会重新训练神经模型，也不会重新评分全部 322,600 个原始合法候选句。</p>
+  <p>默认配置复现首轮输出。改变韵部、模板或搜索宽度属于网页探索，不改写原始试验。格律检查依赖参考表候选平仄；语境读音、对仗、语义连贯性、文学质量、全诗库原创性与全局最优均未得到认证。</p>
+  <h2>唐诗数字语料</h2>
+  <p>来自 <a href="https://github.com/chinese-poetry/chinese-poetry">chinese-poetry/chinese-poetry</a>，固定提交 <code>b8594f81a89752241442f2ce267d6f66f96704ee</code>。网页只使用原训练分割中的 2,203 首五言诗统计。保留 Copyright (c) 2016 JackeyGao 及完整 MIT 许可：</p>
+  <pre>The MIT License (MIT)
+
+Copyright (c) 2016 JackeyGao
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</pre>
+  <h2>平水韵录文与派生参考</h2>
+  <p>《平水韻》来源页署名劉淵、王文鬱；电子录文与现代编排贡献者为中文维基文库贡献者。固定录文为 <a href="https://zh.wikisource.org/w/index.php?title=平水韻&amp;oldid=8264804">修订 8264804</a>，作者与贡献者见 <a href="https://zh.wikisource.org/w/index.php?title=平水韻&amp;action=history">修订历史</a>。</p>
+  <p>录文与派生参考部分继续保留 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 署名及相同方式共享条件。原作的公有领域地位与现代数字录文、编排、校订分别对待。原始通知见仓库 <a href="https://github.com/overloaded-org/verseloom/blob/main/data/reference_v02/LICENSE_NOTICE.md">参考数据来源说明</a>。</p>
+  <h2>网页进行了哪些处理</h2>
+  <p><code>scripts/build_web_data.py</code> 导出冻结候选、参考平仄与韵部，并将训练字符共现值编码为对称浮点表。数据中附有来源文件 SHA-256。未进行简繁转换、字形合并或人工修改诗句。</p>
+  <p>上述通知只针对相关来源和派生数据，不为项目全部代码或其他独立资料添加统一许可证。完整代码、实验协议、负结果和审计记录见 <a href="https://github.com/overloaded-org/verseloom">律织 GitHub 仓库</a>。</p>
+</main>
+</body>
+</html>
