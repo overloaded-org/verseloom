@@ -27,3 +27,7 @@ node_modules/
 
 # Seven-character training-only browser data.
 web/data7.js
+
+# Rebuilt word-level experimental data and its self-contained workbench.
+web/quality-data.js
+web/quality-offline.html

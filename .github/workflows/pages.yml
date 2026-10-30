@@ -1,50 +1,56 @@
 name: Browser demo and GitHub Pages
-
 on:
   push:
     branches: [main]
     paths:
-      - "web/**"
-      - "tests_web/**"
-      - "scripts/build_web_*.py"
-      - "scripts/check_live*.cjs"
-      - "src/wordconv_lab/free_generation.py"
-      - "src/wordconv_lab/prosody.py"
-      - "src/wordconv_lab/restoration.py"
-      - "src/wordconv_lab/retrieval.py"
-      - "data/corpus_v03/poems.jsonl"
-      - "data/reference_v02/**"
-      - "results/free_generation_v06_run001/**"
-      - "requirements.txt"
-      - ".github/workflows/pages.yml"
+      - 'web/**'
+      - 'tests_web/**'
+      - 'tests_quality_v2/**'
+      - 'scripts/build_web_*.py'
+      - 'scripts/build_quality_*.py'
+      - 'scripts/bootstrap_quality_data.py'
+      - 'scripts/check_live*.cjs'
+      - 'src/wordconv_lab/free_generation.py'
+      - 'src/wordconv_lab/prosody.py'
+      - 'src/wordconv_lab/restoration.py'
+      - 'src/wordconv_lab/retrieval.py'
+      - 'data/corpus_v03/poems.jsonl'
+      - 'data/reference_v02/**'
+      - 'data/quality_v2/**'
+      - 'data/confirmation_v04/new_unique_poems.jsonl'
+      - 'results/free_generation_v06_run001/**'
+      - 'requirements.txt'
+      - '.github/workflows/pages.yml'
   pull_request:
     paths:
-      - "web/**"
-      - "tests_web/**"
-      - "scripts/build_web_*.py"
-      - "scripts/check_live*.cjs"
-      - "src/wordconv_lab/free_generation.py"
-      - "src/wordconv_lab/prosody.py"
-      - "src/wordconv_lab/restoration.py"
-      - "src/wordconv_lab/retrieval.py"
-      - "data/corpus_v03/poems.jsonl"
-      - "data/reference_v02/**"
-      - "results/free_generation_v06_run001/**"
-      - "requirements.txt"
-      - ".github/workflows/pages.yml"
+      - 'web/**'
+      - 'tests_web/**'
+      - 'tests_quality_v2/**'
+      - 'scripts/build_web_*.py'
+      - 'scripts/build_quality_*.py'
+      - 'scripts/bootstrap_quality_data.py'
+      - 'scripts/check_live*.cjs'
+      - 'src/wordconv_lab/free_generation.py'
+      - 'src/wordconv_lab/prosody.py'
+      - 'src/wordconv_lab/restoration.py'
+      - 'src/wordconv_lab/retrieval.py'
+      - 'data/corpus_v03/poems.jsonl'
+      - 'data/reference_v02/**'
+      - 'data/quality_v2/**'
+      - 'data/confirmation_v04/new_unique_poems.jsonl'
+      - 'results/free_generation_v06_run001/**'
+      - 'requirements.txt'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
-
 permissions:
   contents: read
-
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     outputs:
       pages_enabled: ${{ steps.pages-state.outputs.enabled }}
       manifest_sha: ${{ steps.site-build.outputs.manifest_sha }}
@@ -56,25 +62,46 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
-          node-version: "24"
+          node-version: '24'
       - name: Set up Python
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
-          python-version: "3.12"
+          python-version: '3.12'
           cache: pip
-      - name: Install the frozen data-build dependency
+      - name: Install frozen dependency
         run: python -m pip install -r requirements.txt
-      - name: Export five and seven character data
+      - name: Export unchanged five and seven character baseline data
         run: |
           python scripts/build_web_data.py
           python scripts/build_web_data.py --check
           python scripts/build_web_seven.py
           python scripts/build_web_seven.py --check
-      - name: Test browser generation
+      - name: Build source-backed word and reading evidence
+        run: |
+          python scripts/bootstrap_quality_data.py --download --cache output/quality-source --output output/quality-bootstrap
+          python scripts/build_quality_v2.py --bootstrap output/quality-bootstrap --output output/quality-v2
+          python scripts/build_quality_v2.py --bootstrap output/quality-bootstrap --output output/quality-v2-replay --web-output output/quality-v2-replay-data.js
+          cmp web/quality-data.js output/quality-v2-replay-data.js
+          cmp output/quality-v2/manifest.json output/quality-v2-replay/manifest.json
+          python scripts/build_quality_offline.py
+      - name: Test baseline and word-level generators
+        env:
+          QUALITY_EVIDENCE_DIR: output/quality-v2-tests
         run: |
           node --test --test-isolation=none --test-reporter=spec tests_web/engine.test.cjs
           node --test --test-isolation=none --test-reporter=spec tests_web/seven.test.cjs tests_web/form-ui.test.cjs
-      - name: Build the site and the offline HTML
+          python -m unittest discover -s tests_quality_v2 -v
+          node --test --test-reporter=spec tests_quality_v2/engine.test.cjs
+      - name: Save quality evidence without claiming literary certification
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: quality-v2-evidence
+          path: |
+            output/quality-v2/
+            output/quality-v2-tests/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Build site and offline HTML
         id: site-build
         run: |
           python scripts/build_web_demo.py --output _site
@@ -85,26 +112,17 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           enabled="$(gh api "repos/${GITHUB_REPOSITORY}" --jq '.has_pages')"
-          case "$enabled" in
-            true|false) ;;
-            *) exit 1 ;;
-          esac
+          case "$enabled" in true|false) ;; *) exit 1 ;; esac
           echo "enabled=$enabled" >> "$GITHUB_OUTPUT"
-          if [ "$enabled" = "false" ]; then
-            echo "### Build verified; Pages is not enabled" >> "$GITHUB_STEP_SUMMARY"
-            echo "Select GitHub Actions in Settings → Pages. No visibility or billing settings were changed." >> "$GITHUB_STEP_SUMMARY"
+          if [ "$enabled" = 'false' ]; then
+            echo 'Pages not enabled. Select GitHub Actions in Settings → Pages.' >> "$GITHUB_STEP_SUMMARY"
           fi
-      - name: Upload the browser demo
+      - name: Upload browser demo
         if: steps.pages-state.outputs.enabled == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        id: upload
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         with:
           path: _site
           retention-days: 1
-      - name: Report uploaded artifact
-        if: steps.upload.outcome == 'success'
-        run: echo "Verified site uploaded. See deploy for publication status." >> "$GITHUB_STEP_SUMMARY"
-
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.build.outputs.pages_enabled == 'true'
     needs: build
@@ -124,7 +142,6 @@ jobs:
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
-
   verify-live:
     needs: [build, deploy]
     runs-on: ubuntu-latest
@@ -132,15 +149,13 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Check out verification code
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - name: Set up Node
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
-          node-version: "24"
-      - name: Verify live five and seven character engines
+          node-version: '24'
+      - name: Verify published baseline and quality generators
         shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
@@ -148,7 +163,8 @@ jobs:
         run: |
           node scripts/check_live_site.cjs | tee "$RUNNER_TEMP/live-site-check.json"
           node scripts/check_live_seven.cjs | tee "$RUNNER_TEMP/live-seven-check.json"
-          echo '### Published HTTP assets and Node engine checks (not browser UI)' >> "$GITHUB_STEP_SUMMARY"
+          node scripts/check_live_quality.cjs | tee "$RUNNER_TEMP/live-quality-check.json"
+          echo '### Same-build published assets and Node execution (not browser UI)' >> "$GITHUB_STEP_SUMMARY"
           echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          cat "$RUNNER_TEMP/live-seven-check.json" >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/live-quality-check.json" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
