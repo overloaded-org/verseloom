@@ -17,8 +17,9 @@ const out=process.argv[2],length=Number(process.argv[3]);assert(out&&[5,7].inclu
   comparisons.push({seed,length,poolIdentical:true,statuses:pair.map(r=>r.status),changed:JSON.stringify(pair[0].lines)!==JSON.stringify(pair[1].lines)});
  }
  const last=records.at(-1),replay=await VerseLoomInduced.generate(VerseLoomInducedData,last.options);assert.deepEqual(identity(last),identity(replay));
+ const changedRows=comparisons.map((c,i)=>{const a=records[2*i],b=records[2*i+1];const indices=Array.from({length:8},(_,j)=>j).filter(j=>a.lines[j]!==b.lines[j]);return {seed:c.seed,length,changedLinePositions:indices,changedLineCount:indices.length,changedMiddleCoupletLines:indices.filter(j=>j>=2&&j<=5).length};});
  const report={schema:'verseloom.continuation-generation.v1',length,runs:records.length,completed:records.filter(x=>x.status==='complete').length,
- comparisons,replay:true,resumedRecords:existing.length,independentLiteraryRatings:0,
+ comparisons,changedRows,changedLinePositionsHistogram:Object.fromEntries(Array.from({length:8},(_,i)=>[String(i),changedRows.filter(x=>x.changedLinePositions.includes(i)).length])),replay:true,resumedRecords:existing.length,independentLiteraryRatings:0,
  uniqueByMode:Object.fromEntries(['relations','learned'].map(mode=>[mode,new Set(records.filter(x=>x.options.mode===mode&&x.status==='complete').map(r=>r.lines.join('/'))).size]))};
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 })().catch(e=>{console.error(e);process.exitCode=1;});
