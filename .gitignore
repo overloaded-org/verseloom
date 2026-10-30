@@ -31,3 +31,9 @@ web/data7.js
 # Rebuilt word-level experimental data and its self-contained workbench.
 web/quality-data.js
 web/quality-offline.html
+
+# Source-backed phrase-composition assets generated during the Pages build.
+web/composition-data.js
+web/composition-offline.html
+web/licenses/tshet-uinh-CC0.txt
+docs/COMPOSITION_V2_BUILD.json

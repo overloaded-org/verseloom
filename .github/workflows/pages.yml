@@ -3,11 +3,15 @@ on:
   push:
     branches: [main]
     paths:
+      - 'README.md'
       - 'web/**'
       - 'tests_web/**'
       - 'tests_quality_v2/**'
+      - 'tests_composition/**'
       - 'scripts/build_web_*.py'
       - 'scripts/build_quality_*.py'
+      - 'scripts/*composition*'
+      - 'scripts/audit_gloss_references_v2.py'
       - 'scripts/bootstrap_quality_data.py'
       - 'scripts/check_live*.cjs'
       - 'src/wordconv_lab/free_generation.py'
@@ -17,17 +21,22 @@ on:
       - 'data/corpus_v03/poems.jsonl'
       - 'data/reference_v02/**'
       - 'data/quality_v2/**'
+      - 'data/composition_v2/**'
       - 'data/confirmation_v04/new_unique_poems.jsonl'
       - 'results/free_generation_v06_run001/**'
       - 'requirements.txt'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:
+      - 'README.md'
       - 'web/**'
       - 'tests_web/**'
       - 'tests_quality_v2/**'
+      - 'tests_composition/**'
       - 'scripts/build_web_*.py'
       - 'scripts/build_quality_*.py'
+      - 'scripts/*composition*'
+      - 'scripts/audit_gloss_references_v2.py'
       - 'scripts/bootstrap_quality_data.py'
       - 'scripts/check_live*.cjs'
       - 'src/wordconv_lab/free_generation.py'
@@ -37,6 +46,7 @@ on:
       - 'data/corpus_v03/poems.jsonl'
       - 'data/reference_v02/**'
       - 'data/quality_v2/**'
+      - 'data/composition_v2/**'
       - 'data/confirmation_v04/new_unique_poems.jsonl'
       - 'results/free_generation_v06_run001/**'
       - 'requirements.txt'
@@ -50,7 +60,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     outputs:
       pages_enabled: ${{ steps.pages-state.outputs.enabled }}
       manifest_sha: ${{ steps.site-build.outputs.manifest_sha }}
@@ -76,7 +86,7 @@ jobs:
           python scripts/build_web_data.py --check
           python scripts/build_web_seven.py
           python scripts/build_web_seven.py --check
-      - name: Build source-backed word and reading evidence
+      - name: Build existing source-backed word workbench
         run: |
           python scripts/bootstrap_quality_data.py --download --cache output/quality-source --output output/quality-bootstrap
           python scripts/build_quality_v2.py --bootstrap output/quality-bootstrap --output output/quality-v2
@@ -84,7 +94,20 @@ jobs:
           cmp web/quality-data.js output/quality-v2-replay-data.js
           cmp output/quality-v2/manifest.json output/quality-v2-replay/manifest.json
           python scripts/build_quality_offline.py
-      - name: Test baseline and word-level generators
+      - name: Build and replay phrase-composition v2 data
+        run: |
+          mkdir -p output/phrase-input
+          ln -s ../quality-source output/phrase-input/cache
+          ln -s ../quality-bootstrap output/phrase-input/run
+          python scripts/build_composition_v2.py --bootstrap output/phrase-input
+          python scripts/build_composition_v2.py --bootstrap output/phrase-input --check
+          python scripts/build_composition_v2.py --bootstrap output/phrase-input --output output/composition-replay.js --report output/composition-build-replay.json
+          cmp web/composition-data.js output/composition-replay.js
+          cmp docs/COMPOSITION_V2_BUILD.json output/composition-build-replay.json
+          mkdir -p web/licenses
+          cp output/quality-source/licenses/tshet-uinh-CC0.txt web/licenses/tshet-uinh-CC0.txt
+          python scripts/build_composition_demo.py --output web/composition-offline.html
+      - name: Test baseline and existing word-level generators
         env:
           QUALITY_EVIDENCE_DIR: output/quality-v2-tests
         run: |
@@ -92,6 +115,18 @@ jobs:
           node --test --test-isolation=none --test-reporter=spec tests_web/seven.test.cjs tests_web/form-ui.test.cjs
           python -m unittest discover -s tests_quality_v2 -v
           node --test --test-reporter=spec tests_quality_v2/engine.test.cjs
+      - name: Test phrase evidence and construct unedited samples
+        run: |
+          python -m unittest discover -s tests_composition -v
+          node scripts/evaluate_composition_v2.cjs output/phrase-results 16
+      - name: Test phrase generation, replay and UI event contracts
+        env:
+          VERSELOOM_COMPOSITION_REPORT: output/phrase-results/report.json
+        run: node --test --test-isolation=none --test-reporter=spec tests_composition/engine.test.cjs tests_composition/ui.test.cjs
+      - name: Independently audit the phrase output receipts
+        run: |
+          python scripts/audit_composition_v2.py --input output/phrase-results/outputs.jsonl --output output/phrase-results/independent_audit.json
+          git diff --exit-code
       - name: Save quality evidence without claiming literary certification
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
@@ -99,12 +134,15 @@ jobs:
           path: |
             output/quality-v2/
             output/quality-v2-tests/
+            output/phrase-results/
+            docs/COMPOSITION_V2_BUILD.json
           if-no-files-found: error
           retention-days: 7
       - name: Build site and offline HTML
         id: site-build
         run: |
           python scripts/build_web_demo.py --output _site
+          python scripts/build_composition_site.py --site _site
           echo "manifest_sha=$(sha256sum _site/build-manifest.json | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
       - name: Check Pages availability
         id: pages-state
@@ -145,7 +183,7 @@ jobs:
   verify-live:
     needs: [build, deploy]
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     permissions:
       contents: read
     steps:
@@ -155,7 +193,7 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
           node-version: '24'
-      - name: Verify published baseline and quality generators
+      - name: Verify published baseline, quality and phrase generators
         shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
@@ -164,7 +202,8 @@ jobs:
           node scripts/check_live_site.cjs | tee "$RUNNER_TEMP/live-site-check.json"
           node scripts/check_live_seven.cjs | tee "$RUNNER_TEMP/live-seven-check.json"
           node scripts/check_live_quality.cjs | tee "$RUNNER_TEMP/live-quality-check.json"
+          node scripts/check_live_composition.cjs | tee "$RUNNER_TEMP/live-composition-check.json"
           echo '### Same-build published assets and Node execution (not browser UI)' >> "$GITHUB_STEP_SUMMARY"
           echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          cat "$RUNNER_TEMP/live-quality-check.json" >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/live-composition-check.json" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"

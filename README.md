@@ -1,138 +1,147 @@
 # 律织 · VerseLoom
 
-**把声律表示为矩阵，让程序自行组织诗句，并保留可复核的生成过程。**
+**让程序组织诗句，而不是替程序写诗。**
 
-项目原名 **VerseMatrix Lab**，现以 **律织 · VerseLoom** 为项目名称。Python 包名 `versematrix-lab`、模块目录 `wordconv_lab`、`wordconv-*` 命令及历史报告文件名沿用既有命名，以保持源码、数据和冻结实验记录可复核。
+用声律矩阵约束位置，用带出处的词组表达意义，让上下句在句法与音韵关系中共同成篇。支持五言、七言；不预写首句，不指定中间句，不用存档诗稿填补失败。
 
-当前可直接运行的最新入口是 **v0.6 自由生成试验**：不接收主题、上句、下句后缀或人工候选，从训练语料自动抽取短片段，按声律约束和固定统计分数组成八句五言。此前的矩阵求解、卷积与二字补句实验也保留在仓库中。
+## 直接体验
 
-## 浏览器示例
+### [打开「词组共构 v2」在线生成台 →](https://overloaded-org.github.io/verseloom/composition.html)
 
-[web/](web/) 提供可直接运行的中文网页：一键生成、12 个可用韵部、四种基本起式、平仄显示、词块来源次数、约束检查、复制和 JSON 下载。算法在浏览器内计算，无需模型 API 或密钥。相同配置得到相同结果；“换个韵部”通过切换真实韵部重新搜索，不是随机挑选已写好的诗。
+[单文件离线版](https://overloaded-org.github.io/verseloom/composition-offline.html) · [原候选句生成台](https://overloaded-org.github.io/verseloom/) · [早期词组实验台](https://overloaded-org.github.io/verseloom/quality.html) · [发布与线上验证](https://github.com/overloaded-org/verseloom/actions/workflows/pages.yml)
 
-网页使用首轮冻结的 2,392 个已评分候选句和训练字符共现统计，实时运行约束搜索。默认四模板结果、评分和逐行搜索计数均与 Python 冻结记录对齐；网页不重新训练卷积模型，也不重新评分全部原始组合。
+打开页面，选择 **五言／七言**，点击 **开始生成**。默认的“春／薄暮”是场景条件，不是固定诗句；无需填写提示词、上句或下句，也不需要 API 密钥。
 
-先从仓库冻结记录构建网页数据，再打开 `web/index.html`，或启动静态服务：
+每次生成默认自动换种子。关闭该选项可以手动输入种子；**按原参数复现**会使用当次的全部参数和历史记录。点选一句，可展开词组出处、句法角色、反切与释义参照；也可复制诗文或下载完整证据 JSON。
 
-```bash
-python3 -m pip install -r requirements.txt
-python3 scripts/build_web_data.py
-python3 -m http.server 8000 --directory web
+所有生成计算在浏览器内执行。自动模式记录的近期诗稿仅在当前页面会话中使用，不上传。相同数据、引擎版本、种子、参数和历史可以复现；不同种子不保证永不重复。
+
+## 三个入口，各自做什么
+
+| 入口 | 生成单位与用途 |
+| --- | --- |
+| **词组共构 v2 · `composition.html`** | 现场组合一字、二字词项；中间两联联合构造，接入义项、角色和历史读音证据。本次上线的主体验入口。 |
+| 自由组合基线 · `index.html` | 在冻结的五言／七言候选句池上搜索；保留早期结果、随机种子和对照功能。 |
+| 早期词组实验台 · `quality.html` | 仓库已存在的另一套词级实验实现，保留供比较；不是 `composition.html` 的别名。 |
+
+“主体验入口”不表示已经证明文学效果优于其他模式。旧生成器、冻结数据和实验记录均保留，没有被新版覆盖。
+
+## 词组如何成篇
+
+```text
+固定来源的训练诗与历史字书
+             ↓
+有训练出处的词项 + 拟用义项 + 读音证据
+             ↓
+季节／时段筛选 + 句法角色与动词搭配条件
+             ↓
+五言／七言声律矩阵 + 中间两联联合构造
+             ↓
+多分支搜索 → 完整八句选择 → 原样输出与证据记录
 ```
 
-访问 `http://localhost:8000/`。完成上述数据导出后，打包单文件离线版只需 Python 标准库：
+**声音与意义使用同一条证据。** 先依据拟用义项和字书记录确定词项是否准入，再接受格律检查；不为满足某个平仄位置临时切换读法。释义的“上同／下同”可以追溯，但不会把参照条目的读音移到原字上。
+
+**对仗参与构造，而不只是事后打分。** 中间两联同时匹配词组跨度、词类、句法角色和声明的语义类别，并限制重复词组、重复事件及韵脚重复。具体字词仍由程序选择。
+
+**无整句输出库。** v2 数据包含词项、语言统计、模板和读音依据，不包含可供直接抽取的完整输出句。训练原句以哈希用于排除，不作为生成候选。采用的是有限词汇、有限句法框架，不是无限制的自然语言写作。
+
+实现入口：[词项与读音编译](scripts/build_composition_v2.py) · [浏览器生成器](web/composition-engine.js) · [独立约束核验](scripts/audit_composition_v2.py) · [完整说明](docs/COMPOSITION_V2.md)。
+
+## 当前能力与边界
+
+| 已实现的工程能力 | 不能由此推断的结论 |
+| --- | --- |
+| 八句五言／七言，基本声律及声明的窄范围变式 | 覆盖全部传统变格、拗救或诗体情况 |
+| 中间联的词组、角色和语义槽位对应 | 专家已认定工对、无合掌、用典准确 |
+| 有出处的历史读音、拟用义项与韵部匹配记录 | 所有生成语境读音均已得到独立审定 |
+| 季节、时段和搭配条件，搜索与回放 | 文学质量、篇章意蕴或全局最优已获保证 |
+| 排除来源训练集的完整原句 | 全古典诗库原创性认证 |
+
+本版词项设计使用旧 `train` 与新增 `train_candidate` 的 **13,810 首形状候选文本**，不是已认证的严格律诗金标。当前设计的 564 个词项中，408 个通过声明的来源／读音准入检查，156 个排除；运行时还会按场景筛选。计数及排除理由由构建报告重新计算，不作为质量评分。
+
+词义、语义类别与语法策略是可审查的助手设计，并非独立人工金标。未找到满足全部约束的诗稿时，界面明确报告失败，不自动放宽规则或返回旧诗。七言的部分季节／时段组合仍可能无解。
+
+## 本地运行
+
+运行网页不需要 Python 或 Node。以下命令用于从源码重新构建整个站点，使用 **Python 3.12**；测试及发布使用 **Node.js 24**。首次构建需要下载固定版本的公开语料与《广韵》，不执行第三方下载脚本。
 
 ```bash
-python3 scripts/build_web_demo.py
-# 在浏览器打开 _site/standalone.html；算法、数据、界面和许可说明均在文件内。
+git clone https://github.com/overloaded-org/verseloom.git
+cd verseloom
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+
+# 保留的基线生成器
+python scripts/build_web_data.py
+python scripts/build_web_seven.py
+
+# 一次性建立有版本与散列的来源缓存；目录必须尚不存在
+python scripts/bootstrap_quality_data.py --download \
+  --cache output/phrase-input/cache --output output/phrase-input/run
+
+# 保留仓库已有词级实验台
+python scripts/build_quality_v2.py \
+  --bootstrap output/phrase-input/run --output output/quality-v2
+python scripts/build_quality_offline.py
+
+# 编译本次词组共构 v2
+python scripts/build_composition_v2.py --bootstrap output/phrase-input
+python scripts/build_composition_v2.py --bootstrap output/phrase-input --check
+mkdir -p web/licenses
+cp output/phrase-input/cache/licenses/tshet-uinh-CC0.txt web/licenses/
+python scripts/build_composition_demo.py --output web/composition-offline.html
+
+# 打包并加入首页入口、发布身份及文件清单
+python scripts/build_web_demo.py --output _site
+python scripts/build_composition_site.py --site _site
+python -m http.server 8000 --directory _site
 ```
 
-[Browser demo and GitHub Pages](https://github.com/overloaded-org/verseloom/actions/workflows/pages.yml) 自动检查网页数据、运行浏览器引擎测试并生成站点。首次发布需在 [Settings → Pages](https://github.com/overloaded-org/verseloom/settings/pages) 将 Source 设为 **GitHub Actions**，再运行一次该工作流。未启用 Pages 时只完成构建并明确跳过部署；成功发布的网址以部署结果为准。组织私有仓库还需具备支持 Pages 的计划与组织策略。
+访问 `http://localhost:8000/composition.html`。离线使用可直接打开 `_site/composition-offline.html`。它内联程序、词项数据和来源许可，不依赖 CDN 或模型接口。
 
-实现、复现、测试和部署说明见 [浏览器示例文档](docs/BROWSER_DEMO.md)，网页数据来源见 [NOTICE](web/NOTICE.md)。
+构建器会拒绝覆盖已有的原始缓存、实验输出和离线 HTML。重建时使用新的相应输出路径，或在确认内容不再需要后清理自己的构建产物；不要改写冻结实验目录。`web/*-data.js` 等派生大文件由构建流程生成，不提交到版本库。
 
-## 第一首程序原始输出
+## 测试与复现
 
-以下四十字直接取自 [首轮原始结果](results/free_generation_v06_run001/result.json)，没有人工改字：
-
-> 日暮春風起，青山美少年。  
-> 誰知何處去，獨有白雲天。  
-> 萬里無人到，還家越水邊。  
-> 江南歸路遠，草木落花前。  
-
-程序自动选中仄起、首句不入韵的基本模板，韵脚为“年、天、邊、前”。参考表的候选平仄检查通过；“青山美少年”“草木落花前”的语义衔接仍生硬，对仗和文学质量尚未得到认证。
-
-本次由**统计片段自动组合与约束搜索**生成。v0.5 卷积模型没有参与这首诗的生成，因此它不构成“卷积模型已学会写整诗”的证据。
-
-## 快速开始
-
-推荐 Python 3.12；首次运行记录使用 Python 3.12.14、NumPy 2.3.5。不需要外部模型、API 密钥或重新训练神经模型。请在仓库根目录执行：
+在完成上面的数据构建后：
 
 ```bash
-python3 -m pip install -r requirements.txt
-python3 -m pip install -e . --no-deps
+# 历史 Python 回归与新增证据／站点检查
+PYTHONPATH=src python -m unittest discover -s tests -v
+python -m unittest discover -s tests_composition -v
 
-# 无内容输入：程序自行生成八句。输出目录必须尚不存在。
-python3 scripts/generate_free_poem_v06.py --output results/free_generation_replay
+# 固定五言／七言配置，各 16 个种子；写入新的结果目录
+node scripts/evaluate_composition_v2.cjs output/phrase-results 16
+VERSELOOM_COMPOSITION_REPORT=output/phrase-results/report.json \
+  node --test --test-isolation=none --test-reporter=spec \
+  tests_composition/engine.test.cjs tests_composition/ui.test.cjs
+
+# 用另一实现核验原样输出、词项身份、平仄和对齐记录
+python scripts/audit_composition_v2.py \
+  --input output/phrase-results/outputs.jsonl \
+  --output output/phrase-results/independent_audit.json
 ```
 
-当前生成器是确定性算法；相同源文件、配置与数值环境下复跑应得到同样的选择。`seed: 0` 仅是试验记录标签，不表示随机采样。第一次结果保存在 `results/free_generation_v06_run001/`，程序拒绝覆盖已有输出目录。
+这些测试检查实现与声明规则，不给文学质量打合格证。界面事件合约测试也不等于 Safari／Chrome／手机的完整渲染兼容测试。原样样本、参数、失败项和负结果应同时保留；不以人工改字替换程序输出。
 
-可用以下命令核对**既有首轮结果**，不会重新生成诗：
+## Pages 发布
 
-```bash
-python3 scripts/audit_free_poem_v06.py \
-  --run results/free_generation_v06_run001 \
-  --output results/ci_free_poem_audit.json
-```
+[`Browser demo and GitHub Pages`](.github/workflows/pages.yml) 在相关 `main` 提交后构建三个入口，执行生成与证据检查，发布站点，再下载正式网址的资源进行同构建 SHA-256 校验及五言／七言执行、复现检查。`release.json` 记录实际部署提交；绿色构建不替代部署和 `verify-live` 成功。
 
-审计输出文件也只能新建；再次执行时应使用另一个输出文件名。
+[查看工作流](https://github.com/overloaded-org/verseloom/actions/workflows/pages.yml) · [线上版本身份](https://overloaded-org.github.io/verseloom/release.json)
 
-## 生成算法
+Fork 部署时，在仓库 Settings → Pages 中选择 GitHub Actions；源码中的项目外链需要相应调整。流程不修改仓库可见性、计费配置或其他项目构件。
 
-1. 只使用原 `train` 分割中的 **2,203 首五言诗**，不从开发集或测试集取材。
-2. 自动抽取各行前二字与后三字，两个片段均须出现至少两次；未知、跨平仄候选和已标记校勘问题字被排除。
-3. 组合成五字句，并筛除完整训练原句、句内重字以及不符合四种基本句型的组合。韵脚必须在参考表中对应唯一平声韵部。
-4. 用双向插值三元字符统计评分；程序按不同韵脚的覆盖度与训练频数自动选韵部。
-5. 比较四种五律基本模板，通过宽度 32 的 beam 搜索选出全诗；评分加入训练诗字符共现，扣除重字惩罚。全诗每字最多出现两次，韵脚不重，中间两联对应位置不同字。
+## 研究记录
 
-配置见 [free_generation_v0.6.json](configs/free_generation_v0.6.json)。本轮共评分 **322,600 个合法候选句**，保留 2,392 个候选进入有限搜索。它是有限候选池上的启发式搜索，不保证全局最优。唯一候选平仄也不等于已经确认语境读音。
+本项目从“声律矩阵＋词卷积”验证开始。早期卷积／矩阵匹配模型在相应复原实验中没有超过指定统计基线，**当前网页整诗生成不是这些神经模型的成果**。它使用词项、规则和统计约束搜索，不调用大语言模型 API。
 
-“不是训练集完整原句”只是在本次五言训练集范围内的检查，不是全古典诗库原创性查重。固定跨度片段也不等于语言学上的分词。
-
-## 运行记录与核验
-
-| 文件 | 内容 |
-|---|---|
-| [freeze.json](results/free_generation_v06_run001/freeze.json) | 生成前固定的代码、配置与输入 SHA |
-| [resources.json](results/free_generation_v06_run001/resources.json) | 全部可用片段、计数与来源位置 |
-| [candidate_pools.json](results/free_generation_v06_run001/candidate_pools.json) | 保留候选及统计分数 |
-| [rhyme_selection.json](results/free_generation_v06_run001/rhyme_selection.json) | 程序选韵依据 |
-| [search.json](results/free_generation_v06_run001/search.json) | 四模板搜索计数与最终路径 |
-| [result.json](results/free_generation_v06_run001/result.json) | 原始八句、逐句来源及分数分解 |
-| [independent_review.json](results/free_generation_v06_engineering/independent_review.json) | 独立来源与最终路径审计 |
-
-独立审计重建了 2,709 个片段记录和 8,035 次来源，复算全部 2,392 个保留候选分数与四模板最终路径，共 2,589 个数值项，最大差为 0.0。它没有独立重放每个被剪枝状态，也不认证文学质量。
-
-完整单元测试：
-
-```bash
-PYTHONPATH=src python3 -m unittest discover -s tests -v
-```
-
-本次仓库整理后的本地验证为 **175 项全部通过**，迁移后的首诗独立审计也通过。对应记录在 [GitHub 导入验证](results/github_import_validation/)。GitHub Actions 使用同一套单元测试和只读首诗审计，不自动重新生成或改写冻结样本；远端 CI 状态以实际 Actions 运行记录为准。
-
-## 既有二字补句功能
-
-保留了 v0.5 主模型三个种子共同选中的第 800 步权重。默认 seed 0 不是最好种子，也不是集成。无需再训练即可运行：
-
-```bash
-python3 scripts/complete_span_v05.py \
-  --upper '江雨催寒色' --suffix '過遠村' --method compare --limit 5
-```
-
-这个接口要求完整上句及下句后三字／后五字，只选择下句前两个字；它与上面的无内容输入整诗生成入口不同。统计分数与匹配模型分数都不是文学质量分数。原字形保留，不自动简繁转换。
-
-## 历史实验与负结果
-
-| 阶段 | 已得到的证据 | 尚未得到的结论 |
-|---|---|---|
-| v0.2 声律矩阵与动态规划 | 基本平仄文法、有限局部可加目标的精确求解 | 任意全局语义目标的精确求解或文学质量保证 |
-| v0.3 卷积复原 | 六次正式训练、原文恢复及求解核验 | CNN 未通过晋级标准 |
-| v0.4 扩展候选与关联检索 | 新独立确认及完整统计记录 | 未通过晋级标准；扩词表不等于复原质量提升 |
-| v0.5 上下文矩阵匹配 | 12 次训练、14,400 次参数更新；开发诗族等权 R@16 主模型 1.058%，统计基线 4.425% | 三个开发资源门均未通过；没有运行新的独立确认 |
-| v0.6 无填句整诗试验 | 自动选择全部 40 字，固定规则产生首轮完整结果 | 对仗、语义连贯性、文学质量与普遍生成效果待验证 |
-
-历史协议、报告和原 README 均保留在 [docs](docs/)，其中 [README_v0.5.md](docs/README_v0.5.md) 是此前完整实验包的说明。基础 Python 包版本暂保留 `0.5.0`，自由生成模块单独以试验版本 `v0.6` 标记，避免改写旧实验源码身份。
-
-## 仓库收录范围
-
-主仓库收录全部源码、脚本、测试、配置、合成 fixture、语料与韵表数据、历史 JSON 报告／冻结／审计、首首完整生成轨迹，以及三个已选主模型权重。原始复制文件保持字节不变。
-
-体积较大的历史逐题预测 JSONL、未选权重及工程回读副本没有放入主仓库。共 131 个省略历史文件的路径、字节数和 SHA，以及 353 个原始复制文件的 SHA，见 [GITHUB_IMPORT_SCOPE.json](docs/GITHUB_IMPORT_SCOPE.json)。旧 manifest 是历史完整包的清单，不是本仓库全部文件均存在的声明；需要重算历史完整逐题报告时，应使用原完整实验包或按原协议输出到新的结果目录。最新整诗生成、首诗审计、二字补句 CLI 和单元测试均具备本地依赖。
+历史实现与负结果见 [docs/](docs/)、[首轮程序原始输出](results/free_generation_v06_run001/result.json)、[七言支持说明](docs/SEVEN_SUPPORT.md)、[质量研究 v1](docs/QUALITY_REVIEW_V1.md)、[数据扩充结果](docs/DATA_BOOTSTRAP_V1_RESULT.md)。本次改写前的 README 原文保存在 [README_BEFORE_PAGES_V2.md](docs/README_BEFORE_PAGES_V2.md)。Python 包 `versematrix-lab`、模块 `wordconv_lab` 继续沿用历史命名，以保持实验身份。
 
 ## 来源与许可
 
-唐诗数字语料来自 [chinese-poetry/chinese-poetry](https://github.com/chinese-poetry/chinese-poetry)，固定提交 `b8594f81a89752241442f2ce267d6f66f96704ee`；完整原始来源、作者信息、SHA 与许可通知随 [data/corpus_v03](data/corpus_v03/) 和 [data/confirmation_v04](data/confirmation_v04/) 保存。源诗仅做八行×五／七字的形状筛选，并非已认证严格律诗金标。
+原诗数字语料来自 [chinese-poetry/chinese-poetry](https://github.com/chinese-poetry/chinese-poetry)，固定提交 `b8594f81a89752241442f2ce267d6f66f96704ee`，保留 MIT 许可与来源信息。《广韵》数字数据来自 [nk2028/tshet-uinh-data](https://github.com/nk2028/tshet-uinh-data)，固定提交 `21585e22c8a730ca2fd175112f4d18e16d5ce578`，保留 CC0-1.0 声明。平水韵录文与派生数据沿用项目 [CC BY-SA 4.0 来源通知](data/reference_v02/LICENSE_NOTICE.md)。
 
-历史韵表来自中文维基文库固定修订，字形和已知校勘问题均保留。录文、派生参考数据的署名与 CC BY-SA 4.0 通知见 [data/reference_v02/LICENSE_NOTICE.md](data/reference_v02/LICENSE_NOTICE.md)。其他第三方源码或资料沿用各自随附许可。本次整理没有添加覆盖整个项目原始代码的开源许可证，也没有把第三方数据静默改授其他许可。
+第三方材料分别保留其权利声明，不替整个仓库改授许可。本项目原始代码目前未新增统一开源许可证。详见 [来源登记](configs/data_source_registry_v1.json)、[网页 NOTICE](web/NOTICE.md) 和各数据目录的通知。
