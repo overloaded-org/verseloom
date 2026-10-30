@@ -80,9 +80,28 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
   check(second);
   assert.equal(second.rhymeGroup, alternate.id);
   assert.notEqual(JSON.stringify(first.lines), JSON.stringify(second.lines), "Changing rhyme did not change the poem");
+  assert.equal(context.VerseLoomEngine.version, "verseloom.seeded-openings.v2");
+  for (const id of ["seed-input", "auto-seed", "avoid-recent", "replay-button"])
+    assert(homepage.includes('id="' + id + '"'), "Missing seed/history UI: " + id);
+  let history = [first.lines[0]], last;
+  const seededOpenings = [];
+  for (let seed = 42; seed < 48; seed++) {
+    last = await context.VerseLoomEngine.generate(data, {seed, variation: 0.8,
+      templateId: "L5-Z-R0", rhymeGroup: first.rhymeGroup, openingHistory: history});
+    check(last);
+    assert(!history.includes(last.lines[0]), "Recent first line repeated");
+    assert(!history.slice(-4).some(line => line.slice(0, 2) === last.lines[0].slice(0, 2)), "Recent opening prefix repeated");
+    seededOpenings.push(last.lines[0]);
+    history = history.concat(last.lines[0]).slice(-8);
+  }
+  const replay = await context.VerseLoomEngine.generate(data, last.options);
+  const withoutTime = result => { const {elapsedMs, ...identity} = result; return JSON.stringify(identity); };
+  assert.equal(withoutTime(replay), withoutTime(last), "Seed/history replay mismatch");
   return {status: "PASS_LIVE_HTTP_ASSETS_AND_NODE_ENGINE", url: base.href, manifestSha256: manifestSha,
     assetCount: assets.size, homepageMatched: true, defaultPoem: Array.from(first.lines),
     changedRhyme: second.rhymeLabel, changedPoem: Array.from(second.lines),
+    engineVersion: context.VerseLoomEngine.version, seededOpenings, seedAndHistoryReplay: true,
+    recentFirstLineCollisions: 0, recentPrefixCollisions: 0,
     browserUIExercised: false, checkedAt: new Date().toISOString()};
 }
 

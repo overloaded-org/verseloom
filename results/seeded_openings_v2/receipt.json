@@ -1,0 +1,66 @@
+{
+  "schema": "verseloom.opening-diversity.audit.v1",
+  "engineVersion": "verseloom.seeded-openings.v2",
+  "design": "Seeds 0..63; fixed L5-Z-R0, frozen default rhyme, beam 32; session begins with visible archived opening; no sample selection.",
+  "scope": "Finite engineering fixture. Not an estimate of population diversity or literary quality. Repeats outside the recent window remain possible.",
+  "sourceSha256": {
+    "web/data.js": "29f380e5b37ed3fc3ed6202dad40453e68ed3ac76b9243dc755b4f562b8759b6",
+    "web/engine.js": "a392cbecfac946b1e6a39486cef9e73dcae178bec750f34bdafa970a74fa53fd",
+    "scripts/audit_opening_diversity.cjs": "588302ba54baa0a984fd464286c1d1cf2ddadd18675e3400af70a074a3809485",
+    "web/app.js": "74404538febc97b497869e40d71bbf7d02818fa8b3c91c50ac7abd20c17d29a0",
+    "web/index.html": "559c3b44a9e013ef366af1ee33e026c59adaa055a275cb2bf714bd9eff884547",
+    "tests_web/engine.test.cjs": "02ca371c66e653ed1efbadc981e44f443e2b86d15686fef0569b28c93f8f538e",
+    "tests_web/seed-ui.test.cjs": "959a588700742a0ca1866f7378641869bcc594fbf90a6dda1be4b8873bc6c932",
+    "scripts/check_live_site.cjs": "6845fb9e393633ec07d15fc9d9e46e5944286357e38e5762e37b0da86038df1b"
+  },
+  "arms": {
+    "baseline": {
+      "runs": 64,
+      "complete": 64,
+      "mechanicalChecksPassed": 64,
+      "uniquePoems": 1,
+      "uniqueFirstLines": 1,
+      "uniqueOpeningPrefixes": 1,
+      "firstLineCollisionWithin8": 64,
+      "openingPrefixCollisionWithin4": 64,
+      "pairwiseFirstLineCollisionRate": 1,
+      "meanStatisticalScore": -34.12251738790631,
+      "mostCommonPrefixShare": 1
+    },
+    "seeded": {
+      "runs": 64,
+      "complete": 64,
+      "mechanicalChecksPassed": 64,
+      "uniquePoems": 64,
+      "uniqueFirstLines": 36,
+      "uniqueOpeningPrefixes": 16,
+      "firstLineCollisionWithin8": 9,
+      "openingPrefixCollisionWithin4": 17,
+      "pairwiseFirstLineCollisionRate": 0.021825396825396824,
+      "meanStatisticalScore": -35.087865637164406,
+      "mostCommonPrefixShare": 0.125
+    },
+    "session": {
+      "runs": 64,
+      "complete": 64,
+      "mechanicalChecksPassed": 64,
+      "uniquePoems": 64,
+      "uniqueFirstLines": 44,
+      "uniqueOpeningPrefixes": 20,
+      "firstLineCollisionWithin8": 0,
+      "openingPrefixCollisionWithin4": 0,
+      "pairwiseFirstLineCollisionRate": 0.011408730158730158,
+      "meanStatisticalScore": -35.091131370463046,
+      "mostCommonPrefixShare": 0.078125
+    }
+  },
+  "verification": {
+    "node_tests": 28,
+    "node_failures": 0,
+    "python_tests": 175,
+    "python_failures": 0,
+    "data_check": "unchanged frozen derived data matched byte-for-byte",
+    "ui_tests": "DOM-contract tests, one using the actual engine; not real-browser rendering",
+    "live_smoke_at_commit_preparation": "mock HTTP fixture passed; deployed run must be checked separately"
+  }
+}

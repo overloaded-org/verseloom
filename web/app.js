@@ -5,6 +5,9 @@
     const byId = (id) => document.getElementById(id);
     const ui = {
       form: byId("generation-form"), rhyme: byId("rhyme-select"), template: byId("template-select"),
+      seed: byId("seed-input"), autoSeed: byId("auto-seed"), variation: byId("variation-select"),
+      replay: byId("replay-button"), seedDisplay: byId("seed-display"),
+      avoidRecent: byId("avoid-recent"), openingDisplay: byId("opening-display"),
       beam: byId("beam-select"), beamSummary: byId("beam-summary"), generate: byId("generate-button"),
       generateLabel: byId("generate-label"), nextRhyme: byId("next-rhyme-button"), cancel: byId("cancel-button"),
       reset: byId("reset-button"), sheet: byId("poem-sheet"), kind: byId("result-kind"), heading: byId("poem-heading"),
@@ -27,6 +30,9 @@
     let completedRuns = 0;
     let showTones = false;
     let toastTimer;
+    // Only this tab's displayed successes; nothing is uploaded or persisted.
+    // Avoid the visible archived opening on the first exploratory click too.
+    let recentOpenings = data?.baseline?.lines?.length ? [data.baseline.lines[0]] : [];
 
     function announce(message) {
       ui.live.textContent = message;
@@ -61,10 +67,13 @@
     }
 
     function setBusy(busy) {
-      [ui.rhyme, ui.template, ui.beam, ui.generate, ui.nextRhyme, ui.reset].forEach((element) => { element.disabled = busy; });
+      [ui.rhyme, ui.template, ui.beam, ui.generate, ui.nextRhyme, ui.reset, ui.seed, ui.autoSeed, ui.variation, ui.avoidRecent].forEach((element) => { element.disabled = busy; });
+      ui.avoidRecent.disabled = busy || !ui.autoSeed.checked || Number(ui.variation.value) === 0;
       ui.cancel.hidden = !busy;
       ui.generate.classList.toggle("is-busy", busy);
-      ui.generateLabel.textContent = busy ? "正在成篇…" : completedRuns ? "再次生成" : "开始生成";
+      ui.generateLabel.textContent = busy ? "正在成篇…" : !completedRuns ? "开始生成" :
+        ui.autoSeed.checked && Number(ui.variation.value) > 0 ? "换个种子，再写一首" : "按当前设置生成";
+      ui.replay.disabled = busy || !result;
       ui.sheet.setAttribute("aria-busy", String(busy));
       ui.progressRegion.hidden = !busy;
       ui.download.disabled = busy || !result;
@@ -125,6 +134,7 @@
       byId("line-coherence").textContent = Number.isFinite(coherenceTerm) ? "+" + coherenceTerm.toFixed(3) : "—";
       byId("line-repetition").textContent = Number.isFinite(detail.repetitionPenalty) ? "−" + detail.repetitionPenalty.toFixed(3) : "—";
       byId("line-increment").textContent = finiteNumber(detail.increment, 3);
+      byId("line-sampling").textContent = finiteNumber(detail.samplingBias ?? 0, 3);
       ui.inspector.hidden = false;
     }
 
@@ -171,12 +181,16 @@
       });
       ui.lines.replaceChildren(rows);
       ui.lines.classList.toggle("show-tones", showTones);
+      ui.openingDisplay.textContent = generated ? value.opening?.policy === "prefix-balanced-softmax-v1" ?
+        "词块分组抽样" + (value.options.openingHistory.length ? " · 近期去重" : "") : "原版择优" : "尚未运行";
       ui.kind.textContent = generated ? "本次生成" : "首轮存档";
       ui.heading.textContent = generated ? "五律 · 新稿" : "五律 · 初试";
       ui.rhymeDisplay.textContent = value.rhymeLabel || labelForRhyme(value.rhymeGroup);
       ui.templateDisplay.textContent = value.templateLabel || labelForTemplate(value.templateId);
       ui.time.textContent = generated && Number.isFinite(value.elapsedMs) ? value.elapsedMs < 1000 ? Math.round(value.elapsedMs) + " ms" : (value.elapsedMs / 1000).toFixed(2) + " s" : "尚未运行";
       ui.score.textContent = generated ? finiteNumber(value.score, 3) : "—";
+      ui.seedDisplay.textContent = generated ? String(value.options.seed) +
+        (value.options.variation === 0 ? "（随机关闭）" : " · 强度 " + value.options.variation) : "尚未运行";
       ui.lineHint.textContent = generated ? "点选一句，查看词块来源与分数" : "生成后，点一句查看词块来源";
       ui.download.disabled = !generated;
       ui.copy.disabled = !displayedLines.length;
@@ -208,21 +222,24 @@
       if (!value || value.status !== "complete") {
         finishJob(job);
         restoreBadge();
-        displayError("当前设置没有找到完整诗稿", "可以换一个韵部、增加搜索宽度，或恢复默认设置后再试。下方仍保留上一份诗稿。");
+        displayError("当前设置没有找到完整诗稿", "当前首句与格律约束下未找到完整路径。请换韵部／起式、增加搜索宽度，或取消近期首句去重。没有偷偷放宽约束，下方仍保留上一份诗稿。");
         return;
       }
       if (!Array.isArray(value.lines) || value.lines.length !== 8 || value.lines.some((line) => typeof line !== "string" || Array.from(line).length !== 5)) {
         receiveError(job, new Error("生成结果未通过八句五言结构检查。"));
         return;
       }
+      const repeatedOutput = result && result.lines.join("\n") === value.lines.join("\n");
       finishJob(job);
       completedRuns += 1;
       result = value;
+      if (!job.replay) recentOpenings = recentOpenings.concat(value.lines[0]).slice(-8);
       renderPoem(result, true);
       renderChecks(result.checks);
       restoreBadge();
-      ui.generateLabel.textContent = "再次生成";
+      setBusy(false);
       selectLine(0);
+      if (repeatedOutput && !job.replay) notify("本次搜索仍选中相同诗稿；换种子不保证唯一，可提高探索强度。");
       announce("生成完成，" + (result.rhymeLabel || labelForRhyme(result.rhymeGroup)) + "，八句五言。" + ui.checksSummary.textContent + "。");
     }
 
@@ -242,9 +259,29 @@
         .then((value) => receiveResult(job, value)).catch((error) => receiveError(job, error));
     }
 
+    function readSeed() {
+      const text = ui.seed.value.trim();
+      if (!/^\d{1,10}$/.test(text) || Number(text) > 4294967295) {
+        throw new Error("种子须为 0 至 4294967295 的整数。");
+      }
+      return Number(text);
+    }
+
+    function freshSeed(previous) {
+      // Only choose the visible run seed here. The engine itself is deterministic.
+      if (globalThis.crypto && typeof globalThis.crypto.getRandomValues === "function") {
+        const value = globalThis.crypto.getRandomValues(new Uint32Array(1))[0];
+        return value === previous ? (previous + 1) >>> 0 : value;
+      }
+      // Offline/older environments can still explore with a recorded new seed.
+      return (previous + 1) >>> 0;
+    }
+
     function currentOptions() {
       const defaults = data.defaults || {};
       return {
+        seed: readSeed(),
+        variation: Number(ui.variation.value),
         rhymeGroup: ui.rhyme.value,
         templateId: ui.template.value,
         beamWidth: Number(ui.beam.value),
@@ -253,9 +290,33 @@
       };
     }
 
-    function beginGeneration() {
+    function beginGeneration(replayOptions = null) {
       if (activeRun) return;
-      const job = { id: ++nextRunId, options: currentOptions(), worker: null, cancelled: false, mainStarted: false };
+      let options;
+      try {
+        options = replayOptions ? {...replayOptions} : currentOptions();
+        if (!replayOptions) {
+          options.openingHistory = [];
+          if (ui.autoSeed.checked && options.variation > 0) {
+            options.seed = freshSeed(options.seed);
+            if (ui.avoidRecent.checked) options.openingHistory = recentOpenings.slice();
+          }
+        } else {
+          options.openingHistory = (replayOptions.openingHistory || []).slice();
+        }
+      } catch (error) {
+        displayError("生成参数无效", error.message);
+        return;
+      }
+      ui.seed.value = String(options.seed);
+      if (replayOptions) {
+        ui.rhyme.value = options.rhymeGroup;
+        ui.template.value = options.templateId;
+        ui.beam.value = String(options.beamWidth);
+        ui.variation.value = String(options.variation);
+        ui.beamSummary.textContent = "宽度 " + ui.beam.value;
+      }
+      const job = { id: ++nextRunId, options, replay: Boolean(replayOptions), worker: null, cancelled: false, mainStarted: false };
       activeRun = job;
       ui.errorRegion.hidden = true;
       setBusy(true);
@@ -302,7 +363,12 @@
       ui.beam.value = String(data.defaults?.beamWidth ?? data.defaults?.beam_width ?? 32);
       ui.beamSummary.textContent = "宽度 " + ui.beam.value;
       ui.errorRegion.hidden = true;
-      notify("已恢复原始配置，点击生成可复现首作");
+      ui.seed.value = "0";
+      ui.variation.value = "0";
+      ui.autoSeed.checked = false;
+      recentOpenings = [];
+      setBusy(false);
+      notify("已恢复原始配置并关闭随机，点击生成可复现首作");
     }
 
     function nextRhyme() {
@@ -360,7 +426,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "verseloom-" + new Date().toISOString().replace(/[:.]/g, "-") + ".json";
+      link.download = "verseloom-seed-" + result.options.seed + "-" + new Date().toISOString().replace(/[:.]/g, "-") + ".json";
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -369,7 +435,7 @@
     }
 
     if (!data || !engine || typeof engine.generate !== "function" || !Array.isArray(data.templates) || !Array.isArray(data.rhymes) || !data.baseline) {
-      [ui.generate, ui.nextRhyme, ui.reset, ui.rhyme, ui.template, ui.beam, ui.copy, ui.tone].forEach((element) => { element.disabled = true; });
+      [ui.generate, ui.nextRhyme, ui.reset, ui.rhyme, ui.template, ui.beam, ui.copy, ui.tone, ui.seed, ui.autoSeed, ui.variation, ui.replay, ui.avoidRecent].forEach((element) => { element.disabled = true; });
       displayError("生成资源尚未加载", "请刷新重试。离线使用时，请使用完整网页包或单文件版本；当前诗稿仍是首轮存档示例。");
       return;
     }
@@ -398,6 +464,9 @@
     ui.tone.disabled = false;
     ui.form.addEventListener("submit", (event) => { event.preventDefault(); beginGeneration(); });
     ui.nextRhyme.addEventListener("click", nextRhyme);
+    ui.replay.addEventListener("click", () => { if (result) beginGeneration(result.options); });
+    ui.autoSeed.addEventListener("change", () => setBusy(Boolean(activeRun)));
+    ui.variation.addEventListener("change", () => setBusy(Boolean(activeRun)));
     ui.cancel.addEventListener("click", cancelGeneration);
     ui.reset.addEventListener("click", restoreDefaults);
     ui.beam.addEventListener("change", () => { ui.beamSummary.textContent = "宽度 " + ui.beam.value; });
