@@ -17,9 +17,17 @@ const out=process.argv[2],length=Number(process.argv[3]);assert(out&&[5,7].inclu
   comparisons.push({seed,length,poolIdentical:true,statuses:pair.map(r=>r.status),changed:JSON.stringify(pair[0].lines)!==JSON.stringify(pair[1].lines)});
  }
  const last=records.at(-1),replay=await VerseLoomInduced.generate(VerseLoomInducedData,last.options);assert.deepEqual(identity(last),identity(replay));
- const changedRows=comparisons.map((c,i)=>{const a=records[2*i],b=records[2*i+1];const indices=Array.from({length:8},(_,j)=>j).filter(j=>a.lines[j]!==b.lines[j]);return {seed:c.seed,length,changedLinePositions:indices,changedLineCount:indices.length,changedMiddleCoupletLines:indices.filter(j=>j>=2&&j<=5).length};});
+ const changedRows=comparisons.map((c,i)=>{const a=records[2*i],b=records[2*i+1];const indices=Array.from({length:8},(_,j)=>j).filter(j=>a.lines[j]!==b.lines[j]);return {seed:c.seed,length,changedLinePositions:indices,changedLineCount:indices.length,changedMiddleCoupletLines:indices.filter(j=>j>=2&&j<=5).length,sharedLines:a.lines.filter(line=>b.lines.includes(line)).length,sameRhyme:a.rhymeGroup===b.rhymeGroup,sameTemplate:a.templateId===b.templateId,scoreDelta:b.score-a.score};});
+ const counterfactual=[];
+ for(const seed of [0,2,42,43])for(const mode of ['relations','learned']){
+  const opts={length,seed,variation:.8,beamWidth:8,mode};
+  const r=await VerseLoomInduced.generate(VerseLoomInducedData,opts);
+  if(r.status==='complete')assert(r.checks.every(c=>c.passed));
+  const baseline=records.find(x=>x.options.seed===seed&&x.options.mode===mode);
+  counterfactual.push({seed,length,mode,beamWidth:8,status:r.status,referenceBeamWidth:16,referenceStatus:baseline.status,changed:r.lines.join('/')!==baseline.lines.join('/'),samePool:r.poolFingerprint===baseline.poolFingerprint,sharedLines:r.lines.filter(line=>baseline.lines.includes(line)).length,rhymeChanged:r.rhymeGroup!==baseline.rhymeGroup,templateChanged:r.templateId!==baseline.templateId});
+ }
  const report={schema:'verseloom.continuation-generation.v1',length,runs:records.length,completed:records.filter(x=>x.status==='complete').length,
- comparisons,changedRows,changedLinePositionsHistogram:Object.fromEntries(Array.from({length:8},(_,i)=>[String(i),changedRows.filter(x=>x.changedLinePositions.includes(i)).length])),replay:true,resumedRecords:existing.length,independentLiteraryRatings:0,
+ comparisons,counterfactual,counterfactualScope:'Beam width 8 versus 16; fixed corpus, seed, mode, variation, no topic or content controls',changedRows,changedLinePositionsHistogram:Object.fromEntries(Array.from({length:8},(_,i)=>[String(i),changedRows.filter(x=>x.changedLinePositions.includes(i)).length])),replay:true,resumedRecords:existing.length,independentLiteraryRatings:0,
  uniqueByMode:Object.fromEntries(['relations','learned'].map(mode=>[mode,new Set(records.filter(x=>x.options.mode===mode&&x.status==='complete').map(r=>r.lines.join('/'))).size]))};
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 })().catch(e=>{console.error(e);process.exitCode=1;});
