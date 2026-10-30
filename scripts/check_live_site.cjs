@@ -1,12 +1,14 @@
 "use strict";
 
 // Verify public HTTP assets against the manifest produced by this same build.
-// Execute the downloaded data/engine in Node; this is not a browser UI test.
+// Execute downloaded data/engines in Node; this is not a browser UI test.
 const assert = require("node:assert/strict");
 const {createHash} = require("node:crypto");
 const vm = require("node:vm");
 const digest = bytes => createHash("sha256").update(bytes).digest("hex");
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+// The induction model is 18 MB; retain the older bound for every other asset.
+const assetLimit = path => path === "induced-data.js" ? 32 * 1024 * 1024 : 10 * 1024 * 1024;
 const required = ["index.html", "styles.css", "data.js", "engine.js", "app.js", "worker.js", "standalone.html", "NOTICE.html"];
 
 async function verifySite(siteUrl, manifestSha, settings = {}) {
@@ -28,7 +30,7 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
         const type = path.endsWith(".js") ? /(?:javascript|ecmascript)/i : path.endsWith(".css") ? /text\/css/i : path.endsWith(".json") ? /application\/json/i : (!path || path.endsWith(".html")) ? /text\/html/i : null;
         if (type) assert.match(mime, type, `Unexpected content type: ${path}`);
         const bytes = Buffer.from(await response.arrayBuffer());
-        assert(bytes.length <= 10 * 1024 * 1024, `Asset too large: ${path}`);
+        assert(bytes.length <= assetLimit(path), `Asset too large: ${path}`);
         if (size !== undefined) assert.equal(bytes.length, size, `Byte length mismatch: ${path}`);
         assert.equal(digest(bytes), sha, `SHA-256 mismatch: ${path || "/"}`);
         return bytes;
@@ -47,7 +49,7 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
     assert(item && typeof item.path === "string" && /^[A-Za-z0-9_./-]+$/.test(item.path), "Invalid asset path");
     assert(!item.path.startsWith("/") && item.path.split("/").every(part => part && part !== "." && part !== ".."), "Unsafe asset path");
     assert(!entries.has(item.path), "Duplicate asset path");
-    assert(/^[a-f0-9]{64}$/.test(item.sha256) && Number.isInteger(item.bytes) && item.bytes >= 0 && item.bytes <= 10 * 1024 * 1024, "Invalid asset identity");
+    assert(/^[a-f0-9]{64}$/.test(item.sha256) && Number.isInteger(item.bytes) && item.bytes >= 0 && item.bytes <= assetLimit(item.path), "Invalid asset identity");
     entries.set(item.path, item);
   }
   for (const path of required) assert(entries.has(path), `Missing required asset: ${path}`);
@@ -56,6 +58,14 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
   const index = entries.get("index.html");
   const homepage = (await read("", index.sha256, index.bytes)).toString("utf8");
   for (const name of ["data.js", "engine.js", "app.js"]) assert(homepage.includes(name), `Homepage missing script: ${name}`);
+  const mobilePages = [];
+  if (entries.has("mobile-baseline.css")) {
+    for (const page of ["index.html", "standalone.html", "composition.html", "composition-offline.html", "quality.html", "quality-offline.html", "induced.html"]) {
+      if (!assets.has(page)) continue;
+      assert(assets.get(page).toString("utf8").includes('id="verseloom-mobile-v1"'), "Missing inlined mobile styles: " + page);
+      mobilePages.push(page);
+    }
+  }
   const context = vm.createContext({atob, setTimeout, performance});
   // These bytes have been matched against this run's trusted build hash above.
   vm.runInContext(assets.get("data.js").toString("utf8"), context, {filename: "published-data.js", timeout: 2000});
@@ -83,21 +93,22 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
   check(second);
   assert.equal(second.rhymeGroup, alternate.id);
   assert.notEqual(JSON.stringify(first.lines), JSON.stringify(second.lines), "Changing rhyme did not change the poem");
-  assert.equal(context.VerseLoomEngine.version, "verseloom.joint-lines.v3");
+  assert.equal(context.VerseLoomEngine.version, "verseloom.joint-lines.v4");
   assert(!homepage.includes("日暮春風起"), "The live page must not prefill an archived poem");
   for (const id of ["seed-input", "auto-seed", "avoid-recent", "replay-button"])
     assert(homepage.includes('id="' + id + '"'), "Missing seed/history UI: " + id);
-  let history = [], last;
+  let history = [], recentPoems = [], last;
   const seededOpenings = [];
   for (let seed = 42; seed < 48; seed++) {
     last = await context.VerseLoomEngine.generate(data, {seed, variation: 0.8,
-      templateId: "L5-Z-R0", rhymeGroup: first.rhymeGroup, openingHistory: history});
+      templateId: "L5-Z-R0", rhymeGroup: first.rhymeGroup, openingHistory: history, recentPoems});
     check(last);
     assert(last.templateSummaries[0].rows.every(row => row.distinctOpenings > 1), "Search prematurely locked a single opening");
     assert(!history.includes(last.lines[0]), "Recent first line repeated");
     assert(!history.slice(-4).some(line => line.slice(0, 2) === last.lines[0].slice(0, 2)), "Recent opening prefix repeated");
     seededOpenings.push(last.lines[0]);
     history = history.concat(last.lines[0]).slice(-8);
+    recentPoems = recentPoems.concat([Array.from(last.lines)]).slice(-8);
   }
   const replay = await context.VerseLoomEngine.generate(data, last.options);
   const withoutTime = result => { const {elapsedMs, ...identity} = result; return JSON.stringify(identity); };
@@ -107,11 +118,11 @@ async function verifySite(siteUrl, manifestSha, settings = {}) {
     changedRhyme: second.rhymeLabel, changedPoem: Array.from(second.lines),
     engineVersion: context.VerseLoomEngine.version, seededOpenings, seedAndHistoryReplay: true,
     preselectedLines: false, selectionStage: "after-eight-lines", homepagePrefilled: false,
-    recentFirstLineCollisions: 0, recentPrefixCollisions: 0,
+    recentFirstLineCollisions: 0, recentPrefixCollisions: 0, mobileStylesVerified: mobilePages,
     browserUIExercised: false, checkedAt: new Date().toISOString()};
 }
 
-module.exports = {verifySite, digest};
+module.exports = {verifySite, digest, assetLimit};
 if (require.main === module) {
   verifySite(process.env.SITE_URL, process.env.MANIFEST_SHA)
     .then(result => console.log(JSON.stringify(result, null, 2)))

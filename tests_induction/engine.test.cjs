@@ -9,3 +9,4 @@ test('relation intervention leaves candidate construction identical',async()=>{c
 test('cancellation propagates rather than emitting a canned poem',async()=>{await assert.rejects(eng.generate(data,{seed:42},()=>{throw Error('cancelled');}),/cancelled/);});
 test('empty vocabulary does not return an archived result',async()=>{await assert.rejects(eng.generate({...data,lexicon:[]}));});
 test('pilot reports all seeds, failed runs and positions rather than cherry-picked samples',()=>{const f=process.env.INDUCTION_REPORT;if(!f)return;const r=JSON.parse(fs.readFileSync(f));assert.equal(r.runs,16);assert.equal(r.comparisons.length,8);assert(r.comparisons.every(x=>x.sameCandidatePool));assert.equal(r.independentLiteraryRatings,0);});
+require('../tests_diversity/induced-recency.test.cjs');

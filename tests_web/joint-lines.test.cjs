@@ -53,7 +53,7 @@ test("same seed and inputs replay all decisions and scores, including uint32 end
     const opts = {seed, variation: 0.8, templateId: "L5-Z-R0"};
     const a = await engine.generate(data, opts), b = await engine.generate(data, opts);
     check(a); assert.deepEqual(identity(a), identity(b));
-    assert.equal(a.engineVersion, "verseloom.joint-lines.v3");
+    assert.equal(a.engineVersion, "verseloom.joint-lines.v4");
     let raw = 0, selection = 0;
     for (const line of a.lineDetails) {
       assert(Math.abs(line.samplingBias) < opts.variation);
@@ -74,7 +74,6 @@ test("no position is fixed across 64 predefined seeds with rhyme AND template fi
   }
   assert(positions.every(rows => rows.size > 1), "A position has become a constant");
   assert(poems.size > 1); assert(prefixes.size > 1);
-  // Descriptive fixture results, not population guarantees or literary scores.
   const report = {schema: "verseloom.joint-lines.seed-diagnostic.v1", seeds: "0..63", seedCount: 64,
     template: "L5-Z-R0", rhymeGroup: data.baseline.rhymeGroup, variation: 0.8,
     uniquePoems: poems.size, uniqueLinesByPosition: positions.map(rows => rows.size),
@@ -152,3 +151,5 @@ test("history is snapshotted; cancellation and worker execution preserve replay 
   const reply = messages.find(x => x.type === "result"); assert(reply);
   assert.equal(reply.id, "joint-lines"); assert.deepEqual(identity(JSON.parse(JSON.stringify(reply.result))), identity(r));
 });
+
+require('../tests_diversity/recency.test.cjs');

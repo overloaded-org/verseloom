@@ -1,7 +1,7 @@
 /* Corpus-derived segment lattice and relation search. No authored content words. */
 (function(global){
 'use strict';
-const VERSION='verseloom.corpus-lattice.v1', prepared=new WeakMap();
+const VERSION='verseloom.corpus-lattice.v1.1', prepared=new WeakMap();
 const check=(v,m)=>{if(!v)throw new Error(m);};
 const pause=()=>new Promise(r=>setTimeout(r,0));
 const order=(a,b)=>a<b?-1:a>b?1:0, lastChar=s=>Array.from(s).at(-1);
@@ -105,15 +105,40 @@ function relational(previous,line,r,middle){
  }
  return {value:0.35*association+0.25*following+0.4*alignment,association,following,alignment,witnesses:receipts};
 }
+
+  // Content-neutral recency: count each 2/3-character span once per prior poem.
+  // This is a soft search preference, never a blacklist or a literary score.
+  function recentSpanCounts(poems) {
+    const counts = new Map();
+    for (const poem of poems) {
+      const spans = new Set();
+      for (const line of poem) {
+        const chars = Array.from(line);
+        for (const width of [2, 3]) for (let i = 0; i + width <= chars.length; i++)
+          spans.add(chars.slice(i, i + width).join(""));
+      }
+      for (const span of spans) counts.set(span, (counts.get(span) || 0) + 1);
+    }
+    return counts;
+  }
+  function spanPenalty(text, counts) {
+    const chars = Array.from(text), terms = [];
+    for (const width of [2, 3]) for (let i = 0; i + width <= chars.length; i++)
+      terms.push(Math.log1p(counts.get(chars.slice(i, i + width).join("")) || 0));
+    return terms.reduce((a, b) => a + b, 0) / Math.max(1, terms.length);
+  }
+
 async function generate(data,input={},onProgress=()=>{}){
  check(typeof onProgress==='function','进度回调无效');const o=options(input),r=prepare(data),start=performance.now();
  const {pools,attempts,copied}=await linePools(data,r,o,onProgress);
  const rhymes=[...new Set([...pools.keys()].filter(k=>!k.endsWith('/nonrhyming')).map(k=>k.slice(k.indexOf('/')+1)))];
  const coverage=g=>[...pools].filter(([k])=>k.endsWith('/'+g)).reduce((a,[,v])=>a+new Set(v.map(l=>lastChar(l.text))).size,0);
  rhymes.sort((a,b)=>(Math.log(coverage(b)+1)+o.variation*gumbel(b,o.seed))-(Math.log(coverage(a)+1)+o.variation*gumbel(a,o.seed))||order(a,b));
+ const recency=recentSpanCounts(o.recentPoems), penaltyCache=new Map();
+ const penaltyFor=line=>{if(o.variation===0||!recency.size)return 0;if(!penaltyCache.has(line.text))penaltyCache.set(line.text,0.5*spanPenalty(line.text,recency));return penaltyCache.get(line.text);};
  const finalists=[],diagnostics=[];let considered=0;
  for(const rhyme of rhymes.slice(0,4))for(const template of data.templates[String(o.length)]){
-  let states=[{lines:[],score:0,rank:0,text:'',relation:[]}];const stage=[];
+  let states=[{lines:[],score:0,rank:0,text:'',relation:[],historyPenalties:[]}];const stage=[];
   for(let row=0;row<8;row++){
    const group=template.rhymeRows.includes(row)?rhyme:'nonrhyming';
    const pool=template.variants[row].flatMap(t=>pools.get(t+'/'+group)||[]);const extensions=[];
@@ -128,10 +153,11 @@ async function generate(data,input={},onProgress=()=>{}){
      if(row===0&&o.recentPoems.some(p=>p[0]===line.text))continue;
      const rel=o.mode==='relations'?relational(s.lines,line,r,row===3||row===5):{value:0,association:0,following:0,alignment:0,witnesses:[]};
      const repeated=[...line.text].reduce((a,c)=>a+(chars.get(c)||0),0);
-     const score=s.score+line.score/o.length-0.3*repeated+(o.mode==='relations'?rel.value:0);
+     const historyPenalty=penaltyFor(line);
+     const score=s.score+line.score/o.length-0.3*repeated+(o.mode==='relations'?rel.value:0)-historyPenalty;
      const text=s.text+'/'+line.text;
      const rank=score+o.variation*1.2*gumbel('poem/'+template.id+'/'+text,o.seed);
-     extensions.push({text,lines:s.lines.concat(line),score,rank,relation:s.relation.concat(rel)});
+     extensions.push({text,lines:s.lines.concat(line),score,rank,relation:s.relation.concat(rel),historyPenalties:s.historyPenalties.concat(historyPenalty)});
     }
    }
    states=keep(extensions,o.beamWidth);stage.push({row,pool:pool.length,states:states.length,distinctOpenings:new Set(states.map(s=>s.lines[0].text)).size});
@@ -143,7 +169,7 @@ async function generate(data,input={},onProgress=()=>{}){
  finalists.sort((a,b)=>b.rank-a.rank||order(a.text,b.text));
  const chosen=finalists[0],provenance={authoredContentLexemes:0,authoredSemanticCategories:0,authoredSentenceFrames:0,preselectedLines:false,
   storedOutputLines:0,selectionStage:'after-eight-lines',sourceIdentity:data.sourceIdentity,
-  graphMeaning:'statistical_association_not_event_causality',contextualPronunciationCertified:false,strictAntithesisCertified:false,literaryQualityCertified:false};
+  historyPolicy:'all-line-2-3gram-soft-penalty-v1',graphMeaning:'statistical_association_not_event_causality',contextualPronunciationCertified:false,strictAntithesisCertified:false,literaryQualityCertified:false};
  const base={schema:'verseloom.induced-result.v1',engineVersion:VERSION,options:o,length:o.length,provenance,attempts,copiedTrainingLinesRejected:copied,considered,diagnostics,
   completeCandidates:finalists.length,poolFingerprint:hash([...pools].map(([k,rs])=>k+':'+rs.map(l=>l.text).join(',')).join('|')),elapsedMs:performance.now()-start};
  if(!chosen)return {...base,status:'infeasible',lines:[]};
@@ -152,7 +178,7 @@ async function generate(data,input={},onProgress=()=>{}){
   rhymeRows:chosen.template.rhymeRows,actualTones:chosen.lines.map(l=>l.tones),
   lineDetails:chosen.lines.map((l,i)=>({text:l.text,tones:l.tones,localScore:l.score,boundaries:l.tokens.map(id=>r.lex[id].size),
    tokens:l.tokens.map(id=>({...data.lexicon[id],id,sourcePoem:data.sourcePoems[data.lexicon[id].source[0]],readings:[...r.lex[id].text].map(c=>({character:c,...data.readings[c]}))})),
-   transitions:l.edges,relations:chosen.relation[i]})),
+   historyPenalty:chosen.historyPenalties[i],transitions:l.edges,relations:chosen.relation[i]})),
   checks:[{id:'shape',passed:lines.length===8&&lines.every(l=>[...l].length===o.length)},
    {id:'meter',passed:chosen.lines.every((l,i)=>chosen.template.variants[i].includes(l.tones))},
    {id:'rhyme',passed:chosen.template.rhymeRows.every(i=>chosen.lines[i].rhymeGroup===chosen.rhyme)},

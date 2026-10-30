@@ -1,0 +1,35 @@
+/* Mobile reflow v1: 320 CSS px, touch controls, long evidence identifiers. */
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-wrap: anywhere; }
+main, section, article, aside, .workspace > *, .grid > *, form, .field { min-width: 0; }
+input, select, textarea { max-width: 100%; min-width: 0; }
+pre, .small, .reading, .notice, .lead, footer { overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; }
+#i-poem { min-height: 280px; padding: 16px 0; }
+#i-sheet, #poem-sheet { scroll-margin-top: 16px; }
+.skip-link { position: fixed; top: -100px; left: 12px; z-index: 20; padding: 12px; background: #fff; color: #243b34; }
+.skip-link:focus { top: 8px; }
+@media (max-width: 760px) {
+  header { flex-wrap: wrap; gap: 10px 16px; }
+  header a { display: inline-flex; align-items: center; min-height: 44px; }
+  header, main, footer { padding-inline: max(12px, env(safe-area-inset-left)); }
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .workspace > * { width: 100%; }
+  input:not([type=checkbox]), select, textarea { font-size: 16px; min-height: 44px; }
+  button, summary { min-height: 44px; touch-action: manipulation; }
+  summary { display: flex; align-items: center; gap: 8px; }
+  summary::before { content: '+'; }
+  details[open] > summary::before { content: '−'; }
+  .check { min-height: 44px; margin-block: 4px; }
+  input[type=checkbox] { min-width: 20px; min-height: 20px; margin: 0; }
+  .intro { padding-block: 8px 18px; }
+  .intro h1 { font-size: clamp(27px, 7vw, 34px); }
+  .intro p { overflow-wrap: anywhere; }
+  .sheet-head { flex-wrap: wrap; }
+  .poem-line { max-width: 100%; white-space: normal; overflow-wrap: anywhere; font-size: clamp(20px, 5.6vw, 27px); letter-spacing: .05em; min-height: 44px; }
+  .actions > button { flex: 1 1 110px; }
+  #i-detail { font-size: 13px; padding: 12px; }
+  #i-inspection { margin-block: 20px; }
+  .notice { padding: 16px; }
+  .small { font-size: 13px; }
+}

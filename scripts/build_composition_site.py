@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finish an existing Pages build with a v2 entry and a same-build manifest."""
+"""Finish the Pages build: visible entries, inline mobile CSS, same-build hashes."""
 import argparse, hashlib, json, os, re
 from pathlib import Path
 
@@ -9,6 +9,43 @@ REQUIRED = ('composition.html', 'composition.css', 'composition-data.js',
 
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
+
+def mobile_styles(site):
+    """Inline styles in online AND standalone pages; no new offline dependency."""
+    profiles = {
+        'mobile-baseline.css': ('index.html', 'standalone.html'),
+        'mobile-shared.css': ('composition.html', 'composition-offline.html',
+                              'quality.html', 'quality-offline.html', 'induced.html'),
+    }
+    present = [(site / name).is_file() for name in profiles]
+    if not any(present):
+        return []  # Historical site fixtures remain valid.
+    if not all(present):
+        raise ValueError('Incomplete mobile styles')
+    changed = []
+    for css, pages in profiles.items():
+        content = (site / css).read_text(encoding='utf-8')
+        if re.search(r'</style', content, flags=re.I):
+            raise ValueError('Unexpected closing style tag')
+        style = '<style id="verseloom-mobile-v1">\n' + content + '\n</style>'
+        for name in pages:
+            path = site / name
+            if not path.is_file():
+                continue
+            text = path.read_text(encoding='utf-8')
+            text = re.sub(r'<style id="verseloom-mobile-v1">.*?</style>\n?', '', text, flags=re.S)
+            if text.count('</head>') != 1:
+                raise ValueError('HTML head changed: ' + name)
+            text = text.replace('</head>', style + '\n</head>', 1)
+            if name == 'index.html' and (site/'induced.html').is_file() and 'id="induced-v1-entry"' not in text:
+                anchor = '<div class="hero-copy">'
+                if text.count(anchor) != 1:
+                    raise ValueError('Induction entry anchor changed')
+                entry = '<p id="induced-v1-entry"><a class="text-link" href="induced.html">语料自组织实验 · 不预填题材与词句 →</a></p>'
+                text = text.replace(anchor, anchor + '\n' + entry, 1)
+            path.write_text(text, encoding='utf-8')
+            changed.append(name)
+    return changed
 
 def finish(site):
     site = site.resolve()
@@ -35,11 +72,13 @@ def finish(site):
             raise ValueError('Homepage entry anchor changed')
         text = text.replace(anchor, anchor + '\n        ' + entry, 1)
         index.write_text(text, encoding='utf-8')
+    mobile_pages = mobile_styles(site)
     sha = os.environ.get('GITHUB_SHA', '')
     if sha and not re.fullmatch(r'[0-9a-f]{40}', sha):
         raise ValueError('Invalid build commit')
     release = {'schema':'verseloom.pages-release.v1', 'commit':sha or None,
-               'entry':'composition.html', 'engineVersion':'verseloom.phrase-composition.v2'}
+               'entry':'composition.html', 'engineVersion':'verseloom.phrase-composition.v2',
+               'mobilePages':mobile_pages, 'inducedEntry':'induced.html' if (site/'induced.html').exists() else None}
     (site/'release.json').write_text(json.dumps(release, sort_keys=True, indent=2)+'\n', encoding='utf-8')
     files = []
     for p in sorted(site.rglob('*')):
@@ -52,7 +91,8 @@ def finish(site):
     manifest['files'] = files
     marker.write_text(json.dumps(manifest, sort_keys=True, indent=2)+'\n', encoding='utf-8')
     return {'status':'composition_site_ready', 'entry':'composition.html',
-            'files':len(files), 'manifestSha256':digest(marker.read_bytes()), 'commit':release['commit']}
+            'files':len(files), 'manifestSha256':digest(marker.read_bytes()), 'commit':release['commit'],
+            'mobilePages':mobile_pages}
 
 if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)

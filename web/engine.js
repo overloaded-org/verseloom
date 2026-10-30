@@ -2,9 +2,9 @@
 (function (global) {
   "use strict";
 
-  const ENGINE_VERSION = "verseloom.joint-lines.v3"; // Same unanchored search, now length-aware.
+  const ENGINE_VERSION = "verseloom.joint-lines.v4"; // Same unanchored search, now length-aware.
   const prepared = new WeakMap();
-  const allowedOptions = new Set(["rhymeGroup", "templateId", "beamWidth", "coherenceWeight", "repetitionWeight", "seed", "variation", "openingHistory"]);
+  const allowedOptions = new Set(["rhymeGroup", "templateId", "beamWidth", "coherenceWeight", "repetitionWeight", "seed", "variation", "openingHistory", "recentPoems"]);
   const now = () => global.performance ? global.performance.now() : Date.now();
   const yieldTurn = () => new Promise(resolve => setTimeout(resolve, 0));
 
@@ -102,11 +102,16 @@
     requireValue(options && typeof options === "object" && !Array.isArray(options), "生成参数应为对象。");
     requireValue(Object.keys(options).every(key => allowedOptions.has(key)), "含有不受支持的生成参数。");
     const length = lineLength(data);
-    const result = Object.assign({seed: 0, variation: 0, openingHistory: []}, data.defaults, options);
+    const result = Object.assign({seed: 0, variation: 0, openingHistory: [], recentPoems: []}, data.defaults, options);
     requireValue(Array.isArray(result.openingHistory) && result.openingHistory.length <= 8 &&
       Array.from(result.openingHistory).every(line => typeof line === "string" && Array.from(line).length === length),
       "首句历史须为最多 8 个与当前句长一致的句子。");
     result.openingHistory = result.openingHistory.slice();
+    requireValue(Array.isArray(result.recentPoems) && result.recentPoems.length <= 8 &&
+      Array.from(result.recentPoems).every(poem => Array.isArray(poem) && poem.length === 8 &&
+        Array.from(poem).every(line => typeof line === "string" && Array.from(line).length === length)),
+      "近期诗稿须为最多8首相同诗体的完整八句。");
+    result.recentPoems = result.recentPoems.map(poem => poem.slice());
     requireValue(Number.isInteger(result.seed) && result.seed >= 0 && result.seed <= 4294967295,
       "种子须为 0 至 4294967295 的整数。");
     requireValue(typeof result.variation === "number" && Number.isFinite(result.variation) && result.variation >= 0 && result.variation <= 2,
@@ -205,13 +210,41 @@
     ];
   }
 
+
+  // Content-neutral recency: count each 2/3-character span once per prior poem.
+  // This is a soft search preference, never a blacklist or a literary score.
+  function recentSpanCounts(poems) {
+    const counts = new Map();
+    for (const poem of poems) {
+      const spans = new Set();
+      for (const line of poem) {
+        const chars = Array.from(line);
+        for (const width of [2, 3]) for (let i = 0; i + width <= chars.length; i++)
+          spans.add(chars.slice(i, i + width).join(""));
+      }
+      for (const span of spans) counts.set(span, (counts.get(span) || 0) + 1);
+    }
+    return counts;
+  }
+  function spanPenalty(text, counts) {
+    const chars = Array.from(text), terms = [];
+    for (const width of [2, 3]) for (let i = 0; i + width <= chars.length; i++)
+      terms.push(Math.log1p(counts.get(chars.slice(i, i + width).join("")) || 0));
+    return terms.reduce((a, b) => a + b, 0) / Math.max(1, terms.length);
+  }
+
   async function generate(data, inputOptions = {}, onProgress = () => {}) {
     const started = now();
     const runtime = prepare(data);
     const length = lineLength(data);
     const options = normalizeOptions(data, inputOptions);
     requireValue(typeof onProgress === "function", "进度回调无效。");
-    const rhyme = options.rhymeGroup === "auto" ? data.rhymes.find(row => row.feasible) : data.rhymes.find(row => row.id === options.rhymeGroup);
+    const feasible = data.rhymes.filter(row => row.feasible);
+    const exploringRhyme = options.rhymeGroup === "auto" && options.variation > 0;
+    const rhyme = options.rhymeGroup !== "auto" ? data.rhymes.find(row => row.id === options.rhymeGroup) :
+      exploringRhyme ? feasible.slice().sort((a, b) =>
+        choiceNoise(options.seed, "auto-rhyme", length, b.id) - choiceNoise(options.seed, "auto-rhyme", length, a.id) || compareText(a.id, b.id))[0] : feasible[0];
+    const recency = recentSpanCounts(options.recentPoems);
     requireValue(rhyme, "没有可用韵部。");
     const templates = data.templates.filter(row => options.templateId === "auto" || row.id === options.templateId)
       .slice().sort((a, b) => compareText(a.id, b.id));
@@ -243,6 +276,8 @@
         const pool = row === 0 ? originalPool.filter(line => !blocked.has(line.text) && !blockedPrefixes.has(line.chars.slice(0, 2).join(""))) : originalPool;
         const biases = new Map(pool.map(candidate => [candidate.text, options.variation === 0 ? 0 :
           options.variation * choiceNoise(options.seed, template.id, row, candidate.text)]));
+        const penalties = new Map(pool.map(candidate => [candidate.text,
+          options.variation > 0 ? 0.5 * spanPenalty(candidate.text, recency) : 0]));
         const counts = {attempted_extensions: 0}, extensions = [];
         const reject = reason => { counts[reason] = (counts[reason] || 0) + 1; };
         for (const state of states) {
@@ -265,11 +300,12 @@
             const increment = candidate.lmScore + coherenceWeighted - repetitionPenalty;
             const samplingBias = biases.get(candidate.text);
             const score = state.score + increment;
-            const selectionScore = state.selectionScore + increment + samplingBias;
+            const historyPenalty = penalties.get(candidate.text);
+            const selectionScore = state.selectionScore + increment + samplingBias - historyPenalty;
             requireValue(Number.isFinite(score) && Number.isFinite(selectionScore), "累计分数溢出。");
             extensions.push({lines: state.lines.concat(candidate.text), selected: state.selected.concat(candidate),
               score, selectionScore, terms: state.terms.concat({coherenceRaw, coherenceWeighted, repetitionPenalty,
-                previousCharacterOccurrences: repeated, increment, samplingBias})});
+                previousCharacterOccurrences: repeated, increment, samplingBias, historyPenalty})});
           }
         }
         counts.legal_extensions = extensions.length;
@@ -296,6 +332,8 @@
       templateLabel: selected ? selected.label : null, rhymeGroup: rhyme.id, rhymeLabel: rhyme.label,
       core: selected ? selected.core : [], rhymeRows: selected ? selected.rhymeRows : [],
       score: selected ? selected.best.score : null, selectionScore: selected ? selected.best.selectionScore : null,
+      rhymeSelection: {policy: exploringRhyme ? "seeded-feasible-rhyme" : options.rhymeGroup === "auto" ? "historical-score-only" : "explicit",
+        feasibleCount: feasible.length, selected: rhyme.id},
       selection, opening: null, elapsedMs: now() - started, candidatesConsidered,
       options, checks: selected ? checkResult(selected, rhyme.id, length) : [],
       lineDetails: selected ? selected.best.selected.map((line, row) => ({text: line.text, prefix: line.prefix, suffix: line.suffix,
@@ -305,8 +343,9 @@
         score: row.best ? row.best.score : null, selectionScore: row.best ? row.best.selectionScore : null,
         lines: row.best ? row.best.lines : [], rows: row.rows, completedPaths: row.finalists.length})),
       provenance: {method: data.meta.method, lineLength: length, preselectedLines: false, randomization: {
-        algorithm: "joint-diverse-beam-completed-path-v3", enabled: options.variation > 0,
-        seed: options.seed, variation: options.variation, openingHistory: options.openingHistory,
+        algorithm: "joint-diverse-beam-seeded-rhyme-v4", enabled: options.variation > 0,
+        seed: options.seed, variation: options.variation, openingHistory: options.openingHistory, recentPoems: options.recentPoems,
+        historyPolicy: "all-line-2-3gram-soft-penalty-v1",
         changesHardConstraints: false, uniqueOutputGuaranteed: false,
       }, candidateScoresPrecomputed: true, neuralModelUsed: false,
         sources: data.meta.sources, contextualPronunciationVerified: false, antithesisCertified: false,

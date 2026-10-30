@@ -1,0 +1,31 @@
+/* Mobile reflow: do not hide overflowing text or remove navigation targets. */
+html { -webkit-text-size-adjust: 100%; }
+.workspace > *, .result-column, .control-panel, .inspection-panel, .poem-annotation dl > div { min-width: 0; }
+.reading-note, .method-note, .error-message, .poem-annotation dd, .footer-links, .score-breakdown { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .site-header { flex-wrap: wrap; gap: 8px 18px; padding-block: 12px; }
+  .site-header nav { flex-wrap: wrap; justify-content: flex-start; gap: 4px 18px; }
+  .site-header nav > a:nth-child(2) { display: inline-flex; }
+  .site-header nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+  input:not([type=checkbox]), select { min-height: 44px; font-size: 16px; }
+  button, summary { min-height: 44px; touch-action: manipulation; }
+  label:has(input[type=checkbox]) { display: flex; align-items: center; min-height: 44px; gap: 8px; }
+  input[type=checkbox] { min-width: 20px; min-height: 20px; }
+  .source-stats { flex-wrap: wrap; }
+  .sheet-toolbar { flex-wrap: wrap; gap: 8px; }
+  .export-actions { flex-wrap: wrap; }
+  .toolbar-button { font-size: 14px; min-height: 44px; }
+  #poem-sheet { scroll-margin-top: 12px; }
+  .poem-body { margin-inline: 12px; }
+  .poem-lines .poem-line { min-height: 48px; padding-inline: 18px 0; gap: clamp(2px, .9vw, 7px); }
+  .poem-lines .character-glyph { font-size: clamp(23px, 6.5vw, 29px); width: clamp(23px, 6.5vw, 29px); }
+  .poem-lines .line-number { left: 0; }
+  .poem-lines .line-punctuation { font-size: 22px; }
+  .run-hint, .control-footnote p, .reading-note { font-size: 13px; }
+}
+@media (max-width: 400px) {
+  #generation-form { grid-template-columns: minmax(0, 1fr); }
+  .field > label { font-size: 14px; }
+  .button-primary, .button-secondary, .reset-button { font-size: 14px; }
+  .poem-annotation dl { grid-template-columns: minmax(0, 1fr); }
+}

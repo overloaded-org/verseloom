@@ -24,6 +24,7 @@
     let length = 5;
     let data = datasets[length];
     const recentOpenings = {5: [], 7: []};
+    const recentPoems = {5: [], 7: []};
     const formName = () => length === 7 ? "七律" : "五律";
     const engine = globalThis.VerseLoomEngine;
     const ordinal = ["一", "二", "三", "四", "五", "六", "七", "八"];
@@ -232,12 +233,17 @@
       finishJob(job);
       completedRuns += 1;
       result = value;
-      if (!job.replay) recentOpenings[job.length] = recentOpenings[job.length].concat(value.lines[0]).slice(-8);
+      if (!job.replay) {
+        recentOpenings[job.length] = recentOpenings[job.length].concat(value.lines[0]).slice(-8);
+        recentPoems[job.length] = recentPoems[job.length].concat([value.lines.slice()]).slice(-8);
+      }
       renderPoem(result, true);
       renderChecks(result.checks);
       restoreBadge();
       setBusy(false);
       selectLine(0);
+      if (globalThis.matchMedia?.("(max-width: 760px)")?.matches)
+        ui.sheet.scrollIntoView?.({block: "start", behavior: "auto"});
       announce("生成完成，" + (result.rhymeLabel || labelForRhyme(result.rhymeGroup)) + "，八句" + (job.length === 7 ? "七言。" : "五言。") + ui.checksSummary.textContent + "。");
     }
 
@@ -289,10 +295,13 @@
       try {
         options = replayOptions ? {...replayOptions, openingHistory: (replayOptions.openingHistory || []).slice()} : currentOptions();
         if (!replayOptions) {
-          options.openingHistory = [];
+          options.openingHistory = []; options.recentPoems = [];
           if (ui.autoSeed.checked && options.variation > 0) {
             options.seed = freshSeed(options.seed);
-            if (ui.avoidRecent.checked) options.openingHistory = recentOpenings[length].slice();
+            if (ui.avoidRecent.checked) {
+              options.openingHistory = recentOpenings[length].slice();
+              options.recentPoems = recentPoems[length].map(poem => poem.slice());
+            }
           }
         }
       } catch (error) { displayError("生成参数无效", error.message); return; }
@@ -348,7 +357,7 @@
       ui.beam.value = "32"; ui.beamSummary.textContent = "宽度 32";
       ui.seed.value = "0"; ui.variation.value = "0.8";
       ui.autoSeed.checked = true; ui.avoidRecent.checked = true;
-      recentOpenings[length] = [];
+      recentOpenings[length] = []; recentPoems[length] = [];
       ui.errorRegion.hidden = true;
       setBusy(false);
       notify("已恢复自由探索；没有预定诗句");
