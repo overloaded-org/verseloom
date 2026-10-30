@@ -1,0 +1,50 @@
+name: Poetry quality evidence
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["src/wordconv_lab/quality.py", "data/quality_v1/**", "scripts/*quality*.py", "scripts/sample_quality_candidates.cjs", "tests_quality/**", ".github/workflows/quality.yml"]
+  pull_request:
+    paths: ["src/wordconv_lab/quality.py", "data/quality_v1/**", "scripts/*quality*.py", "scripts/sample_quality_candidates.cjs", "tests_quality/**", ".github/workflows/quality.yml"]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: "24"
+      - name: Install and test review boundaries
+        run: |
+          python -m pip install -r requirements.txt
+          PYTHONPATH=src python -m unittest discover -s tests_quality -v
+      - name: Rebuild source data and sample unedited engine outputs
+        run: |
+          python scripts/build_web_data.py
+          python scripts/build_web_seven.py
+          mkdir -p /tmp/quality
+          node scripts/sample_quality_candidates.cjs /tmp/quality/samples.jsonl
+      - name: Audit and prepare blinded comparisons
+        shell: bash
+        run: |
+          python scripts/run_quality_experiment.py --samples /tmp/quality/samples.jsonl --output /tmp/quality/review | tee /tmp/quality/summary.json
+          echo '### Experimental proxies, not literary certification' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No production generator or poem text was rewritten. No independent human ratings yet.' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/quality/summary.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+      - name: Preserve review pack
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: quality-evidence
+          path: /tmp/quality
+          retention-days: 14
+          if-no-files-found: error

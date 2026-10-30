@@ -1,0 +1,106 @@
+{
+  "schema": "verseloom.quality-experiment.v1",
+  "status": "PROXY_ONLY_NOT_PROMOTED",
+  "sampleSha256": "ccfc6c15f2ca12eea1087dfad3a7b1bc923b07d4dd13c6928f90c8c0669c3415",
+  "sources": {
+    "web/engine.js": "f9a2c8e7a77efd239e6c4b3cf767b5477cac48a275b13ae469249e1b84761752",
+    "web/data.js": "29f380e5b37ed3fc3ed6202dad40453e68ed3ac76b9243dc755b4f562b8759b6",
+    "web/data7.js": "e5cdddeff62205bc17d6d3e1113e361c0889f0a10ff6de1e9cedacffbe254a87",
+    "scripts/sample_quality_candidates.cjs": "89e8ef78a9278223d71c79add515566b2026028bc5194807fa8fd49cc0abaf78",
+    "data/corpus_v03/poems.jsonl": "5011658d63415772495ff645f92cf90e075998e096e672204f4a71234737360c",
+    "data/reference_v02/pingshui_106_memberships.json": "6481c560885544fed72bc426c7461f2cea01dde8c299eab1e041d23a18364537",
+    "data/quality_v1/lexicon.json": "0a97869ba05f3143934a91e594b1d28493fcb5870e7672fbbee6df663c4da75b",
+    "data/quality_v1/reading_hints.json": "6cda1fa8512555104856bba79dfbfa7c2787f660a11ce3d0607ab1c927a56af9",
+    "src/wordconv_lab/quality.py": "b8541df041dfba4b0b4d9117e6e03a1cc29432565dffe45227b64aaeabe6265c",
+    "scripts/run_quality_experiment.py": "30495702c3100de8c577df8dd910eccec033607330c3c09c4d04ec9eda2b1add"
+  },
+  "tasks": 64,
+  "candidateCount": 256,
+  "independentMechanicalChecks": "passed",
+  "protocol": {
+    "taskSeeds": "1000..1031",
+    "candidatesPerTask": 4,
+    "templates": [
+      "L5-Z-R0",
+      "L7-P-R0"
+    ],
+    "candidateSeedOffsets": "uint32(candidate * 0x9e3779b9)",
+    "qualityWeights": {
+      "unsupportedBridge": 0.4,
+      "unparsedLine": 0.3,
+      "unmatchedCouplet": 0.5,
+      "ambiguousMembership": 0.2
+    },
+    "parameterTuningOnThisBatch": false,
+    "independentHumanReviews": 0,
+    "blindedPackets": 64,
+    "sameComputeBaseline": "rawBestOfFour",
+    "blindedComparison": "rawBestOfFour_vs_reviewRanked",
+    "note": "All proxy metrics overlap the reranking objective. Improvement on them is not independent evidence of literary quality."
+  },
+  "summary": {
+    "5": {
+      "tasks": 32,
+      "changed": 21,
+      "baseline": {
+        "unsupportedBridges": 10.9375,
+        "linesWithSyntaxHypothesis": 0.5625,
+        "unambiguousSyntaxLines": 0.53125,
+        "structurallyPossiblePairs": 0,
+        "unambiguousAlignedPairs": 0,
+        "multiMembershipPositions": 5.34375
+      },
+      "rawBestOfFour": {
+        "unsupportedBridges": 10.0625,
+        "linesWithSyntaxHypothesis": 0.53125,
+        "unambiguousSyntaxLines": 0.4375,
+        "structurallyPossiblePairs": 0,
+        "unambiguousAlignedPairs": 0,
+        "multiMembershipPositions": 5
+      },
+      "reviewRanked": {
+        "unsupportedBridges": 9.625,
+        "linesWithSyntaxHypothesis": 0.8125,
+        "unambiguousSyntaxLines": 0.6875,
+        "structurallyPossiblePairs": 0,
+        "unambiguousAlignedPairs": 0,
+        "multiMembershipPositions": 5.0625
+      }
+    },
+    "7": {
+      "tasks": 32,
+      "changed": 24,
+      "baseline": {
+        "unsupportedBridges": 15,
+        "linesWithSyntaxHypothesis": 0,
+        "unambiguousSyntaxLines": 0,
+        "structurallyPossiblePairs": 0,
+        "unambiguousAlignedPairs": 0,
+        "multiMembershipPositions": 6.71875
+      },
+      "rawBestOfFour": {
+        "unsupportedBridges": 14.1875,
+        "linesWithSyntaxHypothesis": 0.0625,
+        "unambiguousSyntaxLines": 0.0625,
+        "structurallyPossiblePairs": 0,
+        "unambiguousAlignedPairs": 0,
+        "multiMembershipPositions": 6.5625
+      },
+      "reviewRanked": {
+        "unsupportedBridges": 13.65625,
+        "linesWithSyntaxHypothesis": 0.0625,
+        "unambiguousSyntaxLines": 0.0625,
+        "structurallyPossiblePairs": 0,
+        "unambiguousAlignedPairs": 0,
+        "multiMembershipPositions": 6.40625
+      }
+    }
+  },
+  "claims": {
+    "literaryQualityImproved": false,
+    "strictAntithesisCertified": false,
+    "contextualPronunciationVerified": false,
+    "websiteGeneratorChanged": false
+  },
+  "reportSha256": "838013b39461b2e78271d56928803d39c5ec2007e35ae31fa76f6cd6c80f22aa"
+}

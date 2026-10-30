@@ -1,0 +1,12 @@
+{
+  "schema": "verseloom.quality.reading-hints.v1",
+  "status": "modern_dictionary_lexical_hints_only",
+  "policy": "Do not map modern pinyin tone to Pingshui tone or choose a historical rhyme membership from a modern word reading. Contextual applicability and historical mapping need separate evidence.",
+  "entries": [
+    {"word":"少年","pinyin":"shào nián","sense":"年輕；年輕的男子","source":"https://dict.revised.moe.edu.tw/dictView.jsp?ID=129835&la=0&powerMode=0"},
+    {"word":"處處","pinyin":"chù chù","sense":"各處、到處","source":"https://dict.revised.moe.edu.tw/dictView.jsp?ID=125414&la=0&powerMode=0"},
+    {"word":"遠近","pinyin":"yuǎn jìn","sense":"距離的長短等義","source":"https://dict.revised.moe.edu.tw/dictView.jsp?ID=165366"},
+    {"word":"音樂","pinyin":"yīn yuè","sense":"音樂之樂，不是快樂之樂","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=44656&la=0&powerMode=0"},
+    {"word":"快樂","pinyin":"kuài lè","sense":"歡喜、愉悅","source":"https://dict.concised.moe.edu.tw/dictView.jsp?ID=13245&la=0&powerMode=0"}
+  ]
+}
