@@ -7,6 +7,7 @@ on:
       - "web/**"
       - "tests_web/**"
       - "scripts/build_web_*.py"
+      - "scripts/check_live_site.cjs"
       - "src/wordconv_lab/free_generation.py"
       - "src/wordconv_lab/prosody.py"
       - "data/corpus_v03/poems.jsonl"
@@ -19,6 +20,7 @@ on:
       - "web/**"
       - "tests_web/**"
       - "scripts/build_web_*.py"
+      - "scripts/check_live_site.cjs"
       - "src/wordconv_lab/free_generation.py"
       - "src/wordconv_lab/prosody.py"
       - "data/corpus_v03/poems.jsonl"
@@ -41,6 +43,7 @@ jobs:
     timeout-minutes: 10
     outputs:
       pages_enabled: ${{ steps.pages-state.outputs.enabled }}
+      manifest_sha: ${{ steps.site-build.outputs.manifest_sha }}
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -64,7 +67,10 @@ jobs:
       - name: Test browser generation
         run: node --test --test-isolation=none --test-reporter=spec tests_web/engine.test.cjs
       - name: Build the site and the offline HTML
-        run: python scripts/build_web_demo.py --output _site
+        id: site-build
+        run: |
+          python scripts/build_web_demo.py --output _site
+          echo "manifest_sha=$(sha256sum _site/build-manifest.json | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
       - name: Check Pages availability
         id: pages-state
         env:
@@ -97,6 +103,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
@@ -109,3 +117,30 @@ jobs:
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
+
+  verify-live:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Check out verification code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: "24"
+      - name: Verify live HTTP assets and generation engine
+        env:
+          SITE_URL: ${{ needs.deploy.outputs.page_url }}
+          MANIFEST_SHA: ${{ needs.build.outputs.manifest_sha }}
+        run: |
+          node scripts/check_live_site.cjs | tee "$RUNNER_TEMP/live-site-check.json"
+          echo '### Live HTTP assets and Node engine check' >> "$GITHUB_STEP_SUMMARY"
+          echo 'This checks published bytes and generation, not browser UI interactions.' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/live-site-check.json" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
