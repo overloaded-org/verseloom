@@ -7,11 +7,13 @@ on:
       - "web/**"
       - "tests_web/**"
       - "scripts/build_web_*.py"
-      - "scripts/check_live_site.cjs"
+      - "scripts/check_live*.cjs"
       - "src/wordconv_lab/free_generation.py"
       - "src/wordconv_lab/prosody.py"
+      - "src/wordconv_lab/restoration.py"
+      - "src/wordconv_lab/retrieval.py"
       - "data/corpus_v03/poems.jsonl"
-      - "data/reference_v02/pingshui_106_memberships.json"
+      - "data/reference_v02/**"
       - "results/free_generation_v06_run001/**"
       - "requirements.txt"
       - ".github/workflows/pages.yml"
@@ -20,11 +22,13 @@ on:
       - "web/**"
       - "tests_web/**"
       - "scripts/build_web_*.py"
-      - "scripts/check_live_site.cjs"
+      - "scripts/check_live*.cjs"
       - "src/wordconv_lab/free_generation.py"
       - "src/wordconv_lab/prosody.py"
+      - "src/wordconv_lab/restoration.py"
+      - "src/wordconv_lab/retrieval.py"
       - "data/corpus_v03/poems.jsonl"
-      - "data/reference_v02/pingshui_106_memberships.json"
+      - "data/reference_v02/**"
       - "results/free_generation_v06_run001/**"
       - "requirements.txt"
       - ".github/workflows/pages.yml"
@@ -60,12 +64,16 @@ jobs:
           cache: pip
       - name: Install the frozen data-build dependency
         run: python -m pip install -r requirements.txt
-      - name: Export browser data from frozen records
+      - name: Export five and seven character data
         run: |
           python scripts/build_web_data.py
           python scripts/build_web_data.py --check
+          python scripts/build_web_seven.py
+          python scripts/build_web_seven.py --check
       - name: Test browser generation
-        run: node --test --test-isolation=none --test-reporter=spec tests_web/engine.test.cjs
+        run: |
+          node --test --test-isolation=none --test-reporter=spec tests_web/engine.test.cjs
+          node --test --test-isolation=none --test-reporter=spec tests_web/seven.test.cjs tests_web/form-ui.test.cjs
       - name: Build the site and the offline HTML
         id: site-build
         run: |
@@ -83,9 +91,8 @@ jobs:
           esac
           echo "enabled=$enabled" >> "$GITHUB_OUTPUT"
           if [ "$enabled" = "false" ]; then
-            echo "### Browser demo verified; Pages setup is still required" >> "$GITHUB_STEP_SUMMARY"
-            echo "Open Settings → Pages → Build and deployment → Source, select GitHub Actions, then run this workflow again." >> "$GITHUB_STEP_SUMMARY"
-            echo "No site artifact was uploaded because Pages is disabled. The site and standalone.html can also be built locally. Repository visibility was not changed." >> "$GITHUB_STEP_SUMMARY"
+            echo "### Build verified; Pages is not enabled" >> "$GITHUB_STEP_SUMMARY"
+            echo "Select GitHub Actions in Settings → Pages. No visibility or billing settings were changed." >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload the browser demo
         if: steps.pages-state.outputs.enabled == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -96,7 +103,7 @@ jobs:
           retention-days: 1
       - name: Report uploaded artifact
         if: steps.upload.outcome == 'success'
-        run: echo "The verified site and standalone.html were uploaded in the github-pages artifact. See the deploy job for publication status." >> "$GITHUB_STEP_SUMMARY"
+        run: echo "Verified site uploaded. See deploy for publication status." >> "$GITHUB_STEP_SUMMARY"
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.build.outputs.pages_enabled == 'true'
@@ -133,15 +140,15 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
           node-version: "24"
-      - name: Verify live HTTP assets and generation engine
+      - name: Verify live five and seven character engines
         shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
           MANIFEST_SHA: ${{ needs.build.outputs.manifest_sha }}
         run: |
           node scripts/check_live_site.cjs | tee "$RUNNER_TEMP/live-site-check.json"
-          echo '### Live HTTP assets and Node engine check' >> "$GITHUB_STEP_SUMMARY"
-          echo 'This checks published bytes and generation, not browser UI interactions.' >> "$GITHUB_STEP_SUMMARY"
+          node scripts/check_live_seven.cjs | tee "$RUNNER_TEMP/live-seven-check.json"
+          echo '### Published HTTP assets and Node engine checks (not browser UI)' >> "$GITHUB_STEP_SUMMARY"
           echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          cat "$RUNNER_TEMP/live-site-check.json" >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/live-seven-check.json" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"

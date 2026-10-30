@@ -24,3 +24,6 @@ _site/
 # Rebuilt from pinned source records by scripts/build_web_data.py.
 web/data.js
 node_modules/
+
+# Seven-character training-only browser data.
+web/data7.js

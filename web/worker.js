@@ -10,7 +10,11 @@ self.onmessage = async ({data}) => {
   }
   busy = true;
   try {
-    const result = await VerseLoomEngine.generate(VerseLoomData, options === undefined ? {} : options, progress => {
+    const length = data.lineLength === undefined ? 5 : data.lineLength;
+    if (length !== 5 && length !== 7) throw new Error("仅支持五言与七言。");
+    if (length === 7 && !self.VerseLoomSevenData) importScripts("data7.js");
+    const dataset = length === 7 ? self.VerseLoomSevenData : VerseLoomData;
+    const result = await VerseLoomEngine.generate(dataset, options === undefined ? {} : options, progress => {
       self.postMessage({id, type: "progress", progress});
     });
     self.postMessage({id, type: "result", result});

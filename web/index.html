@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f1e8">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="律织 VerseLoom：在浏览器里运行声律矩阵与词块约束搜索，生成八句五言，查看平仄、押韵与词块来源。">
+  <meta name="description" content="律织 VerseLoom：在浏览器里运行声律矩阵与词块约束搜索，生成五言或七言八句，查看平仄、押韵与词块来源。">
   <title>律织 VerseLoom · 让程序写一首诗</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="seven.css">
   <script src="data.js" defer></script>
+  <script src="data7.js" defer></script>
   <script src="engine.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -34,7 +36,7 @@
         <h1 id="page-title">从一张声律矩阵，<br>生出一首<span>诗</span>。</h1>
       </div>
       <div class="hero-aside">
-        <p>让字词按平仄相遇，让程序自行组织八句五言。<br class="desktop-break">无需填写诗句，点一下，看看这一回如何成篇。</p>
+        <p>让字词按平仄相遇，让程序自行组织五言或七言八句。<br class="desktop-break">无需填写诗句，点一下，看看这一回如何成篇。</p>
         <dl class="source-stats">
           <div><dt>训练诗</dt><dd><span id="training-count">2,203</span><small>首</small></dd></div>
           <div><dt>预评分候选</dt><dd><span id="candidate-count">2,392</span><small>句</small></dd></div>
@@ -45,14 +47,15 @@
 
     <section id="generator" class="generator wrap" aria-labelledby="generator-title">
       <div class="section-heading">
-        <div><span class="section-number">01</span><h2 id="generator-title">生成台</h2><span class="section-subtitle">一首五律，从这里开始</span></div>
+        <div><span class="section-number">01</span><h2 id="generator-title">生成台</h2><span class="section-subtitle" id="form-subtitle">一首五律，从这里开始</span></div>
         <span class="local-badge"><span aria-hidden="true"></span> 浏览器本地运行</span>
       </div>
 
       <div class="workspace">
         <aside class="control-panel" aria-labelledby="settings-title">
-          <div class="control-heading"><h3 id="settings-title">写作设置</h3><span>五言 · 八句</span></div>
+          <div class="control-heading"><h3 id="settings-title">写作设置</h3><span id="form-heading">五言 · 八句</span></div>
           <form id="generation-form">
+            <div class="field"><label for="form-select">诗体 <span>选择句长</span></label><div class="select-wrap"><select id="form-select" disabled><option value="5">五言律诗 · 八句四十字</option><option value="7">七言律诗 · 八句五十六字</option></select></div></div>
             <div class="field">
               <label for="rhyme-select">韵部 <span>句尾的回响</span></label>
               <div class="select-wrap"><select id="rhyme-select" name="rhymeGroup" disabled><option value="auto">由程序择韵</option></select></div>
@@ -63,14 +66,13 @@
             </div>
             <div class="field">
               <label for="seed-input">随机种子 <span>记录参数可复现</span></label>
-              <input id="seed-input" name="seed" type="text" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" value="0" required disabled aria-describedby="seed-note" style="width:100%;height:44px;padding:0 13px;border:1px solid #d4d9c8;border-radius:4px;background:#f8f8f1;color:inherit">
-              <p id="seed-note" class="run-hint">范围 0–4294967295；取消自动换种子时也停用近期去重。</p>
-              <label style="justify-content:flex-start;gap:8px"><input id="auto-seed" type="checkbox" checked disabled>每次生成自动换种子</label>
-              <label style="justify-content:flex-start;gap:8px"><input id="avoid-recent" type="checkbox" checked disabled>避开近期首句与起首词块</label>
+              <input id="seed-input" name="seed" type="text" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" value="0" required disabled>
+              <p class="run-hint">范围 0–4294967295；手动种子停用近期去重。</p>
+              <label><input id="auto-seed" type="checkbox" checked disabled>每次生成自动换种子</label>
+              <label><input id="avoid-recent" type="checkbox" checked disabled>避开近期首句与起首词块</label>
             </div>
-            <div class="field">
-              <label for="variation-select">探索强度 <span>不改变格律约束</span></label>
-              <div class="select-wrap"><select id="variation-select" name="variation" disabled><option value="0">0 · 关闭随机／原版</option><option value="0.35">0.35 · 轻微变化</option><option value="0.8" selected>0.8 · 标准探索</option><option value="1.5">1.5 · 更多变化</option></select></div>
+            <div class="field"><label for="variation-select">探索强度 <span>不改变格律约束</span></label>
+              <div class="select-wrap"><select id="variation-select" disabled><option value="0">0 · 确定性搜索</option><option value="0.35">0.35 · 轻微变化</option><option value="0.8" selected>0.8 · 标准探索</option><option value="1.5">1.5 · 更多变化</option></select></div>
             </div>
             <details class="advanced-settings">
               <summary>搜索设置 <span id="beam-summary">宽度 32</span></summary>
@@ -87,14 +89,14 @@
             <p class="run-hint">不需要提示词，也不需要 API 密钥</p>
             <button id="reset-button" class="text-button reset-button" type="button" disabled>恢复自由探索</button>
           </form>
-          <div class="control-footnote"><span class="footnote-mark" aria-hidden="true">※</span><p>默认换种子，并避开本页最近 8 个首句和最近 4 个起首二字。<br>复现使用当次种子、参数和历史；刷新页面会清空近期历史。</p></div>
+          <div class="control-footnote"><span class="footnote-mark" aria-hidden="true">※</span><p>默认每次换种子；八句都不预先固定。<br>五言、七言分别记录本页近期首句。</p></div>
         </aside>
 
         <div class="result-column">
           <article class="poem-sheet" aria-labelledby="poem-heading" aria-busy="false" id="poem-sheet">
             <div class="sheet-heading">
-              <div><p class="sheet-kicker" id="result-kind">空白诗稿</p><h3 id="poem-heading">五律 · 待成篇</h3></div>
-              <span id="result-badge" class="result-badge">尚未生成</span>
+              <div><p class="sheet-kicker" id="result-kind">空白诗稿</p><h3 id="poem-heading">五律 · 待生成</h3></div>
+              <span id="result-badge" class="result-badge">尚未运行</span>
             </div>
             <div id="progress-region" class="progress-region" hidden>
               <div class="progress-caption"><span id="progress-message">正在准备搜索…</span><span id="progress-percent">0%</span></div>
@@ -103,21 +105,18 @@
             <div id="error-region" class="error-region" role="alert" hidden><strong id="error-heading">本次搜索未完成</strong><p id="error-message"></p></div>
             <div class="poem-body">
               <div class="poem-area">
-                <div id="poem-lines" class="poem-lines" aria-label="诗稿">
-                  <!-- Intentionally blank: no prewritten poem or fixed line. -->
-                </div>
+                <div id="poem-lines" class="poem-lines" aria-label="诗稿"></div>
                 <div id="tone-legend" class="tone-legend" hidden><span><i class="legend-ping"></i>平</span><span><i class="legend-ze"></i>仄</span><span class="legend-rhyme">圈字为韵脚</span></div>
                 <p id="line-hint" class="line-hint">生成后，点一句查看词块来源</p>
               </div>
               <aside class="poem-annotation" aria-label="本次结果信息">
                 <span class="annotation-mark" aria-hidden="true">聲<br>律</span>
                 <dl>
-                  <div><dt>韵部</dt><dd id="rhyme-display">—</dd></div>
-                  <div><dt>起式</dt><dd id="template-display">—</dd></div>
+                  <div><dt>韵部</dt><dd id="rhyme-display">尚未运行</dd></div>
+                  <div><dt>起式</dt><dd id="template-display">尚未运行</dd></div>
                   <div><dt>计算耗时</dt><dd id="time-display">尚未运行</dd></div>
                   <div><dt>统计搜索分</dt><dd id="score-display">—</dd></div>
-                  <div><dt>本次种子</dt><dd id="seed-display">尚未运行</dd></div>
-                  <div><dt>选句方式</dt><dd id="opening-display">尚未运行</dd></div>
+                  <div><dt>本次种子</dt><dd id="seed-display">尚未运行</dd></div><div><dt>组织方式</dt><dd id="opening-display">尚未运行</dd></div>
                 </dl>
               </aside>
             </div>
@@ -132,9 +131,9 @@
 
           <section id="inspection-panel" class="inspection-panel" aria-labelledby="inspection-title" hidden>
             <div class="inspection-heading"><h3 id="inspection-title">一句的来处</h3><span id="inspection-row">第一句</span></div>
-            <div class="span-breakdown"><div><span id="prefix-text" class="span-text"></span><small>前二字 · 出现 <b id="prefix-count">0</b> 次</small></div><span class="span-plus" aria-hidden="true">＋</span><div><span id="suffix-text" class="span-text"></span><small>后三字 · 出现 <b id="suffix-count">0</b> 次</small></div></div>
+            <div class="span-breakdown"><div><span id="prefix-text" class="span-text"></span><small><span id="prefix-label">前二字</span> · 出现 <b id="prefix-count">0</b> 次</small></div><span class="span-plus" aria-hidden="true">＋</span><div><span id="suffix-text" class="span-text"></span><small>后三字 · 出现 <b id="suffix-count">0</b> 次</small></div></div>
             <div class="score-breakdown"><span>语言统计 <b id="line-lm">—</b></span><span>共现项 <b id="line-coherence">—</b></span><span>重字扣分 <b id="line-repetition">—</b></span><span>本句增量 <b id="line-increment">—</b></span><span>探索扰动 <b id="line-sampling">—</b></span></div>
-            <p>词块次数来自训练语料；统计分不含探索扰动，选择路径时另加该项。它们都不是文学评分。</p>
+            <p>词块次数来自训练语料；上述数值用于比较搜索路径，不是文学评分。</p>
           </section>
         </div>
       </div>
@@ -149,12 +148,13 @@
     <section id="how-it-works" class="how-section wrap" aria-labelledby="how-title">
       <div class="section-heading"><div><span class="section-number">02</span><h2 id="how-title">字句如何成篇</h2></div><a class="text-link" href="https://github.com/overloaded-org/verseloom/blob/main/web/engine.js" target="_blank" rel="noopener noreferrer">查看算法源码 <span aria-hidden="true">↗</span></a></div>
       <ol class="method-steps">
-        <li><span class="step-number">一</span><h3>取词块</h3><p>从训练诗中抽取前二字与后三字，保留真实出现的片段和来源。</p></li>
-        <li><span class="step-number">二</span><h3>定声律</h3><p>选择韵部与五律模板，用一张八行五列的矩阵约束平仄。</p></li>
-        <li><span class="step-number">三</span><h3>搜成篇</h3><p>不预定任何一句；保留多个开头并行探索，八句完成后再选择整首。种子参与各句探索，格律约束不变。</p></li>
+        <li><span class="step-number">一</span><h3>取词块</h3><p>分别从五言、七言训练诗中抽取片段，保留真实来源。</p></li>
+        <li><span class="step-number">二</span><h3>定声律</h3><p>选择韵部与对应声律模板，用八行五列或八行七列的矩阵约束平仄。</p></li>
+        <li><span class="step-number">三</span><h3>搜成篇</h3><p>多个开头共同搜索，八句完成后再选择；种子作用于全部句位，不锁定任何一句。</p></li>
         <li><span class="step-number">四</span><h3>看来处</h3><p>查看词块次数、平仄和分数，下载本次结果与参数，继续复核。</p></li>
       </ol>
-      <div class="method-note"><span class="note-label">关于这个演示</span><p>网页在预先评分的 2,392 个候选句上，实时执行统计约束搜索。计算发生在你的浏览器中，无需调用模型 API；这里没有重新训练卷积模型，也不保证全局最优。<a href="https://github.com/overloaded-org/verseloom/blob/main/results/free_generation_v06_run001/result.json" target="_blank" rel="noopener noreferrer">查看原始首轮记录 ↗</a></p></div>
+      <p id="span-note" class="reading-note">五言：前二字＋后三字；片段至少出现两次。</p>
+      <div class="method-note"><span class="note-label">关于这个演示</span><p>网页在对应诗体的预评分候选句上，实时执行统计约束搜索。计算发生在你的浏览器中，无需调用模型 API；这里没有重新训练卷积模型，也不保证全局最优。<a href="https://github.com/overloaded-org/verseloom/blob/main/results/free_generation_v06_run001/result.json" target="_blank" rel="noopener noreferrer">查看原始首轮记录 ↗</a></p></div>
     </section>
   </main>
 
@@ -164,6 +164,6 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <p id="live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
-  <noscript><div class="noscript-note">请启用 JavaScript，以便在浏览器中运行生成算法。诗稿将在实际运行后显示，不预填任何诗句。</div></noscript>
+  <noscript><div class="noscript-note">请启用 JavaScript，以便在浏览器中运行生成算法。不会以存档代替生成结果。</div></noscript>
 </body>
 </html>

@@ -31,7 +31,11 @@ def standalone(source: Path) -> str:
     if re.search(r"</style", css, flags=re.IGNORECASE):
         raise ValueError("Unexpected style closing tag in stylesheet")
     html = replace_once(r'<link\b[^>]*href=["\'](?:\./)?styles\.css["\'][^>]*>', "<style>\n" + css + "\n</style>", html)
-    for filename in ("data.js", "engine.js", "app.js"):
+    extra_css = (source / "seven.css").read_text(encoding="utf-8")
+    if re.search(r"</style", extra_css, flags=re.IGNORECASE):
+        raise ValueError("Unexpected closing style in seven.css")
+    html = replace_once(r'<link\b[^>]*href="seven\.css"[^>]*>', "<style>\n" + extra_css + "\n</style>", html)
+    for filename in ("data.js", "data7.js", "engine.js", "app.js"):
         text = (source / filename).read_text(encoding="utf-8")
         if filename == "app.js":
             text = ("window.VERSELOOM_STANDALONE = true;\n"
@@ -69,7 +73,7 @@ def build(output: Path) -> dict:
     output = output.resolve()
     if output == source or output in source.parents or source in output.parents:
         raise ValueError("Build output must be separate from the source tree")
-    required = ("index.html", "styles.css", "data.js", "engine.js", "app.js", "worker.js", "NOTICE.md", "NOTICE.html")
+    required = ("index.html", "styles.css", "seven.css", "data.js", "data7.js", "engine.js", "app.js", "worker.js", "NOTICE.md", "NOTICE.html")
     for name in required:
         if not (source / name).is_file():
             raise ValueError("Missing browser asset: " + name)

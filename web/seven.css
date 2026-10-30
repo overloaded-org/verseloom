@@ -1,0 +1,16 @@
+/* Seven-character rows: keep all seven glyphs within the poem sheet. */
+#seed-input {width:100%;height:44px;padding:0 13px;border:1px solid var(--line,#d4d9c8);border-radius:4px;background:#f8f8f1;color:inherit}
+.poem-lines.is-seven {width:min(100%,430px)}
+.poem-lines.is-seven .poem-line {gap:8px}
+.poem-lines.is-seven .character-glyph {font-size:29px;width:30px}
+@media(max-width:600px) {
+  .poem-lines.is-seven {width:100%}
+  .poem-lines.is-seven .poem-line {gap:4px;padding-left:19px;padding-right:2px}
+  .poem-lines.is-seven .character-glyph {font-size:24px;width:25px}
+  .poem-lines.is-seven .line-punctuation {font-size:20px}
+  .poem-lines.is-seven .line-number {left:0}
+}
+@media(max-width:360px) {
+  .poem-lines.is-seven .poem-line {gap:2px}
+  .poem-lines.is-seven .character-glyph {font-size:22px;width:23px}
+}
