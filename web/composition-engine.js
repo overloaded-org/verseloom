@@ -28,8 +28,8 @@
     reject(Number.isInteger(o.seed)&&o.seed>=0&&o.seed<=4294967295,"种子须为32位非负整数。");
     reject(typeof o.variation==="number"&&Number.isFinite(o.variation)&&o.variation>=0&&o.variation<=2,"探索强度必须在0至2之间。");
     reject(Number.isInteger(o.beamWidth)&&o.beamWidth>=8&&o.beamWidth<=64,"搜索宽度须为8至64。");
-    reject(o.season==="auto"||Object.hasOwn(seasonNames,o.season),"未知季节。");
-    reject(o.time==="auto"||Object.hasOwn(timeNames,o.time),"未知时段。");
+    reject(o.season==="auto"||o.season==="unrestricted"||Object.hasOwn(seasonNames,o.season),"未知季节。");
+    reject(o.time==="auto"||o.time==="unrestricted"||Object.hasOwn(timeNames,o.time),"未知时段。");
     reject(o.templateId==="auto"||new RegExp('^L'+o.length+'-[PZ]-R[01]$').test(o.templateId),"起式与诗体不匹配。");
     reject(typeof o.rhymeGroup==="string","韵部必须是字符串。");
     reject(Array.isArray(o.recentPoems)&&o.recentPoems.length<=8&&Array.from(o.recentPoems).every(p=>Array.isArray(p)&&p.length===8&&Array.from(p).every(l=>typeof l==="string"&&Array.from(l).length===o.length)),"近期诗稿必须为相同诗体的最多8首完整诗。");
@@ -67,7 +67,7 @@
   async function compileCandidates(source,o,context,progress) {
     const patterns=new Set(source.templates[String(o.length)].flatMap(t=>t.variants.flat()));
     const data={source,banned:new Set(source.trainingLineHashes),patterns};
-    const fits=t=>(!t.seasons.length||t.seasons.includes(context.season))&&(!t.times.length||t.times.includes(context.time));
+    const fits=t=>(context.season==="unrestricted"||!t.seasons.length||t.seasons.includes(context.season))&&(context.time==="unrestricted"||!t.times.length||t.times.includes(context.time));
     const words=source.lexicon.filter(fits); const nouns=words.filter(t=>t.kind==="noun"),verbs=words.filter(t=>t.kind==="verb"),locations=words.filter(t=>t.kind==="location"),times=words.filter(t=>t.kind==="time"),adjectives=words.filter(t=>t.kind==="adjective");
     const pools=new Map();let constructed=0,matched=0;
     function add(tokens,frame,s,obj) {
@@ -226,7 +226,7 @@
     const lines=chosen.lines.map(l=>l.text);const rlabel=source.readings[lines[1].at(-1)].rhymeLabel;
     return {status:'complete',schema:'verseloom.composition-result.v2',engineVersion:VERSION,length:o.length,lines,
       templateId:chosen.template.id,rhymeGroup:chosen.rhyme,rhymeLabel:rlabel,core:chosen.template.core,actualTones:chosen.lines.map(l=>l.tones),metricalProfile:'common_prefix',rhymeRows:chosen.template.rhymeRows,
-      score:chosen.score,selectionScore:chosen.selectionScore,options:o,context,contextLabel:seasonNames[context.season]+' · '+timeNames[context.time],
+      score:chosen.score,selectionScore:chosen.selectionScore,options:o,context,contextLabel:(seasonNames[context.season]||"不限定季节")+' · '+(timeNames[context.time]||"不限定时段"),
       lineDetails:chosen.lines.map(l=>({text:l.text,frame:l.frame,tones:l.tones,score:l.score,samplingBias:l.samplingBias,
         tokens:l.tokens.map(t=>({id:t.id,text:t.text,kind:t.kind,semantic:t.semantic,role:t.role,entity:t.entity,count:t.count,sources:t.sources,
           readings:Array.from(t.text).map(c=>source.readings[c])}))})),
