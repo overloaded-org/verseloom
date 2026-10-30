@@ -17,7 +17,7 @@ function init(){
  }
  function progress(job,p){if(job.cancelled||active!==job){const e=new Error('已取消');e.name='AbortError';throw e;}$('progress').textContent=p.message||'正在组织词组…';}
  function finish(job){if(active!==job)return false;if(job.worker)job.worker.terminate();active=null;busy(false);return true;}
- function accept(job,value){if(active!==job||job.cancelled)return;if(value.status!=='complete'){finish(job);error('本次没有找到满足全部声明约束的完整诗稿。可换种子、季节或时段重试；没有使用存档或放宽约束。');$('state').textContent=result?'保留上次结果':'未找到完整解';return;}
+ function accept(job,value){if(active!==job||job.cancelled)return;if(value.status!=='complete'){finish(job);error('本次没有找到满足全部声明约束的完整诗稿。可换种子、搜索宽度或约束条件重试；没有使用存档或放宽约束。');$('state').textContent=result?'保留上次结果':'未找到完整解';return;}
   if(value.length!==job.options.length||value.lines.length!==8||value.lines.some(l=>Array.from(l).length!==value.length)){fail(job,new Error('结果诗体不匹配'));return;}
   if(!job.replay)history[value.length]=history[value.length].concat([value.lines.slice()]).slice(-8);show(value);finish(job);$('progress').textContent='生成完成。点击任一句查看词组与历史读音依据。';
  }
