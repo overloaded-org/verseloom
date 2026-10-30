@@ -1,0 +1,77 @@
+name: Published mobile and algorithm validation
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tests_mobile/**'
+      - '.github/workflows/mobile-validation.yml'
+  workflow_run:
+    workflows: ['Browser demo and GitHub Pages']
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: published-mobile-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event != 'pull_request' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24'
+      - name: Resolve a successful same-repository Pages artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_RUN_ID: ${{ github.event.workflow_run.id || '' }}
+        run: |
+          set -euo pipefail
+          mkdir -p output
+          run_id="$PAGES_RUN_ID"
+          if [ -z "$run_id" ]; then
+            run_id="$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/runs?branch=main&status=success&event=push&per_page=1" --jq '.workflow_runs[0].id')"
+          fi
+          [[ "$run_id" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run_id" > output/source-run.json
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run_id/artifacts" > output/artifacts.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=json.loads(Path('output/artifacts.json').read_text())['artifacts']
+          selected=[x for x in rows if x['name']=='github-pages' and not x['expired']]
+          if len(selected)!=1:raise SystemExit('Expected one unexpired Pages artifact; rebuild Pages if expired')
+          Path('output/selected-artifact.json').write_text(json.dumps(selected[0]))
+          PY
+          artifact_id="$(python -c "import json;print(json.load(open('output/selected-artifact.json'))['id'])")"
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$artifact_id/zip" > output/pages.zip
+          python tests_mobile/verify_pages_artifact.py --archive output/pages.zip --run output/source-run.json --artifact output/selected-artifact.json --repository "$GITHUB_REPOSITORY" --output output/site | tee output/identity.json
+      - name: Install pinned browser harness
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Render actual packaged apps at mobile widths
+        run: python tests_mobile/check_mobile.py --site output/site --output output/mobile
+      - name: Probe repetition and algorithm-led relation intervention
+        run: node tests_mobile/probe_published.cjs output/site output/published-probe
+      - name: Preserve all evidence and exact source identity
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: published-mobile-validation
+          path: |
+            output/identity.json
+            output/mobile/
+            output/published-probe/
+          if-no-files-found: warn
+          retention-days: 7
