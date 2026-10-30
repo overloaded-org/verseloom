@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/*continuation*'
       - 'scripts/diagnose_couplet_closure.py'
+      - 'scripts/evaluate_middle_couplet.py'
       - 'scripts/build_induced_model.py'
       - 'tests_continuation/**'
       - 'web/continuation-*.js'
@@ -52,6 +53,7 @@ jobs:
         run: |
           python scripts/train_continuation_ranker.py --corpus output/continuation-source/run/candidate_poems.jsonl --output output/continuation-v1
           python scripts/check_continuation_context.py --corpus output/continuation-source/run/candidate_poems.jsonl --experiment output/continuation-v1 --output output/continuation-v1/context-control.json
+          python scripts/evaluate_middle_couplet.py --corpus output/continuation-source/run/candidate_poems.jsonl --output output/continuation-v1/sp02-middle-retrieval.json
       - name: Check isolation, math, provenance, rebuild and UI event contracts
         run: |
           python -m unittest discover -s tests_continuation -v
