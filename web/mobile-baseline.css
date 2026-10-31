@@ -10,7 +10,7 @@ html { -webkit-text-size-adjust: 100%; }
   input:not([type=checkbox]), select { min-height: 44px; font-size: 16px; }
   button, summary { min-height: 44px; touch-action: manipulation; }
   label:has(input[type=checkbox]) { display: flex; align-items: center; min-height: 44px; gap: 8px; }
-  input[type=checkbox] { min-width: 20px; min-height: 20px; }
+  input[type=checkbox] { min-width: 20px; min-height: 20px; margin: 0; }
   .source-stats { flex-wrap: wrap; }
   .sheet-toolbar { flex-wrap: wrap; gap: 8px; }
   .export-actions { flex-wrap: wrap; }
@@ -21,11 +21,13 @@ html { -webkit-text-size-adjust: 100%; }
   .poem-lines .character-glyph { font-size: clamp(23px, 6.5vw, 29px); width: clamp(23px, 6.5vw, 29px); }
   .poem-lines .line-number { left: 0; }
   .poem-lines .line-punctuation { font-size: 22px; }
-  .run-hint, .control-footnote p, .reading-note { font-size: 13px; }
+  .run-hint, .control-footnote p,.reading-note, .method-note p { font-size: 13px; }
+  #induced-v1-entry {margin:0 0 12px} #induced-v1-entry a {display:inline-flex;align-items:center;min-height:46px;padding:7px 16px;background:#205648;color:#fffdf6;border-radius:5px;font-size:15px;text-decoration:none}
 }
 @media (max-width: 400px) {
   #generation-form { grid-template-columns: minmax(0, 1fr); }
   .field > label { font-size: 14px; }
   .button-primary, .button-secondary, .reset-button { font-size: 14px; }
   .poem-annotation dl { grid-template-columns: minmax(0, 1fr); }
+  .poem-annotation dd { font-size: 13px; }
 }

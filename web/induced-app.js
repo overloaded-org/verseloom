@@ -1,111 +1,64 @@
-/* Session history affects search preferences, never supplies required content. */
+/* Controller only. Candidate construction, defaults, model and search are unchanged. */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
-  let worker = null, active = null, result = null, serial = 0;
-  const histories = {5: [], 7: []};
-  function status(text) { $('i-status').textContent = text; }
-  function busy(value) {
-    for (const id of ['i-length', 'i-mode', 'i-seed', 'i-auto', 'i-generate', 'i-history', 'i-reset-history']) $(id).disabled = value;
-    $('i-history').disabled = value || !$('i-auto').checked;
-    $('i-cancel').hidden = !value;
-    $('i-sheet').setAttribute('aria-busy', String(value));
-    for (const id of ['i-replay', 'i-copy', 'i-export']) $(id).disabled = value || !result;
+  const histories={5:[],7:[]}, meta=globalThis.VerseLoomInducedMeta;
+  const ready=Boolean(meta && typeof Worker==='function');
+  let worker=null, active=null, result=null, serial=0;
+  function status(s){$('i-status').textContent=s;}
+  function mobileScroll(node){if(globalThis.matchMedia?.('(max-width: 760px)')?.matches) node.scrollIntoView?.({block:'start',behavior:'auto'});}
+  function busy(on){
+    for(const id of ['i-length','i-mode','i-seed','i-auto','i-generate','i-history','i-reset-history']) $(id).disabled=on||!ready;
+    $('i-history').disabled=on||!ready||!$('i-auto').checked;
+    $('i-cancel').hidden=!on; $('i-sheet').setAttribute('aria-busy',String(on));
+    for(const id of ['i-again','i-replay','i-copy','i-export']) $(id).disabled=on||!ready||!result;
+    $('i-generate').textContent=on?'正在生成…':ready?'开始生成':'生成器未就绪';
+    $('i-again').textContent=$('i-auto').checked?'再生成一首':'按当前设置生成';
   }
-  function stop() { worker?.terminate(); worker = null; active = null; busy(false); }
-  function fail(message) { stop(); $('i-error').textContent = message; $('i-error').hidden = false; }
-  function show(value) {
-    result = value; $('i-poem').replaceChildren(); $('i-inspection').hidden = true;
-    for (const [index, text] of value.lines.entries()) {
-      const button = document.createElement('button');
-      button.type = 'button'; button.className = 'poem-line';
-      button.textContent = text + (index % 2 ? '。' : '，');
-      button.setAttribute('aria-label', '第' + (index + 1) + '句，查看来源与算法依据');
-      button.onclick = () => {
-        $('i-inspection').hidden = false;
-        $('i-detail').textContent = JSON.stringify(value.lineDetails[index], null, 2);
-      };
-      $('i-poem').appendChild(button);
-    }
-    $('i-summary').textContent = value.templateId + ' / ' + value.rhymeGroup + ' / 种子 ' + value.options.seed + ' / ' + ({local:'句内对照',relations:'固定关系评分',learned:'学得接续评分'}[value.options.mode]||value.options.mode) + ' / ' + value.engineVersion;
-    status('生成完成。未人工改字；点击任一句查看统计依据。'); busy(false);
-    if (globalThis.matchMedia?.('(max-width: 760px)')?.matches)
-      $('i-sheet').scrollIntoView?.({block: 'start', behavior: 'auto'});
+  function stop(){worker?.terminate();worker=null;active=null;busy(false);}
+  function fail(s){stop();$('i-error').textContent=s;$('i-error').hidden=false;status('本次未完成。');}
+  function resetEvidence(){ $('i-inspection').hidden=true; $('i-detail').textContent=''; }
+  function show(r){
+    result=r; const poem=$('i-poem');poem.replaceChildren();resetEvidence();
+    r.lines.forEach((line,i)=>{const b=document.createElement('button');b.type='button';b.className='poem-line';b.textContent=line+(i%2?'。':'，');
+      b.setAttribute('aria-label','第'+(i+1)+'句：'+line+'，查看依据');b.setAttribute('aria-controls','i-inspection');b.setAttribute('aria-pressed','false');
+      b.onclick=()=>{for(const x of poem.children)x.setAttribute('aria-pressed',String(x===b));const pane=$('i-inspection');pane.hidden=false;
+        const d=r.lineDetails[i];pane.querySelector('h2').textContent='第'+(i+1)+'句 · '+line;
+        $('i-detail').textContent=JSON.stringify(d,null,2);mobileScroll(pane);};poem.appendChild(b);
+    });
+    $('i-summary').textContent=r.templateId+' / '+r.rhymeGroup+' / 种子 '+r.options.seed+' / '+({local:'句内对照',relations:'固定关系评分',learned:'学得接续评分'}[r.options.mode]||r.options.mode)+' / '+r.engineVersion;
+    status('生成完成。点击诗句可查看依据。');busy(false);mobileScroll($('i-sheet'));
   }
-  function ensureWorker() {
-    if (worker) return;
-    worker = new Worker(new URL('induced-worker.js', document.baseURI));
-    worker.onerror = event => { event.preventDefault(); fail('统计数据或计算线程加载失败。没有使用备用诗稿。'); };
-    worker.onmessage = ({data: message}) => {
-      if (!active || message.id !== active.id) return;
-      if (message.type === 'progress') status(message.progress.message);
-      else if (message.type === 'error') fail(message.message);
-      else if (message.type === 'result') {
-        const job = active, value = message.result;
-        if (value.status === 'complete' && (value.length !== job.options.length || value.lines.length !== 8 || value.lines.some(line => Array.from(line).length !== value.length))) {
-          fail('结果诗体不匹配。'); return;
-        }
-        active = null;
-        if (value.status === 'complete') {
-          if (!job.replay) histories[value.length] = histories[value.length].concat([value.lines.slice()]).slice(-8);
-          show(value);
-        } else { busy(false); status('未找到完整结果。没有放宽声律约束或填入存档；可换种子重试。'); }
-      }
+  function ensureWorker(){if(worker)return;const w=new Worker(new URL('induced-worker.js',document.baseURI));worker=w;
+    w.onerror=e=>{if(worker!==w)return;e.preventDefault();fail('统计数据或计算线程加载失败，请重试。没有使用备用诗稿。');};
+    w.onmessage=({data:m})=>{if(worker!==w||!active||m.id!==active.id)return;
+      if(m.type==='progress'){status(m.progress.message);return;}if(m.type==='error'){fail(m.message);return;}if(m.type!=='result')return;
+      const job=active,v=m.result;active=null;
+      if(v?.status!=='complete'){busy(false);status('未找到完整结果。未放宽约束，可换种子重试。');return;}
+      if(v.length!==job.options.length||!Array.isArray(v.lines)||v.lines.length!==8||v.lines.some(l=>typeof l!=='string'||Array.from(l).length!==v.length)){fail('结果诗体不匹配。');return;}
+      if(!job.replay)histories[v.length]=histories[v.length].concat([v.lines.slice()]).slice(-8);show(v);
     };
   }
-  function start(replay) {
-    if (active) return;
-    $('i-error').hidden = true;
-    try {
-      let options;
-      if (replay) {
-        if (!result) return;
-        options = JSON.parse(JSON.stringify(result.options));
-      } else {
-        const raw = $('i-seed').value.trim();
-        if (!/^\d{1,10}$/.test(raw) || Number(raw) > 4294967295) throw new Error('种子必须为0至4294967295的整数');
-        let seed = Number(raw);
-        if ($('i-auto').checked) {
-          const random = new Uint32Array(1); crypto.getRandomValues(random);
-          seed = random[0] === seed ? (seed + 1) >>> 0 : random[0];
-        }
-        const length = Number($('i-length').value);
-        options = {length, mode: $('i-mode').value, seed, variation: 0.8, beamWidth: 16,
-          recentPoems: $('i-auto').checked && $('i-history').checked ? histories[length].map(poem => poem.slice()) : []};
-      }
-      if (typeof Worker === 'undefined') throw new Error('这个实验需要浏览器 Worker；未启用时不模拟生成。');
-      $('i-seed').value = String(options.seed); $('i-length').value = String(options.length); $('i-mode').value = options.mode;
-      ensureWorker(); active = {id: ++serial, options, replay}; busy(true);
-      status('加载训练统计并构造候选；可随时停止。'); worker.postMessage({id: active.id, options});
-    } catch (error) { fail(error.message); }
+  function start(replay){if(active||!ready)return;$('i-error').hidden=true;
+    try{let options;
+      if(replay){if(!result)return;options=JSON.parse(JSON.stringify(result.options));}
+      else{const raw=$('i-seed').value.trim();if(!/^\d{1,10}$/.test(raw)||Number(raw)>4294967295)throw Error('种子必须为0至4294967295的整数');let seed=Number(raw);
+        if($('i-auto').checked){const random=new Uint32Array(1);crypto.getRandomValues(random);seed=random[0]===seed?(seed+1)>>>0:random[0];}
+        const length=Number($('i-length').value);options={length,mode:$('i-mode').value,seed,variation:0.8,beamWidth:16,recentPoems:$('i-auto').checked&&$('i-history').checked?histories[length].map(p=>p.slice()):[]};}
+      $('i-seed').value=String(options.seed);$('i-length').value=String(options.length);$('i-mode').value=options.mode;
+      ensureWorker();active={id:++serial,options,replay};busy(true);status('正在加载语料并生成；可随时停止。');worker.postMessage({id:active.id,options});
+    }catch(e){fail(e.message);}
   }
-  $('i-form').onsubmit = event => { event.preventDefault(); start(false); };
-  $('i-replay').onclick = () => start(true);
-  $('i-auto').onchange = () => busy(Boolean(active));
-  $('i-mode').onchange = () => { if (!active) status(result ? '模式设置已改变；当前诗稿仍是上一次结果，点击生成才运行新模式。' : '模式设置已改变；点击生成后才会出现算法输出。'); };
-  $('i-cancel').onclick = () => { stop(); status('已停止；没有填入备用结果。'); };
-  $('i-reset-history').onclick = () => {
-    if (active) return;
-    histories[Number($('i-length').value)] = []; status('已清空当前诗体的近期记录；没有指定任何词句。');
-  };
-  $('i-length').onchange = () => {
-    if (active) return;
-    result = null; $('i-poem').replaceChildren(); $('i-summary').textContent = ''; $('i-inspection').hidden = true;
-    status('切换诗体后保持空白；五言与七言的近期记录分别保存。'); busy(false);
-  };
-  $('i-copy').onclick = async () => {
-    if (!result) return;
-    try { await navigator.clipboard.writeText(result.lines.map((line, i) => line + (i % 2 ? '。' : '，')).join('\n')); status('已复制。'); }
-    catch { status('复制权限未开启，请选中诗文复制。'); }
-  };
-  $('i-export').onclick = () => {
-    if (!result) return;
-    const url = URL.createObjectURL(new Blob([JSON.stringify(result, null, 2)], {type: 'application/json'}));
-    const link = document.createElement('a'); link.href = url; link.download = 'verseloom-induced-' + result.options.seed + '.json';
-    document.body.appendChild(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-  };
-  const meta = globalThis.VerseLoomInducedMeta;
-  if (meta) $('i-data').textContent = meta.meta.trainingPoems.toLocaleString() + '首训练文本 / ' + meta.meta.admittedSegments.toLocaleString() + '个自动准入词段。首次加载约' + (meta.assetBytes / 1048576).toFixed(1) + ' MiB统计数据。';
-  else fail('来源元数据没有加载。');
-  addEventListener('pagehide', stop); busy(false);
+  $('i-form').onsubmit=e=>{e.preventDefault();start(false);if(active&&e.submitter?.id==='i-again')mobileScroll($('i-cancel'));};
+  $('i-replay').onclick=()=>{start(true);if(active)mobileScroll($('i-cancel'));};
+  $('i-auto').onchange=()=>busy(Boolean(active));
+  $('i-mode').onchange=()=>{if(!active)status(result?'设置已改变；点击生成才产生新稿。':'设置已改变；点击生成才会出现诗稿。');};
+  $('i-cancel').onclick=()=>{stop();status('已停止，没有填入备用诗稿。');};
+  $('i-reset-history').onclick=()=>{if(!active){histories[Number($('i-length').value)]=[];status('已清空当前诗体的近期记录。');}};
+  $('i-length').onchange=()=>{if(active)return;result=null;$('i-poem').replaceChildren();$('i-summary').textContent='';resetEvidence();status('诗体已切换。点击生成，写一首新诗。');busy(false);};
+  $('i-copy').onclick=async()=>{if(!result)return;try{await navigator.clipboard.writeText(result.lines.map((s,i)=>s+(i%2?'。':'，')).join('\n'));status('已复制。');}catch{status('复制权限未开，请选中诗文复制。');}};
+  $('i-export').onclick=()=>{if(!result)return;const u=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='verseloom-induced-'+result.options.seed+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);};
+  if(meta)$('i-data').textContent=meta.meta.trainingPoems.toLocaleString()+'首训练文本 / '+meta.meta.admittedSegments.toLocaleString()+'个自动准入词段。首次加载约'+(meta.assetBytes/1048576).toFixed(1)+' MiB统计数据。';
+  if(!ready)fail('语料元信息或浏览器计算线程不可用。请刷新或使用支持 Worker 的浏览器。');
+  addEventListener('pagehide',stop);busy(false);
 })();
