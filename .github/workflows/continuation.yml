@@ -62,6 +62,7 @@ jobs:
       - name: Probe all line positions, intact endings and original couplet order
         run: |
           python scripts/evaluate_poem_positions.py --model web/induced-data.js --corpus output/continuation-source/run/candidate_poems.jsonl --ranker output/continuation-v1/ranker.json --fixtures output/continuation-v1/feature-fixtures.json --predictions output/continuation-v1/predictions.jsonl --output output/continuation-v1/poem-positions
+          python scripts/train_continuation_order_probe.py --model web/induced-data.js --corpus output/continuation-source/run/candidate_poems.jsonl --ranker output/continuation-v1/ranker.json --out output/continuation-v1/order-probe
       - name: Check isolation, math, provenance, rebuild and UI event contracts
         run: |
           python -m unittest discover -s tests_continuation -v
