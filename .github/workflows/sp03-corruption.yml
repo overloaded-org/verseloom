@@ -1,0 +1,60 @@
+name: SP03 corruption and closing controls
+on:
+  push:
+    branches: ['research/sp03-corruption-controls']
+    paths: ['research/sp03/**', '.github/workflows/sp03-corruption.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Retrieve authenticated inputs (offline archive also provided)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs output/source output/wrap
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/12965520106/zip" > inputs/VerseLoom_Quality_Data_v1.zip
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/13000647584/zip" > inputs/VerseLoom_SP02_Parallel_CI_Evidence.zip
+          echo '1392dd9e03c7b6a2d80960697a4d5e174faccf9cfd975591b774ca548d50cd02  inputs/VerseLoom_Quality_Data_v1.zip' | sha256sum -c -
+          echo 'daed684299a29742ce0c79d4ad3e0fcbf3a508cdc5c68cffde4858d27b4bc03b  inputs/VerseLoom_SP02_Parallel_CI_Evidence.zip' | sha256sum -c -
+          unzip -q inputs/VerseLoom_Quality_Data_v1.zip -d output/source
+      - name: Rebuild the source-identified statistical asset
+        run: |
+          python -m pip install -r requirements.txt
+          python scripts/build_induced_model.py --bootstrap output/source
+          tar -C web -cf output/wrap/artifact.tar ./induced-data.js
+          (cd output/wrap && zip -q ../../inputs/verseloom-pages-1818d1e.zip artifact.tar)
+      - name: Fit, measure both forms, replay and audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install numpy==2.3.5 scipy==1.17.0
+          python -m py_compile research/sp03/study.py research/sp03/audit.py
+          python research/sp03/study.py --inputs inputs --output output/sp03/first
+          PYTHONHASHSEED=881 python research/sp03/study.py --inputs inputs --output output/sp03/replay
+          python research/sp03/audit.py inputs output/sp03/first output/sp03/replay | tee output/sp03/audit.json
+          git diff --exit-code
+      - name: Preserve raw outcomes
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: sp03-corruption-evidence
+          path: |
+            output/sp03/first/
+            output/sp03/audit.json
+          if-no-files-found: warn
+          retention-days: 14
