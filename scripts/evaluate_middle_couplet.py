@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SP-02 train-only couplet-specific ranker, evaluated on dev source adjacency.
+"""SP-03 train-only position-specific rankers, evaluated on dev source adjacency.
 
 This measures retrieval of attested adjacent lines, not strict antithesis.
 No authored content, fixed lines, themes, or templates are introduced.
@@ -37,6 +37,25 @@ def evaluate(model_path, corpus_path, out):
     middle_train, middle_train_records = select_rows(train_matrix, train_records, {3, 5})
     middle_dev, middle_dev_records = select_rows(dev_matrix, dev_records, {3, 5})
     middle, _, _ = fit(middle_train)
+    # Four couplet roles, including opening and closing. The source labels are
+    # observed adjacency only; no authored themes, words, or story templates.
+    role_results = {}
+    from train_continuation_ranker import rank_scores
+    for name, rows in [('opening', {1}), ('middle', {3, 5}), ('closing', {7})]:
+        train_role, train_meta = select_rows(train_matrix, train_records, rows)
+        dev_role, dev_meta = select_rows(dev_matrix, dev_records, rows)
+        learned_role, _, _ = fit(train_role)
+        specialized, _ = rank_scores(dev_role @ learned_role)
+        generic, _ = rank_scores(dev_role @ general)
+        role_results[name] = {
+            'rowsZeroBased': sorted(rows),
+            'trainContexts': len(train_meta), 'devContexts': len(dev_meta),
+            'devFamilies': len({r['family'] for r in dev_meta}),
+            'specialized': summarize(dev_role @ learned_role, dev_meta)[0],
+            'general': summarize(dev_role @ general, dev_meta)[0],
+            'specializedMinusGeneral': bootstrap_difference(specialized, generic, dev_meta),
+            'coefficients': [float(x) for x in learned_role],
+        }
     # No parameter selection on dev, and no promotion of dev to training.
     general_scores = middle_dev @ general
     middle_scores = middle_dev @ middle
@@ -48,7 +67,7 @@ def evaluate(model_path, corpus_path, out):
     # Diagnose whether a middle-specific learner genuinely uses a different    # feature weighting, rather than only renaming the general model.
     coefficient_delta = [float(x-y) for x,y in zip(middle,general)]
     report = {
-        'schema': 'verseloom.sp02.middle-couplet-retrieval.v1',
+        'schema': 'verseloom.sp03.all-couplet-roles.v1',
         'sourceIdentity': data['sourceIdentity'],
         'modelSha256': sha(model_bytes),
         'corpusSha256': sha(corpus_path.read_bytes()),
@@ -66,6 +85,7 @@ def evaluate(model_path, corpus_path, out):
         'generalMinusFixed': bootstrap_difference(general_r1, fixed_r1, middle_dev_records),
         'coefficientDifference': coefficient_delta,
         'coefficientL2Difference': float(np.linalg.norm(middle-general)),
+        'roleComparisons': role_results,
         'coefficients': {'general': [float(x) for x in general],
                          'middle': [float(x) for x in middle]},
         'independentLiteraryRatings': 0,
