@@ -1,0 +1,50 @@
+name: Diagnose live closure interaction
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/closure-live-diagnostics.yml', 'tests_mobile/live_endings.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  trace:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Trace HTTP, Worker, form validity and visible generator status
+        shell: bash
+        run: |
+          mkdir -p output/closure-trace
+          python -u - <<'PY'
+          import json, time
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          out=Path('output/closure-trace');events=[]
+          base='https://overloaded-org.github.io/verseloom/'
+          with sync_playwright() as pw:
+              b=pw.chromium.launch();page=b.new_page(viewport={'width':390,'height':844},has_touch=True,is_mobile=True)
+              def record(k,v):
+                  x=[k,str(v)[:2000]]; print('TRACE',json.dumps(x,ensure_ascii=False),flush=True);events.append(x)
+              page.on('pageerror',lambda e:record('pageerror',e));page.on('worker',lambda w:record('worker',w.url));page.on('console',lambda m:record('console',m.text));page.on('requestfailed',lambda r:record('http-failed',[r.url,r.failure]));page.on('response',lambda r:record('http',[r.status,r.url]));page.set_default_timeout(30000)
+              try:
+                  page.goto(base+'induced.html');page.locator('a[href="endings.html"]').click();page.locator('#auto').uncheck();page.locator('#length').select_option('7');page.locator('#seed').fill('0')
+                  record('preclick',page.evaluate("()=>({valid:document.querySelector('form').checkValidity(),handler:typeof document.querySelector('form').onsubmit,secure:isSecureContext,arm:document.querySelector('input[name=arm]:checked')?.value})"));page.locator('#write').click()
+                  last=None
+                  for i in range(65):
+                      page.wait_for_timeout(1000);state=[page.locator('#status').inner_text(),page.locator('#write').is_enabled(),page.locator('#sheet').is_visible()];
+                      if state!=last:record('ui',state);last=state
+                      if state[1] or state[2]:break
+                  assert page.locator('#sheet').is_visible(),last
+              finally:
+                  page.screenshot(path=str(out/'surface.png'));(out/'trace.json').write_text(json.dumps(events,ensure_ascii=False,indent=2));b.close()
+          PY
+      - if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with: {name: closure-live-trace, path: output/closure-trace/, retention-days: 7}
