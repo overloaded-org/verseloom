@@ -191,4 +191,21 @@ async function generate(data,input={},onProgress=()=>{}){
    {id:'no_authored_content',passed:true,scope:'No content lexicon, theme, event script or sentence frame read by this engine'}]};
 }
 global.VerseLoomInduced=Object.freeze({generate,version:VERSION});
+
+// Node-only, detached research lattice. No browser API or generation-path change.
+// Research callers get fresh copies; they cannot mutate cached production pools.
+if (typeof module === 'object' && module.exports) {
+  module.exports = Object.freeze({version:VERSION, generate,
+    async researchLattice(data, input={}, onProgress=()=>{}) {
+      check(typeof onProgress==='function','Invalid progress callback');
+      const o=options(input), runtime=prepare(data);
+      const {pools,attempts,copied}=await linePools(data,runtime,o,onProgress);
+      return structuredClone({schema:'verseloom.research-lattice.v1',engineVersion:VERSION,
+        options:o,sourceIdentity:data.sourceIdentity,attempts,copied,
+        pools:[...pools],
+        poolFingerprint:hash([...pools].map(([k,rs])=>k+':'+rs.map(l=>l.text).join(',')).join('|'))});
+    }
+  });
+}
+
 })(globalThis);

@@ -1,0 +1,60 @@
+name: Parallel joint search and iterative refinement
+on:
+  push:
+    branches: [main, 'research/sp02-*']
+    paths:
+      - 'scripts/*refinement*'
+      - 'tests_refinement/**'
+      - 'research/parallel-refinement-v1.json'
+      - 'web/induced-engine.js'
+      - '.github/workflows/parallel-refinement.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: parallel-refinement-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24'
+      - name: Syntax and content-neutral search tests before corpus work
+        run: |
+          python -m py_compile scripts/audit_parallel_refinement.py
+          node --check scripts/evaluate_parallel_refinement.cjs
+          node --check scripts/refinement_problem.cjs
+          node --check scripts/run_parallel_refinement.cjs
+          node --test tests_refinement/search.test.cjs
+      - name: Rebuild fixed train-only statistics
+        run: |
+          python -m pip install -r requirements.txt
+          python scripts/bootstrap_quality_data.py --download --cache output/source/cache --output output/source/run
+          python scripts/build_induced_model.py --bootstrap output/source
+      - name: Verify detached lattice, unchanged browser API and scoring parity
+        run: node --test tests_refinement/lattice.test.cjs
+      - name: Execute both forms and both research routes concurrently
+        run: node scripts/run_parallel_refinement.cjs output/parallel-v1
+      - name: Independently check all outputs and revision trajectories
+        run: |
+          python scripts/audit_parallel_refinement.py --run output/parallel-v1 --output output/parallel-v1/audit.json
+          git diff --exit-code
+      - name: Preserve all outcomes including failures
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        with:
+          name: parallel-refinement-evidence
+          path: output/parallel-v1/
+          if-no-files-found: warn
+          retention-days: 7

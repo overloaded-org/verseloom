@@ -1,0 +1,54 @@
+{
+  "schema": "verseloom.parallel-refinement.protocol.v1",
+  "baseCommit": "c9c8127c81d4067699adba95668dd6776740ed9e",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    42,
+    43,
+    44,
+    45
+  ],
+  "lengths": [
+    5,
+    7
+  ],
+  "baselineOptions": {
+    "mode": "learned",
+    "variation": 0.8,
+    "beamWidth": 16,
+    "recentPoems": []
+  },
+  "candidateLimitPerPosition": 24,
+  "proposalBudget": 4096,
+  "maxSweeps": 4,
+  "arms": [
+    "single_pass",
+    "joint_pass",
+    "single_iterative",
+    "joint_iterative"
+  ],
+  "localInterventions": [
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "control": "Automatically generated identical initial poem, template, rhyme, row candidate pools and learned scorer; same proposal ceiling, measured actual work differs with convergence.",
+  "candidateScope": "Runtime-constructed lines from corpus-derived segments; no authored text.",
+  "metricScope": "Full-score gain is an optimization diagnostic, NOT independent literary quality.",
+  "deployed": false,
+  "diffusionModel": false,
+  "noiseProcessTrained": false,
+  "samplingDesign": "Previously used development seeds, not a blind test."
+}
